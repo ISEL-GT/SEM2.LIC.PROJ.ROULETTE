@@ -8,7 +8,7 @@ ENTITY Decoder2x4 IS
 );
 END Decoder2x3;
 
-ARCHITECTURE arch_Decoder of Decoder2x4 is
+ARCHITECTURE arch_Decoder of Decoder2x4s is
 begin
 Y(0) <= (not S0 and not S1);
 Y(1) <= (S0 and not S1);

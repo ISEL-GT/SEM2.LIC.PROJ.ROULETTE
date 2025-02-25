@@ -37,11 +37,19 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY roulette
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:47:01  FEBRUARY 25, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name VHDL_FILE KEY_SCANNER/key_scanner.vhd
+set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
+set_global_assignment -name VHDL_FILE KEY_SCANNER/decoder_2x4.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/counter.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/reg_counter_keyscan.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/f_adder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/h_adder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/mux_4x1.vhd
