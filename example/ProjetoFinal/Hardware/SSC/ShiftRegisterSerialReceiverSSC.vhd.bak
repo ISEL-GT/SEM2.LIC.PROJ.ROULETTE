@@ -1,0 +1,52 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+entity ShiftRegisterSerialReceiverSSC is
+	port(
+		data: in std_logic;
+		SCLK: in std_logic;
+		E: in std_logic;
+		Reset: in std_logic;
+		D: out std_logic_vector(6 downto 0)
+	);
+end ShiftRegisterSerialReceiver;
+architecture structural of ShiftRegisterSerialReceiver is
+component FFDRegisterLCD IS
+	PORT(	
+		CLK : in std_logic;
+		RESET : in STD_LOGIC;
+		SET : in std_logic;
+		D : IN STD_LOGIC;
+		EN : IN STD_LOGIC;
+		Q : out std_logic
+		);
+end component;
+
+signal saidaFFD1: std_logic;
+signal saidaFFD2: std_logic;
+signal saidaFFD3: std_logic;
+signal saidaFFD4: std_logic;
+signal saidaFFD5: std_logic;
+signal saidaFFD6: std_logic;
+signal saidaFFD7: std_logic;
+
+begin
+
+FFD1: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>data ,EN=>E ,Q=>saidaFFD1);
+FFD2: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD1,EN=>E,Q=>saidaFFD2);
+FFD3: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD2,EN=>E,Q=>saidaFFD3);
+FFD4: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD3,EN=>E,Q=>saidaFFD4);
+FFD5: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD4,EN=>E,Q=>saidaFFD5);
+FFD6: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD5,EN=>E,Q=>saidaFFD6);
+FFD7: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD6,EN=>E,Q=>saidaFFD7);
+FFD8: FFDRegisterLCD port map(CLK=>SCLK,RESET=> Reset ,SET=> '0',D=>saidaFFD7,EN=>E,Q=>saidaFFD8);
+
+D(0)<= saidaFFD5;	
+D(1)<= saidaFFD4;
+D(2)<= saidaFFD3;
+D(3)<= saidaFFD2;
+D(4)<= saidaFFD1;
+D(5)<= saidaFFD6;
+D(6)<= saidaFFD7;
+
+end structural;
+

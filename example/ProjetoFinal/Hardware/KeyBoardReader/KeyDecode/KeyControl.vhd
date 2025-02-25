@@ -1,0 +1,55 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity KeyControl is
+	port (
+		Kack : in std_logic;
+		Kpress : in std_logic;
+		clk: in std_logic;
+		rst: in std_logic;
+		Kval: out std_logic;
+		Kscan : out std_logic
+);	
+end KeyControl;	
+architecture behavior of KeyControl is
+
+type STATE_TYPE is (SCANNING, PRESSING, WAITING);
+
+signal CurrentState, NextState: STATE_TYPE;
+
+begin
+
+CurrentState <= SCANNING when rst = '1' else NextState when rising_edge(clk);
+
+Generatenextstate:
+process (CurrentState, Kpress, Kack)
+	begin
+		case CurrentState is
+			when SCANNING	=> if (Kpress = '1') then
+										NextState <= PRESSING;
+									else
+										NextState <= SCANNING;
+									end if;
+			
+			when PRESSING	=> if (Kack = '0') then
+										NextState <= PRESSING;
+									else
+										NextState <= WAITING;
+									end if;
+									
+			when WAITING	=> if (Kack = '0' and Kpress = '0') then
+										NextState <= SCANNING;
+									else
+										NextState <= WAITING;
+									end if;
+									
+		end case;
+	end process;							
+
+Kval <= '1' when (CurrentState = PRESSING) 
+else '0';
+
+Kscan <= '1' when (CurrentState = SCANNING and Kpress = '0') 
+else '0';
+
+end behavior;

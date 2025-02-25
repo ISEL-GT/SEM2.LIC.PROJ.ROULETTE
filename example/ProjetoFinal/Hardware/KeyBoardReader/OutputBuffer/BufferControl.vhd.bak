@@ -1,0 +1,15 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity BufferControl is 
+	port( 
+		clk : in std_logic;
+		reset : in std_logic;
+		load : in std_logic;
+		ACK : in std_logic;
+		Dval : out std_logic;
+		OBfree : out std_logic;
+		Wreg : out std_logic
+);
+end BufferControl; 
+architecture behavioral of BufferControl is

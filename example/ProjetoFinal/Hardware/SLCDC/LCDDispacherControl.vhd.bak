@@ -1,0 +1,52 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity LCDDispacherControl is
+	port(
+		CLK : in std_logic;
+		clr : in std_logic;
+		Dval : in std_logic;
+		Wrl : out std_logic;
+		reset : in std_logic;
+		done : out std_logic
+);
+end LCDDispacherControl;
+architecture behavior of LCDDispacherControl is
+
+type STATE_TYPE is (WaitingDval, ReceivingDval, Done);
+
+signal currentState, NextState: STATE_TYPE;
+
+begin 
+
+currentState <= WaitingDval when reset = '1' else NextState when rising_edge(clk);
+	
+GenerateNextState:
+process(currentState, Dval, Wrl)
+	begin
+		when WaitingDval => if (Dval = '1') then
+										NextState <= ReceivingDval;
+								  else 
+										NextState <= WaitingDval;
+								  end if;
+		when ReceivingDval => NextState <= Done;
+			
+		when Done => 		  if (Dval = '1') then
+									 NextState <= Done;
+								  else 
+									 NextState <= WaitingDval;
+								  end if;
+		end case;
+		end process;
+clr <= '1' when (CurrentState = WaitingDval)
+else '0';
+
+Wrl <= '1' when (CurrentState = ReceivingDval) 
+else '0'; 		
+
+done <= '1' when (CurrentState = Done) 
+else '0';
+
+end behavior 
+								  
+								  

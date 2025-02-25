@@ -1,0 +1,23 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity SerialControl is
+	port(
+		enRx : in std_logic;
+		accept : in std_logic;
+		pFlag : in std_logic;
+		dFlag : in std_logic;
+		RXerror : in std_logic;
+		wr : out std_logic;
+		init : out std_logic;
+		Reset : in std_logic;
+		Clk : in std_logic;
+		DXval : out std_logic
+);
+end SerialControl;
+architecture behavior of SerialControl is
+type STATE_TYPE is (Preparing, Starting, Waiting, Accepted, Empty)
+
+signal CurrentState, NextState : STATE_TYPE;
+
+begin

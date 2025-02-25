@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+entity ScoreDispacher is
+	port(
+		Dval : in std_logic;
+		Din : in std_logic_vector(6 downto 0);
+		WrD : out std_logic;
+		Dout : out std_logic(6 downto 0);
+		done : out std_logic
+);
+		

@@ -1,0 +1,77 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+	entity Ring_Buffer_Control is
+		port(
+			DAV:in std_logic;
+			CTS:in std_logic;
+			full:in std_logic;
+			Mclk:in std_logic;
+			RESET:in std_logic;
+			empty:in std_logic;
+			Wreg:out std_logic;
+			wr:out std_logic;
+			incPut:out std_logic;
+			incGet:out std_logic;
+			selPG:out std_logic;
+			DAC:out std_logic
+);
+end Ring_Buffer_Control;
+
+architecture behavior of Ring_Buffer_Control is
+
+type STATE_TYPE is (WAITING, SELECTING, PUT, ACKNOWLEDGE, REGISTERING);
+
+signal CurrentState, NextState: STATE_TYPE;
+
+begin
+
+CurrentState <= WAITING when RESET = '1' else NextState when rising_edge(Mclk);
+
+Generatenextstate:
+
+process (CurrentState, DAV, full, CTS, empty)
+	begin
+		case CurrentState is
+			when WAITING => if (DAV = '1' and full = '0') then
+										NextState <= SELECTING;
+								 else sif ( CTS ='1' and empty = '0')then
+										NextState <= REGISTERING;
+								 else
+										NextState <= WAITING;
+								 end if;
+			when SELECTING => NextState <= PUT;
+
+						when PUT => NextState <= ACKNOWLEDGE;
+
+			when ACKNOWLEDGE => if (DAV = '1') then
+											NextState <= ACKNOWLEDGE;
+									  else
+											NextState <= WAITING;
+									  end if;
+			when REGISTERING => if (C TS = '0') then
+											NextStat <= WAITING;
+									  else
+											NextState <= REGISTERING;
+									  end if;
+		end case;
+end process;
+
+selPG <= '1' when (CurrentState = SELECTING or CurrentState = PUT)
+else '0';
+
+incPut <= '1' when (CurrentState = PUT)
+else '0';
+
+wr <= '1' when (CurrentState = PUT)
+else'0';
+
+DAC <= '1' when (CurrentState = ACKNOWLEDGE)
+else'0';
+
+incGet <= '1' when (CurrentState = REGISTERING and CTS = '0')
+else'0';
+
+Wreg <= '1' when (CurrentState = REGISTERING)
+else'0';
+
+end behavioral;									  

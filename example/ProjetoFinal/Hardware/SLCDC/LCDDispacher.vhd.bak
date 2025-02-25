@@ -1,0 +1,23 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity LCDDispacher is
+	port(
+		Dval : in std_logic;
+		Din : in std_logic_vector(8 downto 0);
+		WrL : out std_logic;
+		Dout : out std_logic_vector(8 downto 0);
+		done : out std_logic
+);		
+architecture structural of LCDDispacher is
+component Counter is
+	port(
+		PL:in std_logic;
+		CE:in std_logic;
+		CLK:in std_logic;
+		Data_in: in std_logic_vector(3 downto 0);
+		RESET: in std_logic;
+		TC: out std_logic;
+		Q:out std_logic_vector(3 downto 0)
+	);
+end component;

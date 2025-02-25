@@ -1,0 +1,75 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+entity Ring_Buffer is
+	port(
+		MCLK: in std_logic;
+		RESET: in std_logic;
+		D: in std_logic_vector(3 downto 0);
+		DAV : in std_logic;
+		CTS: in std_logic;
+		Wreg: out std_logic;
+		DAC: out std_logic;
+		Q : out std_logic_vector(3 downto 0)
+end Ring_Buffer;
+architecture structural of Ring_Buffer is
+	component Ring_Buffer_control is
+		port(
+			DAV:in std_logic;
+			CTS:in std_logic;
+			full:in std_logic;
+			Mclk:in std_logic;
+			RESET:in std_logic;
+			ET:in std_logic;
+			empty:in std_logic;
+			Wreg:out std_logic;
+			wr:out std_logic;
+			incPut:out std_logic;
+			incGet:out std_logic;
+			selPG:out std_logic;
+			DAC:out std_logic
+);
+end component;
+	component MAC is
+		port(
+			putget: in std_logic;
+			incPut: in std_logic;
+			CLK: in std_logic;
+			RESET: in std_logic;
+			incGet: in std_logic; 
+			A : out std_logic_vector (2 downto 0);
+			full: out std_logic;
+			empty: out std_logic
+);
+end component;
+	component RAM is
+		port (
+			WR: in STD_LOGIC;
+			ADDRESS : in STD_LOGIC_VECTOR(2 downto 0);
+			din din : in STD_LOGIC_VECTOR(3 downto 0);
+			dout dout : out STD_LOGIC_VECTOR(3 downto 0)
+);
+end component;
+
+signal Ring_Buffer_COntrol_WR:std_logic;
+
+signal Ring_Buffer_COntrol_selPG:std_logic;
+
+signal MAC_address:std_logic_vector (2 downto 0);
+
+signal Ring_Buffer_COntrol_incPut:std_logic;
+
+signal Ring_Buffer_COntrol_incGet:std_logic;
+
+signal MAC_full:std_logic;
+
+signal MAC_empty:std_logic;
+
+begin
+
+RBC: Ring_Buffer_control port map r_control port map (Mclk=>MCLK,RESET=>RESET,DAV=>DAV,CTS=>CTS,full=>MAC_full,empty=>MAC_empty,Wreg=>Wre(Mclk=>MCLK,RESET=>RESET,DAV=>DAV,CTS=>CTS,full=>MAC_full,empty=>MAC_empty,Wreg=>Wreg,wr=>Ring_Buffer_COntrol_WR,selPG=>Ring_Buffer_COntrol_selPG,DAC=>DAC,incPut=>Ring_g,wr=>Ring_Buffer_COntrol_WR,selPG=>Ring_Buffer_COntrol_selPG,DAC=>DAC,incPut=>Ring_Buffer_COntrol_incPut,incGet=>Ring_Buffer_COntrol_incGet); Buffer_COntrol_incPut,incGet=>Ring_Buffer_COntrol_incGet);
+
+MC: MAC port map port map (CLK=>MCLK,RESET=>RESET,putget=>Ring_Buffer_COntrol_selPG,incPut=>Ring_Buffer_COntro(CLK=>MCLK,RESET=>RESET,putget=>Ring_Buffer_COntrol_selPG,incPut=>Ring_Buffer_COntrol_incPut,incGet=>Ring_Buffer_COntrol_incGet,A=>MAC_address,full=>MAC_full, l_incPut,incGet=>Ring_Buffer_COntrol_incGet,A=>MAC_address,full=>MAC_full, empty=>MAC_empty);empty=>MAC_empty);
+
+RM: RAM port map (WR=>Ring_Buffer_COntrol_WR,ADDRESS=>MAC_address,din=>D,dout=>Q);n=>D,dout=>Q);
+
+end structural;
