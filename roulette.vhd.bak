@@ -1,0 +1,18 @@
+LIBRARY ieee: 
+USE ieee.std_logic_1164.all;
+
+
+-- This entity is responsible for the operation of the key scanner module
+entity key_scanner is
+	port(
+		Kscan : in std_logic;
+		Lines : in std_logic_vector(3 downto 0);
+		Osc   :		in std_logic;  
+		Reset : in std_logic		
+		
+		Kpress : out std_logic;
+		K      : out std_logic_vector(3 downto 0);
+		Cols   : out std_logic_vector(3 downto 0);
+
+);
+end key_scanner;
