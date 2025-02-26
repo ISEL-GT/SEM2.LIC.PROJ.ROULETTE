@@ -2,8 +2,10 @@ LIBRARY ieee;
 Use ieee.std_logic_1164.all;
 
 entity p_encoder is 
+
 	port (
 		A: in std_logic_vector(3 downto 0);
+		
 		Y: out std_logic_vector(1 downto 0);
 		GS: out std_logic
 	);
