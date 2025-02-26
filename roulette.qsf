@@ -59,3 +59,4 @@ set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/FFD.vhd
 set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/adder_4bits.vhd
 set_global_assignment -name VHDL_FILE roulette.vhd
 set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/counter.vhd
+set_global_assignment -name VHDL_FILE decoder_2x4.vhd
