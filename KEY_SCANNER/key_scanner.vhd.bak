@@ -13,10 +13,10 @@ entity counter is
 		  parallel_load_flag : in std_logic;
 		  parallel_load_value : in std_logic_vector(0 downto 3);
 		  
-		  count : out std_logic_vector(0 downto 3)
+		  count : out std_logic_vector(0 downto 3);
     );
 
-end counter;
+end registry_4bits;
 
 
 architecture structural of counter is
@@ -66,4 +66,11 @@ architecture structural of counter is
 		
 	end component;
 
+	
+	
+	
+	
+	
+	
+    
 begin

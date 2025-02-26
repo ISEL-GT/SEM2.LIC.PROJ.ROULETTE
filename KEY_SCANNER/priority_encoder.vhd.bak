@@ -1,0 +1,22 @@
+LIBRARY ieee;
+Use ieee.std_logic_1164.all;
+
+-- This entity is responsable for corresponding the 4 bits of the inputs to 2 bits
+-- with Y(0) being A(0) and A(1) and Y(1) being the A(2) and A(3)
+entity priority_encoder is 
+	port(
+		 A 	: in std_logic_vector(3 downto 0);
+		 
+		 Y 	: out std_logic_vector(1 downto 0);
+		 GS	: out std_logic
+	);
+end priority_encoder;
+
+architecture structural of priority_encoder is
+
+begin 
+
+Y(1) <= A(2) or A(3);
+Y(0) <= A(1) or A(3);
+GS <= A(0) or A(1) or A(2) or A(3); 
+end structural;
