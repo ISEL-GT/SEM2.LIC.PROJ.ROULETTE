@@ -26,3 +26,5 @@ replay_pid*
 db/
 .qsys_edit/
 devkits/
+
+*.qws

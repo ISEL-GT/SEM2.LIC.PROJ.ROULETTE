@@ -9,14 +9,14 @@ entity counter is
         CE  : in std_logic_vector(1 downto 0);
 		  CLK : in std_logic;
 		  
-		  reset : in std_logic;
-		  parallel_load_flag : in std_logic;
+		  reset 					 : in std_logic;
+		  parallel_load_flag  : in std_logic;
 		  parallel_load_value : in std_logic_vector(1 downto 0);
 		  
-		  count : out std_logic_vector(1 downto 0);
+		  count : out std_logic_vector(1 downto 0)
     );
 
-end registry_4bits;
+end counter;
 
 
 architecture behavioral of counter is
