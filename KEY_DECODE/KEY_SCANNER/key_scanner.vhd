@@ -20,7 +20,7 @@ entity key_scanner is
 end key_scanner;
 
 
-architecture structural of counter is
+architecture structural of key_scanner is
 
 	-- Imports the 4 bit registry
 	component registry_2bits is
@@ -92,7 +92,7 @@ begin
 
 			reset 				  => RESET,
 			parallel_load_flag  => parallel_load_flag,
-			parallel_load_value => parallel_load_value
+			parallel_load_value => parallel_load_value,
 
 			count => counter_partial_result
 		);
@@ -125,4 +125,4 @@ begin
 		
 	K <= counter_partial_result & registry_partial_result;
 
-end structural
+end structural;
