@@ -50,6 +50,18 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE KEY_SCANNER/p_encoder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/KeyControl.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/decoder_2x4.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/key_scanner.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/registry_4bits.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/MUX2x4.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/half_adder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/full_adder.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/FFD.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/adder_4bits.vhd
+set_global_assignment -name VHDL_FILE KEY_SCANNER/COUNTER/counter.vhd
 set_global_assignment -name VHDL_FILE KEY_DECODE/KEY_SCANNER/COUNTER/registry_4bits.vhd
 set_global_assignment -name VHDL_FILE KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x4.vhd
 set_global_assignment -name VHDL_FILE KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd
@@ -62,3 +74,4 @@ set_global_assignment -name VHDL_FILE KEY_DECODE/KEY_SCANNER/key_scanner.vhd
 set_global_assignment -name VHDL_FILE KEY_DECODE/KEY_SCANNER/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEY_DECODE/KeyControl.vhd
 set_global_assignment -name VHDL_FILE roulette.vhd
+set_global_assignment -name VHDL_FILE KEY_DECODE/key_decode.vhd

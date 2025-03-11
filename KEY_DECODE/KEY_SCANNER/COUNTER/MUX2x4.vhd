@@ -11,7 +11,7 @@ entity mux_2x4 is
 
 		selector : in std_logic;
 
-		result : out std_logic_vector(3 downto 0);
+		result : out std_logic_vector(3 downto 0)
 	);
 
 end mux_2x1;
