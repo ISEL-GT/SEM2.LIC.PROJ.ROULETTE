@@ -1,5 +1,5 @@
-Analysis & Synthesis report for roulette
-Tue Mar 18 08:59:03 2025
+Analysis & Synthesis report for Key_decode
+Tue Mar 18 09:53:53 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 18 08:59:03 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 18 09:53:53 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; roulette                                    ;
+; Revision Name                      ; Key_decode                                  ;
 ; Top-level Entity Name              ; Key_decode                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 15                                          ;
-;     Total combinational functions  ; 15                                          ;
+; Total logic elements               ; 13                                          ;
+;     Total combinational functions  ; 13                                          ;
 ;     Dedicated logic registers      ; 8                                           ;
 ; Total registers                    ; 8                                           ;
 ; Total pins                         ; 16                                          ;
@@ -75,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; Key_decode         ; roulette           ;
+; Top-level entity name                                            ; Key_decode         ; Key_decode         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -172,26 +172,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                   ;
-+-----------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                       ; Library ;
-+-----------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                     ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                     ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                             ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                         ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                         ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                                ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                            ;         ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                        ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                        ;         ;
-; KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                            ;         ;
-; KEY_DECODE/KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd ;         ;
-; KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                      ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                      ;         ;
-; KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                          ;         ;
-; KEY_DECODE/KEY_SCANNER/key_scanner.vhd                                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                                ;         ;
-; KEY_DECODE/KeyControl/KeyControl.vhd                                  ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd                                  ;         ;
-; KEY_DECODE/Key_decode.vhd                                             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd                                             ;         ;
-+-----------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                       ; Library ;
++------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd ;         ;
+; KEY_SCANNER/COUNTER/registry_2bits.vhd                     ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                     ;         ;
+; KEY_SCANNER/COUNTER/MUX2x1.vhd                             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                             ;         ;
+; KEY_SCANNER/COUNTER/half_adder.vhd                         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                         ;         ;
+; KEY_SCANNER/COUNTER/full_adder.vhd                         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                         ;         ;
+; KEY_SCANNER/COUNTER/FFD.vhd                                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                                ;         ;
+; KEY_SCANNER/COUNTER/counter.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                            ;         ;
+; KEY_SCANNER/COUNTER/adder_2bits.vhd                        ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                        ;         ;
+; KEY_SCANNER/DEC/decoder_2x4.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                            ;         ;
+; KEY_SCANNER/PENC/priority_encoder.vhd                      ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                      ;         ;
+; KEY_SCANNER/PENC/mux_2x1_penc.vhd                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                          ;         ;
+; KEY_SCANNER/key_scanner.vhd                                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                                ;         ;
+; KeyControl/KeyControl.vhd                                  ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd                                  ;         ;
+; Key_decode.vhd                                             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd                                             ;         ;
++------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -199,16 +199,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 15          ;
+; Estimated Total logic elements              ; 13          ;
 ;                                             ;             ;
-; Total combinational functions               ; 15          ;
+; Total combinational functions               ; 13          ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 6           ;
 ;     -- 3 input functions                    ; 2           ;
-;     -- <=2 input functions                  ; 7           ;
+;     -- <=2 input functions                  ; 5           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 15          ;
+;     -- normal mode                          ; 13          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 8           ;
@@ -221,8 +221,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; Reset~input ;
 ; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 93          ;
-; Average fan-out                             ; 1.69        ;
+; Total fan-out                               ; 89          ;
+; Average fan-out                             ; 1.68        ;
 +---------------------------------------------+-------------+
 
 
@@ -231,18 +231,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name              ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |Key_decode                                       ; 15 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                      ; Key_decode               ; work         ;
+; |Key_decode                                       ; 13 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                      ; Key_decode               ; work         ;
 ;    |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|KeyControl:keycontrols                                                               ; KeyControl               ; work         ;
-;    |key_scanner:keyscan|                          ; 10 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan                                                                  ; key_scanner              ; work         ;
+;    |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan                                                                  ; key_scanner              ; work         ;
 ;       |counter:Contador|                          ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter:Contador                                                 ; counter                  ; work         ;
 ;          |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits          ; register_2bits           ; work         ;
 ;             |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1 ; FFD                      ; work         ;
 ;             |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD2 ; FFD                      ; work         ;
 ;       |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|decoder_2x4:Decoder                                              ; decoder_2x4              ; work         ;
-;       |priority_encoder:Penc|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc                                            ; priority_encoder         ; work         ;
+;       |priority_encoder:Penc|                     ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc                                            ; priority_encoder         ; work         ;
 ;          |mux_2x1_penc:Mux2x1|                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|mux_2x1_penc:Mux2x1                        ; mux_2x1_penc             ; work         ;
 ;          |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1      ; partial_priority_encoder ; work         ;
-;          |partial_priority_encoder:PencPartial3|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial3      ; partial_priority_encoder ; work         ;
 ;       |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg                                               ; register_2bits           ; work         ;
 ;          |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                      ; FFD                      ; work         ;
 ;          |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                      ; FFD                      ; work         ;
@@ -346,15 +345,15 @@ Encoding Type:  One-Hot
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 8                           ;
 ;     CLR               ; 8                           ;
-; cycloneiii_lcell_comb ; 18                          ;
-;     normal            ; 18                          ;
+; cycloneiii_lcell_comb ; 16                          ;
+;     normal            ; 16                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 7                           ;
+;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.45                        ;
+; Average LUT depth     ; 1.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -373,61 +372,55 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 18 08:58:58 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
+    Info: Processing started: Tue Mar 18 09:53:49 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Key_decode -c Key_decode
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/registry_2bits_counter.vhd
-    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/registry_2bits.vhd
-    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/mux2x1.vhd
-    Info (12022): Found design unit 1: mux_2x1-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/half_adder.vhd
-    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd Line: 19
-    Info (12023): Found entity 1: half_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd Line: 21
-    Info (12023): Found entity 1: full_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/ffd.vhd
-    Info (12022): Found design unit 1: FFD-logicFunction File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd Line: 17
-    Info (12023): Found entity 1: FFD File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/counter.vhd
-    Info (12022): Found design unit 1: counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
-    Info (12023): Found entity 1: counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/counter/adder_2bits.vhd
-    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/dec/decoder_2x4.vhd
-    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
-    Info (12023): Found entity 1: decoder_2x4 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/penc/penc_partial/partial_priority_encoder.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/penc/penc_partial/partial_priority_encoder.vhd
     Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd Line: 16
     Info (12023): Found entity 1: partial_priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/PENC_Partial/partial_priority_encoder.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/penc/priority_encoder.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/registry_2bits_counter.vhd
+    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/registry_2bits.vhd
+    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/mux2x1.vhd
+    Info (12022): Found design unit 1: mux_2x1-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd Line: 19
+    Info (12023): Found entity 1: half_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/ffd.vhd
+    Info (12022): Found design unit 1: FFD-logicFunction File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd Line: 17
+    Info (12023): Found entity 1: FFD File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/counter.vhd
+    Info (12022): Found design unit 1: counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
+    Info (12023): Found entity 1: counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/counter/adder_2bits.vhd
+    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/dec/decoder_2x4.vhd
+    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
+    Info (12023): Found entity 1: decoder_2x4 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/penc/priority_encoder.vhd
     Info (12022): Found design unit 1: priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
     Info (12023): Found entity 1: priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/penc/mux_2x1_penc.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/penc/mux_2x1_penc.vhd
     Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
     Info (12023): Found entity 1: mux_2x1_penc File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/key_scanner.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file key_scanner/key_scanner.vhd
     Info (12022): Found design unit 1: key_scanner-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
     Info (12023): Found entity 1: key_scanner File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/keycontrol/keycontrol.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file keycontrol/keycontrol.vhd
     Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 19
     Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_decode.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file key_decode.vhd
     Info (12022): Found design unit 1: Key_decode-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 17
     Info (12023): Found entity 1: Key_decode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 19
-    Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 25
 Info (12127): Elaborating entity "Key_decode" for the top level hierarchy
 Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:keyscan" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 55
 Info (12128): Elaborating entity "counter" for hierarchy "key_scanner:keyscan|counter:Contador" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 74
@@ -445,14 +438,14 @@ Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:keycontr
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 15 logic cells
+    Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Tue Mar 18 08:59:03 2025
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Tue Mar 18 09:53:53 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:11
 
 

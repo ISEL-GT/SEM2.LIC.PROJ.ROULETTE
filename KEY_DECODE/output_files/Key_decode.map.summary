@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Mar 18 08:59:03 2025
+Analysis & Synthesis Status : Successful - Tue Mar 18 09:53:53 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-Revision Name : roulette
+Revision Name : Key_decode
 Top-level Entity Name : Key_decode
 Family : MAX 10
-Total logic elements : 15
-    Total combinational functions : 15
+Total logic elements : 13
+    Total combinational functions : 13
     Dedicated logic registers : 8
 Total registers : 8
 Total pins : 16
