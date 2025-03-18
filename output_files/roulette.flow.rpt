@@ -1,5 +1,5 @@
 Flow report for roulette
-Tue Mar 18 10:59:13 2025
+Tue Mar 18 11:49:32 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 18 10:59:13 2025       ;
+; Flow Status                        ; Successful - Tue Mar 18 11:49:32 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2025 10:58:48 ;
+; Start date & time ; 03/18/2025 11:48:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; roulette            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105850251781432.174229552823632        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 2544930702742.174229850507576          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4873 MB             ; 00:00:24                           ;
-; Fitter               ; 00:00:05     ; 1.1                     ; 6613 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4700 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4954 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4809 MB             ; 00:00:42                           ;
+; Fitter               ; 00:00:13     ; 1.0                     ; 5385 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4692 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4805 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
+; Total                ; 00:01:01     ; --                      ; --                  ; 00:00:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +111,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-55NJG120  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-55NJG120  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-55NJG120  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-55NJG120  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-55NJG120  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; KELP-WORK        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; KELP-WORK        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; KELP-WORK        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; KELP-WORK        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; KELP-WORK        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
