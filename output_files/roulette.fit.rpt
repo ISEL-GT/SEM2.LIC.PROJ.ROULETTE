@@ -1,5 +1,5 @@
 Fitter report for roulette
-Tue Mar 18 10:59:06 2025
+Tue Mar 18 11:49:16 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 18 10:59:06 2025       ;
+; Fitter Status                      ; Successful - Tue Mar 18 11:49:16 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
@@ -150,15 +150,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.7%      ;
+;     Processor 2            ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -211,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.pin.
+The pin-out file can be found in C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.pin.
 
 
 +----------------------------------------------------------------------+
@@ -1323,7 +1323,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 10M50DAF484C6GES for design "roulette"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1360,14 +1360,14 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node CLK~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 10
+Info (176353): Automatically promoted node CLK~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Key_decode:keydecode|KeyControl:keycontrols|CurrentState.State_Scan_Lines  File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 23
+Info (176353): Automatically promoted node Key_decode:keydecode|KeyControl:keycontrols|CurrentState.State_Scan_Lines  File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl.vhd Line: 23
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node Key_decode:keydecode|KeyControl:keycontrols|Selector1~0 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 34
+        Info (176357): Destination node Key_decode:keydecode|KeyControl:keycontrols|Selector1~0 File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl.vhd Line: 34
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1393,7 +1393,7 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y33 to location X55_Y43
@@ -1401,26 +1401,26 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.fit.smsg
+Info (144001): Generated suppressed messages file C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 6613 megabytes
-    Info: Processing ended: Tue Mar 18 10:59:06 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5385 megabytes
+    Info: Processing ended: Tue Mar 18 11:49:17 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.fit.smsg.
+The suppressed messages can be found in C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.fit.smsg.
 
 
