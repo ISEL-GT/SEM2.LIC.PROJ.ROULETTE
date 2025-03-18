@@ -11,7 +11,7 @@ object HAL {
     }
 
     fun isBit(mask: Int):Boolean {
-        require(mask.toString().length==1){ "mask must be one bit only" }
+        // require(mask.toString().length==1){ "mask must be one bit only" }
         return UsbPort.read().and(mask) != 0
     }
 
