@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.ammdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.dfp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.logdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.cdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.dpi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.hdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.kpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.logdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../output_files/roulette.cdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/usbPort.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Software.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USB_PORT.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ftd2xx64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hardware.simul" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/USB_PORT.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ftd2xx64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roulette_software.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2uUJNq1kYSW1zhfHOTREvxwcep2" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.UsbPortKt (1).executor": "Run",
+    "Kotlin.UsbPortKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette_software/lib/usbPort.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Isel\2Semestre\LIC\SEM2.LIC.PROJ.ROULETTE\roulette_software\src\main\kotlin\com\github\iselgt\roulette" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.github.iselgt.roulette" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.UsbPortKt (1)">
+    <configuration name="UsbPortKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.UsbPortKt" />
+      <module name="roulette_software" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsbPortKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UsbPortKt" />
+      <module name="Software" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.UsbPortKt (1)" />
+        <item itemvalue="Kotlin.UsbPortKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="" />
+      <created>1728914328859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728914328859</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
+      <option name="closed" value="true" />
+      <created>1742298216927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742298216927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk" />
+  </component>
+</project>
