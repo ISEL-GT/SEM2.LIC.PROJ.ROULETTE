@@ -9,26 +9,26 @@ object HAL {
         resetOutput = 0
         UsbPort.write(resetOutput)
     }
-
+    //Checks if the bit chosen by the mask is on
     fun isBit(mask: Int):Boolean {
-        // require(mask.toString().length==1){ "mask must be one bit only" }
+        require(mask.countOneBits()==1){ "mask must be one bit only" }
         return UsbPort.read().and(mask) != 0
     }
-
+    //Read the bits chosen by the mask and puts 0 on the bits that you aren't checking
     fun readBits(mask:Int):Int{
         return UsbPort.read().and(mask)
     }
-
+    //Force 0 on the bits chosen by the mask
     fun clrBits(mask:Int) {
         resetOutput = resetOutput.and(0xFF - mask)
         UsbPort.write(resetOutput)
     }
-
+    //Force 1 on the bits chosen by the mask
     fun setBits(mask:Int){
         resetOutput = mask.or(resetOutput)
         UsbPort.write(resetOutput)
     }
-
+    //Chose the bits that u want to rewrite and force them with the input value
     fun writeBits(mask:Int, value:Int){
         clrBits(mask)
         setBits(value.and(mask))

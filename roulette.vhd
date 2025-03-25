@@ -7,12 +7,12 @@ entity roulette is
 
 	port (
 		Liness: 	in std_logic_vector(3 downto 0);
-		CLK:		in std_logic;
+		CLK   :	in std_logic;
 		Reset:	in std_logic;
 		
 		Colss : 	out std_logic_vector(3 downto 0);
-		Kout : 	out std_logic_vector(3 downto 0);
-		Kval : 	out std_logic 
+		Kout  : 	out std_logic_vector(3 downto 0);
+		Kval	: 	out std_logic 
 	);
 end roulette;
 
@@ -27,7 +27,7 @@ architecture structural of roulette is
 			
 			Colss : 	out std_logic_vector(3 downto 0);
 			Kout 	: 	out std_logic_vector(3 downto 0);
-			Kval 	: 	out std_logic 
+			Kval	: 	out std_logic 
 		);
 	end component;
 	
@@ -55,10 +55,11 @@ architecture structural of roulette is
 		CLK 		=>	CLK,
 		Reset 	=>	Reset,
 		Colss 	=> sig_cols,
-		Kout		=> sig_k3_0
+		Kout		=> sig_k3_0,
+		Kval 		=> sig_kval
 	);
 	
-	usbPortVHD: 	UsbPort port map (
+	usbPortVHD: 		UsbPort port map (
 		inputPort(0) 	=> sig_kval,
 		inputPort(1)	=> sig_k3_0(0),
 		inputPort(2)	=> sig_k3_0(1),
@@ -68,7 +69,7 @@ architecture structural of roulette is
 	);
 	
 	
-	Kval 	<= sig_kval;
+	Kval	<= sig_kval;
 	Kout 	<= sig_k3_0;
 	Colss <= sig_cols;
 	

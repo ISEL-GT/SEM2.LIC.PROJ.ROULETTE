@@ -5,42 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.ammdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.dfp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.logdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.cdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.dpi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.hdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.kpt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.logdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../output_files/roulette.cdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/usbPort.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USB_PORT.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftd2xx64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware.simul" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/USB_PORT.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ftd2xx64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roulette_software.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.done" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.done" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../roulette.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware.simul" beforeDir="false" afterPath="$PROJECT_DIR$/hardware.simul" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +36,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.UsbPortKt (1).executor": "Run",
-    "Kotlin.UsbPortKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette_software/lib/usbPort.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.UsbPortKt (1).executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.UsbPortKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette_software&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Isel\2Semestre\LIC\SEM2.LIC.PROJ.ROULETTE\roulette_software\src\main\kotlin\com\github\iselgt\roulette" />

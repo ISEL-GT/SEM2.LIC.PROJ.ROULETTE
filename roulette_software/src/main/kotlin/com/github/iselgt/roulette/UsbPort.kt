@@ -8,6 +8,5 @@ fun main(args: Array<String>) {
         val value = UsbPort.read()
         UsbPort.write(value)
     }
-
 }
 
