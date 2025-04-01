@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Mon Mar 24 11:08:52 2025
+Tue Apr 01 16:23:52 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,25 +10,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |roulette|Key_decode:keydecode|KeyControl:keycontrols|CurrentState
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Parameter Settings for User Entity Instance: UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst
- 13. Port Connectivity Checks: "UsbPort:usbPortVHD"
- 14. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|register_2bits:Reg"
- 15. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
- 16. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
- 17. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits"
- 18. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits"
- 19. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador"
- 20. Virtual JTAG Settings
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  5. Analysis & Synthesis IP Cores Summary
+  6. Parameter Settings for User Entity Instance: UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst
+  7. Parameter Settings for User Entity Instance: Lcd:inst_lcd|UsbPort:instance_UsbPort|sld_virtual_jtag:b2v_inst
+  8. Port Connectivity Checks: "Lcd:inst_lcd|UsbPort:instance_UsbPort"
+  9. Port Connectivity Checks: "UsbPort:usbPortVHD"
+ 10. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|register_2bits:Reg"
+ 11. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
+ 12. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
+ 13. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits"
+ 14. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits"
+ 15. Port Connectivity Checks: "Key_decode:keydecode|key_scanner:keyscan|counter:Contador"
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -55,22 +48,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 24 11:08:52 2025       ;
+; Analysis & Synthesis Status        ; Failed - Tue Apr 01 16:23:52 2025           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 163                                         ;
-;     Total combinational functions  ; 139                                         ;
-;     Dedicated logic registers      ; 94                                          ;
-; Total registers                    ; 94                                          ;
-; Total pins                         ; 15                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -169,113 +162,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                              ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                    ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
-; KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                   ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                   ;             ;
-; KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd           ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd           ;             ;
-; KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                       ;             ;
-; KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                         ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                         ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                  ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                  ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                          ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                          ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                      ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                      ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                      ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                      ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                             ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                         ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                         ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                     ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                     ;             ;
-; KEY_DECODE/KEY_SCANNER/key_scanner.vhd                             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                             ;             ;
-; KEY_DECODE/KeyControl.vhd                                          ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl.vhd                                          ;             ;
-; KEY_DECODE/Key_decode.vhd                                          ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd                                          ;             ;
-; roulette.vhd                                                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd                                                       ;             ;
-; UsbPort.vhd                                                        ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd                                                        ;             ;
-; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                       ;             ;
-; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                 ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                            ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                        ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                              ; altera_sld  ;
-; db/ip/sld86bd74f0/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                         ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                           ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
-
-
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 163                      ;
-;                                             ;                          ;
-; Total combinational functions               ; 139                      ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 59                       ;
-;     -- 3 input functions                    ; 35                       ;
-;     -- <=2 input functions                  ; 45                       ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 131                      ;
-;     -- arithmetic mode                      ; 8                        ;
-;                                             ;                          ;
-; Total registers                             ; 94                       ;
-;     -- Dedicated logic registers            ; 94                       ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 15                       ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 107                      ;
-; Total fan-out                               ; 755                      ;
-; Average fan-out                             ; 2.78                     ;
-+---------------------------------------------+--------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |roulette                                                                                                                               ; 139 (2)             ; 94 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |roulette                                                                                                                                                                                                                                                                                                                                            ; roulette                          ; work         ;
-;    |Key_decode:keydecode|                                                                                                               ; 13 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode                                                                                                                                                                                                                                                                                                                       ; Key_decode                        ; work         ;
-;       |KeyControl:keycontrols|                                                                                                          ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|KeyControl:keycontrols                                                                                                                                                                                                                                                                                                ; KeyControl                        ; work         ;
-;       |key_scanner:keyscan|                                                                                                             ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan                                                                                                                                                                                                                                                                                                   ; key_scanner                       ; work         ;
-;          |counter:Contador|                                                                                                             ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|counter:Contador                                                                                                                                                                                                                                                                                  ; counter                           ; work         ;
-;             |register_2bits:instance_registry_2bits|                                                                                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits                                                                                                                                                                                                                                           ; register_2bits                    ; work         ;
-;                |FFD:FFD1|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1                                                                                                                                                                                                                                  ; FFD                               ; work         ;
-;                |FFD:FFD2|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD2                                                                                                                                                                                                                                  ; FFD                               ; work         ;
-;          |decoder_2x4:Decoder|                                                                                                          ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|decoder_2x4:Decoder                                                                                                                                                                                                                                                                               ; decoder_2x4                       ; work         ;
-;          |priority_encoder:Penc|                                                                                                        ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc                                                                                                                                                                                                                                                                             ; priority_encoder                  ; work         ;
-;             |mux_2x1_penc:Mux2x1|                                                                                                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|mux_2x1_penc:Mux2x1                                                                                                                                                                                                                                                         ; mux_2x1_penc                      ; work         ;
-;             |partial_priority_encoder:PencPartial1|                                                                                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1                                                                                                                                                                                                                                       ; partial_priority_encoder          ; work         ;
-;          |register_2bits:Reg|                                                                                                           ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|register_2bits:Reg                                                                                                                                                                                                                                                                                ; register_2bits                    ; work         ;
-;             |FFD:FFD1|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                                                                                                                                                                                                                                                       ; FFD                               ; work         ;
-;             |FFD:FFD2|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|Key_decode:keydecode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                                                                                                                                                                                                                                                       ; FFD                               ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 124 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 123 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 123 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 123 (1)             ; 86 (5)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 122 (0)             ; 81 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 122 (84)            ; 81 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
-;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
-;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -289,45 +180,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |roulette|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |roulette|Key_decode:keydecode|KeyControl:keycontrols|CurrentState                                                                          ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
-; Name                            ; CurrentState.State_Ack_Waiting ; CurrentState.State_Val ; CurrentState.State_Scan_Lines ; CurrentState.State_Scan_Columns ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
-; CurrentState.State_Scan_Columns ; 0                              ; 0                      ; 0                             ; 0                               ;
-; CurrentState.State_Scan_Lines   ; 0                              ; 0                      ; 1                             ; 1                               ;
-; CurrentState.State_Val          ; 0                              ; 1                      ; 0                             ; 1                               ;
-; CurrentState.State_Ack_Waiting  ; 1                              ; 0                      ; 0                             ; 1                               ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 94    ;
-; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 41    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 58    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
-; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
-; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------+
@@ -347,13 +199,41 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UsbPort:usbPortVHD"                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; outputport[7..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lcd:inst_lcd|UsbPort:instance_UsbPort|sld_virtual_jtag:b2v_inst ;
++-------------------------+------------------+-----------------------------------------------------------------+
+; Parameter Name          ; Value            ; Type                                                            ;
++-------------------------+------------------+-----------------------------------------------------------------+
+; sld_auto_instance_index ; YES              ; String                                                          ;
+; sld_instance_index      ; 0                ; Signed Integer                                                  ;
+; sld_ir_width            ; 8                ; Signed Integer                                                  ;
+; sld_sim_n_scan          ; 0                ; Signed Integer                                                  ;
+; sld_sim_action          ; UNUSED           ; String                                                          ;
+; sld_sim_total_length    ; 0                ; Signed Integer                                                  ;
+; lpm_type                ; sld_virtual_jtag ; String                                                          ;
+; lpm_hint                ; UNUSED           ; String                                                          ;
++-------------------------+------------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lcd:inst_lcd|UsbPort:instance_UsbPort"                                                       ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; inputport     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outputport[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputport[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UsbPort:usbPortVHD"                                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; outputport[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -416,52 +296,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+-------+----------+-------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Virtual JTAG Settings                                                                                                                                          ;
-+----------------+------------+------------------+----------+---------+-----------------+-------------------------+----------------------------------------------+
-; Instance Index ; Auto Index ; Index Reassigned ; IR Width ; Address ; USER1 DR length ; VIR capture instruction ; Hierarchy Location                           ;
-+----------------+------------+------------------+----------+---------+-----------------+-------------------------+----------------------------------------------+
-; 0              ; YES        ; N/A              ; 8        ; 0x100   ; 9               ; 0x00B                   ; UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst ;
-+----------------+------------+------------------+----------+---------+-----------------+-------------------------+----------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 54                          ;
-; cycloneiii_ff         ; 8                           ;
-;     CLR               ; 8                           ;
-; cycloneiii_lcell_comb ; 17                          ;
-;     normal            ; 17                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 6                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.47                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 24 11:08:40 2025
+    Info: Processing started: Tue Apr 01 16:23:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -504,14 +345,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file key_dec
 Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/key_scanner.vhd
     Info (12022): Found design unit 1: key_scanner-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
     Info (12023): Found entity 1: key_scanner File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file key_decode/keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl.vhd Line: 19
-    Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_decode.vhd
     Info (12022): Found design unit 1: Key_decode-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 17
     Info (12023): Found entity 1: Key_decode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 19
+    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
     Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
     Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 33
@@ -525,10 +363,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
 Info (12021): Found 2 design units, including 1 entities, in source file testbench/key_decode_tb.vhd
     Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd Line: 7
     Info (12023): Found entity 1: Key_decode_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_decode/keycontrol/keycontrol.vhd
+    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 19
+    Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file lcd/lcd.vhd
+    Info (12022): Found design unit 1: Lcd-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 12
+    Info (12023): Found entity 1: Lcd File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 4
 Info (12127): Elaborating entity "roulette" for the top level hierarchy
-Critical Warning (10920): VHDL Incomplete Partial Association warning at roulette.vhd(62): port or argument "inputPort" has 3/8 unassociated elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 62
-Critical Warning (10920): VHDL Incomplete Partial Association warning at roulette.vhd(62): port or argument "outputPort" has 7/8 unassociated elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 62
-Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:keydecode" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 52
+Critical Warning (10920): VHDL Incomplete Partial Association warning at roulette.vhd(78): port or argument "inputPort" has 3/8 unassociated elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 78
+Critical Warning (10920): VHDL Incomplete Partial Association warning at roulette.vhd(78): port or argument "outputPort" has 1/8 unassociated elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 78
+Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:keydecode" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 68
 Info (12128): Elaborating entity "key_scanner" for hierarchy "Key_decode:keydecode|key_scanner:keyscan" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 55
 Info (12128): Elaborating entity "counter" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 74
 Info (12128): Elaborating entity "adder_2bits" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 75
@@ -542,7 +386,7 @@ Info (12128): Elaborating entity "priority_encoder" for hierarchy "Key_decode:ke
 Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 54
 Info (12128): Elaborating entity "mux_2x1_penc" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|mux_2x1_penc:Mux2x1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 81
 Info (12128): Elaborating entity "KeyControl" for hierarchy "Key_decode:keydecode|KeyControl:keycontrols" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 65
-Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:usbPortVHD" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 62
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:usbPortVHD" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 78
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 80
 Info (12133): Instantiated megafunction "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 80
@@ -559,8 +403,10 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:
 Info (12131): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "Lcd" for hierarchy "Lcd:inst_lcd" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 95
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Lcd.vhd(30): port or argument "outputPort" has 2/8 unassociated elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 30
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.03.24.11:08:46 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.04.01.16:23:44 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -579,21 +425,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 188 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 168 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Mon Mar 24 11:08:52 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+Error (12014): Net "sig_d7_4[3]", which fans out to "D[3]", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 59
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[4]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|D[3]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 8
+Error (12014): Net "sig_d7_4[2]", which fans out to "D[2]", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 59
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[3]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|D[2]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 8
+Error (12014): Net "sig_d7_4[1]", which fans out to "D[1]", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 59
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[2]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|D[1]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 8
+Error (12014): Net "sig_d7_4[0]", which fans out to "D[0]", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 59
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[1]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|D[0]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 8
+Error (12014): Net "sig_enable", which fans out to "Enable", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 60
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[7]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|Enable" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 7
+Error (12014): Net "sig_rs", which fans out to "RegisterSelector", cannot be assigned more than one value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 61
+    Error (12015): Net is fed by "UsbPort:usbPortVHD|outputPort[6]" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 29
+    Error (12015): Net is fed by "Lcd:inst_lcd|RegisterSelector" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/LCD/Lcd.vhd Line: 6
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 18 errors, 4 warnings
+    Error: Peak virtual memory: 4793 megabytes
+    Error: Processing ended: Tue Apr 01 16:23:52 2025
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:37
 
 

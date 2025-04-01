@@ -1,5 +1,5 @@
 Assembler report for roulette
-Tue Mar 18 11:49:23 2025
+Tue Apr 01 15:04:44 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -11,7 +11,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof
+  6. Assembler Device Options: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 18 11:49:23 2025 ;
+; Assembler Status      ; Successful - Tue Apr 01 15:04:44 2025 ;
 ; Revision Name         ; roulette                              ;
 ; Top-level Entity Name ; roulette                              ;
 ; Family                ; MAX 10                                ;
@@ -64,23 +64,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+------------------------+--------------+
 
 
-+--------------------------------------------------------------+
-; Assembler Generated Files                                    ;
-+--------------------------------------------------------------+
-; File Name                                                    ;
-+--------------------------------------------------------------+
-; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof ;
-+--------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Generated Files                                              ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof ;
++------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof ;
-+----------------+-----------------------------------------------------------------------+
-; Option         ; Setting                                                               ;
-+----------------+-----------------------------------------------------------------------+
-; JTAG usercode  ; 0x002861E7                                                            ;
-; Checksum       ; 0x002861E7                                                            ;
-+----------------+-----------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.sof ;
++----------------+---------------------------------------------------------------------------------+
+; Option         ; Setting                                                                         ;
++----------------+---------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0028D91B                                                                      ;
+; Checksum       ; 0x0028D91B                                                                      ;
++----------------+---------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -89,15 +89,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 18 11:49:19 2025
+    Info: Processing started: Tue Apr 01 15:04:42 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4692 megabytes
-    Info: Processing ended: Tue Mar 18 11:49:23 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4694 megabytes
+    Info: Processing ended: Tue Apr 01 15:04:44 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

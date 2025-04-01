@@ -156,13 +156,15 @@ object LCD {
         writeNibble(false, SET8BITS)         //
         Time.sleep(wait_time)                               // Tempo de espera menor, 5L
         writeNibble(false, SET8BITS)
-        //
+
         writeNibble(false, SET4BITS)         //
                                                             // Start 2 lines mode
         cursor(0, 0)
-        writeCMD(Display_On_with_cursor_blink)
+        writeCMD(0x28)
+        writeCMD(0x08)
         writeCMD(0x01)
         writeCMD(0x06)
+        writeCMD(Display_On_with_cursor_blink)
         Time.sleep(wait_time)
 
     }
