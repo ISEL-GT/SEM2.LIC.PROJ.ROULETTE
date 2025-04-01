@@ -1,20 +1,20 @@
 package com.github.iselgt.roulette
 
-import isel.leic.utils.Time
-
+import com.github.iselgt.roulette.KBD
+import isel.leic.UsbPort
+import jdk.internal.org.jline.utils.Display
+/*
 object LCD {
     private const val LINES = 2
     private const val COLS = 16
 
     private const val SERIAL_INTERFACE = false
 
-    const val DATAMASK = 0x1E
     const val Enable_Mask = 0x80            // the value of 1000 0000 on outputPort
     const val RegisterSeletct_Mask = 0x40   // the value of 0100 0000 on outputPort
 
     const val Wait_first_time = 15L
     const val wait_time = 5L
-    const val WAIT_NIMBLE_TIME = 20L
 
     /** Some values of 8 bits for the instructions used on LCD
      *
@@ -95,108 +95,88 @@ object LCD {
      *  F = 0 -> 5x8 dots
      */
 
-    const val SET4BITS = 0x2
-    const val SET8BITS = 0x3
+    const val Set4bits_with_1lines = 0x20
+    const val Set4bits_with_1linesF = 0x24
+    const val Set4bits_with_2lines = 0x28
+    const val Set4bits_with_2linesF = 0x2C
+
+    const val Set8bits_with_1lines = 0x30
+    const val Set8bits_with_1linesF = 0x34
+    const val Set8bits_with_2lines = 0x38
+    const val Set8bits_with_2linesF = 0x3C
 
 
     private fun writeDATA(data: Int) {
-        writeByte(true, data)
+        writeByte(false, data)
     }
 
     private fun writeCMD(data: Int) {
-        writeByte(false, data)
+        writeByte(true, data)
     }
 
     // Escreve um byte de comando/dados no LCD
     fun writeByte(rs: Boolean, data: Int) {
 
-
         // 4 bits mais significativos
-        val topdata = data shr 4
+        val topString = data.toString().substring(0, 4).toInt()
+
         // 4 bits menos significativos
-        val botdata = data and 0x0F
+        val botString = data.toString().substring(4, 8).toInt()
 
-        writeNibble(rs, topdata)  // High
-        writeNibble(rs, botdata)  // Low
-
+        writeNibble(rs, topString)
+        println(botString)
+        println(topString)
+        writeNibble(rs, botString)
     }
+
 
     // Escreve um nibble de comando/dados no LCD
-    fun writeNibble(rs: Boolean, data: Int) {
-        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data.shl(1))
-        else writeNibbleParallel(rs, data.shl(1))
+    fun writeNibble(rs : Boolean , data: Int) {
+        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data)
+        else writeNibbleParallel(rs, data)
     }
+
 
 
     // Escreve um byte de comando/dados no LCD em paralelo
-    fun writeNibbleParallel(rs: Boolean, data: Int) {
-        if (rs) {
-            HAL.setBits(RegisterSeletct_Mask)
-        }
-        else{
-            HAL.clrBits(DATAMASK)
-        }
-        Time.sleep(WAIT_NIMBLE_TIME)
-        HAL.setBits(Enable_Mask)
-        HAL.writeBits(DATAMASK, data)
-        Time.sleep(WAIT_NIMBLE_TIME)
-        HAL.clrBits(Enable_Mask)
-        Time.sleep(WAIT_NIMBLE_TIME)
+    fun writeNibbleParallel(rs : Boolean , data: Int) {
+        HAL.writeBits(0xFF, Set4bits_with_2linesF)
+        HAL.writeBits(
+
+
+         HAL.writeBits(0x10, if(rs)0x10 else 0x00)
+
+                HAL.writeBits(0x0F, data)
+
+                HAL.writeBits(0x20, 0x20)
+                Thread.sleep(20)
+                HAL.writeBits(0x20, 0x00)
     }
 
     // Escreve um byte de comando/dados no LCD em serie
-    fun writeNibbleSerial(rs: Boolean, data: Int) {
+    fun writeNibbleSerial(rs : Boolean , data: Int) {
         TODO()
     }
 
-    fun init() {
-        Time.sleep(Wait_first_time)                         // Tempo de espera maior para init 15L
-        writeNibble(false, SET8BITS)         //
-        Time.sleep(wait_time)                               // Tempo de espera menor, 5L
-        writeNibble(false, SET8BITS)         //
-        Time.sleep(wait_time)                               // Tempo de espera menor, 5L
-        writeNibble(false, SET8BITS)
-        //
-        writeNibble(false, SET4BITS)         //
-                                                            // Start 2 lines mode
-        cursor(0, 0)
-        writeCMD(Display_On_with_cursor_blink)
-        writeCMD(0x01)
-        writeCMD(0x06)
-        Time.sleep(wait_time)
-
+    fun init(){
+        Thread.sleep(Wait_first_time)
+        KBD.init()
+        writeCMD(Set4bits_with_1linesF)
     }
 
-    // UPcode e parametros
-
     fun write(c: Char) {
-        if (c != KBD.vazio) writeDATA(c.code)   //.code => .toInt()
     }
 
     fun write(text: String) {
-        for (c in text) {
-            write(c)
-        }
     }
 
-    fun cursor(line: Int, column: Int) {
-        val address = if (line == 0) 0x00 else SET4BITS
-        writeCMD(address + column)
+    fun cursor(line: Int, column: Int){
     }
 
-    fun clear() {
-        writeCMD(Display_Clear)
-        Time.sleep(wait_time)
+    fun clear(){
     }
 }
-
-fun main(){
-    HAL.init()
-    LCD.init()
-    while (true){
-        LCD.write(KBD.waitKey(500))
-    }
-}
+*/
 
 
 
@@ -204,27 +184,6 @@ fun main(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 object LCD{
 
@@ -321,4 +280,3 @@ fun main() {
     LCD.write("HELLO WORD")
 
 }
-*/

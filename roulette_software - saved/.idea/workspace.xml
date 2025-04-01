@@ -41,7 +41,7 @@
     "JUnit.HALTest.halGlobalTest.executor": "Run",
     "JUnit.KBDTest.kbdTest.executor": "Run",
     "Kotlin.KBDKt.executor": "Run",
-    "Kotlin.LCDKt.executor": "Run",
+    "Kotlin.LCDKt.executor": "Debug",
     "Kotlin.UsbPortKt (1).executor": "Run",
     "Kotlin.UsbPortKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -62,7 +62,7 @@
       <recent name="com.github.iselgt.roulette" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.LCDKt">
+  <component name="RunManager">
     <configuration name="HALTest.halGlobalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
       <extension name="coverage">
@@ -102,13 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LCDKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.LCDKt" />
-      <module name="roulette_software" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsbPortKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.UsbPortKt" />
       <module name="roulette_software" />
@@ -116,13 +109,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsbPortKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UsbPortKt" />
+      <module name="Software" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.LCDKt" />
         <item itemvalue="Kotlin.KBDKt" />
         <item itemvalue="JUnit.KBDTest.kbdTest" />
         <item itemvalue="Kotlin.UsbPortKt (1)" />
         <item itemvalue="JUnit.HALTest.halGlobalTest" />
+        <item itemvalue="Kotlin.UsbPortKt" />
       </list>
     </recent_temporary>
   </component>
@@ -149,12 +149,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk" />
     <option name="LAST_COMMIT_MESSAGE" value="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-defaults>
-        <breakpoint suspend="THREAD" type="kotlin-line" />
-      </breakpoints-defaults>
-    </breakpoint-manager>
   </component>
 </project>

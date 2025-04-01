@@ -21,9 +21,9 @@ object KBD {
         if (HAL.isBit(Kval)) {
             val key = HAL.readBits(K)
             HAL.setBits(Kack)
-            while(!HAL.isBit(Kval)) {
-                  HAL.clrBits(Kack)
-                  return keys[key.shr(1)] // We use a logical shift right as the values of the K3:0 are the UsbPortInput(4:1)
+            if (!HAL.isBit(Kval)) {
+                HAL.clrBits(Kack)
+                return keys[key.shr(1)] // We use a logical shift right as the values of the K3:0 are the UsbPortInput(4:1)
             }
         }
         return vazio

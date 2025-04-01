@@ -24,7 +24,7 @@ object HAL {
 
     //Force 0 on the bits chosen by the mask
     fun clrBits(mask:Int) {
-        resetOutput = resetOutput.and(mask.inv())
+        resetOutput = resetOutput.and(0xFF - mask)
         UsbPort.write(resetOutput)
     }
 
