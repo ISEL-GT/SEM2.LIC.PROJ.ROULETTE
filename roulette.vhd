@@ -8,12 +8,12 @@ entity roulette is
 	port (
 		Liness: 	in std_logic_vector(3 downto 0);
 		CLK   :	in std_logic;
-		Reset :	in std_logic;
+		Reset :	in std_logic;		
 		
+		LCD_RS				: 	out std_logic;
+		LCD_EN				: 	out std_logic;			
+		LCD_DATA				: 	out std_logic_vector(7 downto 4);
 		
-		RegisterSelector 	: 	out std_logic;
-		Enable				: 	out std_logic;			
-		D						: 	out std_logic_vector(3 downto 0);
 		Colss 				: 	out std_logic_vector(3 downto 0);
 		Kout  				: 	out std_logic_vector(3 downto 0);
 		Kval					: 	out std_logic 
@@ -42,15 +42,6 @@ architecture structural of roulette is
 		);
 	end component;
 	
-	component Lcd is 
-	    port (		
-			RegisterSelector 	: 	out std_logic;
-			Enable				: 	out std_logic;
-			D 						: 	out std_logic_vector(3 downto 0) 
-		);
-	end component;
-	
-	
 	signal sig_k3_0	: std_logic_vector(3 downto 0);
 	signal sig_kscan 	: std_logic_vector(1 downto 0);
 	signal sig_cols 	: std_logic_vector(3 downto 0);
@@ -75,6 +66,7 @@ architecture structural of roulette is
 		Kval 		=> sig_kval
 	);
 	
+	
 	usbPortVHD: 		UsbPort port map (
 		inputPort(0) 	=> sig_kval,
 		inputPort(1)	=> sig_k3_0(0),
@@ -92,15 +84,9 @@ architecture structural of roulette is
 		outputPort(7) 	=> sig_enable
 	);
 	
-	inst_lcd: Lcd port map(
-		RegisterSelector 	=> sig_rs,
-		Enable				=> sig_enable,
-		D 						=> sig_d7_4
-	);
-	
-	RegisterSelector 	<= sig_rs;
-	Enable				<= sig_enable;
-	D 						<= sig_d7_4;
+	LCD_RS			 	<= sig_rs;
+	LCD_EN				<= sig_enable;
+	LCD_DATA				<= sig_d7_4;
 	
 	Kval	<= sig_kval;
 	Kout 	<= sig_k3_0;

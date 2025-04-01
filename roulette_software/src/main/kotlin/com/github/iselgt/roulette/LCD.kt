@@ -1,5 +1,7 @@
 package com.github.iselgt.roulette
 
+import com.github.iselgt.roulette.components.Mask
+import isel.leic.UsbPort
 import isel.leic.utils.Time
 
 object LCD {
@@ -172,7 +174,7 @@ object LCD {
     // UPcode e parametros
 
     fun write(c: Char) {
-        if (c != KBD.vazio) writeDATA(c.code)   //.code => .toInt()
+        if (c != Mask.NONE_VALUE().toChar()) writeDATA(c.code)   //.code => .toInt()
     }
 
     fun write(text: String) {
@@ -192,10 +194,10 @@ object LCD {
     }
 }
 
-fun main(){
+fun main() {
     HAL.init()
     LCD.init()
-    while (true){
+    while (true) {
         LCD.write(KBD.waitKey(500))
     }
 }

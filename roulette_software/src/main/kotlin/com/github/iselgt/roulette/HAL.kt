@@ -40,3 +40,70 @@ object HAL {
         setBits(value.and(mask))
     }
 }
+
+
+/*
+import kotlin.math.exp
+// HAL ALEX
+object HAL {
+
+    /**
+     * A representation of the output stream, used to track the data within it
+     */
+    public var outputStream = 0x00
+
+    fun init() = writeBits(0)
+
+    /**
+     * Checks if the bits specified by the mask match.
+     * Useful for checking if a bit is set to 1.
+     *
+     * @param mask The mask used to match the bits
+     * @return Whether the mask is matched or not
+     */
+    fun isBit(mask: Int) : Boolean = readBits(mask) != 0x0
+
+    /**
+     * Returns the value of the bits specified by the mask
+     *
+     * @param mask The mask with the bits to match against
+     * @return A binary string with the values for the matched vals
+     */
+    fun readBits(mask: Int) : Int = UsbPort.read().and(mask)
+
+    /**
+     * Clears the bits, setting whatever values of mask = 1 to 0 and writing it into
+     * the USB Port channel.
+     *
+     * @param mask The mask to match against
+     */
+    fun clrBits(mask: Int) : HAL {
+        writeBits(mask.inv(), outputStream)
+        return this
+    }
+
+    /**
+     * Sets the bits specified by the mask as '1'
+     * @param mask The mask to match against
+     */
+    fun setBits(mask: Int): HAL {
+        val expression = mask or outputStream
+
+        writeBits(expression)
+        return this
+    }
+
+    /**
+     * Writes the existing "value" bits on the indexes specified by "mask"
+     *
+     * @param mask The mask to match against
+     * @param value The value to get the bits from
+     */
+    fun writeBits(mask: Int, value: Int = mask): HAL {
+        outputStream = mask and value
+        UsbPort.write(outputStream)
+
+        return this
+    }
+}
+*/
