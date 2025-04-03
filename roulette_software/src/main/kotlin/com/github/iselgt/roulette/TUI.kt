@@ -40,7 +40,7 @@ fun main() {
         else {                                          // Write the key after clearing and reset the flag
             if (isCleared) {
                 LCD.write(key)
-                isCleared = false                        // Reset the flag after writing the first key
+                isCleared = false                       // Reset the flag after writing the first key
             }
             else {
                 LCD.write(key)

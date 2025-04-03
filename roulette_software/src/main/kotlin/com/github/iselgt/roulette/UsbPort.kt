@@ -1,8 +1,7 @@
 package com.github.iselgt.roulette
-import com.github.iselgt.roulette.HAL
 import isel.leic.UsbPort
 
-fun main(args: Array<String>) {
+fun main() {
 
     HAL.init()
     var counter = 0

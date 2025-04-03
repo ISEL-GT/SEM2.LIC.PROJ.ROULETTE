@@ -7,10 +7,8 @@
     <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Simul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +37,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.HALTest.halGlobalTest.executor": "Run",
-    "JUnit.KBDTest.kbdTest.executor": "Run",
-    "Kotlin.KBDKt.executor": "Run",
-    "Kotlin.LCDKt.executor": "Run",
-    "Kotlin.TUIKt.executor": "Run",
-    "Kotlin.UsbPortKt (1).executor": "Run",
-    "Kotlin.UsbPortKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Isel/2Semestre/RCP/SEM2.RCP.AV.CLIENT-SERVER",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.HALTest.halGlobalTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KBDTest.kbdTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.KBDKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.LCDKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.TUIKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.UsbPortKt (1).executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.UsbPortKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Isel/2Semestre/RCP/SEM2.RCP.AV.CLIENT-SERVER&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Isel\2Semestre\LIC\SEM2.LIC.PROJ.ROULETTE\roulette_software\src\main\kotlin\com\github\iselgt\roulette" />
@@ -67,7 +65,7 @@
       <recent name="com.github.iselgt.roulette" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.LCDKt">
+  <component name="RunManager">
     <configuration name="HALTest.halGlobalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
       <extension name="coverage">
