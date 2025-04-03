@@ -1,0 +1,730 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim
+Eadder_2bits
+Z1 w1741695217
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 10
+R0
+Z4 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd
+Z5 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd
+l0
+L4 1
+VcOd?jUQVL[L5QX>d2OCJm3
+!s100 ZG<?nYZagR0?:d[CEjz=10
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1743679455
+!i10b 1
+Z8 !s108 1743679455.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd|
+Z10 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 11 adder_2bits 0 22 cOd?jUQVL[L5QX>d2OCJm3
+!i122 10
+l44
+L19 64
+VzAjNG6]mQeCibgLoX;ZZ[3
+!s100 ;cDbeUW>TiFmVZNVUT_MJ1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecounter
+R1
+R2
+R3
+!i122 9
+R0
+Z13 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd
+Z14 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd
+l0
+L4 1
+Vlkfn6OD=gW54e5V;WCNgF2
+!s100 mjdDPnin@N@eZe=8<8nOI3
+R6
+31
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd|
+Z16 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 7 counter 0 22 lkfn6OD=gW54e5V;WCNgF2
+!i122 9
+l72
+L19 95
+VU2V9L>f:VZQ6[B7aMMV?53
+!s100 :F6W6f@?g8Db1<WFdo:;:3
+R6
+31
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Edecoder_2x4
+R1
+R2
+R3
+!i122 3
+R0
+Z17 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
+Z18 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
+l0
+L5 1
+Vnfk;H?dN[WzkI0QMn?3e_1
+!s100 :7oW=k@Gj_Y0cAijhOKm03
+R6
+31
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd|
+Z20 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 11 decoder_2x4 0 22 nfk;H?dN[WzkI0QMn?3e_1
+!i122 3
+l16
+L15 9
+V<bF0L_GejTQD@7WjjEFQ62
+!s100 LITNk@HB>zO=0PgKCmDVF1
+R6
+31
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Effd
+R1
+R2
+R3
+!i122 8
+R0
+Z21 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd
+Z22 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd
+l0
+L5 1
+V7P=[@f?NjJ5eAni:EWNLA3
+!s100 TMIDRFA<z3GmnLWRDb`T?3
+R6
+31
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd|
+Z24 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd|
+!i113 1
+R11
+R12
+Alogicfunction
+R2
+R3
+DEx4 work 3 ffd 0 22 7P=[@f?NjJ5eAni:EWNLA3
+!i122 8
+l18
+L17 9
+VLa]ADh?VlmFbIUF@SYOo33
+!s100 Fi1SWmU^YWbMQz5W^HZkO1
+R6
+31
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12
+Efull_adder
+R1
+R2
+R3
+!i122 7
+R0
+Z25 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd
+Z26 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd
+l0
+L6 1
+VOUO;gSf6dhQn3OzTm4LMf0
+!s100 ]hdZUUZ_@dRMOH8;4[82?2
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd|
+Z28 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 10 full_adder 0 22 OUO;gSf6dhQn3OzTm4LMf0
+!i122 7
+l45
+L21 56
+VDGnjWECiGaSbO@D1P6@e=3
+!s100 QFhd>j0?fBj`ljXJ8f8DT2
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Ehalf_adder
+R1
+R2
+R3
+!i122 6
+R0
+Z29 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd
+Z30 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd
+l0
+L6 1
+V5A9:A6@gTm<DI]fd`6C]a0
+!s100 Rk8Y58EMd:CVUb@^SRGL80
+R6
+31
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd|
+Z32 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 10 half_adder 0 22 5A9:A6@gTm<DI]fd`6C]a0
+!i122 6
+l20
+L19 7
+VOKl2J4OG^IT6:^ZgO^PU^0
+!s100 2z3oh;BXC]Z95ZCXV:U:T1
+R6
+31
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Ekey_decode
+Z33 w1743678601
+R2
+R3
+!i122 12
+R0
+Z34 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
+Z35 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
+l0
+L4 1
+VB>lG]JkbG>67g<Oa]QAG12
+!s100 To0b=64;2:I]4Yl]<1Daf2
+R6
+31
+Z36 !s110 1743679456
+!i10b 1
+Z37 !s108 1743679456.000000
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd|
+Z39 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 10 key_decode 0 22 B>lG]JkbG>67g<Oa]QAG12
+!i122 12
+l53
+L17 63
+V80TGDo3^o[1f>lKLIKcAL1
+!s100 mm7MA@``7en`L5VAU8QnO2
+R6
+31
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R11
+R12
+Ekey_decode_tb
+Z40 w1743677628
+R2
+R3
+!i122 17
+R0
+Z41 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd
+Z42 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd
+l0
+L4 1
+VXJ1VJdCi?NcS4EPUk4eEC1
+!s100 ^U:UgmG<Vcz5LL_eSnXjV0
+R6
+32
+Z43 !s110 1743680886
+!i10b 1
+Z44 !s108 1743680886.000000
+Z45 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd|
+Z46 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd|
+!i113 1
+Z47 o-work work
+R12
+Abehavioral
+R2
+R3
+DEx4 work 13 key_decode_tb 0 22 XJ1VJdCi?NcS4EPUk4eEC1
+!i122 17
+l33
+L7 115
+VgOb4MHbmB982Q?bFPIo@l3
+!s100 mS2E_jL=9D]lJM=^_efY@3
+R6
+32
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R47
+R12
+Ekey_scanner
+Z48 w1742295526
+R2
+R3
+!i122 11
+R0
+Z49 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd
+Z50 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd
+l0
+L5 1
+VXPG3h<H1ZO[K]Me^5;H<[1
+!s100 [9RT6oVHCV2YXnz5:Rm=a0
+R6
+31
+R36
+!i10b 1
+R8
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd|
+Z52 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 11 key_scanner 0 22 XPG3h<H1ZO[K]Me^5;H<[1
+!i122 11
+l71
+L21 98
+V]?<0EjThEz4Z@;2hZ@iCo3
+!s100 =NHYc4>=jE79NhnGH;H_>2
+R6
+31
+R36
+!i10b 1
+R8
+R51
+R52
+!i113 1
+R11
+R12
+Ekeycontrol
+Z53 w1742299233
+R2
+R3
+!i122 18
+R0
+Z54 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd
+Z55 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd
+l0
+L5 1
+VXG`3h@5YHZieOoe0i]:o;1
+!s100 _LOF_A_Rz;AdBCS2zEhKF0
+R6
+32
+Z56 !s110 1743680975
+!i10b 1
+Z57 !s108 1743680975.000000
+Z58 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd|
+!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd|
+!i113 1
+R47
+R12
+Abehavioral
+R2
+R3
+DEx4 work 10 keycontrol 0 22 XG`3h@5YHZieOoe0i]:o;1
+!i122 18
+l25
+L19 48
+V=l[QG=cL4dgP:]NMSFoZ=0
+!s100 W3Mc9YLiSI?C1V4USme9Z0
+R6
+32
+R56
+!i10b 1
+R57
+R58
+Z59 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd|
+!i113 1
+R47
+R12
+Emux_2x1
+R1
+R2
+R3
+!i122 5
+R0
+Z60 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
+Z61 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
+l0
+L6 1
+VX13G2MQa?`8a5HHigBnX@1
+!s100 H4bQ4WYUVgFLOQ1Z8hg_43
+R6
+31
+R7
+!i10b 1
+R8
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd|
+Z63 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 7 mux_2x1 0 22 X13G2MQa?`8a5HHigBnX@1
+!i122 5
+l22
+L21 7
+Vo_LnfXHZW?^BgQbEjQM?T1
+!s100 j[4F[S3LA6A6c_?i0bSQ80
+R6
+31
+R7
+!i10b 1
+R8
+R62
+R63
+!i113 1
+R11
+R12
+Emux_2x1_penc
+R1
+R2
+R3
+!i122 2
+R0
+Z64 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
+Z65 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
+l0
+L6 1
+V9PJ316E13DFO<VmkYzk`V3
+!s100 ngVDPok]WdAaB[JA3eFkm0
+R6
+31
+R7
+!i10b 1
+R8
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd|
+Z67 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 12 mux_2x1_penc 0 22 9PJ316E13DFO<VmkYzk`V3
+!i122 2
+l22
+L21 6
+VB^ELLz9PERm@<_OC_F<en2
+!s100 XeY0Lnfd0XN@:^]?4n4<R2
+R6
+31
+R7
+!i10b 1
+R8
+R66
+R67
+!i113 1
+R11
+R12
+Epartial_priority_encoder
+R53
+R2
+R3
+!i122 1
+R0
+Z68 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
+Z69 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
+l0
+L7 1
+Ve]QTCKObE<Qa9<IOnhki;3
+!s100 Ohm@@ERPjNFnKzA9@FEEa1
+R6
+31
+Z70 !s110 1743679454
+!i10b 1
+Z71 !s108 1743679454.000000
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd|
+Z73 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 24 partial_priority_encoder 0 22 e]QTCKObE<Qa9<IOnhki;3
+!i122 1
+l18
+L16 8
+VJKb?aA::@5[7ko8<Qm:SG2
+!s100 n``YA8CA58U6i6Y6Me=a;0
+R6
+31
+R70
+!i10b 1
+R71
+R72
+R73
+!i113 1
+R11
+R12
+Epriority_encoder
+R1
+R2
+R3
+!i122 0
+R0
+Z74 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+Z75 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+l0
+L7 1
+V6>=`^ojBn:gK:^eU<WfZ80
+!s100 ROcL@id;1<1R9ka[EEciF3
+R6
+31
+R70
+!i10b 1
+R71
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd|
+Z77 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 16 priority_encoder 0 22 6>=`^ojBn:gK:^eU<WfZ80
+!i122 0
+l51
+L16 82
+V1<E8S91?;m8Y8m]52Sgf23
+!s100 aGlNY@m`OYQjdka]2OBQ70
+R6
+31
+R70
+!i10b 1
+R71
+R76
+R77
+!i113 1
+R11
+R12
+Eregister_2bits
+R1
+R2
+R3
+!i122 4
+R0
+Z78 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
+Z79 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
+l0
+L4 1
+VIoED`BF:E__I[R[>gNkki2
+!s100 ?zmd^QWmRek>gzY;[B4b:2
+R6
+31
+R7
+!i10b 1
+R8
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
+Z81 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 14 register_2bits 0 22 IoED`BF:E__I[R[>gNkki2
+!i122 4
+l34
+L18 40
+VakQUXa1Ig4DHd[AnKP0TI0
+!s100 Cnc3aXO7IYhX0POC<eSge3
+R6
+31
+R7
+!i10b 1
+R8
+R80
+R81
+!i113 1
+R11
+R12
+Eroulette
+Z82 w1743665324
+R2
+R3
+!i122 13
+R0
+Z83 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd
+Z84 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd
+l0
+L6 1
+V]I:a_]T^VQWeHfb^zR[M60
+!s100 NW=^KMN_P3OeSEV32jPYD0
+R6
+31
+R36
+!i10b 1
+R37
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd|
+Z86 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 8 roulette 0 22 ]I:a_]T^VQWeHfb^zR[M60
+!i122 13
+l61
+L23 85
+VbQcVjiZ>CO1De`QBS_lTM3
+!s100 4TNlUjJkmG>N]YNYEQ^Q^3
+R6
+31
+R36
+!i10b 1
+R37
+R85
+R86
+!i113 1
+R11
+R12
+Eroulette_tb
+Z87 w1743672969
+R2
+R3
+!i122 15
+R0
+Z88 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd
+Z89 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd
+l0
+L4 1
+VNZI8NLR_C8iA2lEc]PS6[0
+!s100 3@97i^mnL@l?hN=IA28;Z1
+R6
+32
+Z90 !s110 1743679515
+!i10b 1
+Z91 !s108 1743679515.000000
+Z92 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd|
+Z93 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd|
+!i113 1
+R47
+R12
+Abehavioral
+R2
+R3
+DEx4 work 11 roulette_tb 0 22 NZI8NLR_C8iA2lEc]PS6[0
+!i122 15
+l43
+L7 108
+V23`?o4a[COV0K?JoY2jPA0
+!s100 Nc4B6?o6LfCES[6@E;=?b0
+R6
+32
+R90
+!i10b 1
+R91
+R92
+R93
+!i113 1
+R47
+R12
+Eusbport
+w1742285896
+R2
+R3
+!i122 14
+R0
+8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd
+FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd
+l0
+L25 1
+VH<Ia8`dE_cdIGLca01JFN3
+!s100 hl94EPOkeW;iYO_Coen0c3
+R6
+31
+R36
+!i10b 1
+R37
+!s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd|
+!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd|
+!i113 1
+R11
+R12

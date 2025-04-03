@@ -1,7 +1,6 @@
 package com.github.iselgt.roulette
 
 import com.github.iselgt.roulette.components.Mask
-import isel.leic.UsbPort
 import isel.leic.utils.Time
 
 object LCD {

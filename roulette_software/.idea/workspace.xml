@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
-      <change beforePath="$PROJECT_DIR$/../Pins/TesteKeyDecodePinos.qsf" beforeDir="false" afterPath="$PROJECT_DIR$/../Pins/TesteKeyDecodePinos.qsf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.ammdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.ammdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LCD/Lcd.vhd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LCD/Lcd.vhd.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cr_ie_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../cr_ie_info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.dpi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.map.kpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.ammdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.ammdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.rcfdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.rcfdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi.tmp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" afterDir="false" />
@@ -32,7 +28,6 @@
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.summary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.jdi" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.jdi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.rpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.summary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.pin" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.pin" afterDir="false" />
@@ -41,40 +36,17 @@
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output_files/roulette.sta.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sta.summary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../roulette.qsf" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.qsf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette.qsf.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.qsf.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../roulette.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/libraries/usbPort.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/Simul.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/Software.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/USB_PORT.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/ftd2xx64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/hardware.simul" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/lib/USB_PORT.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/lib/ftd2xx64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/target/classes/META-INF/roulette_software.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette_software - saved/target/test-classes/META-INF/roulette_software.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Simul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USB_PORT.properties" beforeDir="false" afterPath="$PROJECT_DIR$/USB_PORT.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/roulette_software.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testbench/KeyScannerTb.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../testbench/KeyScannerTb.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testbench/Key_decode_tb.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../testbench/Key_decode_tb.vhd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +57,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>

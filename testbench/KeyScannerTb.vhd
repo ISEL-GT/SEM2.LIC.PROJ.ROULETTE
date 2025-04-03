@@ -54,16 +54,72 @@ begin
     stimulus: process
     begin
         reset_tb <= '1';
-        wait for clk_period;
-        
+		  Kscan_tb <= "11";
+        lines_tb <= "0000";
+        wait for clk_period*2;
+        		  
+		  reset_tb <= '0';
         Kscan_tb <= "11";
-		  reset_tb <= '0';
-        lines_tb <= "1110";
-        wait for clk_period;
+        lines_tb <= "0001";
+        wait for clk_period*2;
+		  
+        Kscan_tb <= "10";
+        lines_tb <= "0001";
+        wait for clk_period*2;
+		  
+		  Kscan_tb <= "00";
+        lines_tb <= "0001";
+        wait for clk_period*2;
         
-		  reset_tb <= '0';
+		  
+		  Kscan_tb <= "11";
         lines_tb <= "0010";
-		  wait for clk_period;
+        wait for clk_period*2;
+		  
+        Kscan_tb <= "10";
+        lines_tb <= "0010";
+        wait for clk_period*2;
+		  
+		  Kscan_tb <= "00";
+        lines_tb <= "0010";
+        wait for clk_period*2;
+		  
+		  
+		  Kscan_tb <= "11";
+        lines_tb <= "0100";
+        wait for clk_period*2;
+		  
+        Kscan_tb <= "10";
+        lines_tb <= "0100";
+        wait for clk_period*2;
+		  
+		  Kscan_tb <= "00";
+        lines_tb <= "0100";
+        wait for clk_period*2;
+        
+		  Kscan_tb <= "11";
+        lines_tb <= "1000";
+        wait for clk_period*2;
+		  
+        Kscan_tb <= "10";
+        lines_tb <= "1000";
+        wait for clk_period*2;
+		  
+		  Kscan_tb <= "00";
+        lines_tb <= "1000";
+        wait for clk_period*2;
+        
+		  Kscan_tb <= "11";
+        lines_tb <= "0000";
+        wait for clk_period*2;
+		  
+        Kscan_tb <= "10";
+        lines_tb <= "0000";
+        wait for clk_period*2;
+		  
+		  Kscan_tb <= "00";
+        lines_tb <= "0000";
+        wait for clk_period*2;
         
         wait;
     end process;
