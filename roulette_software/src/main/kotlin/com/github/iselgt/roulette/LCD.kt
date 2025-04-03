@@ -1,6 +1,5 @@
 package com.github.iselgt.roulette
 
-import com.github.iselgt.roulette.components.Mask
 import isel.leic.utils.Time
 
 object LCD {
@@ -9,95 +8,32 @@ object LCD {
 
     private const val SERIAL_INTERFACE = false
 
-    const val DATAMASK = 0x1E
-    const val Enable_Mask = 0x80            // the value of 1000 0000 on outputPort
-    const val RegisterSeletct_Mask = 0x40   // the value of 0100 0000 on outputPort
+    // Useful Constants to use with LCD
+    private const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
+    private const val DATA_MASK = 0x1E                  // A useful mask that correspond to the 4 bits key
+    private const val ENABLE_MASK = 0x80                // A useful mask that correspond to enable
+    private const val REGISTER_SELECTOR_MASK= 0x40      // A useful mask that correspond to the register selector
 
-    const val Wait_first_time = 15L
-    const val wait_time = 5L
-    const val WAIT_NIMBLE_TIME = 20L
+    private const val WAIT_FIRST_TIME = 15L
+    private const val WAIT_TIME = 5L
 
-    /** Some values of 8 bits for the instructions used on LCD
-     *
-     *  These values correspond to diverse instructions
-     *
-     */
-    const val Display_Clear = 0x01
-    const val ReturnHome = 0x02
+    // LCD Command Constants
+    private const val LCD_CLEAR = 0x01                  // Clear display & reset cursor to (0,0)
+    const val LCD_HOME = 0x02                           // Return cursor to (0,0) without clearing
+    private const val LCD_ENTRY_MODE = 0x06             // Cursor moves right, no display shift
+    private const val LCD_DISPLAY_OFF = 0x08            // Turn off display
+    const val LCD_DISPLAY_ON = 0x0C                     // Display ON, Cursor OFF, Blink OFF
+    const val LCD_DISPLAY_ON_CURSOR = 0x0E              // Display ON, Cursor ON, No Blink
+    private const val LCD_DISPLAY_ON_BLINK = 0x0F       // Display ON, Cursor ON, Blink ON
+    private const val LCD_FUNCTION_SET = 0x28           // 4-bit mode, 2 lines, 5x8 font
 
-    /** Data -> 0000 0 1 I/D S
-     *
-     *  Instruction Entry mode set
-     *
-     *  I = 1 -> Increment
-     *
-     *  D = 0 -> Decrement
-     *
-     *  S -> Accompanies shift on/off
-     */
-    const val DecrementMode_Set = 0x04
-    const val DecrementMode_Set_Shift = 0x05
-    const val IncrementMode_Set = 0x06
-    const val IncrementMode_Set_Shift = 0x07
+    // Cursor Positioning Constants
+    private const val LCD_LINE_1 = 0x80                 // First line
+    private const val LCD_LINE_2 = 0xC0                 // Second line
 
-    /** Data -> 0000 1DCB
-     *
-     *  Instruction Display on/off control
-     *
-     *  D -> Display on/off
-     *
-     *  C -> Cursor on/off
-     *
-     *  B -> Blinking Cursor on/off
-     */
-
-    const val Display_Off_without_cursor = 0x08
-    const val Display_Off_without_cursor_blink = 0x09
-    const val Display_Off_with_cursor = 0x0A
-    const val Display_Off_with_cursor_blink = 0x0B
-
-    const val Display_On_without_cursor = 0x0C
-    const val Display_On_without_cursor_blink = 0x0D
-    const val Display_On_with_cursor = 0x0E
-    const val Display_On_with_cursor_blink = 0x0F
-
-    /** Data -> 0001 S/C R/L 0 0
-     *
-     *  Instruction Cursor or Display shift
-     *
-     *  S = 1 -> Display shift
-     *
-     *  C = 0 -> Cursor move
-     *
-     *  R = 1 -> Shift to the right
-     *
-     *  L = 0 -> Shift to the left
-     */
-
-    const val Cursor_Shift_left = 0x10
-    const val Cursor_Shift_right = 0x14
-    const val Display_Shift_left = 0x18
-    const val Display_Shift_right = 0x1C
-
-    /** Data -> 001DL NF00
-     *
-     *  Instruction Function Set
-     *
-     *  DL = 1 -> 8 bits
-     *
-     *  DL = 0 -> 4 bits
-     *
-     *  N = 1 -> 2 lines
-     *
-     *  N = 0 -> 1 line
-     *
-     *  F = 1 -> 5x10 dots
-     *
-     *  F = 0 -> 5x8 dots
-     */
-
-    const val SET4BITS = 0x2
-    const val SET8BITS = 0x3
+    // Mode Sets Bits Constants
+    private const val SET4BITS = 0x2                    // Entry Mode Set 4 bits long
+    private const val SET8BITS = 0x3                    // Entry Mode Set 8 bits long
 
 
     private fun writeDATA(data: Int) {
@@ -108,13 +44,12 @@ object LCD {
         writeByte(false, data)
     }
 
-    // Escreve um byte de comando/dados no LCD
-    fun writeByte(rs: Boolean, data: Int) {
+    // Writes a Byte command/data on LCD
+    private fun writeByte(rs: Boolean, data: Int) {
 
-
-        // 4 bits mais significativos
+        // The 4 most significant bits
         val topdata = data shr 4
-        // 4 bits menos significativos
+        // The 4 less significant bits
         val botdata = data and 0x0F
 
         writeNibble(rs, topdata)  // High
@@ -122,58 +57,64 @@ object LCD {
 
     }
 
-    // Escreve um nibble de comando/dados no LCD
-    fun writeNibble(rs: Boolean, data: Int) {
+    // Writes a nibble command/data on LCD
+    private fun writeNibble(rs: Boolean, data: Int) {
         if (SERIAL_INTERFACE) writeNibbleSerial(rs, data.shl(1))
         else writeNibbleParallel(rs, data.shl(1))
     }
 
 
-    // Escreve um byte de comando/dados no LCD em paralelo
-    fun writeNibbleParallel(rs: Boolean, data: Int) {
+    // Writes a nibble (4 bits) of command/data to the LCD in Parallel Mode
+    private fun writeNibbleParallel(rs: Boolean, data: Int) {
+                                                    // Set or clear the Register Select (RS) pin depending on whether sending data or command
         if (rs) {
-            HAL.setBits(RegisterSeletct_Mask)
+            HAL.setBits(REGISTER_SELECTOR_MASK)     // RS = 1 for data
         }
-        else{
-            HAL.clrBits(DATAMASK)
+        else {
+            HAL.clrBits(REGISTER_SELECTOR_MASK)     // RS = 0 for command
         }
-        Time.sleep(WAIT_NIMBLE_TIME)
-        HAL.setBits(Enable_Mask)
-        HAL.writeBits(DATAMASK, data)
-        Time.sleep(WAIT_NIMBLE_TIME)
-        HAL.clrBits(Enable_Mask)
-        Time.sleep(WAIT_NIMBLE_TIME)
+        HAL.setBits(ENABLE_MASK)                    // Set the Enable (E) pin to high to latch the data
+
+        HAL.writeBits(DATA_MASK, data)              // Send the 4-bit data by writing it to the data lines
+
+        Time.sleep(WAIT_TIME)                       // Hold Enable high for a short period to ensure the data is latched
+
+        HAL.clrBits(ENABLE_MASK)                    // Set the Enable (E) pin to low to complete the data transfer
+
+        Time.sleep(WAIT_TIME)                       // Wait again before the next operation (optional depending on hardware)
     }
 
-    // Escreve um byte de comando/dados no LCD em serie
-    fun writeNibbleSerial(rs: Boolean, data: Int) {
+
+    // Writes a nibble (4 bits) of command/data to the LCD in Serial Mode
+    private fun writeNibbleSerial(rs: Boolean, data: Int) {
         TODO()
     }
 
     fun init() {
-        Time.sleep(Wait_first_time)                         // Tempo de espera maior para init 15L
-        writeNibble(false, SET8BITS)         //
-        Time.sleep(wait_time)                               // Tempo de espera menor, 5L
-        writeNibble(false, SET8BITS)         //
-        Time.sleep(wait_time)                               // Tempo de espera menor, 5L
+        // Initiate LCD with 8-bit mode before switching to 4-bit mode
+        Time.sleep(WAIT_FIRST_TIME)                 // Longer wait time for power-on
+        writeNibble(false, SET8BITS)
+        Time.sleep(WAIT_TIME)
+        writeNibble(false, SET8BITS)
+        Time.sleep(WAIT_TIME)
         writeNibble(false, SET8BITS)
 
-        writeNibble(false, SET4BITS)         //
-                                                            // Start 2 lines mode
-        cursor(0, 0)
-        writeCMD(0x28)
-        writeCMD(0x08)
-        writeCMD(0x01)
-        writeCMD(0x06)
-        writeCMD(Display_On_with_cursor_blink)
-        Time.sleep(wait_time)
+        // Now switch to 4-bit mode
+        writeNibble(false, SET4BITS)
 
+        // Configure LCD settings using named constants
+        writeCMD(LCD_FUNCTION_SET)                  // 4-bit mode, 2-line, 5x8 font
+        writeCMD(LCD_DISPLAY_OFF)                   // Display OFF
+        writeCMD(LCD_CLEAR)                         // Clear display
+        Time.sleep(WAIT_TIME)                       // Extra delay needed for clearing
+        writeCMD(LCD_ENTRY_MODE)                    // Cursor moves right
+        writeCMD(LCD_DISPLAY_ON_BLINK)              // Display ON, Cursor ON, Blink ON
+        Time.sleep(WAIT_TIME)                       // Short delay for stability
     }
 
-    // UPcode e parametros
 
     fun write(c: Char) {
-        if (c != Mask.NONE_VALUE().toChar()) writeDATA(c.code)   //.code => .toInt()
+        if (c != NONE_VALUE.toChar()) writeDATA(c.code)   //.code => .toInt()
     }
 
     fun write(text: String) {
@@ -183,13 +124,17 @@ object LCD {
     }
 
     fun cursor(line: Int, column: Int) {
-        val address = if (line == 0) 0x00 else SET4BITS
-        writeCMD(address + column)
+        val address = when (line) {
+            0 -> LCD_LINE_1 + column                // First line
+            1 -> LCD_LINE_2 + column                // Second line
+            else -> LCD_LINE_1                      // Default to first line if invalid
+        }
+        writeCMD(address)
     }
 
     fun clear() {
-        writeCMD(Display_Clear)
-        Time.sleep(wait_time)
+        writeCMD(LCD_CLEAR)
+        Time.sleep(WAIT_TIME)
     }
 }
 
@@ -200,128 +145,3 @@ fun main() {
         LCD.write(KBD.waitKey(500))
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-object LCD{
-
-    // Dimensao do display.
-    private const val LINES = 2
-    private const val COLS = 16
-
-    // Define se a interface e Serie ou Paralela
-    private const val SERIAL_INTERFACE = false
-
-    // Escreve um byte de comando/dados no LCD em paralelo
-    private fun writeNibbleParallel(rs: Boolean, data: Int){
-        HAL.writeBits(0x10, if(rs)0x10 else 0x00)
-
-        HAL.writeBits(0x0F, data)
-
-        HAL.writeBits(0x20, 0x20)
-        Thread.sleep(20)
-        HAL.writeBits(0x20, 0x00)
-    }
-
-    // Escreve um byte de comando/ dados no LCD em serie
-    private fun writeNibbleSerial(rs: Boolean, data: Int){
-
-    }
-
-    // Escreve um nibble de comando/ dados no LCD
-    private fun writeNibble(rs: Boolean, data: Int){
-        if(SERIAL_INTERFACE) writeNibbleSerial(rs, data) else writeNibbleParallel(rs, data)
-    }
-
-    // Escreve um byte de comando/ dados no LCD
-    private fun writeByte( rs: Boolean, data: Int){
-        writeNibble(rs, data shr  4)
-        writeNibble(rs, data and 0x0F)
-    }
-
-    // Escreve um comando no LCD
-    private fun writeCMD(data: Int){
-        writeByte(false, data)
-    }
-
-    // Escreve um dado no LCD
-    private fun writeDATA(data: Int){
-        writeByte(true, data)
-    }
-
-    // Envia a sequencia de iniciacao para comunicacao a 4 bits.
-    fun init(){
-        Thread.sleep(15)
-        writeNibble(false, 0x03)
-        Thread.sleep(5)
-        writeNibble(false, 0x03)
-        Thread.sleep(1)
-        writeNibble(false, 0x03)
-        writeNibble(false, 0x02)
-
-        cursor(0,0)
-        writeCMD(0x0F)
-        clear()
-        writeCMD(0x07)
-        Thread.sleep(2)
-    }
-
-    // Escreve um carater na posicao corrente.
-    fun write(c: Char){
-        if(c != 'N') writeDATA(c.code)
-    }
-
-    // Escreve uma string na posicao corrente.
-    fun write(text: String){
-        for(c in text) {
-            write(c)
-        }
-    }
-
-    // Envia comando para posicionar cursor('line':0..LINES-1 , 'column':0..COLS-1)
-    fun cursor (line: Int, column: Int){
-        val address = if (line == 0) 0x00 else 0x28
-        writeCMD(address + column)
-    }
-
-    // Envia comando para limpar o ecra e posicionar o cursor em (0,0)
-    fun clear(){
-        writeCMD(0x01)
-        Thread.sleep(2)
-    }
-}
-
-fun main() {
-    LCD.init()
-
-    LCD.write(KBD.waitKey(500))
-    LCD.write("HELLO WORD")
-
-}
-*/

@@ -5,53 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
-      <change beforePath="$PROJECT_DIR$/../LCD/Lcd.vhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LCD/Lcd.vhd.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cr_ie_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../cr_ie_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.rcfdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.ammdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.ammdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.rcfdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.rcfdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.rrp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.rrp.hdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.asm.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.asm.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.done" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.done" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.eda.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.eda.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.summary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.summary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.pin" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.pin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.pof" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.pof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.sof" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output_files/roulette.sta.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sta.summary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette.qsf" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.qsf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../roulette.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.vhd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Simul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USB_PORT.properties" beforeDir="false" afterPath="$PROJECT_DIR$/USB_PORT.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/HAL.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/LCD.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/roulette_software.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/roulette_software.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testbench/KeyScannerTb.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../testbench/KeyScannerTb.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testbench/Key_decode_tb.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../testbench/Key_decode_tb.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +27,9 @@
         <option value="Kotlin Object" />
       </list>
     </option>
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -75,15 +45,17 @@
     "JUnit.KBDTest.kbdTest.executor": "Run",
     "Kotlin.KBDKt.executor": "Run",
     "Kotlin.LCDKt.executor": "Run",
+    "Kotlin.TUIKt.executor": "Run",
     "Kotlin.UsbPortKt (1).executor": "Run",
     "Kotlin.UsbPortKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Isel/2Semestre/RCP/SEM2.RCP.AV.CLIENT-SERVER",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
 }]]></component>
   <component name="RecentsManager">
