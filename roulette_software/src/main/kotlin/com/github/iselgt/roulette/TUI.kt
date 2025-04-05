@@ -24,7 +24,7 @@ fun main() {
     TUI.writeMessage("Hello World :)")
     Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))    // Pause the program for WAIT_TIME seconds
     LCD.clear()
-    TUI.writeMessage("Grupo 16 Display")
+    TUI.writeMessage("Grupo 11 Display")
     Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))
     LCD.clear()
     TUI.writeMessage("Use '*' to Clear")

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Thu Apr 03 12:31:00 2025
+Fri Apr 04 16:30:57 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 03 12:31:00 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 04 16:30:57 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
@@ -181,6 +181,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                    ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
+; UsbPort.vhd                                                        ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd                                                        ;             ;
 ; KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                   ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                   ;             ;
 ; KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd           ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd           ;             ;
 ; KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                       ;             ;
@@ -195,7 +196,6 @@ https://fpgasoftware.intel.com/eula.
 ; KEY_DECODE/KEY_SCANNER/key_scanner.vhd                             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                             ;             ;
 ; KEY_DECODE/Key_decode.vhd                                          ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd                                          ;             ;
 ; roulette.vhd                                                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd                                                       ;             ;
-; UsbPort.vhd                                                        ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd                                                        ;             ;
 ; KEY_DECODE/KeyControl/KeyControl.vhd                               ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd                               ;             ;
 ; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                       ;             ;
 ; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                 ;             ;
@@ -451,10 +451,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 03 12:30:42 2025
+    Info: Processing started: Fri Apr 04 16:30:43 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file key_decode/key_scanner/penc/priority_encoder.vhd
     Info (12022): Found design unit 1: priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
     Info (12023): Found entity 1: priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
@@ -500,9 +503,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file key_dec
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
     Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
     Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file testbench/keyscannertb.vhd
     Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/KeyScannerTb.vhd Line: 7
     Info (12023): Found entity 1: Key_Scanner_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/KeyScannerTb.vhd Line: 4
@@ -524,9 +524,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
 Info (12021): Found 2 design units, including 1 entities, in source file testbench/priority_encoder_tb.vhd
     Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/priority_encoder_tb.vhd Line: 7
     Info (12023): Found entity 1: priority_encoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/priority_encoder_tb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file testbench/roulette_tb.vhd
-    Info (12022): Found design unit 1: roulette_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd Line: 7
-    Info (12023): Found entity 1: roulette_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_reader.vhd
+    Info (12022): Found design unit 1: Key_reader-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/Key_reader.vhd Line: 17
+    Info (12023): Found entity 1: Key_reader File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/Key_reader.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testbench/key_reader_tb.vhd
+    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_reader_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_reader_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_reader_tb.vhd Line: 4
 Info (12127): Elaborating entity "roulette" for the top level hierarchy
 Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:keydecode" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 63
 Info (12128): Elaborating entity "key_scanner" for hierarchy "Key_decode:keydecode|key_scanner:keyscan" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd Line: 55
@@ -560,7 +563,7 @@ Info (12131): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virt
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.04.03.12:30:51 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.04.04.16:30:50 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -591,9 +594,9 @@ Info (21057): Implemented 194 device resources after synthesis - the final resou
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 168 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Thu Apr 03 12:31:00 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Fri Apr 04 16:30:57 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

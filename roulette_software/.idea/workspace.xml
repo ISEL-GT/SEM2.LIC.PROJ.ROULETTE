@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="roulette_software:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0f2e29-b0a6-49ab-995d-dd3bac40608f" name="Changes" comment="Properly structured the software, added libraries, moved to maven architecture, added the proper sdk">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/roulette_software_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KEY_DECODE/Key_decode.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../KEY_DECODE/Key_decode.vhd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.autoh_e40e1.cmp.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.cmp.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.dpi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hbdb.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.root_partition.map.kpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.rrp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../incremental_db/compiled_partitions/roulette.rrp.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.asm.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.asm.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.done" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.done" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.eda.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.eda.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.fit.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.fit.summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.flow.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.map.summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.sof" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../output_files/roulette.sta.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../roulette.qsf" beforeDir="false" afterPath="$PROJECT_DIR$/../roulette.qsf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Simul.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Simul.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/KBD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/TUI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/iselgt/roulette/UsbPort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/msim_transcript" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/msim_transcript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette.vho" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette_modelsim.xrf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/roulette_run_msim_rtl_vhdl.do" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/roulette_run_msim_rtl_vhdl.do" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_info" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib.qdb" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib.qdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qdb" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qpg" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qtl" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/rtl_work/_lib1_0.qtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation/modelsim/vsim.wlf" beforeDir="false" afterPath="$PROJECT_DIR$/../simulation/modelsim/vsim.wlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testbench/roulette_tb.vhd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -37,25 +77,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.HALTest.halGlobalTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.KBDTest.kbdTest.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.KBDKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.LCDKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.TUIKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.UsbPortKt (1).executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.UsbPortKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Isel/2Semestre/RCP/SEM2.RCP.AV.CLIENT-SERVER&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.HALTest.executor": "Run",
+    "JUnit.HALTest.halEmpty.executor": "Run",
+    "JUnit.HALTest.halGlobalTest.executor": "Run",
+    "JUnit.HALTestDuarte.clrBits deve desativar bits especificados.executor": "Run",
+    "JUnit.HALTestDuarte.init deve limpar a saída.executor": "Run",
+    "JUnit.HALTestDuarte.setBits deve ativar bits especificados.executor": "Run",
+    "JUnit.KBDTest.executor": "Run",
+    "JUnit.KBDTest.kbdTest.executor": "Run",
+    "JUnit.KBDTest.kbdTest2.executor": "Run",
+    "Kotlin.KBDKt.executor": "Run",
+    "Kotlin.LCDKt.executor": "Run",
+    "Kotlin.TUIKt.executor": "Run",
+    "Kotlin.UsbPortKt (1).executor": "Run",
+    "Kotlin.UsbPortKt.executor": "Run",
+    "Maven.roulette_software [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Isel/2Semestre/RCP/SEM2.RCP.TRAB1.BATTLESHIP",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Isel\2Semestre\LIC\SEM2.LIC.PROJ.ROULETTE\roulette_software\src\main\kotlin\com\github\iselgt\roulette" />
@@ -65,8 +114,8 @@
       <recent name="com.github.iselgt.roulette" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="HALTest.halGlobalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HALTestDuarte.clrBits deve desativar bits especificados">
+    <configuration name="HALTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
       <extension name="coverage">
         <pattern>
@@ -76,13 +125,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.iselgt.roulette" />
       <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.HALTest" />
-      <option name="METHOD_NAME" value="halGlobalTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KBDTest.kbdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HALTestDuarte.clrBits deve desativar bits especificados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
       <extension name="coverage">
         <pattern>
@@ -91,41 +139,68 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.github.iselgt.roulette" />
-      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.KBDTest" />
-      <option name="METHOD_NAME" value="kbdTest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.HALTestDuarte" />
+      <option name="METHOD_NAME" value="clrBits deve desativar bits especificados" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KBDKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.KBDKt" />
+    <configuration name="HALTestDuarte.init deve limpar a saída" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.iselgt.roulette.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.iselgt.roulette" />
+      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.HALTestDuarte" />
+      <option name="METHOD_NAME" value="init deve limpar a saída" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LCDKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.LCDKt" />
+    <configuration name="HALTestDuarte.setBits deve ativar bits especificados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.iselgt.roulette.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.iselgt.roulette" />
+      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.HALTestDuarte" />
+      <option name="METHOD_NAME" value="setBits deve ativar bits especificados" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsbPortKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.UsbPortKt" />
+    <configuration name="HALTest.halEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="roulette_software" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.iselgt.roulette.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.iselgt.roulette" />
+      <option name="MAIN_CLASS_NAME" value="com.github.iselgt.roulette.HALTest" />
+      <option name="METHOD_NAME" value="halEmpty" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.LCDKt" />
-        <item itemvalue="Kotlin.KBDKt" />
-        <item itemvalue="JUnit.KBDTest.kbdTest" />
-        <item itemvalue="Kotlin.UsbPortKt (1)" />
-        <item itemvalue="JUnit.HALTest.halGlobalTest" />
+        <item itemvalue="JUnit.HALTestDuarte.clrBits deve desativar bits especificados" />
+        <item itemvalue="JUnit.HALTestDuarte.setBits deve ativar bits especificados" />
+        <item itemvalue="JUnit.HALTestDuarte.init deve limpar a saída" />
+        <item itemvalue="JUnit.HALTest" />
+        <item itemvalue="JUnit.HALTest.halEmpty" />
       </list>
     </recent_temporary>
   </component>

@@ -1,43 +1,31 @@
 LIBRARY ieee; 
 USE ieee.std_logic_1164.all;
 
-entity Key_decode is 
+entity Key_reader is 
 	port (
 		Kack 	: 	in std_logic;
 		Liness: 	in std_logic_vector(3 downto 0);
 		CLK	:	in std_logic;
-		Reset:	in std_logic;
+		Reset	:	in std_logic;
 		
 		Colss : 	out std_logic_vector(3 downto 0);
 		Kout 	: 	out std_logic_vector(3 downto 0);
 		Kval 	: 	out std_logic 
 	);
-end Key_decode;
+end Key_reader;
 
-architecture structural of Key_decode is
+architecture structural of Key_reader is
 
-	component key_scanner is 
+	component key_decode is 
 	    port (
-			KScan : in std_logic_vector(1 downto 0);
-			lines : in std_logic_vector(3 downto 0);
-			CLK 	: in std_logic;
-			Reset : in std_logic;
-		
-			columns : out std_logic_vector(3 downto 0);
-			KPress  : out std_logic; 
-			K 		  : out std_logic_vector(3 downto 0)
-		);
-	end component;
-	
-	component KeyControl is
-		port (
-		   reset		: in std_logic;
-			clk		: in std_logic;
-			Kpress	: in std_logic;
-			Kack		: in std_logic;
+			Kack 	: 	in std_logic;
+			Liness: 	in std_logic_vector(3 downto 0);
+			CLK	:	in std_logic;
+			Reset:	in std_logic;
 			
-			KScan		: out std_logic_vector(1 downto 0);
-			Kval		: out std_logic
+			Colss : 	out std_logic_vector(3 downto 0);
+			Kout 	: 	out std_logic_vector(3 downto 0);
+			Kval	: 	out std_logic 
 		);
 	end component;
 	
@@ -52,8 +40,8 @@ architecture structural of Key_decode is
 	
 	begin
 	
-	keyscan: key_scanner port map (
-		KScan 	=> sig_kscan,
+	keydecode: key_decode port map (
+		Kack 	=> sig_kscan,
 		lines 	=> Liness,
 		CLK 		=>	CLK,
 		Reset 	=>	Reset,

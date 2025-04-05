@@ -5,10 +5,10 @@ use ieee.std_logic_1164.all;
 entity key_scanner is
 
     port (
-		KScan : in std_logic_vector(1 downto 0);
-		lines : in std_logic_vector(3 downto 0);
-		CLK 	: in std_logic;
-		Reset : in std_logic;
+		KScan   : in std_logic_vector(1 downto 0);
+		lines   : in std_logic_vector(3 downto 0);
+		CLK 	  : in std_logic;
+		Reset   : in std_logic;
 		
 		columns : out std_logic_vector(3 downto 0);
 		KPress  : out std_logic; 
@@ -22,9 +22,9 @@ architecture structural of key_scanner is
 
 	component counter is
 		port (
-			CE  : in std_logic;
-			CLK : in std_logic;
-			reset 					 : in std_logic;
+			CE 					  : in std_logic;
+			CLK 					  : in std_logic;
+			reset 				  : in std_logic;
 			parallel_load_flag  : in std_logic;
 			parallel_load_value : in std_logic_vector(1 downto 0);
 		  
@@ -61,11 +61,11 @@ architecture structural of key_scanner is
 	
 	
 	signal counter_to_decoder: std_logic_vector(1 downto 0);
-	signal penc_to_reg: 			std_logic_vector(1 downto 0);
-	signal cols:					std_logic_vector(3 downto 0);
-	signal penc_to_kpress:		std_logic;
-	signal K_low:					std_logic_vector(1 downto 0);
-	signal lines_signal:			std_logic_vector(3 downto 0);
+	signal penc_to_reg		 : std_logic_vector(1 downto 0);
+	signal cols					 : std_logic_vector(3 downto 0);
+	signal penc_to_kpress	 : std_logic;
+	signal K_low             :	std_logic_vector(1 downto 0);
+	signal lines_signal      : std_logic_vector(3 downto 0);
 	
 	
 	begin
@@ -108,11 +108,11 @@ architecture structural of key_scanner is
 		Q		=> K_low
 	);
 	
-	K(3) <= counter_to_decoder(1); 
-	K(2) <= counter_to_decoder(0);
-	K(1) <= K_low(1);
-	K(0) <= K_low(0);
-	columns <= not cols;
-	KPress <= penc_to_kpress;
+	K(3)		<= counter_to_decoder(1); 
+	K(2) 		<= counter_to_decoder(0);
+	K(1) 		<= K_low(1);
+	K(0) 		<= K_low(0);
+	columns 	<= not cols;
+	KPress 	<= penc_to_kpress;
 	
 end structural;

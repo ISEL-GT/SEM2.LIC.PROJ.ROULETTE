@@ -19,6 +19,5 @@ vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY
 vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd}
 vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd}
 vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd}
-vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd}
 vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd}
 

@@ -12,343 +12,184 @@
 # 
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:14 on Apr 03,2025
+# Start time: 12:03:53 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity priority_encoder
 # -- Compiling architecture structural of priority_encoder
-# End time: 12:24:14 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:53 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:14 on Apr 03,2025
+# Start time: 12:03:53 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity partial_priority_encoder
 # -- Compiling architecture structural of partial_priority_encoder
-# End time: 12:24:14 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:53 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux_2x1_penc
 # -- Compiling architecture structural of mux_2x1_penc
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decoder_2x4
 # -- Compiling architecture structural of decoder_2x4
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_2bits
 # -- Compiling architecture behavioral of register_2bits
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux_2x1
 # -- Compiling architecture structural of mux_2x1
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity half_adder
 # -- Compiling architecture structural of half_adder
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder
 # -- Compiling architecture behavioral of full_adder
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FFD
 # -- Compiling architecture logicFunction of FFD
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity counter
 # -- Compiling architecture behavioral of counter
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder_2bits
 # -- Compiling architecture behavioral of adder_2bits
-# End time: 12:24:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:15 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KEY_SCANNER/key_scanner.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity key_scanner
 # -- Compiling architecture structural of key_scanner
-# End time: 12:24:16 on Apr 03,2025, Elapsed time: 0:00:01
+# End time: 12:03:54 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:16 on Apr 03,2025
+# Start time: 12:03:54 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Key_decode
 # -- Compiling architecture structural of Key_decode
-# End time: 12:24:16 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:55 on Apr 04,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:16 on Apr 03,2025
+# Start time: 12:03:55 on Apr 04,2025
 # vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity roulette
 # -- Compiling architecture structural of roulette
-# End time: 12:24:16 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:03:55 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd}
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:16 on Apr 03,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd 
+# Start time: 12:03:55 on Apr 04,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity UsbPort
-# -- Compiling architecture bdf_type of UsbPort
-# ** Error: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd(90): (vcom-1035) Formal port "tdo" has OPEN or no actual associated with it.
-# ** Note: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd(92): VHDL Compiler exiting
-# End time: 12:24:16 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./roulette_run_msim_rtl_vhdl.do line 22
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/UsbPort.vhd}"
+# -- Compiling entity KeyControl
+# -- Compiling architecture behavioral of KeyControl
+# End time: 12:03:55 on Apr 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
 vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:25:15 on Apr 03,2025
+# Start time: 12:04:33 on Apr 04,2025
 # vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/roulette_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity roulette_tb
 # -- Compiling architecture behavioral of roulette_tb
-# End time: 12:25:15 on Apr 03,2025, Elapsed time: 0:00:00
+# End time: 12:04:33 on Apr 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.roulette_tb
 # vsim work.roulette_tb 
-# Start time: 12:25:33 on Apr 03,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.roulette_tb(behavioral)
-# Loading work.roulette(structural)
-# Loading work.key_decode(structural)
-# Loading work.key_scanner(structural)
-# Loading work.counter(behavioral)
-# Loading work.adder_2bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.mux_2x1(structural)
-# Loading work.register_2bits(behavioral)
-# Loading work.ffd(logicfunction)
-# Loading work.decoder_2x4(structural)
-# Loading work.priority_encoder(structural)
-# Loading work.partial_priority_encoder(structural)
-# Loading work.mux_2x1_penc(structural)
-# ** Warning: (vsim-3473) Component instance "keycontrols : KeyControl" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /roulette_tb/UUT/keydecode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
-# ** Error: (vsim-3173) Entity 'C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim/rtl_work.usbport' has no architecture.
-# Load interrupted
-# Error loading design
-# End time: 12:25:33 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-vsim work.roulette_tb(behavioral)
-# vsim work.roulette_tb(behavioral) 
-# Start time: 12:26:38 on Apr 03,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.roulette_tb(behavioral)
-# Loading work.roulette(structural)
-# Loading work.key_decode(structural)
-# Loading work.key_scanner(structural)
-# Loading work.counter(behavioral)
-# Loading work.adder_2bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.mux_2x1(structural)
-# Loading work.register_2bits(behavioral)
-# Loading work.ffd(logicfunction)
-# Loading work.decoder_2x4(structural)
-# Loading work.priority_encoder(structural)
-# Loading work.partial_priority_encoder(structural)
-# Loading work.mux_2x1_penc(structural)
-# ** Warning: (vsim-3473) Component instance "keycontrols : KeyControl" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /roulette_tb/UUT/keydecode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
-# ** Error: (vsim-3173) Entity 'C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim/rtl_work.usbport' has no architecture.
-# Load interrupted
-# Error loading design
-# End time: 12:26:39 on Apr 03,2025, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
-vsim work.roulette_tb
-# vsim work.roulette_tb 
-# Start time: 12:47:37 on Apr 03,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.roulette_tb(behavioral)
-# Loading work.roulette(structural)
-# Loading work.key_decode(structural)
-# Loading work.key_scanner(structural)
-# Loading work.counter(behavioral)
-# Loading work.adder_2bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.mux_2x1(structural)
-# Loading work.register_2bits(behavioral)
-# Loading work.ffd(logicfunction)
-# Loading work.decoder_2x4(structural)
-# Loading work.priority_encoder(structural)
-# Loading work.partial_priority_encoder(structural)
-# Loading work.mux_2x1_penc(structural)
-# ** Warning: (vsim-3473) Component instance "keycontrols : KeyControl" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /roulette_tb/UUT/keydecode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
-# ** Error: (vsim-3173) Entity 'C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim/rtl_work.usbport' has no architecture.
-# Load interrupted
-# Error loading design
-# End time: 12:47:37 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:48:05 on Apr 03,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Key_decode_tb
-# -- Compiling architecture behavioral of Key_decode_tb
-# End time: 12:48:05 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:48:06 on Apr 03,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/testbench/Key_decode_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Key_decode_tb
-# -- Compiling architecture behavioral of Key_decode_tb
-# End time: 12:48:06 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.key_decode_tb
-# vsim work.key_decode_tb 
-# Start time: 12:48:16 on Apr 03,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.key_decode_tb(behavioral)
-# Loading work.key_decode(structural)
-# Loading work.key_scanner(structural)
-# Loading work.counter(behavioral)
-# Loading work.adder_2bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.mux_2x1(structural)
-# Loading work.register_2bits(behavioral)
-# Loading work.ffd(logicfunction)
-# Loading work.decoder_2x4(structural)
-# Loading work.priority_encoder(structural)
-# Loading work.partial_priority_encoder(structural)
-# Loading work.mux_2x1_penc(structural)
-# ** Warning: (vsim-3473) Component instance "keycontrols : KeyControl" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /key_decode_tb/UUT File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/Key_decode.vhd
-add wave -position insertpoint sim:/key_decode_tb/*
-run
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:49:35 on Apr 03,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/KEY_DECODE/KeyControl/KeyControl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyControl
-# -- Compiling architecture behavioral of KeyControl
-# End time: 12:49:35 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.keycontrol(behavioral)
-run
-# GetModuleFileName: Impossível localizar o módulo especificado.
-# 
-# 
-vsim work.roulette_tb
-# End time: 12:51:56 on Apr 03,2025, Elapsed time: 0:03:40
-# Errors: 0, Warnings: 0
-# vsim work.roulette_tb 
-# Start time: 12:51:56 on Apr 03,2025
+# Start time: 12:04:38 on Apr 04,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -368,8 +209,8 @@ vsim work.roulette_tb
 # Loading work.partial_priority_encoder(structural)
 # Loading work.mux_2x1_penc(structural)
 # Loading work.keycontrol(behavioral)
-# ** Error: (vsim-3173) Entity 'C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim/rtl_work.usbport' has no architecture.
-# Load interrupted
-# Error loading design
-# End time: 12:51:56 on Apr 03,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+add wave -position insertpoint sim:/roulette_tb/*
+run
+run
+# End time: 14:19:20 on Apr 04,2025, Elapsed time: 2:14:42
+# Errors: 0, Warnings: 0
