@@ -24,10 +24,6 @@ object KBD {
                   HAL.clrBits(KACK)
                   return keys[key.shr(1)]   // We use a logical shift right as the values of the K3:0 are the UsbPortInput(4:1)
             }
-            //while(HAL.isBit(KVAL){}
-            //HAL.clrBits(KACK)
-            //return keys[key.shr(1)]
-
         return EMPTY_CHAR
     }
 
