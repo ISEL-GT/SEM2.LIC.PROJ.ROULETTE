@@ -1,5 +1,6 @@
 package com.github.iselgt.roulette
 
+
 import isel.leic.utils.Time
 
 object LCD {
@@ -43,7 +44,6 @@ object LCD {
     private fun writeCMD(data: Int) {
         writeByte(false, data)
     }
-
     // Writes a Byte command/data on LCD
     private fun writeByte(rs: Boolean, data: Int) {
 
@@ -65,7 +65,7 @@ object LCD {
 
 
     // Writes a nibble (4 bits) of command/data to the LCD in Parallel Mode
-    private fun writeNibbleParallel(rs: Boolean, data: Int) {
+    private fun  writeNibbleParallel(rs: Boolean, data: Int) {
                                                     // Set or clear the Register Select (RS) pin depending on whether sending data or command
         if (rs) {
             HAL.setBits(REGISTER_SELECTOR_MASK)     // RS = 1 for data
