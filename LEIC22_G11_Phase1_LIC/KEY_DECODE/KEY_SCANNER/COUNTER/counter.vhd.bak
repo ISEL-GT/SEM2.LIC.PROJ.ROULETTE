@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- This entity defines a 4bit counter that always adds +1 to the current count, looping
+-- around indefinitely.
+entity counter is
+
+    port (
+        A : in std_logic_vector(0 downto 3);
+		  B : in std_logic_vector(0 downto 3);
+		  
+		  reset : in std_logic;
+		  parallel_load_flag : in std_logic;
+		  parallel_load_value : in std_logic_vector(0 downto 3);
+		  
+		  count : out std_logic_vector(0 downto 3);
+    );
+
+end registry_4bits;
+
+
+architecture structural of counter is
+
+   -- Declare the component for the flip-flop (FFD)
+	component adder_4bits is 
+	 
+		port (
+			A : in std_logic_vector(3 downto 0);
+			B : in std_logic_vector(3 downto 0);
+				
+			carry_in  : in std_logic;
+			carry_out : out std_logic;
+				
+			result : out std_logic_vector(3 downto 0)
+		);
+			
+	end component;
+	
+	
+	-- Imports a 2 inputs x 4 bits mux
+	component mux_2x4 is
+		
+		port (
+			A : in std_logic(3 downto 0);
+			B : in std_logic_vector(3 downto 0);
+
+			selector : in std_logic;
+
+			result : out std_logic_vector(3 downto 0)
+		);
+		
+	end component;
+	
+	
+	-- Imports the 4bit registry 
+	component registry_4bits is
+	
+		port (
+        CLK   : in std_logic;
+        RESET : in std_logic;
+        SET   : in std_logic;
+        D     : in std_logic_vector(2 downto 0);
+        EN    : in std_logic;
+        Q     : out std_logic_vector(2 downto 0)
+		);
+		
+	end component;
+
+	
+	
+	
+	
+	
+	
+    
+begin

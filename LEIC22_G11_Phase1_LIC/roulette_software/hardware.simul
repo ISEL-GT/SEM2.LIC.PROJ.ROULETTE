@@ -1,0 +1,20 @@
+#Generic modules to activate from Simulator
+UsbPort = UsbPort
+kbd = Keyboard("123A456B789C*0#D",4,4,0)
+lcd     = LCD
+
+#--------------------------------------
+#KeyBoard Reader
+#--------------------------------------
+1 -> kbd.oe
+kbd.K[0-3] -> UsbPort.I[1-4]
+kbd.val -> UsbPort.I0
+UsbPort.O0 -> kbd.ack
+
+#--------------------------------------
+#LCD
+#--------------------------------------
+#Serial Receiver
+UsbPort.O[1-4] -> lcd.D[4-7]
+UsbPort.O6 -> lcd.rs
+UsbPort.O7 -> lcd.e

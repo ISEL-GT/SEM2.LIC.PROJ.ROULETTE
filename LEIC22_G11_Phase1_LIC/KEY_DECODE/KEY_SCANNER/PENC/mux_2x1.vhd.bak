@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- This entity is responsible for acting like a MUX, and giving the output based
+-- on the selected inputs
+entity mux_2x1 is
+
+	port (
+		A : in std_logic_vector(1 downto 0);
+		B : in std_logic_vector(1 downto 0);
+
+		selector : in std_logic;
+
+		result : out std_logic_vector(1 downto 0)
+	);
+
+end mux_2x1;
+
+
+-- Implements the logic of a MUX with two inputs and one selector
+architecture structural of mux_2x1 is
+begin
+	
+	result(1) <= (A(1) and not selector) or (B(1) and selector);
+	result(0) <= (A(0) and not selector) or (B(1) and selector);
+
+end structural;
