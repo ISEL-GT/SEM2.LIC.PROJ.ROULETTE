@@ -4,6 +4,7 @@ object SerialEmitter { // Envia tramas para os diferentes mÃ³dulos Serial Rece
     private const val SSSCORE_MASK = 0x02
     private const val SCLK_MASK = 0x10
     private const val SDX_VAL = 0x08
+
     fun init() {
         HAL.init()
         HAL.setBits(SSLCD_MASK)

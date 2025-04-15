@@ -103,3 +103,4 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE roulette_dispatcher.vhd
 set_global_assignment -name VHDL_FILE serial_reciver.vhd
+set_global_assignment -name VHDL_FILE SLCDC/serial_reciver/ShiftRegisterSerialReceiver.vhd

@@ -6,6 +6,8 @@ import isel.leic.utils.Time
 object LCD {
     private const val LINES = 2
     private const val COLS = 16
+    private var currCol = 0
+    private var currLine = 0
 
     private const val SERIAL_INTERFACE = false
 
@@ -114,7 +116,15 @@ object LCD {
 
 
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar()) writeDATA(c.code)   //.code => .toInt()
+        if (c != NONE_VALUE.toChar()){
+            if (currCol>=COLS){
+                currLine++
+                currCol = (currLine+1)%LINES
+                cursor(currLine, currCol)
+            }
+            writeDATA(c.code)
+            currCol++
+        }   //.code => .toInt()
     }
 
     fun write(text: String) {
