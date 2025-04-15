@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Serial_Receiver_tb is
+end Serial_Receiver_tb;
+
+architecture behavioral of Serial_Receiver_tb is
+
+	component serial_receiver is
+
+	port (
+		SS			: 	in std_logic;
+		SCLK		: 	in std_logic;
+		SDX		: 	in std_logic;
+		Reset 	:	in std_logic;	
+		accept   :  in std_logic;
+		
+		DXval 	: 	out std_logic;
+		Data		: 	out std_logic_vector(4 downto 0)			
+	);	
+	end component;
