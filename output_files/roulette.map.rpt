@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue Apr 15 10:36:16 2025
+Tue Apr 15 11:47:56 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 15 10:36:16 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 15 11:47:56 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
+; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -181,50 +181,35 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                    ; Library     ;
 +------------------------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
-; .hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd                                 ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd                                 ;             ;
-; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd                             ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd                             ;             ;
-; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd                             ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd                             ;             ;
-; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                                    ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                                    ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd         ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd         ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd             ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd             ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd               ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd               ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd        ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd        ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd               ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd               ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd           ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd           ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                   ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                   ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd                                ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd                                ;             ;
-; .hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd                                ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd                                ;             ;
-; .hardware/UsbPort.vhd                                                              ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd                                                              ;             ;
-; roulette.vhd                                                                       ; yes             ; User VHDL File                               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd                                                                       ;             ;
+; .hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd                                 ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd                                 ;             ;
+; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd                             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd                             ;             ;
+; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd                             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd                             ;             ;
+; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                                    ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                                    ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd         ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd         ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd             ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd               ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd               ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd        ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd        ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd               ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd               ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd           ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd           ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                   ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd                   ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd                                ;             ;
+; .hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd                                ;             ;
+; .hardware/UsbPort.vhd                                                              ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd                                                              ;             ;
+; roulette.vhd                                                                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd                                                                       ;             ;
 ; sld_virtual_jtag.v                                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                                       ;             ;
 ; sld_virtual_jtag_basic.v                                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                                 ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                            ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                        ;             ;
 ; sld_hub.vhd                                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                              ; altera_sld  ;
-; db/ip/sld86bd74f0/alt_sld_fab.v                                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/alt_sld_fab.v                                                    ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v                             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v                             ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv                      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv                      ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv                   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv                   ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd                 ; yes             ; Encrypted Auto-Found VHDL File               ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd                 ; alt_sld_fab ;
-; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv                   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv                   ; alt_sld_fab ;
+; db/ip/sld86bd74f0/alt_sld_fab.v                                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/alt_sld_fab.v                                                    ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v                             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v                             ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv                      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv                      ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv                   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv                   ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd                 ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd                 ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv                   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv                   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                         ;             ;
 ; sld_rom_sr.vhd                                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                           ;             ;
-; KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                                   ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd                                                                                ;             ;
-; KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd                           ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd                                                                        ;             ;
-; KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                                       ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd                                                                                    ;             ;
-; KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                                         ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd                                                                                      ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                                  ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd                                                                               ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                                          ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd                                                                                       ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                                      ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd                                                                                   ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                                      ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd                                                                                   ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                                             ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd                                                                                          ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                                         ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd                                                                                      ;             ;
-; KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                                     ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd                                                                                  ;             ;
-; KEY_DECODE/KEY_SCANNER/key_scanner.vhd                                             ; yes             ; User VHDL File                               ; KEY_DECODE/KEY_SCANNER/key_scanner.vhd                                                                                          ;             ;
-; KEY_DECODE/Key_decode.vhd                                                          ; yes             ; User VHDL File                               ; KEY_DECODE/Key_decode.vhd                                                                                                       ;             ;
-; UsbPort.vhd                                                                        ; yes             ; User VHDL File                               ; UsbPort.vhd                                                                                                                     ;             ;
-; KEY_DECODE/KeyControl/KeyControl.vhd                                               ; yes             ; User VHDL File                               ; KEY_DECODE/KeyControl/KeyControl.vhd                                                                                            ;             ;
 +------------------------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -466,142 +451,142 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 15 10:36:00 2025
+    Info: Processing started: Tue Apr 15 11:47:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Warning (12019): Can't analyze file -- file .hardware/SLCDC/LCD_dispatcher/roulette_dispatcher.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
-    Info (12023): Found entity 1: parity_checker File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
+    Info (12022): Found design unit 1: parity_checker-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
+    Info (12023): Found entity 1: parity_checker File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/registry_3bits_counter.vhd
-    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_3bits_counter File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_3bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/mux2x1.vhd
-    Info (12022): Found design unit 1: mux_2x1-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1 File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/half_adder.vhd
-    Info (12022): Found design unit 1: half_adder-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
-    Info (12023): Found entity 1: half_adder File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
+    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
+    Info (12023): Found entity 1: half_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
-    Info (12023): Found entity 1: full_adder File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/ffd.vhd
-    Info (12022): Found design unit 1: FFD-logicFunction File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
-    Info (12023): Found entity 1: FFD File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-logicFunction File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
+    Info (12023): Found entity 1: FFD File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/counter_3bits.vhd
-    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
-    Info (12023): Found entity 1: counter_3bits File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
+    Info (12023): Found entity 1: counter_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/adder_3bits.vhd
-    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_3bits File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/shiftregisterserialreceiver.vhd
-    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
+    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_receiver.vhd
-    Info (12022): Found design unit 1: serial_receiver-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 18
-    Info (12023): Found entity 1: serial_receiver File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
+    Info (12022): Found design unit 1: serial_receiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 18
+    Info (12023): Found entity 1: serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file .hardware/slcdc/slcdc.vhd
-    Info (12023): Found entity 1: SLCDC File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
+    Info (12023): Found entity 1: SLCDC File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/priority_encoder.vhd
-    Info (12022): Found design unit 1: priority_encoder-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: priority_encoder File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/partial_priority_encoder.vhd
-    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: partial_priority_encoder File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: partial_priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/mux_2x1_penc.vhd
-    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1_penc File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1_penc File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/dec/decoder_2x4.vhd
-    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
-    Info (12023): Found entity 1: decoder_2x4 File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
+    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
+    Info (12023): Found entity 1: decoder_2x4 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits_counter.vhd
-    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits_counter File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits.vhd
-    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
-Info (15248): File "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/mux2x1.vhd
-Info (15248): File "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/half_adder.vhd
-Info (15248): File "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/full_adder.vhd
-Info (15248): File "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/ffd.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/counter.vhd
-    Info (12022): Found design unit 1: counter-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
-    Info (12023): Found entity 1: counter File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
+    Info (12022): Found design unit 1: counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
+    Info (12023): Found entity 1: counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/adder_2bits.vhd
-    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_2bits File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/key_scanner.vhd
-    Info (12022): Found design unit 1: key_scanner-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
-    Info (12023): Found entity 1: key_scanner File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
+    Info (12022): Found design unit 1: key_scanner-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
+    Info (12023): Found entity 1: key_scanner File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
-    Info (12023): Found entity 1: KeyControl File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
+    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
+    Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_decode.vhd
-    Info (12022): Found design unit 1: Key_decode-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
-    Info (12023): Found entity 1: Key_decode File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
+    Info (12023): Found entity 1: Key_decode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_reader.vhd
-    Info (12022): Found design unit 1: Key_reader-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
-    Info (12023): Found entity 1: Key_reader File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
+    Info (12023): Found entity 1: Key_reader File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/priority_encoder_tb.vhd
-    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: priority_encoder_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: priority_encoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keyscannertb.vhd
-    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
-    Info (12023): Found entity 1: Key_Scanner_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
+    Info (12023): Found entity 1: Key_Scanner_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keycontrol_tb.vhd
-    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
-    Info (12023): Found entity 1: KeyControl_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
+    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_reader_tb.vhd
-    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_reader_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_reader_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_decode_tb.vhd
-    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_decode_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_decode_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/decoder_tb.vhd
-    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: decoder_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: decoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/countertb.vhd
-    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
-    Info (12023): Found entity 1: counter_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
+    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
+    Info (12023): Found entity 1: counter_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
-    Info (12023): Found entity 1: roulette File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
+    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
+    Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_controller_tb.vhd
-    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Controller_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Controller_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_receiver_tb.vhd
-    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/receiver_controller.vhd
-    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controller.vhd Line: 22
-    Info (12023): Found entity 1: receiver_controler File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controller.vhd Line: 4
+    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/receiver_controler.vhd
+    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 21
+    Info (12023): Found entity 1: receiver_controler File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
 Info (12127): Elaborating entity "roulette" for the top level hierarchy
-Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:keydecode" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 63
-Info (12128): Elaborating entity "key_scanner" for hierarchy "Key_decode:keydecode|key_scanner:keyscan" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 55
-Info (12128): Elaborating entity "counter" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 74
-Info (12128): Elaborating entity "adder_2bits" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 75
-Info (12128): Elaborating entity "full_adder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 47
-Info (12128): Elaborating entity "half_adder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|mux_2x1:instance_mux_2x1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 88
-Info (12128): Elaborating entity "register_2bits" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 100
-Info (12128): Elaborating entity "FFD" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 37
-Info (12128): Elaborating entity "decoder_2x4" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|decoder_2x4:Decoder" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 83
-Info (12128): Elaborating entity "priority_encoder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 93
-Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 54
-Info (12128): Elaborating entity "mux_2x1_penc" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|mux_2x1_penc:Mux2x1" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 81
-Info (12128): Elaborating entity "KeyControl" for hierarchy "Key_decode:keydecode|KeyControl:keycontrols" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 65
-Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:usbPortVHD" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 74
-Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
-Info (12130): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
-Info (12133): Instantiated megafunction "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:keydecode" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 63
+Info (12128): Elaborating entity "key_scanner" for hierarchy "Key_decode:keydecode|key_scanner:keyscan" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 55
+Info (12128): Elaborating entity "counter" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 74
+Info (12128): Elaborating entity "adder_2bits" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 75
+Info (12128): Elaborating entity "full_adder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 47
+Info (12128): Elaborating entity "half_adder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|mux_2x1:instance_mux_2x1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 88
+Info (12128): Elaborating entity "register_2bits" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 100
+Info (12128): Elaborating entity "FFD" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|counter:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 37
+Info (12128): Elaborating entity "decoder_2x4" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|decoder_2x4:Decoder" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 83
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 93
+Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 54
+Info (12128): Elaborating entity "mux_2x1_penc" for hierarchy "Key_decode:keydecode|key_scanner:keyscan|priority_encoder:Penc|mux_2x1_penc:Mux2x1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 81
+Info (12128): Elaborating entity "KeyControl" for hierarchy "Key_decode:keydecode|KeyControl:keycontrols" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 65
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:usbPortVHD" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 74
+Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+Info (12133): Instantiated megafunction "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
     Info (12134): Parameter "lpm_type" = "sld_virtual_jtag"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
     Info (12134): Parameter "sld_instance_index" = "0"
@@ -616,7 +601,7 @@ Info (12131): Elaborated megafunction instantiation "UsbPort:usbPortVHD|sld_virt
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:usbPortVHD|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.04.15.10:36:09 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.04.15.11:47:50 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -627,18 +612,18 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/LEIC/4Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -647,9 +632,9 @@ Info (21057): Implemented 194 device resources after synthesis - the final resou
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 168 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Tue Apr 15 10:36:16 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Tue Apr 15 11:47:56 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 
