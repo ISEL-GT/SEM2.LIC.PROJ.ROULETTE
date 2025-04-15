@@ -1,0 +1,20 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all;
+
+entity serial_control is
+
+	port (
+		not_enRx	: 	in std_logic;
+		accept	: 	in std_logic;
+		pFlag    :  in std_logic;
+		dFlag    :  in std_logic;
+		RXerror  :  in std_logic;
+		
+		CLK		: 	in std_logic;
+		Reset 	:	in std_logic;		
+		
+		wr	 		: 	out std_logic;
+		init     :  out std_logic;
+		DXval    :  out std_logic;
+	);
+end parity_checker;
