@@ -1,5 +1,4 @@
 package com.github.iselgt.roulette
-
 import isel.leic.UsbPort
 
 object HAL {

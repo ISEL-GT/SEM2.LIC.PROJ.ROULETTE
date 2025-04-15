@@ -1,6 +1,4 @@
 package com.github.iselgt.roulette
-
-
 import isel.leic.utils.Time
 
 object LCD {
