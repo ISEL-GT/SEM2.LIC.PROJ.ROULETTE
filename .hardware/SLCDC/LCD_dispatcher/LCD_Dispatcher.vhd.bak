@@ -1,0 +1,26 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all;
+
+entity LCD_Dispatcher is
+
+	port (
+		Dval		: 	in std_logic;
+		Din		: 	in std_logic_vector(4 downto 0);
+		
+		Wrl 		: 	out std_logic;
+		Dout		: 	out std_logic_vector(4 downto 0)			
+	);
+end LCD_Dispatcher;
+
+architecture structural of LCD_Dispatcher is
+
+	signal wr_sig 			: std_logic;
+	signal data_sig 		: std_logic_vector(4 downto 0);
+
+begin
+	data_sig <= Dval,
+	wr_sig  	<= Din,
+	
+	Wrl  <= wr_sig,
+	Dout <= data_sig,
+end structural;
