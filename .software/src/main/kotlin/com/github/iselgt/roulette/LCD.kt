@@ -1,6 +1,7 @@
 package com.github.iselgt.roulette
 
 import isel.leic.utils.Time
+import jdk.internal.org.jline.utils.Colors.s
 
 object LCD {
     private const val LINES = 2
@@ -35,6 +36,8 @@ object LCD {
     private const val SET4BITS = 0x2                    // Entry Mode Set 4 bits long
     private const val SET8BITS = 0x3                    // Entry Mode Set 8 bits long
 
+    private var currCol = 0
+    private var currLine = 0
 
     private fun writeDATA(data: Int) {
         writeByte(true, data)
@@ -113,8 +116,17 @@ object LCD {
     }
 
 
+
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar()) writeDATA(c.code)   //.code => .toInt()
+        if (c != NONE_VALUE.toChar()){
+            if (currCol>=COLS){
+                currLine++
+                currCol = 0
+                cursor(currLine, currCol)
+            }
+            writeDATA(c.code)
+            currCol = (currCol+1)%COLS
+        }   //.code => .toInt()
     }
 
     fun write(text: String) {

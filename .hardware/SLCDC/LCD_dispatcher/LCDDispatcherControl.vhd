@@ -1,0 +1,77 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity LCDDispatcherControl is
+    port(
+        clk   : in std_logic;
+        reset : in std_logic;
+        Dval  : in std_logic;
+        Wrl   : out std_logic;
+        done  : out std_logic
+    );
+end LCDDispatcherControl;
+
+architecture behavior of LCDDispatcherControl is
+
+    type STATE_TYPE is (WaitingDval, ReceivingDval, DoneReceived);
+    signal currentState, nextState : STATE_TYPE;
+
+    signal counter : unsigned(3 downto 0) := (others => '0'); -- 4 bits para contar até 13
+    signal counter_enable : std_logic := '0';
+
+begin
+
+    -- Registo de estado (sincrono com reset)
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            currentState <= WaitingDval;
+            counter <= (others => '0');
+        elsif rising_edge(clk) then
+            currentState <= nextState;
+            if counter_enable = '1' then
+                if counter < 13 then
+                    counter <= counter + 1;
+                end if;
+            else
+                counter <= (others => '0');
+            end if;
+        end if;
+    end process;
+
+    -- Lógica de transição de estados
+    process(currentState, Dval, counter)
+    begin
+        case currentState is
+            when WaitingDval =>
+                if Dval = '1' then
+                    nextState <= ReceivingDval;
+                else
+                    nextState <= WaitingDval;
+                end if;
+
+            when ReceivingDval =>
+                if counter = 13 then
+                    nextState <= DoneReceived;
+                else
+                    nextState <= ReceivingDval;
+                end if;
+
+            when DoneReceived =>
+                if Dval = '0' then
+                    nextState <= WaitingDval;
+                else
+                    nextState <= DoneReceived;
+                end if;
+        end case;
+    end process;
+
+    -- Sinais de controlo
+    Wrl <= '1' when currentState = ReceivingDval else '0';
+    done <= '1' when currentState = DoneReceived else '0';
+
+    -- Enable para o contador apenas no estado de escrita
+    counter_enable <= '1' when currentState = ReceivingDval else '0';
+
+end behavior;

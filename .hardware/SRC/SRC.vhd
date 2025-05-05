@@ -1,9 +1,9 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-entity SLCDC is
+entity SRC is
     port (
-        LCDSel : in std_logic;
+        RouSel : in std_logic;
         SCLK   : in std_logic;
         SDX    : in std_logic;
         MClk   : in std_logic;
@@ -13,11 +13,11 @@ entity SLCDC is
         Wrl    : out std_logic;
         Dout   : out std_logic_vector(4 downto 0)
     );
-end SLCDC;
+end SRC;
 
-architecture structural of SLCDC is
+architecture structural of SRC is
 
-    component serial_receiver is
+    component serial_receiver_roulette is
         port (
             SS      : in std_logic;
             SCLK    : in std_logic;
@@ -27,34 +27,34 @@ architecture structural of SLCDC is
             accept  : in std_logic;
 
             DXval   : out std_logic;
-            Data    : out std_logic_vector(4 downto 0)
+            Data    : out std_logic_vector(7 downto 0)
         );
     end component;
 
-    component LCD_Dispatcher is
+    component roulette_dispatcher is
         port (
             clk   : in std_logic;
             reset : in std_logic;
             Dval  : in std_logic;
-            Din   : in std_logic_vector(4 downto 0);
+            Din   : in std_logic_vector(7 downto 0);
             
             Wrl   : out std_logic;
-            Dout  : out std_logic_vector(4 downto 0);
+            Dout  : out std_logic_vector(7 downto 0);
             done  : out std_logic
         );
     end component;
 
     -- Sinais internos para interligação
     signal DXval_sig : std_logic;
-    signal Data_sig  : std_logic_vector(4 downto 0);
+    signal Data_sig  : std_logic_vector(7 downto 0);
     signal done_sig  : std_logic;
 
 begin
 
     -- Instância do receptor serial
-    ReceiverInst: serial_receiver
+    ReceiverInst: serial_receiver_roulette
         port map (
-            SS      => LCDSel,
+            SS      => RouSel,
             SCLK    => SCLK,
             SDX     => SDX,
             MClk    => MClk,
@@ -65,7 +65,7 @@ begin
         );
 
     -- Instância do dispatcher LCD
-    DispatcherInst: LCD_Dispatcher
+    DispatcherInst: roulette_dispatcher
         port map (
             clk     => MClk,
             reset   => Reset,

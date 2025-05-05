@@ -96,18 +96,15 @@ begin
 		wait for clk_period*2;
 		pFlag_tb <= '1';
 		wait for clk_period*2;
-
-		-- State 4
-		not_enRx_tb <= '0';
 		RXerror_tb  <= '0';
 		wait for clk_period*2;
 
-		-- State 5
+		-- State 4
 		accept_tb <= '0';
 		wait for clk_period*2;
 		accept_tb <= '1';
 
-		-- State 6
+		-- State 5
 		wait for clk_period*2;
 		accept_tb <= '1';
 		wait for clk_period*2;

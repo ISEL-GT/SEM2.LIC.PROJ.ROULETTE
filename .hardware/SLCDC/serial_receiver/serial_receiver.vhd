@@ -7,6 +7,7 @@ entity serial_receiver is
 		SS			: 	in std_logic;
 		SCLK		: 	in std_logic;
 		SDX		: 	in std_logic;
+		MClk 	   :  in std_logic;
 		Reset 	:	in std_logic;	
 		accept   :  in std_logic;
 		
@@ -119,7 +120,7 @@ begin
 			pFlag    => pFlag_sig,
 			dFlag    => dFlag_sig,
 			RXerror  => RXerror_sig,
-			CLK      => SCLK,
+			CLK      => MClk,
 			Reset    => Reset,
 			wr       => wr_sig,
 			init     => init_sig,

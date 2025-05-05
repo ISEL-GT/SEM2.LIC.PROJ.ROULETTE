@@ -23,9 +23,9 @@ VcOd?jUQVL[L5QX>d2OCJm3
 !s100 ZG<?nYZagR0?:d[CEjz=10
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1744714253
+Z7 !s110 1744716749
 !i10b 1
-Z8 !s108 1744714253.000000
+Z8 !s108 1744716749.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd|
 Z10 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd|
 !i113 1
@@ -269,9 +269,9 @@ VZl[_6k2eR9=0CWgO_jK^C0
 !s100 =HXUA8hOAZH?<N]H2Sd1^0
 R6
 31
-Z35 !s110 1744714254
+Z35 !s110 1744716750
 !i10b 1
-Z36 !s108 1744714254.000000
+Z36 !s108 1744716750.000000
 Z37 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd|
 Z38 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd|
 !i113 1
@@ -542,55 +542,14 @@ R62
 !i113 1
 R11
 R12
-Ereceiver_controler
-Z63 w1744714060
-R2
-R3
-!i122 15
-R0
-Z64 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
-Z65 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
-l0
-L4 1
-VWISN]Qz3DM`R<bF^:hHhC2
-!s100 12^A_8_ao9BgZ@izRkMc92
-R6
-32
-Z66 !s110 1744714278
-!i10b 1
-Z67 !s108 1744714278.000000
-Z68 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
-Z69 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
-!i113 1
-Z70 o-work work
-R12
-Abehavioral
-R2
-R3
-DEx4 work 18 receiver_controler 0 22 WISN]Qz3DM`R<bF^:hHhC2
-!i122 15
-l26
-L21 79
-VY9BL2B1b[4c]ccW8F1Ee70
-!s100 flM4ZdCGVb`THUF67@8_I0
-R6
-32
-R66
-!i10b 1
-R67
-R68
-R69
-!i113 1
-R70
-R12
 Eregister_2bits
 R1
 R2
 R3
 !i122 8
 R0
-Z71 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
-Z72 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
+Z63 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
+Z64 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 l0
 L4 1
 VIoED`BF:E__I[R[>gNkki2
@@ -600,8 +559,8 @@ R6
 R7
 !i10b 1
 R8
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
-Z74 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
+Z66 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd|
 !i113 1
 R11
 R12
@@ -619,51 +578,10 @@ R6
 R7
 !i10b 1
 R8
-R73
-R74
+R65
+R66
 !i113 1
 R11
-R12
-Eserial_controller_tb
-Z75 w1744713343
-R2
-R3
-!i122 16
-R0
-Z76 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
-Z77 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
-l0
-L4 1
-VHoeaGU4<3f>Nl7`:HnnzV0
-!s100 ?VY`10XzYTQkIfF;T`A9n1
-R6
-32
-Z78 !s110 1744714284
-!i10b 1
-Z79 !s108 1744714284.000000
-Z80 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
-!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
-!i113 1
-R70
-R12
-Abehavioral
-R2
-R3
-DEx4 work 20 serial_controller_tb 0 22 HoeaGU4<3f>Nl7`:HnnzV0
-!i122 16
-l40
-L7 113
-V3;JZ8MW4`FW0:K:l81Dj=3
-!s100 d:Bm<NnDN0Seb^zP1:Dd>1
-R6
-32
-R78
-!i10b 1
-R79
-R80
-Z81 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
-!i113 1
-R70
 R12
 Eusbport
 R1

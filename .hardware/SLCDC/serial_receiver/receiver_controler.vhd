@@ -20,7 +20,7 @@ end receiver_controler;
 
 architecture behavioral of receiver_controler is
 
-    type STATE_TYPE is (State1, State2, State3, State4, State5, State6);
+    type STATE_TYPE is (State1, State2, State3, State4, State5);
     signal CurrentState, NextState: STATE_TYPE;
 
 begin
@@ -58,42 +58,36 @@ begin
             when State3 =>
                 if not_enRx = '1' then
                     NextState <= State1;
-                elsif pFlag = '1' then
-                    NextState <= State4;
-                else
+                elsif pFlag = '0' then
                     NextState <= State3;
+                elsif RXerror = '1' then
+						  NextState <= State1;
+					 else
+						  NextState <= State4;
                 end if;
 
             when State4 =>
                 if not_enRx = '1' then
                     NextState <= State1;
-                elsif RXerror = '1' then
-                    NextState <= State1;
-                else
+                elsif accept = '1' then
                     NextState <= State5;
+                else
+                    NextState <= State4;
                 end if;
 
             when State5 =>
-                if not_enRx = '1' then
-                    NextState <= State1;
-                elsif accept = '1' then
-                    NextState <= State6;
-                else
-                    NextState <= State5;
-                end if;
-
-            when State6 =>
                 if not_enRx = '1' or accept = '0' then
                     NextState <= State1;
                 else
-                    NextState <= State6;
+                    NextState <= State5;
                 end if;
         end case;
     end process;
 
     -- Output Logic
-    wr    <= '1' when CurrentState = State2 else '0';
+	 
+    wr    <= '1' when (CurrentState = State2 and (not_enRx = '0' and dFlag = '0')) else '0';
     init  <= '1' when CurrentState = State1 else '0';
-    DXval <= '1' when CurrentState = State5 else '0';
+    DXval <= '1' when CurrentState = State4 else '0';
 
 end behavioral;
