@@ -1,11 +1,11 @@
 package com.github.iselgt.roulette
+
 import isel.leic.utils.Time
+import jdk.internal.org.jline.utils.Colors.s
 
 object LCD {
     private const val LINES = 2
     private const val COLS = 16
-    private var currCol = 0
-    private var currLine = 0
 
     private const val SERIAL_INTERFACE = false
 
@@ -36,6 +36,8 @@ object LCD {
     private const val SET4BITS = 0x2                    // Entry Mode Set 4 bits long
     private const val SET8BITS = 0x3                    // Entry Mode Set 8 bits long
 
+    private var currCol = 0
+    private var currLine = 0
 
     private fun writeDATA(data: Int) {
         writeByte(true, data)
@@ -44,6 +46,7 @@ object LCD {
     private fun writeCMD(data: Int) {
         writeByte(false, data)
     }
+
     // Writes a Byte command/data on LCD
     private fun writeByte(rs: Boolean, data: Int) {
 
@@ -65,8 +68,8 @@ object LCD {
 
 
     // Writes a nibble (4 bits) of command/data to the LCD in Parallel Mode
-    private fun  writeNibbleParallel(rs: Boolean, data: Int) {
-                                                    // Set or clear the Register Select (RS) pin depending on whether sending data or command
+    private fun writeNibbleParallel(rs: Boolean, data: Int) {
+        // Set or clear the Register Select (RS) pin depending on whether sending data or command
         if (rs) {
             HAL.setBits(REGISTER_SELECTOR_MASK)     // RS = 1 for data
         }
@@ -113,16 +116,17 @@ object LCD {
     }
 
 
+
     fun write(c: Char) {
         if (c != NONE_VALUE.toChar()){
             if (currCol>=COLS){
                 currLine++
-                currCol = (currLine+1)%LINES
+                currCol = 0
                 cursor(currLine, currCol)
             }
             writeDATA(c.code)
-            currCol++
-        }   //.code => .toInt()
+            currCol = (currCol+1)%COLS
+        }   //.code => .toInt()
     }
 
     fun write(text: String) {
