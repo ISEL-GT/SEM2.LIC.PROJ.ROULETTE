@@ -8,26 +8,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim
+Z0 dC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim
 Eadder_3bits
-Z1 w1744706104
+Z1 w1744705927
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 6
 R0
-Z4 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
-Z5 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
+Z4 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
+Z5 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
 l0
 L4 1
 VIED[Wij;RbSR<1GO[LL`52
 !s100 :]Xk1dZ;Vc>HA>>IzzADM2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1746518947
+Z7 !s110 1746524478
 !i10b 1
-Z8 !s108 1746518947.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
-Z10 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
+Z8 !s108 1746524478.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
+Z10 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
@@ -56,8 +56,8 @@ R2
 R3
 !i122 5
 R0
-Z13 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
-Z14 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
+Z13 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
+Z14 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
 l0
 L4 1
 VNmf`D<H8UZMV9nMUT]?^=2
@@ -67,8 +67,8 @@ R6
 R7
 !i10b 1
 R8
-Z15 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
-Z16 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
+Z15 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
+Z16 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
 !i113 1
 R11
 R12
@@ -97,8 +97,8 @@ R2
 R3
 !i122 4
 R0
-Z17 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
-Z18 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
+Z17 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
+Z18 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
 l0
 L5 1
 V7P=[@f?NjJ5eAni:EWNLA3
@@ -108,8 +108,8 @@ R6
 R7
 !i10b 1
 R8
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
-Z20 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
+Z20 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
 !i113 1
 R11
 R12
@@ -138,8 +138,8 @@ R2
 R3
 !i122 3
 R0
-Z21 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
-Z22 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
+Z21 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
+Z22 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
 l0
 L6 1
 VOUO;gSf6dhQn3OzTm4LMf0
@@ -149,8 +149,8 @@ R6
 R7
 !i10b 1
 R8
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
-Z24 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
+Z24 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
 !i113 1
 R11
 R12
@@ -179,8 +179,8 @@ R2
 R3
 !i122 2
 R0
-Z25 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
-Z26 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
+Z25 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
+Z26 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
 l0
 L6 1
 V5A9:A6@gTm<DI]fd`6C]a0
@@ -189,9 +189,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z27 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
-Z28 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
+Z27 !s108 1746524477.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
+Z29 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
 !i113 1
 R11
 R12
@@ -208,9 +208,9 @@ R6
 31
 R7
 !i10b 1
-R8
 R27
 R28
+R29
 !i113 1
 R11
 R12
@@ -220,19 +220,19 @@ R2
 R3
 !i122 0
 R0
-Z29 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
-Z30 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
+Z30 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
+Z31 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
 l0
 L4 1
 VFK9gKjSgk]>ZD[KYI6zXc2
 !s100 :gd^z@HF`YjG[c0Ih5GCl2
 R6
 31
-R7
+Z32 !s110 1746524476
 !i10b 1
-R8
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
-Z32 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
+Z33 !s108 1746524476.000000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
+Z35 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
 !i113 1
 R11
 R12
@@ -247,177 +247,259 @@ ViUZzfmzbA=j:PM@hKzkk01
 !s100 kHcA?<SAmZNL[FEdXNKBY3
 R6
 31
-R7
-!i10b 1
-R8
-R31
 R32
+!i10b 1
+R33
+R34
+R35
 !i113 1
 R11
+R12
+Ereceiver_controler
+Z36 w1746524393
+R2
+R3
+!i122 12
+R0
+Z37 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
+Z38 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
+l0
+L4 1
+Vg9Wg^@mY@mPz;^l[4H8zl3
+!s100 PEYRGIST0AKIYW`FESPmO3
+R6
+32
+Z39 !s110 1746524990
+!i10b 1
+Z40 !s108 1746524990.000000
+Z41 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
+Z42 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
+!i113 1
+Z43 o-work work
+R12
+Abehavioral
+R2
+R3
+DEx4 work 18 receiver_controler 0 22 g9Wg^@mY@mPz;^l[4H8zl3
+!i122 12
+l28
+L22 79
+Va@cT5^]nh5ncQ1JW9QFBe3
+!s100 dZX503O@3J[;Fz>Do:jIS1
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R43
 R12
 Eregister_3bits_counter
 R1
 R2
 R3
-!i122 1
+!i122 16
 R0
-Z33 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
-Z34 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
+Z44 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
+Z45 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
 l0
 L4 1
-Vf9VLn9XAz?YTc78nCLj=Z3
+VQ4C:`IUCBEe7I7EjbUmhX3
 !s100 RfO>RFPg`zN:jLH9l>kTL2
 R6
-31
-R7
+32
+Z46 !s110 1746525002
 !i10b 1
-R8
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
-Z36 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
+Z47 !s108 1746525002.000000
+Z48 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
+Z49 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
 !i113 1
-R11
+R43
 R12
 Abehavioral
 R2
 R3
-DEx4 work 22 register_3bits_counter 0 22 f9VLn9XAz?YTc78nCLj=Z3
-!i122 1
+DEx4 work 22 register_3bits_counter 0 22 Q4C:`IUCBEe7I7EjbUmhX3
+!i122 16
 l34
-L18 50
-Va[n0zMEZCEHLZ3TI>fCCJ1
-!s100 9Y5>PLJfB;ic4j`JPKiB12
+Z50 L18 50
+V1hz0[Cd532OU:E676]=gc1
+Z51 !s100 9Y5>PLJfB;ic4j`JPKiB12
 R6
-31
-R7
+32
+R46
 !i10b 1
-R8
-R35
-R36
+R47
+R48
+R49
 !i113 1
-R11
+R43
 R12
-Eserial_receiver
-Z37 w1746439684
+Eserial_controller_tb
+Z52 w1746522080
 R2
 R3
 !i122 11
 R0
-Z38 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-Z39 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
+Z53 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
+Z54 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
+l0
+L4 1
+VHoeaGU4<3f>Nl7`:HnnzV0
+!s100 ?VY`10XzYTQkIfF;T`A9n1
+R6
+32
+Z55 !s110 1746524503
+!i10b 1
+Z56 !s108 1746524503.000000
+Z57 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
+Z58 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
+!i113 1
+R43
+R12
+Abehavioral
+R2
+R3
+DEx4 work 20 serial_controller_tb 0 22 HoeaGU4<3f>Nl7`:HnnzV0
+!i122 11
+l43
+L7 115
+VE>c3`gCGW9S0BPG25SJc`2
+!s100 Y=Y[W`AfDdPGSX=fDhdVP1
+R6
+32
+R55
+!i10b 1
+R56
+R57
+R58
+!i113 1
+R43
+R12
+Eserial_receiver
+Z59 w1746520235
+R2
+R3
+!i122 13
+R0
+Z60 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
+Z61 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
 l0
 L4 1
 VC^ONna2Df7OZ;FU37^K[o0
 !s100 _Sf^mmVhzbWJ;8Q<D?e7D1
 R6
 32
-Z40 !s110 1746519079
+Z62 !s110 1746524992
 !i10b 1
-Z41 !s108 1746519079.000000
-Z42 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
-Z43 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
+Z63 !s108 1746524992.000000
+Z64 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
+Z65 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
 !i113 1
-Z44 o-work work
+R43
 R12
 Astructural
 R2
 R3
 DEx4 work 15 serial_receiver 0 22 C^ONna2Df7OZ;FU37^K[o0
-!i122 11
+!i122 13
 l76
-Z45 L19 115
+L19 115
 VVO`ESB0MaWd_0U=6d6B`@0
-Z46 !s100 f?XN=CSCaYDT78?EB8Ld03
+!s100 f?XN=CSCaYDT78?EB8Ld03
 R6
 32
-R40
+R62
 !i10b 1
-R41
-R42
-R43
+R63
+R64
+R65
 !i113 1
-R44
+R43
 R12
-Eserial_receiver_tb
-Z47 w1746518902
+Eserial_test
+Z66 w1746522280
 R2
 R3
-!i122 10
+!i122 14
 R0
-Z48 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd
-Z49 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd
+Z67 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd
+Z68 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd
 l0
 L4 1
-VXg_0_>FjMnoiP91>XVLEU2
-!s100 9?NYbTmJn[J0KOM0XmWO=0
+VeY<9kSPl__RU[1a6;LAEO0
+!s100 YoF08CH3JnFLUV7JTZ3KH3
 R6
 32
-Z50 !s110 1746518976
+Z69 !s110 1746524993
 !i10b 1
-Z51 !s108 1746518976.000000
-Z52 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd|
-Z53 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd|
+Z70 !s108 1746524993.000000
+Z71 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd|
+Z72 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd|
 !i113 1
-R44
+R43
 R12
-Abehavioral
+Alogic
 R2
 R3
-DEx4 work 18 serial_receiver_tb 0 22 Xg_0_>FjMnoiP91>XVLEU2
-!i122 10
-l36
-L7 107
-Vbl7KN483DWf1mVEN;F6mi3
-!s100 mAT?Dz1EgMlmeC8Z08RI53
+DEx4 work 11 serial_test 0 22 eY<9kSPl__RU[1a6;LAEO0
+!i122 14
+l40
+L15 52
+VbkEVTfbIazO@Cn^nQD9HV0
+!s100 J6R<XCo4OjaA_1PEP]52a1
 R6
 32
-R50
+R69
 !i10b 1
-R51
-R52
-R53
+R70
+R71
+R72
 !i113 1
-R44
+R43
 R12
 Eshiftregisterserialreceiver
 R1
 R2
 R3
-!i122 7
+!i122 15
 R0
-Z54 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
-Z55 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
+Z73 8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
+Z74 FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
 l0
 L3 1
-V4Q43bk_L@A<7O?7KmzX2i1
+VUAzT5O15Y]=<DjYg7[i=]2
 !s100 ZiRzCH[io?P;eTieQYogF1
 R6
-31
-R7
+32
+Z75 !s110 1746524994
 !i10b 1
-R8
-Z56 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
-Z57 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
+Z76 !s108 1746524994.000000
+Z77 !s90 -reportprogress|300|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
+Z78 !s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
 !i113 1
-R11
+R43
 R12
 Astructural
 R2
 R3
-DEx4 work 27 shiftregisterserialreceiver 0 22 4Q43bk_L@A<7O?7KmzX2i1
-!i122 7
+DEx4 work 27 shiftregisterserialreceiver 0 22 UAzT5O15Y]=<DjYg7[i=]2
+!i122 15
 l31
 L13 79
-VCSW?LSKQ3<V0^MTAPO6773
+V?LdYEdhbXDF@6jY]Afh;60
 !s100 Y110ol[B81PiXM8hTP7XH3
 R6
-31
-R7
+32
+R75
 !i10b 1
-R8
-R56
-R57
+R76
+R77
+R78
 !i113 1
-R11
+R43
 R12
 Eusbport
 R1
@@ -425,19 +507,19 @@ R2
 R3
 !i122 9
 R0
-8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd
-FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd
+8C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd
+FC:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd
 l0
 L25 1
 VH<Ia8`dE_cdIGLca01JFN3
 !s100 hl94EPOkeW;iYO_Coen0c3
 R6
 31
-R7
+!s110 1746524479
 !i10b 1
-R8
-!s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd|
-!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd|
+!s108 1746524479.000000
+!s90 -reportprogress|300|-93|-work|work|C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd|
+!s107 C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd|
 !i113 1
 R11
 R12

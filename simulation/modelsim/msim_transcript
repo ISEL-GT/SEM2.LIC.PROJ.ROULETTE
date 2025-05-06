@@ -10,215 +10,278 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd 
+# Start time: 10:41:16 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity parity_checker
 # -- Compiling architecture structural of parity_checker
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:16 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd 
+# Start time: 10:41:17 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_3bits_counter
 # -- Compiling architecture behavioral of register_3bits_counter
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:17 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd 
+# Start time: 10:41:17 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity half_adder
 # -- Compiling architecture structural of half_adder
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder
 # -- Compiling architecture behavioral of full_adder
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FFD
 # -- Compiling architecture logicFunction of FFD
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity counter_3bits
 # -- Compiling architecture behavioral of counter_3bits
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder_3bits
 # -- Compiling architecture behavioral of adder_3bits
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ShiftRegisterSerialReceiver
 # -- Compiling architecture structural of ShiftRegisterSerialReceiver
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:18 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd 
+# Start time: 10:41:18 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity serial_receiver
 # -- Compiling architecture structural of serial_receiver
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:41:19 on May 06,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd}
+# vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:07 on May 06,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd 
+# Start time: 10:41:19 on May 06,2025
+# vcom -reportprogress 300 -93 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity UsbPort
 # -- Compiling architecture bdf_type of UsbPort
-# ** Error: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd(90): (vcom-1035) Formal port "tdo" has OPEN or no actual associated with it.
-# ** Note: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd(92): VHDL Compiler exiting
-# End time: 09:09:07 on May 06,2025, Elapsed time: 0:00:00
+# ** Error: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd(90): (vcom-1035) Formal port "tdo" has OPEN or no actual associated with it.
+# ** Note: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd(92): VHDL Compiler exiting
+# End time: 10:41:19 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
 # ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
 # Error in macro ./roulette_run_msim_rtl_vhdl.do line 17
 # C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
 #     while executing
-# "vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd}"
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd
+# "vcom -93 -work work {C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd}"
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:09:36 on May 06,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd 
+# Start time: 10:41:42 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Serial_Receiver_tb
-# -- Compiling architecture behavioral of Serial_Receiver_tb
-# End time: 09:09:36 on May 06,2025, Elapsed time: 0:00:00
+# -- Compiling entity Serial_Controller_tb
+# -- Compiling architecture behavioral of Serial_Controller_tb
+# End time: 10:41:42 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.serial_receiver_tb
-# vsim work.serial_receiver_tb 
-# Start time: 09:09:41 on May 06,2025
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:41:43 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Serial_Controller_tb
+# -- Compiling architecture behavioral of Serial_Controller_tb
+# End time: 10:41:43 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.serial_controller_tb
+# vsim work.serial_controller_tb 
+# Start time: 10:41:46 on May 06,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.serial_receiver_tb(behavioral)
-# Loading work.serial_receiver(structural)
-# Loading work.shiftregisterserialreceiver(structural)
-# Loading work.ffd(logicfunction)
-# Loading work.parity_checker(structural)
-# Loading work.counter_3bits(behavioral)
-# Loading work.adder_3bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.register_3bits_counter(behavioral)
-# ** Warning: (vsim-3473) Component instance "Controller : receiver_controler" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /serial_receiver_tb/UUT File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /serial_receiver_tb/UUT/DXval, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /serial_receiver_tb/DXval_tb.
+# Loading work.serial_controller_tb(behavioral)
+# ** Warning: (vsim-3473) Component instance "UUT : receiver_controler" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /serial_controller_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
 add wave -position insertpoint  \
-sim:/serial_receiver_tb/SS_tb \
-sim:/serial_receiver_tb/SCLK_tb \
-sim:/serial_receiver_tb/SDX_tb \
-sim:/serial_receiver_tb/Reset_tb \
-sim:/serial_receiver_tb/accept_tb \
-sim:/serial_receiver_tb/DXval_tb \
-sim:/serial_receiver_tb/Data_tb
+sim:/serial_controller_tb/not_enRx_tb \
+sim:/serial_controller_tb/accept_tb \
+sim:/serial_controller_tb/pFlag_tb \
+sim:/serial_controller_tb/dFlag_tb \
+sim:/serial_controller_tb/RXerror_tb \
+sim:/serial_controller_tb/CLK_tb \
+sim:/serial_controller_tb/Reset_tb \
+sim:/serial_controller_tb/wr_tb \
+sim:/serial_controller_tb/init_tb \
+sim:/serial_controller_tb/DXval_tb \
+sim:/serial_controller_tb/clk_period \
+sim:/serial_controller_tb/half_clk_period
 run
 run
-run
-# Break key hit
-# Break key hit
-# Break key hit
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "Controller : receiver_controler" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /serial_receiver_tb/UUT File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /serial_receiver_tb/UUT/DXval, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /serial_receiver_tb/DXval_tb.
-run
-# GetModuleFileName: Impossível localizar o módulo especificado.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "Controller : receiver_controler" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /serial_receiver_tb/UUT File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /serial_receiver_tb/UUT/DXval, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /serial_receiver_tb/DXval_tb.
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:11:19 on May 06,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd 
+# Start time: 10:49:50 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity receiver_controler
+# -- Compiling architecture behavioral of receiver_controler
+# End time: 10:49:50 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:52 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity serial_receiver
 # -- Compiling architecture structural of serial_receiver
-# End time: 09:11:19 on May 06,2025, Elapsed time: 0:00:00
+# End time: 10:49:52 on May 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.serial_receiver
-# End time: 09:11:48 on May 06,2025, Elapsed time: 0:02:07
-# Errors: 0, Warnings: 2
-# vsim work.serial_receiver 
-# Start time: 09:11:48 on May 06,2025
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:53 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_test
+# -- Compiling architecture logic of serial_test
+# End time: 10:49:53 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:54 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftRegisterSerialReceiver
+# -- Compiling architecture structural of ShiftRegisterSerialReceiver
+# End time: 10:49:54 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:50:02 on May 06,2025
+# vcom -reportprogress 300 -work work C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_3bits_counter
+# -- Compiling architecture behavioral of register_3bits_counter
+# End time: 10:50:02 on May 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.receiver_controler(behavioral)
+vsim work.receiver_controler
+# End time: 10:50:49 on May 06,2025, Elapsed time: 0:09:03
+# Errors: 0, Warnings: 0
+# vsim work.receiver_controler 
+# Start time: 10:50:49 on May 06,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.serial_receiver(structural)
-# Loading work.shiftregisterserialreceiver(structural)
-# Loading work.ffd(logicfunction)
-# Loading work.parity_checker(structural)
-# Loading work.counter_3bits(behavioral)
-# Loading work.adder_3bits(behavioral)
-# Loading work.full_adder(behavioral)
-# Loading work.half_adder(structural)
-# Loading work.register_3bits_counter(behavioral)
-# ** Warning: (vsim-3473) Component instance "Controller : receiver_controler" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-vsim work.serial_receiver_tb
+# Loading work.receiver_controler(behavioral)
+vsim work.serial_controller_tb
+# End time: 10:51:15 on May 06,2025, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
+# vsim work.serial_controller_tb 
+# Start time: 10:51:15 on May 06,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serial_controller_tb(behavioral)
+# Loading work.receiver_controler(behavioral)
+add wave -position insertpoint  \
+sim:/serial_controller_tb/not_enRx_tb \
+sim:/serial_controller_tb/accept_tb \
+sim:/serial_controller_tb/pFlag_tb \
+sim:/serial_controller_tb/dFlag_tb \
+sim:/serial_controller_tb/RXerror_tb \
+sim:/serial_controller_tb/CLK_tb \
+sim:/serial_controller_tb/Reset_tb \
+sim:/serial_controller_tb/wr_tb \
+sim:/serial_controller_tb/init_tb \
+sim:/serial_controller_tb/DXval_tb \
+sim:/serial_controller_tb/clk_period \
+sim:/serial_controller_tb/half_clk_period
+run
+run
+add wave -position insertpoint  \
+sim:/serial_controller_tb/UUT/state_number
+restart
+add wave -position insertpoint  \
+sim:/serial_controller_tb/UUT/state_number
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim/wave.do
+# End time: 11:02:39 on May 06,2025, Elapsed time: 0:11:24
+# Errors: 0, Warnings: 0

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue May 06 09:14:51 2025
+Analysis & Synthesis Status : Successful - Tue May 06 10:40:29 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
 Top-level Entity Name : serial_test
 Family : MAX 10
-Total logic elements : 166
-    Total combinational functions : 142
-    Dedicated logic registers : 96
-Total registers : 96
-Total pins : 12
+Total logic elements : 150
+    Total combinational functions : 126
+    Dedicated logic registers : 86
+Total registers : 86
+Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

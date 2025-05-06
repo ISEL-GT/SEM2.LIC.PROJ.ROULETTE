@@ -59,8 +59,8 @@ begin
         );
 
     -- Mapeamento dos sinais de saída do UsbPort para sinais internos
-    SDX_N  <= output(1);
-    SCLK_N <= output(7);
-    SS_N   <= output(5);
+    -- S_DX  <= output(1);
+    -- SCLK_N <= output(7);
+    -- SS_N   <= output(5);
 
 end logic;
