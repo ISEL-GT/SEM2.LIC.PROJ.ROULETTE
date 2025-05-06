@@ -3,11 +3,13 @@ USE ieee.std_logic_1164.all;
 
 entity serial_test is 
     port(
+        SSport      : in  std_logic;
+        SCLKport    : in  std_logic;
+        SDXport     : in  std_logic;
         RESETport   : in  std_logic;
         MCLK        : in  std_logic;
+        DXvalport   : out std_logic;
         acceptport  : in  std_logic;
-		  
-		  DXvalport   : out std_logic;
         Dport       : out std_logic_vector(4 downto 0)
     );
 end serial_test;
@@ -34,7 +36,7 @@ architecture logic of serial_test is
         );
     end component;
 
-    signal SS_N, S_CLK, S_DX 	 : std_logic;
+    signal SS_N, SCLK_N, SDX_N : std_logic;
     signal input, output       : std_logic_vector(7 downto 0);
 
 begin
@@ -42,8 +44,8 @@ begin
     U0: serial_receiver 
         port map (
             SS     => SS_N,
-            SCLK   => S_CLK,
-            SDX    => S_DX,
+            SCLK   => SCLK_N,
+            SDX    => SDX_N,
             MCLK   => MCLK,
             Reset  => RESETport,
             accept => acceptport,
@@ -59,8 +61,8 @@ begin
         );
 
     -- Mapeamento dos sinais de saída do UsbPort para sinais internos
-    -- S_DX  <= output(1);
-    -- SCLK_N <= output(7);
-    -- SS_N   <= output(5);
+    SDX_N  <= output(1);
+    SCLK_N <= output(7);
+    SS_N   <= output(5);
 
 end logic;

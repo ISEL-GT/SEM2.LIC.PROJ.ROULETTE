@@ -16,12 +16,14 @@ entity receiver_controler is
         init     : out std_logic;
         DXval    : out std_logic
     );
+	 
 end receiver_controler;
 
 architecture behavioral of receiver_controler is
 
     type STATE_TYPE is (State1, State2, State3, State4, State5);
     signal CurrentState, NextState: STATE_TYPE;
+	 signal state_number: std_logic_vector(2 downto 0);
 
 begin
 
@@ -56,12 +58,10 @@ begin
                 end if;
 
             when State3 =>
-                if not_enRx = '1' then
+                if not_enRx = '1' or RXerror = '1' then
                     NextState <= State1;
                 elsif pFlag = '0' then
                     NextState <= State3;
-                elsif RXerror = '1' then
-						  NextState <= State1;
 					 else
 						  NextState <= State4;
                 end if;
@@ -76,7 +76,7 @@ begin
                 end if;
 
             when State5 =>
-                if not_enRx = '1' or accept = '0' then
+                if not_enRx = '1' and accept = '0' then
                     NextState <= State1;
                 else
                     NextState <= State5;
@@ -85,9 +85,16 @@ begin
     end process;
 
     -- Output Logic
-	 
     wr    <= '1' when (CurrentState = State2 and (not_enRx = '0' and dFlag = '0')) else '0';
     init  <= '1' when CurrentState = State1 else '0';
     DXval <= '1' when CurrentState = State4 else '0';
+	 
+	 with CurrentState select
+		 state_number <= "001" when State1,
+					 "010" when State2,
+					 "011" when State3,
+					 "100" when State4,
+					 "101" when State5,
+					 "000" when others;
 
 end behavioral;

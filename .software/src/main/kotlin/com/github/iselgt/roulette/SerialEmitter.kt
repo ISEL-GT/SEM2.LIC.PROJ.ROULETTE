@@ -73,3 +73,8 @@ object SerialEmitter {
         HAL.clrBits(SCLK_MASK)
     }
 }
+    fun main (){
+        HAL.init()
+        SerialEmitter.init()
+        SerialEmitter.send(SerialEmitter.Destination.LCD, 0x15, 5)
+    }
