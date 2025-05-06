@@ -109,8 +109,8 @@ begin
 	eq6 <= '1' when counter_val = "110" else '0';
 
 	-- Flags
-	pFlag_sig <= eq5;
-	dFlag_sig <= eq6;
+	pFlag_sig <= eq6;
+	dFlag_sig <= eq5;
 
 	-- Controle
 	Controller: receiver_controler

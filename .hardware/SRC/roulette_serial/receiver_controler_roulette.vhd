@@ -1,7 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-entity receiver_controler is
+entity receiver_controler_roulette is
     port (
         not_enRx : in std_logic;
         accept   : in std_logic;
@@ -17,9 +17,9 @@ entity receiver_controler is
         DXval    : out std_logic
     );
 	 
-end receiver_controler;
+end receiver_controler_roulette;
 
-architecture behavioral of receiver_controler is
+architecture behavioral of receiver_controler_roulette is
 
     type STATE_TYPE is (State1, State2, State3, State4, State5);
     signal CurrentState, NextState: STATE_TYPE;

@@ -1,37 +1,38 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-entity serial_test is 
+entity roulette_serial_test is 
     port(
         RESETport   : in  std_logic;
         MCLK        : in  std_logic;
         acceptport  : in  std_logic;
 		  
 		  DXvalport   : out std_logic;
-        Dport       : out std_logic_vector(4 downto 0)
+        Dport       : out std_logic_vector(7 downto 0)
     );
-end serial_test;
+end roulette_serial_test;
 
-architecture logic of serial_test is
+architecture logic of roulette_serial_test is
 
-    component serial_receiver is
+    component serial_receiver_roulette is
         port (
-            SS       : in  std_logic;
-            SCLK     : in  std_logic;
-            SDX      : in  std_logic;
-            MClk     : in  std_logic;
-            Reset    : in  std_logic;
-            accept   : in  std_logic;
-            DXval    : out std_logic;
-            Data     : out std_logic_vector(4 downto 0)
-        );
+				SS			: 	in std_logic;
+				SCLK		: 	in std_logic;
+				SDX		: 	in std_logic;
+				MClk 	   :  in std_logic;
+				Reset 	:	in std_logic;	
+				accept   :  in std_logic;
+		
+				DXval 	: 	out std_logic;
+				Data		: 	out std_logic_vector(7 downto 0)			
+			);
     end component;
 
     component UsbPort is
         port (
             inputPort  : in  std_logic_vector(7 downto 0);
             outputPort : out std_logic_vector(7 downto 0)
-        );
+         );
     end component;
 
     signal SS_N, S_CLK, S_DX 	 : std_logic;
@@ -40,7 +41,7 @@ architecture logic of serial_test is
 
 begin
     -- Instancia o receptor serial
-    U0: serial_receiver 
+    U0: serial_receiver_roulette 
         port map (
             SS     => SS_N,
             SCLK   => S_CLK,
@@ -62,6 +63,6 @@ begin
     -- Mapeamento dos sinais de saída do UsbPort para sinais internos
      S_DX   <= output(1);
      S_CLK  <= output(7);
-     SS_N   <= output(5);
+     SS_N   <= output(6);
 
 end logic;

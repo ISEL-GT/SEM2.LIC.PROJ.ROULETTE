@@ -2,6 +2,11 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
+entity LCDDispatcherControl_tb is
+end LCDDispatcherControl_tb;
+
+architecture behavior of LCDDispatcherControl_tb is
+
 entity LCDDispatcherControl is
     port(
         clk   : in std_logic;
@@ -10,7 +15,7 @@ entity LCDDispatcherControl is
         Wrl   : out std_logic;
         done  : out std_logic
     );
-end LCDDispatcherControl;
+end component;
 
 architecture behavior of LCDDispatcherControl is
 
@@ -68,8 +73,8 @@ begin
     end process;
 
     -- Sinais de controlo
-    Wrl 	<= '1' when currentState = ReceivingDval else '0';
-    done <= '1' when currentState = DoneReceived else '0';
+    Wrl  <= '1' when currentState = ReceivingDval else '0';
+    done <= '1' when currentState = DoneReceived  else '0';
 
     -- Enable para o contador apenas no estado de escrita
     counter_enable <= '1' when currentState = ReceivingDval else '0';

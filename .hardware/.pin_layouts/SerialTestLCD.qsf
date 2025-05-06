@@ -1,0 +1,11 @@
+set_location_assignment PIN_A8  -to DPort[0]
+set_location_assignment PIN_A9  -to DPort[1]
+set_location_assignment PIN_A10 -to DPort[2]
+set_location_assignment PIN_B10 -to DPort[3]
+set_location_assignment PIN_D13 -to DPort[4]
+set_location_assignment PIN_C13 -to DXvalport
+set_location_assignment PIN_C10 -to acceptport
+set_location_assignment PIN_C11 -to RESETport
+set_location_assignment PIN_P11 -to MCLK
+
+
