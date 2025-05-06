@@ -33,7 +33,7 @@ begin
 FFD0: FFD 
 	port map(
 		CLK=>SCLK,
-		RESET=> RESET,
+		RESET=> '0',
 		SET=> '0',
 		D=>data,
 		EN=>E,
@@ -44,9 +44,9 @@ FFD0: FFD
 FFD1: FFD 
 	port map(
 		CLK=>SCLK,
-		RESET=> RESET,
+		RESET=> '0',
 		SET=> '0', 
-		D=>saidaFFD0,
+		D=>saidaFFD1,
 		EN=>E,
 		Q=>saidaFFD1
 	);
@@ -54,9 +54,9 @@ FFD1: FFD
 FFD2: FFD 
 	port map(
 		CLK=>SCLK,
-		RESET=> RESET,
+		RESET=> '0',
 		SET=> '0',
-		D=>saidaFFD1,
+		D=>saidaFFD2,
 		EN=>E,
 		Q=>saidaFFD2
 	);
@@ -64,9 +64,9 @@ FFD2: FFD
 FFD3: FFD 
 	port map(
 		CLK=>SCLK,
-		RESET=> RESET,
+		RESET=> '0',
 		SET=> '0',
-		D=>saidaFFD2,
+		D=>saidaFFD3,
 		EN=>E,
 		Q=>saidaFFD3
 	);
@@ -74,9 +74,9 @@ FFD3: FFD
 FFD4: FFD 
 	port map(
 		CLK=>SCLK,
-		RESET=> RESET,
+		RESET=> '0',
 		SET=> '0',
-		D=>saidaFFD3,
+		D=>saidaFFD4,
 		EN=>E,
 		Q=>saidaFFD4
 	);

@@ -1,11 +1,12 @@
 package com.github.iselgt.roulette
 
+import isel.leic.utils.Time
+
 object SerialEmitter {
 
     enum class Destination { LCD, ROULETTE }
 
-    // Fixed bit masks
-    private const val SDX = 0x01                // Serial data line -> 01
+    private const val SDX = 0x02                // Serial data line -> 01
     private const val LCD_MASK = 0x20           // Enables LCD communication -> O5
     private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
     private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07
@@ -62,6 +63,7 @@ object SerialEmitter {
             HAL.setBits(SDX)
         else
             HAL.clrBits(SDX)
+        Time.sleep(200L)
     }
 
     /**
@@ -72,4 +74,7 @@ object SerialEmitter {
         HAL.setBits(SCLK_MASK)
         HAL.clrBits(SCLK_MASK)
     }
+}
+fun main(){
+    SerialEmitter.send(SerialEmitter.Destination.LCD, 0x15, 5)
 }
