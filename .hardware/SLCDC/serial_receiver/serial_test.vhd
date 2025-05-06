@@ -8,11 +8,7 @@ entity serial_test is
         acceptport  : in  std_logic;
 		  
 		  DXvalport   : out std_logic;
-        Dport       : out std_logic_vector(4 downto 0);
-		  
-		  reset_sig 	: out std_logic;
-		  accept_sig 	: out std_logic
-
+        Dport       : out std_logic_vector(4 downto 0)
     );
 end serial_test;
 
@@ -38,7 +34,7 @@ architecture logic of serial_test is
         );
     end component;
 
-    signal SS_N, SCLK_N, SDX_N : std_logic;
+    signal SS_N, S_CLK, S_DX 	 : std_logic;
     signal input, output       : std_logic_vector(7 downto 0);
 	
 
@@ -46,9 +42,9 @@ begin
     -- Instancia o receptor serial
     U0: serial_receiver 
         port map (
-            SS     => output(5),
-            SCLK   => output(7),
-            SDX    => output(1),
+            SS     => SS_N,
+            SCLK   => S_CLK,
+            SDX    => S_DX,
             MCLK   => MCLK,
             Reset  => RESETport,
             accept => acceptport,
@@ -62,8 +58,10 @@ begin
             inputPort  => input,
             outputPort => output
         );
-	
-	accept_sig <= acceptport;
-	reset_sig  <= RESETport;
-	
-  end logic;
+
+    -- Mapeamento dos sinais de saída do UsbPort para sinais internos
+    -- S_DX  <= output(1);
+    -- SCLK_N <= output(7);
+    -- SS_N   <= output(5);
+
+end logic;

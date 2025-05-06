@@ -13,7 +13,8 @@ architecture behavioral of Serial_Receiver_tb is
             SDX     : in std_logic;
             Reset   : in std_logic;    
             accept  : in std_logic;
-				
+				MClk 	  : in std_logic;
+								
             DXval   : out std_logic;
             Data    : out std_logic_vector(4 downto 0)            
         );    
@@ -29,6 +30,8 @@ architecture behavioral of Serial_Receiver_tb is
     signal accept_tb  : std_logic;
     signal DXval_tb   : std_logic;
     signal Data_tb    : std_logic_vector(4 downto 0);
+	 signal CLK_tb		 : std_logic;
+	 
 
 begin
 
@@ -41,7 +44,8 @@ begin
             Reset  => Reset_tb,
             accept => accept_tb,
             DXval  => DXval_tb,
-            Data   => Data_tb
+            Data   => Data_tb,
+				MClk   => CLK_tb
         );
 
     -- Clock generation for SCLK
@@ -75,23 +79,33 @@ begin
         -- Enviar bits de dados (5 bits, por ex: 10101)
         -- Bit 4 (MSB)
         SDX_tb <= '1'; wait for clk_period;
+		  accept_tb <= '1'; wait for clk_period;
+		  accept_tb <= '0'; wait for clk_period;
+		  
         -- Bit 3
         SDX_tb <= '0'; wait for clk_period;
+		  accept_tb <= '1'; wait for clk_period;
+		  accept_tb <= '0'; wait for clk_period;
+		  
         -- Bit 2
         SDX_tb <= '1'; wait for clk_period;
+		  accept_tb <= '1'; wait for clk_period;
+		  accept_tb <= '0'; wait for clk_period;
+		  
         -- Bit 1
         SDX_tb <= '0'; wait for clk_period;
+		  accept_tb <= '1'; wait for clk_period;
+		  accept_tb <= '0'; wait for clk_period;
+		  
         -- Bit 0 (LSB)
         SDX_tb <= '1'; wait for clk_period;
+		  accept_tb <= '1'; wait for clk_period;
+		  accept_tb <= '0'; wait for clk_period;
 
         -- Desativar SS (fim de transmissão)
         SS_tb <= '1';
         wait for clk_period;
-
-        -- Simular aceitação de dados
-        accept_tb <= '1';
-        wait for clk_period;
-
+		  
         -- Parar simulação
         wait;
     end process;
