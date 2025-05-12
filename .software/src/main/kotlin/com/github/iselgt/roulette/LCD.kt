@@ -126,8 +126,10 @@ object LCD {
             }
             writeDATA(c.code)
             currCol = (currCol+1)%COLS
-        }   //.code => .toInt()
-    }
+        }   //.code => .toInt()
+
+        }   //.code = .toInt()
+
 
     fun write(text: String) {
         for (c in text) {
