@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue May 06 17:14:47 2025
+Analysis & Synthesis Status : Successful - Tue May 13 09:08:58 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : LCD_Dispatcher
+Top-level Entity Name : serial_receiver
 Family : MAX 10
-Total logic elements : 10
-    Total combinational functions : 10
-    Dedicated logic registers : 7
-Total registers : 7
-Total pins : 15
+Total logic elements : 22
+    Total combinational functions : 17
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

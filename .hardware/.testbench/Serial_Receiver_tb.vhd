@@ -52,9 +52,9 @@ begin
     clk_gen: process
     begin
         while true loop
-            SCLK_tb <= '0';
+            CLK_tb <= '0';
             wait for half_clk_period;
-            SCLK_tb <= '1';
+            CLK_tb <= '1';
             wait for half_clk_period;
         end loop;
     end process;
@@ -67,6 +67,7 @@ begin
         SS_tb    <= '1';
         SDX_tb   <= '0';
         accept_tb <= '0';
+		  SCLK_tb	<= '0';
         wait for clk_period;
 
         -- Tirar do reset
@@ -78,32 +79,44 @@ begin
 
         -- Enviar bits de dados (5 bits, por ex: 10101)
         -- Bit 4 (MSB)
-        SDX_tb <= '1'; wait for clk_period;
-		  accept_tb <= '1'; wait for clk_period;
-		  accept_tb <= '0'; wait for clk_period;
+        SDX_tb 	<= '1';  wait for clk_period;
+		  accept_tb <= '1'; 	wait for clk_period;
+		  SCLK_tb	<= '1';	wait for clk_period;
+		  accept_tb <= '0'; 	wait for clk_period;
+		  SCLK_tb	<= '0';	wait for clk_period;
 		  
         -- Bit 3
-        SDX_tb <= '0'; wait for clk_period;
+        SDX_tb 	<= '0'; wait for clk_period;
 		  accept_tb <= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
 		  accept_tb <= '0'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
 		  
         -- Bit 2
-        SDX_tb <= '1'; wait for clk_period;
+        SDX_tb 	<= '1'; wait for clk_period;
 		  accept_tb <= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
 		  accept_tb <= '0'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
 		  
         -- Bit 1
-        SDX_tb <= '0'; wait for clk_period;
+        SDX_tb 	<= '0'; wait for clk_period;
 		  accept_tb <= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
 		  accept_tb <= '0'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
 		  
         -- Bit 0 (LSB)
-        SDX_tb <= '1'; wait for clk_period;
+        SDX_tb 	<= '1'; wait for clk_period;
 		  accept_tb <= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
 		  accept_tb <= '0'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
 
         -- Desativar SS (fim de transmissão)
-        SS_tb <= '1';
+        SS_tb 		<= '1';
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
         wait for clk_period;
 		  
         -- Parar simulação

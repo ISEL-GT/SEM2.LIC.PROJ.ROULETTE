@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 06 17:14:47 2025
+Tue May 13 09:08:58 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,23 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |LCD_Dispatcher|LCDDispatcherControl:control_unit|currentState
+  8. State Machine - |serial_receiver|receiver_controler:Controller|CurrentState
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD3"
+ 11. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD2"
+ 12. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1"
+ 13. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits"
+ 14. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3"
+ 15. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits"
+ 16. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp"
+ 17. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
+ 18. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
+ 19. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
+ 20. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
+ 21. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +56,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 06 17:14:47 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 13 09:08:58 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; LCD_Dispatcher                              ;
+; Top-level Entity Name              ; serial_receiver                             ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 10                                          ;
-;     Total combinational functions  ; 10                                          ;
-;     Dedicated logic registers      ; 7                                           ;
-; Total registers                    ; 7                                           ;
-; Total pins                         ; 15                                          ;
+; Total logic elements               ; 22                                          ;
+;     Total combinational functions  ; 17                                          ;
+;     Dedicated logic registers      ; 14                                          ;
+; Total registers                    ; 14                                          ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -70,7 +81,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; LCD_Dispatcher     ; roulette           ;
+; Top-level entity name                                            ; serial_receiver    ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -167,69 +178,94 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+---------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                        ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
-+---------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; .hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd ;         ;
-; .hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd       ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd       ;         ;
-+---------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; .hardware/SLCDC/serial_receiver/parity_checker.vhd                 ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                 ;         ;
+; .hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ;         ;
+; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ;         ;
+; .hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ;         ;
+; .hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ;         ;
+; .hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ;         ;
+; .hardware/SLCDC/serial_receiver/serial_receiver.vhd                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                ;         ;
+; .hardware/SLCDC/serial_receiver/receiver_controler.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd             ;         ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                ;
-+---------------------------------------------+--------------------------------------------------------------+
-; Resource                                    ; Usage                                                        ;
-+---------------------------------------------+--------------------------------------------------------------+
-; Estimated Total logic elements              ; 10                                                           ;
-;                                             ;                                                              ;
-; Total combinational functions               ; 10                                                           ;
-; Logic element usage by number of LUT inputs ;                                                              ;
-;     -- 4 input functions                    ; 7                                                            ;
-;     -- 3 input functions                    ; 1                                                            ;
-;     -- <=2 input functions                  ; 2                                                            ;
-;                                             ;                                                              ;
-; Logic elements by mode                      ;                                                              ;
-;     -- normal mode                          ; 10                                                           ;
-;     -- arithmetic mode                      ; 0                                                            ;
-;                                             ;                                                              ;
-; Total registers                             ; 7                                                            ;
-;     -- Dedicated logic registers            ; 7                                                            ;
-;     -- I/O registers                        ; 0                                                            ;
-;                                             ;                                                              ;
-; I/O pins                                    ; 15                                                           ;
-;                                             ;                                                              ;
-; Embedded Multiplier 9-bit elements          ; 0                                                            ;
-;                                             ;                                                              ;
-; Maximum fan-out node                        ; LCDDispatcherControl:control_unit|currentState.ReceivingDval ;
-; Maximum fan-out                             ; 8                                                            ;
-; Total fan-out                               ; 78                                                           ;
-; Average fan-out                             ; 1.66                                                         ;
-+---------------------------------------------+--------------------------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 22          ;
+;                                             ;             ;
+; Total combinational functions               ; 17          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 10          ;
+;     -- 3 input functions                    ; 4           ;
+;     -- <=2 input functions                  ; 3           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 17          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 14          ;
+;     -- Dedicated logic registers            ; 14          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 12          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Reset~input ;
+; Maximum fan-out                             ; 13          ;
+; Total fan-out                               ; 123         ;
+; Average fan-out                             ; 2.24        ;
++---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                               ; Entity Name          ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------+----------------------+--------------+
-; |LCD_Dispatcher                        ; 10 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |LCD_Dispatcher                                   ; LCD_Dispatcher       ; work         ;
-;    |LCDDispatcherControl:control_unit| ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_Dispatcher|LCDDispatcherControl:control_unit ; LCDDispatcherControl ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------+----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                       ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                         ; Entity Name                 ; Library Name ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |serial_receiver                                          ; 17 (1)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |serial_receiver                                                                                                            ; serial_receiver             ; work         ;
+;    |ShiftRegisterSerialReceiver:ShiftReg|                 ; 0 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg                                                                       ; ShiftRegisterSerialReceiver ; work         ;
+;       |FFD:FFD0|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0                                                              ; FFD                         ; work         ;
+;       |FFD:FFD1|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1                                                              ; FFD                         ; work         ;
+;       |FFD:FFD2|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2                                                              ; FFD                         ; work         ;
+;       |FFD:FFD3|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3                                                              ; FFD                         ; work         ;
+;       |FFD:FFD4|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4                                                              ; FFD                         ; work         ;
+;    |counter_3bits:Counter3bit|                            ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit                                                                                  ; counter_3bits               ; work         ;
+;       |register_3bits_counter:instance_registry_3bits|    ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits                                   ; register_3bits_counter      ; work         ;
+;          |FFD:FFD1|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD1                          ; FFD                         ; work         ;
+;          |FFD:FFD2|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD2                          ; FFD                         ; work         ;
+;          |FFD:FFD3|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD3                          ; FFD                         ; work         ;
+;    |parity_checker:ParityCheck|                           ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck                                                                                 ; parity_checker              ; work         ;
+;       |counter_3bits:CounterUp|                           ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp                                                         ; counter_3bits               ; work         ;
+;          |register_3bits_counter:instance_registry_3bits| ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits          ; register_3bits_counter      ; work         ;
+;             |FFD:FFD1|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1 ; FFD                         ; work         ;
+;    |receiver_controler:Controller|                        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|receiver_controler:Controller                                                                              ; receiver_controler          ; work         ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------+
-; State Machine - |LCD_Dispatcher|LCDDispatcherControl:control_unit|currentState                                 ;
-+----------------------------+---------------------------+----------------------------+--------------------------+
-; Name                       ; currentState.DoneReceived ; currentState.ReceivingDval ; currentState.WaitingDval ;
-+----------------------------+---------------------------+----------------------------+--------------------------+
-; currentState.WaitingDval   ; 0                         ; 0                          ; 0                        ;
-; currentState.ReceivingDval ; 0                         ; 1                          ; 1                        ;
-; currentState.DoneReceived  ; 1                         ; 0                          ; 1                        ;
-+----------------------------+---------------------------+----------------------------+--------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |serial_receiver|receiver_controler:Controller|CurrentState                                                       ;
++---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+; Name                ; CurrentState.State5 ; CurrentState.State4 ; CurrentState.State3 ; CurrentState.State2 ; CurrentState.State1 ;
++---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
+; CurrentState.State1 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ;
+; CurrentState.State2 ; 0                   ; 0                   ; 0                   ; 1                   ; 1                   ;
+; CurrentState.State3 ; 0                   ; 0                   ; 1                   ; 0                   ; 1                   ;
+; CurrentState.State4 ; 0                   ; 1                   ; 0                   ; 0                   ; 1                   ;
+; CurrentState.State5 ; 1                   ; 0                   ; 0                   ; 0                   ; 1                   ;
++---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
 
 
 +------------------------------------------------------+
@@ -237,23 +273,125 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 14    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |LCD_Dispatcher|LCDDispatcherControl:control_unit|counter[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD3" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD2" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                      ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
++------+-------+----------+--------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                             ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                        ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3" ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                          ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                              ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits"     ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp"                                        ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; count[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -261,17 +399,18 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 7                           ;
-;     CLR               ; 7                           ;
-; cycloneiii_lcell_comb ; 10                          ;
-;     normal            ; 10                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+; boundary_port         ; 12                          ;
+; cycloneiii_ff         ; 14                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 5                           ;
+; cycloneiii_lcell_comb ; 17                          ;
+;     normal            ; 17                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.24                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,7 +429,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 06 17:14:42 2025
+    Info: Processing started: Tue May 13 09:08:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -449,18 +588,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/receiver_controler_roulette.vhd
     Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
     Info (12023): Found entity 1: receiver_controler_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
-Info (12127): Elaborating entity "LCD_Dispatcher" for the top level hierarchy
-Info (12128): Elaborating entity "LCDDispatcherControl" for hierarchy "LCDDispatcherControl:control_unit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 33
+Info (12021): Found 0 design units, including 0 entities, in source file .hardware/.testbench/lcddispatchercontrol_tb.vhd
+Info (12127): Elaborating entity "serial_receiver" for the top level hierarchy
+Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 79
+Info (12128): Elaborating entity "FFD" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
+Info (12128): Elaborating entity "parity_checker" for hierarchy "parity_checker:ParityCheck" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 89
+Info (12128): Elaborating entity "counter_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 32
+Info (12128): Elaborating entity "adder_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at adder_3bits.vhd(44): object "carry_full_adder_3" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 44
+Info (12128): Elaborating entity "full_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 49
+Info (12128): Elaborating entity "half_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_3bits_counter" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 69
+Info (12128): Elaborating entity "receiver_controler" for hierarchy "receiver_controler:Controller" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 116
+Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 10 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Tue May 06 17:14:47 2025
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 22 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue May 13 09:08:58 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:11
 
