@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 13 09:08:58 2025
+Tue May 13 10:19:34 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 13 09:08:58 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 13 10:19:34 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; serial_receiver                             ;
@@ -166,34 +166,34 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
-+--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
-+--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; .hardware/SLCDC/serial_receiver/parity_checker.vhd                 ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                 ;         ;
-; .hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ;         ;
-; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ;         ;
-; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ;         ;
-; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ;         ;
-; .hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ;         ;
-; .hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ;         ;
-; .hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ;         ;
-; .hardware/SLCDC/serial_receiver/serial_receiver.vhd                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                ;         ;
-; .hardware/SLCDC/serial_receiver/receiver_controler.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd             ;         ;
-+--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
++--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                          ; Library ;
++--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
+; .hardware/SLCDC/serial_receiver/parity_checker.vhd                 ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                 ;         ;
+; .hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ;         ;
+; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ;         ;
+; .hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ;         ;
+; .hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ;         ;
+; .hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ;         ;
+; .hardware/SLCDC/serial_receiver/serial_receiver.vhd                ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                ;         ;
+; .hardware/SLCDC/serial_receiver/receiver_controler.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd             ;         ;
++--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -429,178 +429,183 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 13 09:08:53 2025
+    Info: Processing started: Tue May 13 10:19:20 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
-    Info (12023): Found entity 1: parity_checker File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
+    Info (12022): Found design unit 1: parity_checker-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
+    Info (12023): Found entity 1: parity_checker File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/registry_3bits_counter.vhd
-    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_3bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_3bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/mux2x1.vhd
-    Info (12022): Found design unit 1: mux_2x1-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1 File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/half_adder.vhd
-    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
-    Info (12023): Found entity 1: half_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
+    Info (12022): Found design unit 1: half_adder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
+    Info (12023): Found entity 1: half_adder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
-    Info (12023): Found entity 1: full_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/ffd.vhd
-    Info (12022): Found design unit 1: FFD-logicFunction File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
-    Info (12023): Found entity 1: FFD File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-logicFunction File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
+    Info (12023): Found entity 1: FFD File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/counter_3bits.vhd
-    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
-    Info (12023): Found entity 1: counter_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
+    Info (12023): Found entity 1: counter_3bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/adder_3bits.vhd
-    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_3bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/shiftregisterserialreceiver.vhd
-    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
+    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_receiver.vhd
-    Info (12022): Found design unit 1: serial_receiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 19
-    Info (12023): Found entity 1: serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
+    Info (12022): Found design unit 1: serial_receiver-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 19
+    Info (12023): Found entity 1: serial_receiver File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/slcdc.vhd
-    Info (12022): Found design unit 1: SLCDC-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 18
-    Info (12023): Found entity 1: SLCDC File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
+    Info (12022): Found design unit 1: SLCDC-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 18
+    Info (12023): Found entity 1: SLCDC File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/priority_encoder.vhd
-    Info (12022): Found design unit 1: priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: priority_encoder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: priority_encoder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/partial_priority_encoder.vhd
-    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: partial_priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: partial_priority_encoder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/mux_2x1_penc.vhd
-    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1_penc File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1_penc File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/dec/decoder_2x4.vhd
-    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
-    Info (12023): Found entity 1: decoder_2x4 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
+    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
+    Info (12023): Found entity 1: decoder_2x4 File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits_counter.vhd
-    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits.vhd
-    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
-Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
+Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/mux2x1.vhd
-Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/half_adder.vhd
-Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/full_adder.vhd
-Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/ffd.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/counter.vhd
-    Info (12022): Found design unit 1: counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
-    Info (12023): Found entity 1: counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
+    Info (12022): Found design unit 1: counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
+    Info (12023): Found entity 1: counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/adder_2bits.vhd
-    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_2bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/key_scanner.vhd
-    Info (12022): Found design unit 1: key_scanner-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
-    Info (12023): Found entity 1: key_scanner File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
+    Info (12022): Found design unit 1: key_scanner-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
+    Info (12023): Found entity 1: key_scanner File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
-    Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
+    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
+    Info (12023): Found entity 1: KeyControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_decode.vhd
-    Info (12022): Found design unit 1: Key_decode-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
-    Info (12023): Found entity 1: Key_decode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
+    Info (12023): Found entity 1: Key_decode File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_reader.vhd
-    Info (12022): Found design unit 1: Key_reader-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
-    Info (12023): Found entity 1: Key_reader File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
+    Info (12023): Found entity 1: Key_reader File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/priority_encoder_tb.vhd
-    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: priority_encoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: priority_encoder_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keyscannertb.vhd
-    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
-    Info (12023): Found entity 1: Key_Scanner_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
+    Info (12023): Found entity 1: Key_Scanner_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keycontrol_tb.vhd
-    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
-    Info (12023): Found entity 1: KeyControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
+    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyControl_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_reader_tb.vhd
-    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_reader_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_reader_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_decode_tb.vhd
-    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_decode_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_decode_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/decoder_tb.vhd
-    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: decoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: decoder_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/countertb.vhd
-    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
-    Info (12023): Found entity 1: counter_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
+    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
+    Info (12023): Found entity 1: counter_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
-    Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
+    Info (12022): Found design unit 1: roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
+    Info (12023): Found entity 1: roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_controller_tb.vhd
-    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Controller_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Controller_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_receiver_tb.vhd
-    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/receiver_controler.vhd
-    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 22
-    Info (12023): Found entity 1: receiver_controler File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
+    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 22
+    Info (12023): Found entity 1: receiver_controler File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_test.vhd
-    Info (12022): Found design unit 1: serial_test-logic File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 15
-    Info (12023): Found entity 1: serial_test File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 4
+    Info (12022): Found design unit 1: serial_test-logic File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 15
+    Info (12023): Found entity 1: serial_test File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcddispatchercontrol.vhd
-    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 15
-    Info (12023): Found entity 1: LCDDispatcherControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 5
+    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 15
+    Info (12023): Found entity 1: LCDDispatcherControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcd_dispatcher.vhd
-    Info (12022): Found design unit 1: LCD_Dispatcher-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 17
-    Info (12023): Found entity 1: LCD_Dispatcher File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 4
+    Info (12022): Found design unit 1: LCD_Dispatcher-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 17
+    Info (12023): Found entity 1: LCD_Dispatcher File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_dispatcher/roulettedispatchercontrol.vhd
-    Info (12022): Found design unit 1: rouletteDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 15
-    Info (12023): Found entity 1: rouletteDispatcherControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 5
+    Info (12022): Found design unit 1: rouletteDispatcherControl-behavior File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 15
+    Info (12023): Found entity 1: rouletteDispatcherControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_dispatcher/roulette_dispatcher.vhd
-    Info (12022): Found design unit 1: roulette_dispatcher-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 17
-    Info (12023): Found entity 1: roulette_dispatcher File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_dispatcher-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 17
+    Info (12023): Found entity 1: roulette_dispatcher File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/registry_4bits_counter.vhd
-    Info (12022): Found design unit 1: register_4bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_4bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_4bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_4bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/counter_4bits.vhd
-    Info (12022): Found design unit 1: counter_4bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 17
-    Info (12023): Found entity 1: counter_4bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 4
+    Info (12022): Found design unit 1: counter_4bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 17
+    Info (12023): Found entity 1: counter_4bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/adder_4bits.vhd
-    Info (12022): Found design unit 1: adder_4bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 16
-    Info (12023): Found entity 1: adder_4bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_4bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 16
+    Info (12023): Found entity 1: adder_4bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/roulette_shiftregister.vhd
-    Info (12022): Found design unit 1: roulette_shiftRegister-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 14
-    Info (12023): Found entity 1: roulette_shiftRegister File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_shiftRegister-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 14
+    Info (12023): Found entity 1: roulette_shiftRegister File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/serial_receiver_roulette.vhd
-    Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
-    Info (12023): Found entity 1: serial_receiver_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
+    Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
+    Info (12023): Found entity 1: serial_receiver_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 16
-    Info (12023): Found entity 1: parity_checker_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 4
+    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 16
+    Info (12023): Found entity 1: parity_checker_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/src.vhd
-    Info (12022): Found design unit 1: SRC-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 18
-    Info (12023): Found entity 1: SRC File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 4
+    Info (12022): Found design unit 1: SRC-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 18
+    Info (12023): Found entity 1: SRC File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/roulette_serial_test.vhd
-    Info (12022): Found design unit 1: roulette_serial_test-logic File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 15
-    Info (12023): Found entity 1: roulette_serial_test File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_serial_test-logic File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 15
+    Info (12023): Found entity 1: roulette_serial_test File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/receiver_controler_roulette.vhd
-    Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
-    Info (12023): Found entity 1: receiver_controler_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
-Info (12021): Found 0 design units, including 0 entities, in source file .hardware/.testbench/lcddispatchercontrol_tb.vhd
+    Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
+    Info (12023): Found entity 1: receiver_controler_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/lcddispatchercontrol_tb.vhd
+    Info (12022): Found design unit 1: LCDDispatcherControl_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 8
+    Info (12023): Found entity 1: LCDDispatcherControl_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/mac.vhd
+    Info (12022): Found design unit 1: memory_address_control-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 22
+    Info (12023): Found entity 1: memory_address_control File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 4
 Info (12127): Elaborating entity "serial_receiver" for the top level hierarchy
-Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 79
-Info (12128): Elaborating entity "FFD" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
-Info (12128): Elaborating entity "parity_checker" for hierarchy "parity_checker:ParityCheck" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 89
-Info (12128): Elaborating entity "counter_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 32
-Info (12128): Elaborating entity "adder_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at adder_3bits.vhd(44): object "carry_full_adder_3" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 44
-Info (12128): Elaborating entity "full_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 49
-Info (12128): Elaborating entity "half_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "register_3bits_counter" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 69
-Info (12128): Elaborating entity "receiver_controler" for hierarchy "receiver_controler:Controller" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
+Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 79
+Info (12128): Elaborating entity "FFD" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
+Info (12128): Elaborating entity "parity_checker" for hierarchy "parity_checker:ParityCheck" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 89
+Info (12128): Elaborating entity "counter_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 32
+Info (12128): Elaborating entity "adder_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at adder_3bits.vhd(44): object "carry_full_adder_3" assigned a value but never read File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 44
+Info (12128): Elaborating entity "full_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 49
+Info (12128): Elaborating entity "half_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_3bits_counter" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 69
+Info (12128): Elaborating entity "receiver_controler" for hierarchy "receiver_controler:Controller" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 116
+Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -609,9 +614,9 @@ Info (21057): Implemented 34 device resources after synthesis - the final resour
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 22 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Tue May 13 09:08:58 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Tue May 13 10:19:34 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:18
 
 

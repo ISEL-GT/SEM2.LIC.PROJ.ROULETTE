@@ -4,13 +4,16 @@ use ieee.std_logic_1164.all;
 entity memory_address_control is
 
     port (
-        putget: in std_logic;
-		  incput: in std_logic;
-		  incget: in std_logic;
-		  
-		  full: out std_logic;
-		  empty: out std_logic;
-		  output: out std_logic_vector(3 downto 0)
+			CLK: 	  in std_logic;
+			reset:  in std_logic;
+			
+			putget: in std_logic;
+			incput: in std_logic;
+			incget: in std_logic;
+
+			full: out std_logic;
+			empty: out std_logic;
+			output: out std_logic_vector(3 downto 0)
     );
 
 end memory_address_control;
@@ -52,15 +55,15 @@ architecture behavioral of memory_address_control is
 	signal registry_input_1: std_logic_vector(3 downto 0);
 	signal registry_input_2: std_logic_vector(3 downto 0);
 	
-	signal registry_add_amount_1: std_logic;
-	signal registry_add_amount_2: std_logic;
+	signal registry_add_amount_1: std_logic_vector(3 downto 0);
+	signal registry_add_amount_2: std_logic_vector(3 downto 0);
 
 	
 	
 begin
 
-	registry_add_amount_1 <= '1' when incput else '0';
-	registry_add_amount_2 <= '1' when incget else '0';
+	registry_add_amount_1 <= "0001" when incput = '1' else "0000";
+	registry_add_amount_2 <= "0001" when incget = '1' else "0000";
 	
 
 	-- Instantiates the 4 bit adder that always adds 1
@@ -94,7 +97,7 @@ begin
 			RESET => reset,
 			SET   => '0',
 			D     => registry_input_1,
-			EN    => CE,
+			EN    => '1',
 			Q     => registry_data_1
 		);
 		
@@ -106,13 +109,13 @@ begin
 			RESET => reset,
 			SET   => '0',
 			D     => registry_input_2,
-			EN    => CE,
+			EN    => '1',
 			Q     => registry_data_2
 		);
 		
 	
 	empty <= '1' when registry_data_1 = "0000" and registry_data_1 = "0000" else '0';
 	full <= '1' when registry_data_1 = "1111" and registry_data_1 = "1111" else '0';
-	result <= registry_data_1 when putget else registry_data_2;
+	output <= registry_data_1 when putget = '1' else registry_data_2;
 	
 end behavioral;
