@@ -77,8 +77,6 @@ object SerialEmitter {
     }
 }
 
-fun main (){
-    HAL.init()
-    SerialEmitter.init()
-    SerialEmitter.send(SerialEmitter.Destination.LCD, 0x15, 5)
+fun main() {
+    SerialEmitter.send(SerialEmitter.Destination.ROULETTE, 0x55, 8)
 }

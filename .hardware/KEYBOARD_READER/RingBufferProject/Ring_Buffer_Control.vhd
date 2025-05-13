@@ -65,13 +65,12 @@ process (CurrentState, DAV, full, CTS, empty)
 		end case; 	
 end process;
 
-
+wr 		<= 	'1' when (CurrentState = Writing) else'0';
 selPG 	<= 	'1' when (CurrentState = CanBeStored or CurrentState = Writing) else '0';
 incPut 	<= 	'1' when (CurrentState = Writing) else '0';
-wr 		<= 	'1' when (CurrentState = Writing) else'0';
-DAC 		<= 	'1' when (CurrentState = WriteCompleted) else'0';
 incGet 	<= 	'1' when (CurrentState = Reading and CTS = '0') else'0';
 Wreg 		<= 	'1' when (CurrentState = Reading) else'0';
+DAC 		<= 	'1' when (CurrentState = WriteCompleted) else'0';
 
 end behavorial;			
      								 
