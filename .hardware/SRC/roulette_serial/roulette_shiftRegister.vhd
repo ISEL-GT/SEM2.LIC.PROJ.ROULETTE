@@ -38,7 +38,7 @@ begin
     FFD0: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => data,
             EN    => E,
@@ -48,7 +48,7 @@ begin
     FFD1: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD0,
             EN    => E,
@@ -58,7 +58,7 @@ begin
     FFD2: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD1,
             EN    => E,
@@ -68,7 +68,7 @@ begin
     FFD3: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD2,
             EN    => E,
@@ -78,7 +78,7 @@ begin
     FFD4: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD3,
             EN    => E,
@@ -88,7 +88,7 @@ begin
     FFD5: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD4,
             EN    => E,
@@ -98,7 +98,7 @@ begin
     FFD6: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD5,
             EN    => E,
@@ -108,7 +108,7 @@ begin
     FFD7: FFD 
         port map (
             CLK   => SCLK,
-            RESET => '0',
+            RESET => RESET,
             SET   => '0',
             D     => saidaFFD6,
             EN    => E,

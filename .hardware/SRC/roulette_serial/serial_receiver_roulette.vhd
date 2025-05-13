@@ -1,17 +1,17 @@
-LIBRARY ieee; 
+LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 entity serial_receiver_roulette is
-
 	port (
-		SS			: 	in std_logic;
-		SCLK		: 	in std_logic;
-		SDX		: 	in std_logic;
-		Reset 	:	in std_logic;	
-		accept   :  in std_logic;
-		
-		DXval 	: 	out std_logic;
-		Data		: 	out std_logic_vector(7 downto 0)			
+		SS      : in std_logic;
+		SCLK    : in std_logic;
+		SDX     : in std_logic;
+		MClk    : in std_logic;
+		Reset   : in std_logic;	
+		accept  : in std_logic;
+
+		DXval   : out std_logic;
+		Data    : out std_logic_vector(7 downto 0)
 	);
 end serial_receiver_roulette;
 
@@ -61,16 +61,15 @@ architecture structural of serial_receiver_roulette is
 		);
 	end component;
 
-
-	signal wr_sig 			: std_logic;
-	signal init_sig 		: std_logic;
-	signal dFlag_sig 		: std_logic;
-	signal pFlag_sig 		: std_logic;
-	signal RXerror_sig	: std_logic;
-	signal eq8 				: std_logic;
-	signal eq9 				: std_logic;
-	signal counter_val	: std_logic_vector(3 downto 0);
-	signal data_shift 	: std_logic_vector(7 downto 0);
+	signal wr_sig        : std_logic;
+	signal init_sig      : std_logic;
+	signal dFlag_sig     : std_logic;
+	signal pFlag_sig     : std_logic;
+	signal RXerror_sig   : std_logic;
+	signal eq8           : std_logic;
+	signal eq9           : std_logic;
+	signal counter_val   : std_logic_vector(3 downto 0);
+	signal data_shift    : std_logic_vector(7 downto 0);
 
 begin
 
@@ -95,7 +94,7 @@ begin
 		);
 
 	-- Counter
-	Counter3bit: counter_4bits
+	Counter4bit: counter_4bits
 		port map (
 			CE     => wr_sig,
 			CLK    => SCLK,
@@ -108,8 +107,8 @@ begin
 	eq9 <= '1' when counter_val = "1001" else '0';
 
 	-- Flags
-	pFlag_sig <= eq8;
-	dFlag_sig <= eq9;
+	pFlag_sig <= eq9;
+	dFlag_sig <= eq8;
 
 	-- Controle
 	Controller: receiver_controler_roulette
@@ -119,7 +118,7 @@ begin
 			pFlag    => pFlag_sig,
 			dFlag    => dFlag_sig,
 			RXerror  => RXerror_sig,
-			CLK      => SCLK,
+			CLK      => MClk,
 			Reset    => Reset,
 			wr       => wr_sig,
 			init     => init_sig,
@@ -127,6 +126,6 @@ begin
 		);
 
 	-- Saída
-	Data(7 downto 0) <= data_shift;
+	Data <= data_shift;
 
 end structural;
