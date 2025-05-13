@@ -58,25 +58,25 @@ begin
                 end if;
 
             when State3 =>
-                if not_enRx = '1' or RXerror = '1' then
-                    NextState <= State1;
-                elsif pFlag = '0' then
-                    NextState <= State3;
-					 else
+                if (not_enRx = '1') then
+						  NextState <= State1;
+					 elsif (pFlag = '1' and RXerror = '0') then
 						  NextState <= State4;
+					 elsif (pFlag = '1' and RXerror = '1') then
+                    NextState <= State1;
+                else	
+						  NextState <= State3;
                 end if;
 
             when State4 =>
-                if not_enRx = '1' then
-                    NextState <= State1;
-                elsif accept = '1' then
+                if accept = '1' then
                     NextState <= State5;
                 else
                     NextState <= State4;
                 end if;
 
             when State5 =>
-                if not_enRx = '1' and accept = '0' then
+                if accept = '0' then
                     NextState <= State1;
                 else
                     NextState <= State5;
@@ -90,7 +90,8 @@ begin
     DXval <= '1' when CurrentState = State4 else '0';
 	 
 	 with CurrentState select
-		 state_number <= "001" when State1,
+		 state_number <= 
+					 "001" when State1,
 					 "010" when State2,
 					 "011" when State3,
 					 "100" when State4,

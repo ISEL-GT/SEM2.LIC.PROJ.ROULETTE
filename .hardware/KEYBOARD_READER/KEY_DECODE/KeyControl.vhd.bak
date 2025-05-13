@@ -43,7 +43,6 @@ process (CurrentState, Kpress, Kack)
 					 
 				when State_Val 			=>		if (Kack = '1' and Kpress = '0') then
 															  NextState <= State_Ack_Waiting;
-															  
 														else
 															  NextState <= State_Val;
 														end if;
