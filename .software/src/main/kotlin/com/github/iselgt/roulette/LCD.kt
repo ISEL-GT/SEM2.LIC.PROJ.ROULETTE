@@ -90,7 +90,10 @@ object LCD {
 
     // Writes a nibble (4 bits) of command/data to the LCD in Serial Mode
     private fun writeNibbleSerial(rs: Boolean, data: Int) {
-        TODO()
+        val rsBit = if (rs) 1 else 0
+        val result = (data shl 1) or (rsBit)
+
+        SerialEmitter.send(SerialEmitter.Destination.LCD, result, 5)
     }
 
     fun init() {
@@ -153,9 +156,13 @@ object LCD {
 }
 
 fun main() {
+
+    /*
     HAL.init()
     LCD.init()
     while (true) {
         LCD.write(KBD.waitKey(500))
     }
+    */
+
 }

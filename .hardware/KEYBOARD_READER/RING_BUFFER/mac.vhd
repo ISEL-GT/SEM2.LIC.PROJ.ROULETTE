@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity memory_address_control is
+entity mac is
 
     port (
 			CLK: 	  in std_logic;
@@ -16,10 +16,10 @@ entity memory_address_control is
 			output: out std_logic_vector(3 downto 0)
     );
 
-end memory_address_control;
+end mac;
 
 
-architecture behavioral of memory_address_control is
+architecture behavioral of mac is
 
 	-- Imports the 4bit registry 
 	component register_4bits_counter is
@@ -113,9 +113,13 @@ begin
 			Q     => registry_data_2
 		);
 		
+	-- FAZER COM CONTADORES DE 5 BITS
+	-- EXISTE IMPLEMENTAÇÃO MELHOR MAS O MATUTINO DISSE QUE DEVEMOS FAZER ESTA PRIMEIRO
+
+	-- 
 	
-	empty <= '1' when registry_data_1 = "0000" and registry_data_1 = "0000" else '0';
-	full <= '1' when registry_data_1 = "1111" and registry_data_1 = "1111" else '0';
+	empty  <= '1' when registry_data_1 = "0000" and registry_data_1 = "0000" else '0';
+	full 	 <= '1' when registry_data_1 = "1111" and registry_data_1 = "1111" else '0';
 	output <= registry_data_1 when putget = '1' else registry_data_2;
 	
 end behavioral;

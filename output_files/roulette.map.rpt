@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 13 10:19:34 2025
+Tue May 13 19:14:17 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,23 +13,27 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |serial_receiver|receiver_controler:Controller|CurrentState
-  9. General Register Statistics
- 10. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD3"
- 11. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD2"
- 12. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1"
- 13. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits"
- 14. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3"
- 15. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits"
- 16. Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp"
- 17. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
- 18. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
- 19. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
- 20. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
- 21. Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  8. State Machine - |SLCDC|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState
+  9. State Machine - |SLCDC|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "LCD_Dispatcher:DispatcherInst"
+ 14. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD3"
+ 15. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD2"
+ 16. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD1"
+ 17. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits"
+ 18. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3"
+ 19. Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits"
+ 20. Port Connectivity Checks: "serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop"
+ 21. Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
+ 22. Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
+ 23. Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
+ 24. Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
+ 25. Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +60,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 13 10:19:34 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 13 19:14:17 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; serial_receiver                             ;
+; Top-level Entity Name              ; SLCDC                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 22                                          ;
-;     Total combinational functions  ; 17                                          ;
-;     Dedicated logic registers      ; 14                                          ;
-; Total registers                    ; 14                                          ;
+; Total logic elements               ; 31                                          ;
+;     Total combinational functions  ; 26                                          ;
+;     Dedicated logic registers      ; 20                                          ;
+; Total registers                    ; 20                                          ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -81,7 +85,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; serial_receiver    ; roulette           ;
+; Top-level entity name                                            ; SLCDC              ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -166,34 +170,38 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 32          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
-+--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                          ; Library ;
-+--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
-; .hardware/SLCDC/serial_receiver/parity_checker.vhd                 ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                 ;         ;
-; .hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ;         ;
-; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ;         ;
-; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ;         ;
-; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ;         ;
-; .hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ;         ;
-; .hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ;         ;
-; .hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ;         ;
-; .hardware/SLCDC/serial_receiver/serial_receiver.vhd                ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                ;         ;
-; .hardware/SLCDC/serial_receiver/receiver_controler.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd             ;         ;
-+--------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; .hardware/SLCDC/serial_receiver/parity_checker.vhd                 ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                 ;         ;
+; .hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd ;         ;
+; .hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd             ;         ;
+; .hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd                    ;         ;
+; .hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd          ;         ;
+; .hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd            ;         ;
+; .hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd    ;         ;
+; .hardware/SLCDC/serial_receiver/serial_receiver.vhd                ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                ;         ;
+; .hardware/SLCDC/SLCDC.vhd                                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd                                          ;         ;
+; .hardware/SLCDC/serial_receiver/receiver_controler.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd             ;         ;
+; .hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd            ;         ;
+; .hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd                  ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd                  ;         ;
++--------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -201,20 +209,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 22          ;
+; Estimated Total logic elements              ; 31          ;
 ;                                             ;             ;
-; Total combinational functions               ; 17          ;
+; Total combinational functions               ; 26          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 10          ;
-;     -- 3 input functions                    ; 4           ;
-;     -- <=2 input functions                  ; 3           ;
+;     -- 4 input functions                    ; 16          ;
+;     -- 3 input functions                    ; 5           ;
+;     -- <=2 input functions                  ; 5           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 17          ;
+;     -- normal mode                          ; 26          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
-; Total registers                             ; 14          ;
-;     -- Dedicated logic registers            ; 14          ;
+; Total registers                             ; 20          ;
+;     -- Dedicated logic registers            ; 20          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 12          ;
@@ -222,41 +230,54 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; Reset~input ;
-; Maximum fan-out                             ; 13          ;
-; Total fan-out                               ; 123         ;
-; Average fan-out                             ; 2.24        ;
+; Maximum fan-out                             ; 19          ;
+; Total fan-out                               ; 172         ;
+; Average fan-out                             ; 2.46        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                       ;
-+-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
-; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                         ; Entity Name                 ; Library Name ;
-+-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
-; |serial_receiver                                          ; 17 (1)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |serial_receiver                                                                                                            ; serial_receiver             ; work         ;
-;    |ShiftRegisterSerialReceiver:ShiftReg|                 ; 0 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg                                                                       ; ShiftRegisterSerialReceiver ; work         ;
-;       |FFD:FFD0|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0                                                              ; FFD                         ; work         ;
-;       |FFD:FFD1|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1                                                              ; FFD                         ; work         ;
-;       |FFD:FFD2|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2                                                              ; FFD                         ; work         ;
-;       |FFD:FFD3|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3                                                              ; FFD                         ; work         ;
-;       |FFD:FFD4|                                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4                                                              ; FFD                         ; work         ;
-;    |counter_3bits:Counter3bit|                            ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit                                                                                  ; counter_3bits               ; work         ;
-;       |register_3bits_counter:instance_registry_3bits|    ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits                                   ; register_3bits_counter      ; work         ;
-;          |FFD:FFD1|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD1                          ; FFD                         ; work         ;
-;          |FFD:FFD2|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD2                          ; FFD                         ; work         ;
-;          |FFD:FFD3|                                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD3                          ; FFD                         ; work         ;
-;    |parity_checker:ParityCheck|                           ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck                                                                                 ; parity_checker              ; work         ;
-;       |counter_3bits:CounterUp|                           ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp                                                         ; counter_3bits               ; work         ;
-;          |register_3bits_counter:instance_registry_3bits| ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits          ; register_3bits_counter      ; work         ;
-;             |FFD:FFD1|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1 ; FFD                         ; work         ;
-;    |receiver_controler:Controller|                        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |serial_receiver|receiver_controler:Controller                                                                              ; receiver_controler          ; work         ;
-+-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                 ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                   ; Entity Name                 ; Library Name ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |SLCDC                                                    ; 26 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |SLCDC                                                                                                                ; SLCDC                       ; work         ;
+;    |LCD_Dispatcher:DispatcherInst|                        ; 9 (0)               ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|LCD_Dispatcher:DispatcherInst                                                                                  ; LCD_Dispatcher              ; work         ;
+;       |LCDDispatcherControl:control_unit|                 ; 9 (9)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit                                                ; LCDDispatcherControl        ; work         ;
+;    |serial_receiver:ReceiverInst|                         ; 17 (0)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst                                                                                   ; serial_receiver             ; work         ;
+;       |ShiftRegisterSerialReceiver:ShiftReg|              ; 0 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg                                              ; ShiftRegisterSerialReceiver ; work         ;
+;          |FFD:FFD0|                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0                                     ; FFD                         ; work         ;
+;          |FFD:FFD1|                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1                                     ; FFD                         ; work         ;
+;          |FFD:FFD2|                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2                                     ; FFD                         ; work         ;
+;          |FFD:FFD3|                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3                                     ; FFD                         ; work         ;
+;          |FFD:FFD4|                                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4                                     ; FFD                         ; work         ;
+;       |counter_3bits:Counter3bit|                         ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|counter_3bits:Counter3bit                                                         ; counter_3bits               ; work         ;
+;          |register_3bits_counter:instance_registry_3bits| ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits          ; register_3bits_counter      ; work         ;
+;             |FFD:FFD1|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD1 ; FFD                         ; work         ;
+;             |FFD:FFD2|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD2 ; FFD                         ; work         ;
+;             |FFD:FFD3|                                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD3 ; FFD                         ; work         ;
+;       |parity_checker:ParityCheck|                        ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|parity_checker:ParityCheck                                                        ; parity_checker              ; work         ;
+;          |FFD:FlipFlop|                                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop                                           ; FFD                         ; work         ;
+;       |receiver_controler:Controller|                     ; 13 (13)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC|serial_receiver:ReceiverInst|receiver_controler:Controller                                                     ; receiver_controler          ; work         ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------+
+; State Machine - |SLCDC|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState            ;
++----------------------------+---------------------------+----------------------------+--------------------------+
+; Name                       ; currentState.DoneReceived ; currentState.ReceivingDval ; currentState.WaitingDval ;
++----------------------------+---------------------------+----------------------------+--------------------------+
+; currentState.WaitingDval   ; 0                         ; 0                          ; 0                        ;
+; currentState.ReceivingDval ; 0                         ; 1                          ; 1                        ;
+; currentState.DoneReceived  ; 1                         ; 0                          ; 1                        ;
++----------------------------+---------------------------+----------------------------+--------------------------+
+
+
+Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |serial_receiver|receiver_controler:Controller|CurrentState                                                       ;
+; State Machine - |SLCDC|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState                                    ;
 +---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
 ; Name                ; CurrentState.State5 ; CurrentState.State4 ; CurrentState.State3 ; CurrentState.State2 ; CurrentState.State1 ;
 +---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
@@ -268,68 +289,96 @@ Encoding Type:  One-Hot
 +---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++-------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                             ; Reason for Removal ;
++-------------------------------------------------------------------------------------------+--------------------+
+; LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState.DoneReceived ; Lost fanout        ;
+; Total Number of Removed Registers = 1                                                     ;                    ;
++-------------------------------------------------------------------------------------------+--------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 20    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD3" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                      ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |SLCDC|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|counter[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD2" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                      ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LCD_Dispatcher:DispatcherInst"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits|FFD:FFD1" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                      ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD3" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                     ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                             ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                        ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD2" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                     ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3" ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                          ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                              ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits|FFD:FFD1" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                     ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                 ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                            ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_3" ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                              ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits"     ;
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits" ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -340,58 +389,58 @@ Encoding Type:  One-Hot
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "parity_checker:ParityCheck|counter_3bits:CounterUp"                                        ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; count[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop" ;
++------+-------+----------+------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                ;
++------+-------+----------+------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                           ;
++------+-------+----------+------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                    ;
-+------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4" ;
++------+-------+----------+------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                    ;
-+------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3" ;
++------+-------+----------+------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                    ;
-+------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2" ;
++------+-------+----------+------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                    ;
-+------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1" ;
++------+-------+----------+------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                    ;
-+------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" ;
++------+-------+----------+------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -400,17 +449,17 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 14                          ;
-;     CLR               ; 9                           ;
+; cycloneiii_ff         ; 20                          ;
+;     CLR               ; 15                          ;
 ;     ENA CLR           ; 5                           ;
-; cycloneiii_lcell_comb ; 17                          ;
-;     normal            ; 17                          ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 10                          ;
+; cycloneiii_lcell_comb ; 26                          ;
+;     normal            ; 26                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.65                        ;
+; Average LUT depth     ; 1.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -429,194 +478,211 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 13 10:19:20 2025
+    Info: Processing started: Tue May 13 19:14:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
-    Info (12023): Found entity 1: parity_checker File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
+    Info (12022): Found design unit 1: parity_checker-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 15
+    Info (12023): Found entity 1: parity_checker File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/registry_3bits_counter.vhd
-    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_3bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_3bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/mux2x1.vhd
-    Info (12022): Found design unit 1: mux_2x1-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1 File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/half_adder.vhd
-    Info (12022): Found design unit 1: half_adder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
-    Info (12023): Found entity 1: half_adder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
+    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 19
+    Info (12023): Found entity 1: half_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
-    Info (12023): Found entity 1: full_adder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/ffd.vhd
-    Info (12022): Found design unit 1: FFD-logicFunction File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
-    Info (12023): Found entity 1: FFD File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-logicFunction File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 17
+    Info (12023): Found entity 1: FFD File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/counter_3bits.vhd
-    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
-    Info (12023): Found entity 1: counter_3bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: counter_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 17
+    Info (12023): Found entity 1: counter_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/adder_3bits.vhd
-    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_3bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/shiftregisterserialreceiver.vhd
-    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
+    Info (12022): Found design unit 1: ShiftRegisterSerialReceiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegisterSerialReceiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_receiver.vhd
-    Info (12022): Found design unit 1: serial_receiver-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 19
-    Info (12023): Found entity 1: serial_receiver File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
+    Info (12022): Found design unit 1: serial_receiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 18
+    Info (12023): Found entity 1: serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/slcdc.vhd
-    Info (12022): Found design unit 1: SLCDC-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 18
-    Info (12023): Found entity 1: SLCDC File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
+    Info (12022): Found design unit 1: SLCDC-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 18
+    Info (12023): Found entity 1: SLCDC File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/priority_encoder.vhd
-    Info (12022): Found design unit 1: priority_encoder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: priority_encoder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/partial_priority_encoder.vhd
-    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
-    Info (12023): Found entity 1: partial_priority_encoder File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
+    Info (12022): Found design unit 1: partial_priority_encoder-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 16
+    Info (12023): Found entity 1: partial_priority_encoder File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/penc/mux_2x1_penc.vhd
-    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
-    Info (12023): Found entity 1: mux_2x1_penc File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
+    Info (12022): Found design unit 1: mux_2x1_penc-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 21
+    Info (12023): Found entity 1: mux_2x1_penc File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/dec/decoder_2x4.vhd
-    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
-    Info (12023): Found entity 1: decoder_2x4 File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
+    Info (12022): Found design unit 1: decoder_2x4-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 15
+    Info (12023): Found entity 1: decoder_2x4 File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits_counter.vhd
-    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_2bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/registry_2bits.vhd
-    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
-    Info (12023): Found entity 1: register_2bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
-Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+    Info (12022): Found design unit 1: register_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 18
+    Info (12023): Found entity 1: register_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd Line: 4
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/mux2x1.vhd
-Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/half_adder.vhd
-Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/full_adder.vhd
-Info (15248): File "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (15248): File "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd" is a duplicate of already analyzed file "C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/ffd.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/counter.vhd
-    Info (12022): Found design unit 1: counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
-    Info (12023): Found entity 1: counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
+    Info (12022): Found design unit 1: counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 19
+    Info (12023): Found entity 1: counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/counter/adder_2bits.vhd
-    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
-    Info (12023): Found entity 1: adder_2bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_2bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 19
+    Info (12023): Found entity 1: adder_2bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_scanner/key_scanner.vhd
-    Info (12022): Found design unit 1: key_scanner-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
-    Info (12023): Found entity 1: key_scanner File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
+    Info (12022): Found design unit 1: key_scanner-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 21
+    Info (12023): Found entity 1: key_scanner File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
-    Info (12023): Found entity 1: KeyControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
+    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
+    Info (12023): Found entity 1: KeyControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_decode/key_decode.vhd
-    Info (12022): Found design unit 1: Key_decode-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
-    Info (12023): Found entity 1: Key_decode File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
+    Info (12023): Found entity 1: Key_decode File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/key_reader.vhd
-    Info (12022): Found design unit 1: Key_reader-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
-    Info (12023): Found entity 1: Key_reader File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 17
+    Info (12023): Found entity 1: Key_reader File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/Key_reader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/priority_encoder_tb.vhd
-    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: priority_encoder_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: priority_encoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: priority_encoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/priority_encoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keyscannertb.vhd
-    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
-    Info (12023): Found entity 1: Key_Scanner_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
+    Info (12023): Found entity 1: Key_Scanner_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keycontrol_tb.vhd
-    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
-    Info (12023): Found entity 1: KeyControl_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
+    Info (12022): Found design unit 1: KeyControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 7
+    Info (12023): Found entity 1: KeyControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyControl_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_reader_tb.vhd
-    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_reader_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_reader_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_reader_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_reader_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/key_decode_tb.vhd
-    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
-    Info (12023): Found entity 1: Key_decode_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Key_decode_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 7
+    Info (12023): Found entity 1: Key_decode_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Key_decode_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/decoder_tb.vhd
-    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
-    Info (12023): Found entity 1: decoder_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
+    Info (12022): Found design unit 1: decoder_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 7
+    Info (12023): Found entity 1: decoder_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/decoder_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/countertb.vhd
-    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
-    Info (12023): Found entity 1: counter_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
+    Info (12022): Found design unit 1: counter_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 8
+    Info (12023): Found entity 1: counter_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/CounterTb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
-    Info (12023): Found entity 1: roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
+    Info (12022): Found design unit 1: roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 23
+    Info (12023): Found entity 1: roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/roulette.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_controller_tb.vhd
-    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Controller_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_receiver_tb.vhd
-    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
-    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
+    Info (12022): Found design unit 1: Serial_Controller_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Controller_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/receiver_controler.vhd
-    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 22
-    Info (12023): Found entity 1: receiver_controler File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
+    Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 22
+    Info (12023): Found entity 1: receiver_controler File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_test.vhd
-    Info (12022): Found design unit 1: serial_test-logic File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 15
-    Info (12023): Found entity 1: serial_test File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 4
+    Info (12022): Found design unit 1: serial_test-logic File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 15
+    Info (12023): Found entity 1: serial_test File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcddispatchercontrol.vhd
-    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 15
-    Info (12023): Found entity 1: LCDDispatcherControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 5
+    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 15
+    Info (12023): Found entity 1: LCDDispatcherControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcd_dispatcher.vhd
-    Info (12022): Found design unit 1: LCD_Dispatcher-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 17
-    Info (12023): Found entity 1: LCD_Dispatcher File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 4
+    Info (12022): Found design unit 1: LCD_Dispatcher-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 17
+    Info (12023): Found entity 1: LCD_Dispatcher File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_dispatcher/roulettedispatchercontrol.vhd
-    Info (12022): Found design unit 1: rouletteDispatcherControl-behavior File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 15
-    Info (12023): Found entity 1: rouletteDispatcherControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 5
+    Info (12022): Found design unit 1: rouletteDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 15
+    Info (12023): Found entity 1: rouletteDispatcherControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/rouletteDispatcherControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_dispatcher/roulette_dispatcher.vhd
-    Info (12022): Found design unit 1: roulette_dispatcher-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 17
-    Info (12023): Found entity 1: roulette_dispatcher File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_dispatcher-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 17
+    Info (12023): Found entity 1: roulette_dispatcher File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_dispatcher/roulette_dispatcher.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/registry_4bits_counter.vhd
-    Info (12022): Found design unit 1: register_4bits_counter-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 18
-    Info (12023): Found entity 1: register_4bits_counter File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 4
+    Info (12022): Found design unit 1: register_4bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 18
+    Info (12023): Found entity 1: register_4bits_counter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/counter_4bits.vhd
-    Info (12022): Found design unit 1: counter_4bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 17
-    Info (12023): Found entity 1: counter_4bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 4
+    Info (12022): Found design unit 1: counter_4bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 17
+    Info (12023): Found entity 1: counter_4bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/counter_4bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/adder_4bits.vhd
-    Info (12022): Found design unit 1: adder_4bits-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 16
-    Info (12023): Found entity 1: adder_4bits File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 4
+    Info (12022): Found design unit 1: adder_4bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 16
+    Info (12023): Found entity 1: adder_4bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/roulette_shiftregister.vhd
-    Info (12022): Found design unit 1: roulette_shiftRegister-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 14
-    Info (12023): Found entity 1: roulette_shiftRegister File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_shiftRegister-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 14
+    Info (12023): Found entity 1: roulette_shiftRegister File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_shiftRegister.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/serial_receiver_roulette.vhd
-    Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
-    Info (12023): Found entity 1: serial_receiver_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
+    Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
+    Info (12023): Found entity 1: serial_receiver_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 16
-    Info (12023): Found entity 1: parity_checker_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 4
+    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 16
+    Info (12023): Found entity 1: parity_checker_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/src.vhd
-    Info (12022): Found design unit 1: SRC-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 18
-    Info (12023): Found entity 1: SRC File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 4
+    Info (12022): Found design unit 1: SRC-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 18
+    Info (12023): Found entity 1: SRC File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/SRC.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/roulette_serial_test.vhd
-    Info (12022): Found design unit 1: roulette_serial_test-logic File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 15
-    Info (12023): Found entity 1: roulette_serial_test File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 4
+    Info (12022): Found design unit 1: roulette_serial_test-logic File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 15
+    Info (12023): Found entity 1: roulette_serial_test File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/roulette_serial_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/receiver_controler_roulette.vhd
-    Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
-    Info (12023): Found entity 1: receiver_controler_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
+    Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
+    Info (12023): Found entity 1: receiver_controler_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/lcddispatchercontrol_tb.vhd
-    Info (12022): Found design unit 1: LCDDispatcherControl_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 8
-    Info (12023): Found entity 1: LCDDispatcherControl_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 5
+    Info (12022): Found design unit 1: LCDDispatcherControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 8
+    Info (12023): Found entity 1: LCDDispatcherControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/mac.vhd
-    Info (12022): Found design unit 1: memory_address_control-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 22
-    Info (12023): Found entity 1: memory_address_control File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 4
-Info (12127): Elaborating entity "serial_receiver" for the top level hierarchy
-Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 79
-Info (12128): Elaborating entity "FFD" for hierarchy "ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
-Info (12128): Elaborating entity "parity_checker" for hierarchy "parity_checker:ParityCheck" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 89
-Info (12128): Elaborating entity "counter_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 32
-Info (12128): Elaborating entity "adder_3bits" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at adder_3bits.vhd(44): object "carry_full_adder_3" assigned a value but never read File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 44
-Info (12128): Elaborating entity "full_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 49
-Info (12128): Elaborating entity "half_adder" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "register_3bits_counter" for hierarchy "parity_checker:ParityCheck|counter_3bits:CounterUp|register_3bits_counter:instance_registry_3bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 69
-Info (12128): Elaborating entity "receiver_controler" for hierarchy "receiver_controler:Controller" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
+    Info (12022): Found design unit 1: mac-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 22
+    Info (12023): Found entity 1: mac File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_receiver_lcd_tb.vhd
+    Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_lcd_tb.vhd Line: 7
+    Info (12023): Found entity 1: Serial_Receiver_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_lcd_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/shiftregisterlcd_tb.vhd
+    Info (12022): Found design unit 1: ShiftRegisterLCD_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/ShiftRegisterLCD_tb.vhd Line: 7
+    Info (12023): Found entity 1: ShiftRegisterLCD_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/ShiftRegisterLCD_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/parity_checker_tb.vhd
+    Info (12022): Found design unit 1: parity_checker_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/parity_checker_tb.vhd Line: 7
+    Info (12023): Found entity 1: parity_checker_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/parity_checker_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/counterseriallcd_tb.vhd
+    Info (12022): Found design unit 1: counterSerialLCD_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/counterSerialLCD_tb.vhd Line: 7
+    Info (12023): Found entity 1: counterSerialLCD_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/counterSerialLCD_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/slcdc_tb.vhd
+    Info (12022): Found design unit 1: SLCDC_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/SLCDC_tb.vhd Line: 7
+    Info (12023): Found entity 1: SLCDC_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/SLCDC_tb.vhd Line: 4
+Info (12127): Elaborating entity "SLCDC" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at SLCDC.vhd(50): object "done_sig" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 50
+Info (12128): Elaborating entity "serial_receiver" for hierarchy "serial_receiver:ReceiverInst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 55
+Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 78
+Info (12128): Elaborating entity "FFD" for hierarchy "serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
+Info (12128): Elaborating entity "parity_checker" for hierarchy "serial_receiver:ReceiverInst|parity_checker:ParityCheck" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 88
+Info (12128): Elaborating entity "counter_3bits" for hierarchy "serial_receiver:ReceiverInst|counter_3bits:Counter3bit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 97
+Info (12128): Elaborating entity "adder_3bits" for hierarchy "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at adder_3bits.vhd(44): object "carry_full_adder_3" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 44
+Info (12128): Elaborating entity "full_adder" for hierarchy "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 49
+Info (12128): Elaborating entity "half_adder" for hierarchy "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_3bits_counter" for hierarchy "serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits_counter:instance_registry_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd Line: 69
+Info (12128): Elaborating entity "receiver_controler" for hierarchy "serial_receiver:ReceiverInst|receiver_controler:Controller" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 114
+Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
+Info (12128): Elaborating entity "LCD_Dispatcher" for hierarchy "LCD_Dispatcher:DispatcherInst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 68
+Info (12128): Elaborating entity "LCDDispatcherControl" for hierarchy "LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 22 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Tue May 13 10:19:34 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 31 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Tue May 13 19:14:17 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 
