@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue May 13 10:19:34 2025
+Analysis & Synthesis Status : Successful - Mon May 19 13:30:21 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : serial_receiver
+Top-level Entity Name : mac
 Family : MAX 10
 Total logic elements : 22
-    Total combinational functions : 17
-    Dedicated logic registers : 14
-Total registers : 14
+    Total combinational functions : 22
+    Dedicated logic registers : 10
+Total registers : 10
 Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0
