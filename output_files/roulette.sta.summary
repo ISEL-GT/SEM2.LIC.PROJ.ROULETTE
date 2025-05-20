@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SCLK'
+Slack : -1.147
+TNS   : -7.413
+
+Type  : Slow 1200mV 85C Model Setup 'MClk'
+Slack : -0.785
+TNS   : -4.914
+
+Type  : Slow 1200mV 85C Model Hold 'MClk'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SCLK'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'SCLK'
+Slack : -0.418
+TNS   : -0.418
+
+Type  : Slow 1200mV 85C Model Removal 'SCLK'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MClk'
+Slack : -3.000
+TNS   : -16.442
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCLK'
+Slack : -3.000
+TNS   : -13.998
+
+Type  : Slow 1200mV 0C Model Setup 'SCLK'
+Slack : -0.973
+TNS   : -6.100
+
+Type  : Slow 1200mV 0C Model Setup 'MClk'
+Slack : -0.615
+TNS   : -3.492
+
+Type  : Slow 1200mV 0C Model Hold 'MClk'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SCLK'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'SCLK'
+Slack : -0.296
+TNS   : -0.296
+
+Type  : Slow 1200mV 0C Model Removal 'SCLK'
+Slack : 0.763
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MClk'
+Slack : -3.000
+TNS   : -16.442
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCLK'
+Slack : -3.000
+TNS   : -13.998
+
+Type  : Fast 1200mV 0C Model Setup 'SCLK'
+Slack : -0.043
+TNS   : -0.215
+
+Type  : Fast 1200mV 0C Model Setup 'MClk'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MClk'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SCLK'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'SCLK'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'SCLK'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MClk'
+Slack : -3.000
+TNS   : -14.341
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCLK'
+Slack : -3.000
+TNS   : -12.284
+
+------------------------------------------------------------

@@ -103,8 +103,8 @@ begin
 		);
 
 	-- Comparadores
-	eq8 <= '1' when counter_val = "1000" else '0';
-	eq9 <= '1' when counter_val = "1001" else '0';
+	eq8 <= not counter_val(0) and not counter_val(1) and not counter_val(2) and counter_val(3);
+	eq9 <= 	  counter_val(0) and not counter_val(1) and not counter_val(2) and counter_val(3);
 
 	-- Flags
 	pFlag_sig <= eq9;

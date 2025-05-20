@@ -1,0 +1,101 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ShiftRegisterLCD_tb is
+end ShiftRegisterLCD_tb;
+
+architecture behavioral of ShiftRegisterLCD_tb is
+
+    component ShiftRegisterSerialReceiver is
+        port(
+            MCLK  : in std_logic;
+            reset : in std_logic;
+            data  : in std_logic;
+            SCLK  : in std_logic;
+            E     : in std_logic;
+            D     : out std_logic_vector(4 downto 0)
+        );
+    end component;
+
+    constant clk_period      : time := 10 ns;
+    constant half_clk_period : time := clk_period / 2;
+
+    signal data_tb   : std_logic;
+    signal SCLK_tb   : std_logic;
+    signal enable_tb : std_logic;
+    signal Reset_tb  : std_logic;
+    signal CLK_tb    : std_logic;
+    signal D_out     : std_logic_vector(4 downto 0);
+
+begin
+
+    -- DUT instantiation
+    UUT: ShiftRegisterSerialReceiver
+        port map (
+            reset => Reset_tb,
+            SCLK  => SCLK_tb,
+            data  => data_tb,
+            E     => enable_tb,
+            MCLK  => CLK_tb,
+            D     => D_out
+        );
+
+    -- Clock generation for CLK_tb
+    clk_gen: process
+    begin
+        while true loop
+            CLK_tb <= '0';
+            wait for half_clk_period;
+            CLK_tb <= '1';
+            wait for half_clk_period;
+        end loop;
+    end process;
+
+    -- Stimulus process
+    stimulus: process
+    begin
+        -- Inicialização
+        Reset_tb   <= '1';
+        enable_tb  <= '1';
+        data_tb    <= '0';
+        SCLK_tb    <= '0';
+        wait for clk_period;
+
+        -- Tirar do reset
+        Reset_tb <= '0';
+        wait for clk_period;
+
+        -- Enviar bits de dados (5 bits, por ex: 10101)
+
+        -- Bit 4 (MSB)
+        data_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '0'; wait for clk_period;
+
+        -- Bit 3
+        data_tb  <= '0'; wait for clk_period;
+        SCLK_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '0'; wait for clk_period;
+
+        -- Bit 2
+        data_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '0'; wait for clk_period;
+
+        -- Bit 1
+        data_tb  <= '0'; wait for clk_period;
+        SCLK_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '0'; wait for clk_period;
+
+        -- Bit 0 (LSB)
+        data_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '1'; wait for clk_period;
+        SCLK_tb  <= '0'; wait for clk_period;
+
+        wait for clk_period;
+
+        -- Parar simulação
+        wait;
+    end process;
+
+end behavioral;
