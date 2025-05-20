@@ -1,5 +1,5 @@
 Fitter report for roulette
-Tue May 20 09:22:13 2025
+Tue May 20 10:27:27 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue May 20 09:22:13 2025       ;
+; Fitter Status                      ; Successful - Tue May 20 10:27:27 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; OutputBuffer                                ;
@@ -153,12 +153,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.3%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processors 3-16        ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -1335,10 +1336,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/output_files/roulette.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 6603 megabytes
-    Info: Processing ended: Tue May 20 09:22:13 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 6605 megabytes
+    Info: Processing ended: Tue May 20 10:27:27 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

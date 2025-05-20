@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 20 09:22:07 2025
+Tue May 20 11:33:27 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |OutputBuffer|OutputBufferControl:CTRL|CurrentState
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,22 +37,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 20 09:22:07 2025       ;
+; Analysis & Synthesis Status        ; Failed - Tue May 20 11:33:27 2025           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; OutputBuffer                                ;
+; Top-level Entity Name              ; RingBuffer                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 10                                          ;
-;     Total combinational functions  ; 6                                           ;
-;     Dedicated logic registers      ; 8                                           ;
-; Total registers                    ; 8                                           ;
-; Total pins                         ; 14                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -69,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; OutputBuffer       ; roulette           ;
+; Top-level entity name                                            ; RingBuffer         ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,123 +151,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
-; .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd ;         ;
-; .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd      ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd      ;         ;
-; .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd        ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd        ;         ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 10        ;
-;                                             ;           ;
-; Total combinational functions               ; 6         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 2         ;
-;     -- <=2 input functions                  ; 4         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 8         ;
-;     -- Dedicated logic registers            ; 8         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 14        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 58        ;
-; Average fan-out                             ; 1.38      ;
-+---------------------------------------------+-----------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                    ; Entity Name         ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------------+--------------+
-; |OutputBuffer                 ; 6 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |OutputBuffer                          ; OutputBuffer        ; work         ;
-;    |OutputBufferControl:CTRL| ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |OutputBuffer|OutputBufferControl:CTRL ; OutputBufferControl ; work         ;
-;    |OutputRegister:REG|       ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |OutputBuffer|OutputRegister:REG       ; OutputRegister      ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |OutputBuffer|OutputBufferControl:CTRL|CurrentState                                                                    ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; Name                       ; CurrentState.State_Clear ; CurrentState.State_WaitAck ; CurrentState.State_Load ; CurrentState.State_Idle ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; CurrentState.State_Idle    ; 0                        ; 0                          ; 0                       ; 0                       ;
-; CurrentState.State_Load    ; 0                        ; 0                          ; 1                       ; 1                       ;
-; CurrentState.State_WaitAck ; 0                        ; 1                          ; 0                       ; 1                       ;
-; CurrentState.State_Clear   ; 1                        ; 0                          ; 0                       ; 1                       ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 8                           ;
-;     CLR               ; 4                           ;
-;     ENA               ; 4                           ;
-; cycloneiii_lcell_comb ; 6                           ;
-;     normal            ; 6                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 2                           ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.55                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -283,7 +164,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 20 09:22:02 2025
+    Info: Processing started: Tue May 20 11:33:23 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -300,8 +181,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12022): Found design unit 1: mac_tb-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd Line: 8
     Info (12023): Found entity 1: mac_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/lcddispatchercontrol_tb.vhd
-    Info (12022): Found design unit 1: LCDDispatcherControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 8
-    Info (12023): Found entity 1: LCDDispatcherControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 5
+    Info (12022): Found design unit 1: LCDDispatcherControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 9
+    Info (12023): Found entity 1: LCDDispatcherControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcherControl_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/keyscannertb.vhd
     Info (12022): Found design unit 1: Key_Scanner_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 7
     Info (12023): Found entity 1: Key_Scanner_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/KeyScannerTb.vhd Line: 4
@@ -401,7 +282,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12022): Found design unit 1: adder_3bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 19
     Info (12023): Found entity 1: adder_3bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcddispatchercontrol.vhd
-    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 15
+    Info (12022): Found design unit 1: LCDDispatcherControl-behavior File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 18
     Info (12023): Found entity 1: LCDDispatcherControl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/lcd_dispatcher.vhd
     Info (12022): Found design unit 1: LCD_Dispatcher-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 17
@@ -484,20 +365,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/output_buffer/outputbuffer.vhd
     Info (12022): Found design unit 1: OutputBuffer-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 17
     Info (12023): Found entity 1: OutputBuffer File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 4
-Info (12127): Elaborating entity "OutputBuffer" for the top level hierarchy
-Info (12128): Elaborating entity "OutputBufferControl" for hierarchy "OutputBufferControl:CTRL" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 46
-Info (12128): Elaborating entity "OutputRegister" for hierarchy "OutputRegister:REG" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 58
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 10 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Tue May 20 09:22:07 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/slcdc_tb.vhd
+    Info (12022): Found design unit 1: SLCDC_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/SLCDC_tb.vhd Line: 7
+    Info (12023): Found entity 1: SLCDC_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/SLCDC_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/lcddispatcher_tb.vhd
+    Info (12022): Found design unit 1: LCDDispatcher_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcher_tb.vhd Line: 9
+    Info (12023): Found entity 1: LCDDispatcher_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/LCDDispatcher_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/lcd_dispatcher/counter_4bits_dispatcher.vhd
+    Info (12022): Found design unit 1: counter_4bits_dispatcher-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/counter_4bits_dispatcher.vhd Line: 17
+    Info (12023): Found entity 1: counter_4bits_dispatcher File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/counter_4bits_dispatcher.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/outputregister_tb.vhd
+    Info (12022): Found design unit 1: OutputRegister_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputRegister_tb.vhd Line: 7
+    Info (12023): Found entity 1: OutputRegister_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputRegister_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/outputbuffer_tb.vhd
+    Info (12022): Found design unit 1: OutputBuffer_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBuffer_tb.vhd Line: 7
+    Info (12023): Found entity 1: OutputBuffer_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBuffer_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/outputbuffercontrol_tb.vhd
+    Info (12022): Found design unit 1: OutputBufferControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd Line: 7
+    Info (12023): Found entity 1: OutputBufferControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd Line: 4
+Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/ring_buffer/ringbuffertest.vhd
+Info (12127): Elaborating entity "RingBuffer" for the top level hierarchy
+Error (10344): VHDL expression error at RingBuffer.vhd(116): expression has 5 elements, but must have 4 elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 116
+Error (10346): VHDL error at RingBuffer.vhd(114): formal port or parameter "address" must have actual or default value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 114
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
+    Error: Peak virtual memory: 4787 megabytes
+    Error: Processing ended: Tue May 20 11:33:27 2025
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:10
 
 

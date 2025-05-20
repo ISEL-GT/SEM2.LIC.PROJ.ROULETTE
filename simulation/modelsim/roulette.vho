@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "05/20/2025 09:22:19"
+-- DATE "05/20/2025 10:27:33"
 
 -- 
 -- Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -95,9 +95,9 @@ ENTITY 	OutputBuffer IS
 	Load : IN std_logic;
 	ACK : IN std_logic;
 	Din : IN std_logic_vector(3 DOWNTO 0);
-	Dout : OUT std_logic_vector(3 DOWNTO 0);
-	OBfree : OUT std_logic;
-	Dval : OUT std_logic
+	Dout : BUFFER std_logic_vector(3 DOWNTO 0);
+	OBfree : BUFFER std_logic;
+	Dval : BUFFER std_logic
 	);
 END OutputBuffer;
 

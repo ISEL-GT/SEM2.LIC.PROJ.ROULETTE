@@ -13,7 +13,7 @@ entity mac is
 
         full    : out std_logic;
         empty   : out std_logic;
-        output  : out std_logic_vector(4 downto 0)
+        output  : out std_logic_vector(3 downto 0)
     );
 end mac;
 

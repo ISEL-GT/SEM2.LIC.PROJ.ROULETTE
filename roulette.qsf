@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY OutputBuffer
+set_global_assignment -name TOP_LEVEL_ENTITY RingBuffer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:47:01  FEBRUARY 25, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -134,6 +134,13 @@ set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/RING_BUFFER/Ring
 set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd
 set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd
 set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/SLCDC_tb.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/LCDDispatcher_tb.vhd
+set_global_assignment -name VHDL_FILE .hardware/SLCDC/LCD_dispatcher/counter_4bits_dispatcher.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputRegister_tb.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputBuffer_tb.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputBufferControl_tb.vhd
+set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

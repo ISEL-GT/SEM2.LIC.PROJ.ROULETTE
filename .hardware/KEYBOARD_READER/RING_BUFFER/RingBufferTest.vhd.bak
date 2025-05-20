@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity RingBufferTest is
+    port (
+        -- Entradas principais
+        MCLK    : in  std_logic;
+        RESET   : in  std_logic;
+        DAV     : in  std_logic;
+        D       : in  std_logic_vector(3 downto 0);
+        ACK     : in  std_logic;
+        
+        -- Saídas observáveis
+        Q       : out std_logic_vector(3 downto 0); -- Saída final de dados
+        OBfree  : out std_logic;
+        Dval    : out std_logic
+    );
+end RingBufferTest;
+
+architecture structural of RingBufferTest is
+
+    -- Sinais internos
+    signal internal_Q      : std_logic_vector(3 downto 0);
+    signal internal_Wreg   : std_logic;
+    signal internal_DAC    : std_logic;
+
+begin
+
+    -- Instância do RingBuffer
+    RB: entity RingBuffer
+        port map (
+            D     => D,
+            DAV   => DAV,
+            CTS   => OBfree,     -- O RingBuffer só envia dados se OutputBuffer estiver livre
+            RESET => RESET,
+            MCLK  => MCLK,
+            Q     => internal_Q, -- Dados lidos da RAM
+            Wreg  => internal_Wreg,
+            DAC   => internal_DAC
+        );
+
+    -- Instância do OutputBuffer
+    OB: entity OutputBuffer
+        port map (
+            reset  => RESET,
+            clk    => MCLK,
+            Load   => internal_DAC,     -- Sinal para carregar dados do RingBuffer
+            ACK    => ACK,              -- Acknowledgment externo
+            Din    => internal_Q,       -- Dados recebidos do RingBuffer
+            Dout   => Q,                -- Saída final de dados
+            OBfree => OBfree,           -- Indica se o OutputBuffer está disponível
+            Dval   => Dval              -- Indica se há dado válido pronto
+        );
+
+end structural;
