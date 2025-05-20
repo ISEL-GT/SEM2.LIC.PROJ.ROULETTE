@@ -9,39 +9,39 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/simulation/modelsim
-Eadder_3bits
-Z1 w1744706104
+Eadder_5bits
+Z1 w1747725245
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 15
+!i122 4
 R0
-Z4 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
-Z5 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd
+Z4 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd
+Z5 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd
 l0
 L4 1
-VNc8NL_7nN`Z@<UaDLTGa`0
-!s100 :]Xk1dZ;Vc>HA>>IzzADM2
+VN;WZbf9RQkE?kY6dnVfL10
+!s100 JQJWKBHd[6VBP<@A8EZ9_2
 Z6 OV;C;2020.1;71
-32
-Z7 !s110 1747123802
+31
+Z7 !s110 1747727032
 !i10b 1
-Z8 !s108 1747123802.000000
-Z9 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
-Z10 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/adder_3bits.vhd|
+Z8 !s108 1747727032.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd|
+Z10 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd|
 !i113 1
-Z11 o-work work
+Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
 Abehavioral
 R2
 R3
-DEx4 work 11 adder_3bits 0 22 Nc8NL_7nN`Z@<UaDLTGa`0
-!i122 15
-l46
-L19 80
-VE1GCU8fYblX[Uj4Ph<[933
-!s100 :S]f>JDSN7G1nXEV^63RH1
+DEx4 work 11 adder_5bits 0 22 N;WZbf9RQkE?kY6dnVfL10
+!i122 4
+l34
+L16 73
+V7o2Q:V@AlGJNIb@BODNfZ2
+!s100 [VkomT@;g^MIRSY7d`oUR3
 R6
-32
+31
 R7
 !i10b 1
 R8
@@ -50,203 +50,162 @@ R10
 !i113 1
 R11
 R12
-Ecounter_3bits
-R1
-R2
-R3
-!i122 16
-R0
-Z13 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
-Z14 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd
-l0
-L4 1
-VN6gMkUZSOhl6;VXaJT[L`2
-!s100 kJ3XEMA29l_:0I3BNLCb`3
-R6
-32
-R7
-!i10b 1
-R8
-Z15 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
-Z16 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/counter_3bits.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R2
-R3
-DEx4 work 13 counter_3bits 0 22 N6gMkUZSOhl6;VXaJT[L`2
-!i122 16
-l54
-L17 66
-VGCHkOldVd1Qj]FgIZPj;J1
-!s100 fSJZARJ:>=cz7RjYWm]oJ2
-R6
-32
-R7
-!i10b 1
-R8
-R15
-R16
-!i113 1
-R11
-R12
 Effd
-R1
+Z13 w1746439684
 R2
 R3
-!i122 17
+!i122 2
 R0
-Z17 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
-Z18 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd
+Z14 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd
+Z15 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd
 l0
 L5 1
-VNQT5Ug:m4IAS27P0I3B250
+V7P=[@f?NjJ5eAni:EWNLA3
 !s100 TMIDRFA<z3GmnLWRDb`T?3
 R6
-32
+31
 R7
 !i10b 1
-R8
-Z19 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
-Z20 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/FFD.vhd|
+Z16 !s108 1747727031.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd|
+Z18 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd|
 !i113 1
 R11
 R12
 Alogicfunction
 R2
 R3
-DEx4 work 3 ffd 0 22 NQT5Ug:m4IAS27P0I3B250
-!i122 17
+DEx4 work 3 ffd 0 22 7P=[@f?NjJ5eAni:EWNLA3
+!i122 2
 l18
 L17 9
-V3i6Oe5;^NZQEUS5N]Uk1V1
+VLa]ADh?VlmFbIUF@SYOo33
 !s100 Fi1SWmU^YWbMQz5W^HZkO1
 R6
-32
+31
 R7
 !i10b 1
-R8
-R19
-R20
+R16
+R17
+R18
 !i113 1
 R11
 R12
 Efull_adder
-R1
+R13
 R2
 R3
-!i122 18
+!i122 1
 R0
-Z21 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
-Z22 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd
+Z19 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd
+Z20 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd
 l0
 L6 1
-Vm^A60N=cdN_S]fPc18:T61
+VOUO;gSf6dhQn3OzTm4LMf0
 !s100 ]hdZUUZ_@dRMOH8;4[82?2
 R6
-32
-R7
+31
+Z21 !s110 1747727031
 !i10b 1
-R8
-Z23 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
-Z24 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/full_adder.vhd|
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd|
+Z23 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd|
 !i113 1
 R11
 R12
 Abehavioral
 R2
 R3
-DEx4 work 10 full_adder 0 22 m^A60N=cdN_S]fPc18:T61
-!i122 18
+DEx4 work 10 full_adder 0 22 OUO;gSf6dhQn3OzTm4LMf0
+!i122 1
 l45
 L21 56
-VZVO:j_jXjJR>X0L:?H1YY0
+VDGnjWECiGaSbO@D1P6@e=3
 !s100 QFhd>j0?fBj`ljXJ8f8DT2
 R6
-32
-R7
+31
+R21
 !i10b 1
-R8
+R16
+R22
 R23
-R24
 !i113 1
 R11
 R12
 Ehalf_adder
-R1
+R13
 R2
 R3
-!i122 19
+!i122 0
 R0
-Z25 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
-Z26 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd
+Z24 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd
+Z25 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd
 l0
 L6 1
-Vil;DF5W<A;oPISm?F>G8I2
+V5A9:A6@gTm<DI]fd`6C]a0
 !s100 Rk8Y58EMd:CVUb@^SRGL80
 R6
-32
-R7
+31
+R21
 !i10b 1
-R8
-Z27 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
-Z28 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/half_adder.vhd|
+R16
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd|
+Z27 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-DEx4 work 10 half_adder 0 22 il;DF5W<A;oPISm?F>G8I2
-!i122 19
+DEx4 work 10 half_adder 0 22 5A9:A6@gTm<DI]fd`6C]a0
+!i122 0
 l20
 L19 7
-VJ:[6J8`039Pfb9_cm4Q4l0
+VOKl2J4OG^IT6:^ZgO^PU^0
 !s100 2z3oh;BXC]Z95ZCXV:U:T1
 R6
-32
-R7
+31
+R21
 !i10b 1
-R8
+R16
+R26
 R27
-R28
 !i113 1
 R11
 R12
-Emux_2x1
-R1
+Emac
+Z28 w1747726885
 R2
 R3
-!i122 20
+!i122 5
 R0
-Z29 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd
-Z30 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd
+Z29 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd
+Z30 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd
 l0
-L6 1
-VHRXYAV5^fD0Kz]dL46V1a2
-!s100 H4bQ4WYUVgFLOQ1Z8hg_43
+L5 1
+V>RojcMO?2BWC0N0a1=9SK3
+!s100 ?7CzK5m^M9`>PQSgnl4o>0
 R6
-32
+31
 R7
 !i10b 1
 R8
-Z31 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd|
-Z32 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/MUX2x1.vhd|
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd|
+Z32 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd|
 !i113 1
 R11
 R12
-Astructural
+Abehavioral
 R2
 R3
-DEx4 work 7 mux_2x1 0 22 HRXYAV5^fD0Kz]dL46V1a2
-!i122 20
-l22
-L21 7
-V^@>F]iha8RBV:?GHhK?9b0
-!s100 j[4F[S3LA6A6c_?i0bSQ80
+DEx4 work 3 mac 0 22 >RojcMO?2BWC0N0a1=9SK3
+!i122 5
+l54
+L20 92
+Vdc8`f`3P6?ibH=Ml@<f2E2
+!s100 B:?=cVYEk=WKWk`9ZRd7i3
 R6
-32
+31
 R7
 !i10b 1
 R8
@@ -255,331 +214,87 @@ R32
 !i113 1
 R11
 R12
-Eparity_checker
+Emac_tb
 R1
+Z33 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
-!i122 10
+!i122 6
 R0
-Z33 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
-Z34 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd
+Z34 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd
+Z35 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd
 l0
-L4 1
-VD1c=e_45U2jOo_ocSTlPM0
-!s100 :gd^z@HF`YjG[c0Ih5GCl2
+L5 1
+VUQY]3Vm^ZJZdofXBA=gXI2
+!s100 >;o`^2U47J7X]QO::>JH_3
 R6
 32
-Z35 !s110 1747123799
+Z36 !s110 1747727054
 !i10b 1
-Z36 !s108 1747123799.000000
-Z37 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
-Z38 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd|
+Z37 !s108 1747727054.000000
+Z38 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd|
+!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd|
 !i113 1
-R11
+Z39 o-work work
 R12
-Astructural
+Abehavior
+R33
 R2
 R3
-DEx4 work 14 parity_checker 0 22 D1c=e_45U2jOo_ocSTlPM0
-!i122 10
-l30
-L16 28
-V5Qg190_YDnJM0N8W9dIZa0
-!s100 kHcA?<SAmZNL[FEdXNKBY3
+DEx4 work 6 mac_tb 0 22 UQY]3Vm^ZJZdofXBA=gXI2
+!i122 6
+l36
+L8 89
+V[`j>LhjoQDi^F3986IF<Q3
+!s100 VeOHZ=X^`9IYhM;eehiFa0
 R6
 32
-R35
-!i10b 1
 R36
+!i10b 1
 R37
 R38
+Z40 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/mac_tb.vhd|
 !i113 1
-R11
+R39
 R12
-Ereceiver_controler
-Z39 w1746540225
-R2
-R3
-!i122 11
-R0
-Z40 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
-Z41 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd
-l0
-L4 1
-Vg9Wg^@mY@mPz;^l[4H8zl3
-!s100 PEYRGIST0AKIYW`FESPmO3
-R6
-32
-R35
-!i10b 1
-R36
-Z42 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
-Z43 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R2
-R3
-DEx4 work 18 receiver_controler 0 22 g9Wg^@mY@mPz;^l[4H8zl3
-!i122 11
-l28
-L22 80
-VhonQ7m?h9GASXGFanD<J<0
-!s100 Co`cD0:8VhAmFnzJ6?g8m2
-R6
-32
-R35
-!i10b 1
-R36
-R42
-R43
-!i113 1
-R11
-R12
-Eregister_3bits_counter
+Eregister_5bits
 R1
 R2
 R3
-!i122 21
+!i122 3
 R0
-Z44 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
-Z45 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
+Z41 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd
+Z42 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd
 l0
 L4 1
-VQ4C:`IUCBEe7I7EjbUmhX3
-!s100 RfO>RFPg`zN:jLH9l>kTL2
+V5Ma@[@PaWLR@Cn=>>EQKN3
+!s100 ]U6m56784SX^A68SS83M73
 R6
-32
+31
 R7
 !i10b 1
 R8
-Z46 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
-Z47 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd|
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd|
+Z44 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd|
 !i113 1
 R11
 R12
 Abehavioral
 R2
 R3
-DEx4 work 22 register_3bits_counter 0 22 Q4C:`IUCBEe7I7EjbUmhX3
-!i122 21
+DEx4 work 14 register_5bits 0 22 5Ma@[@PaWLR@Cn=>>EQKN3
+!i122 3
 l34
-L18 50
-V1hz0[Cd532OU:E676]=gc1
-!s100 9Y5>PLJfB;ic4j`JPKiB12
+L18 70
+VfPfHaJnZ34`eYMzGCm0;n3
+!s100 WgTo77nY9<>9eN_Vbh1he3
 R6
-32
+31
 R7
 !i10b 1
 R8
-R46
-R47
-!i113 1
-R11
-R12
-Eserial_controller_tb
-Z48 w1746527991
-R2
-R3
-!i122 22
-R0
-Z49 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
-Z50 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd
-l0
-L4 1
-VHoeaGU4<3f>Nl7`:HnnzV0
-!s100 ?VY`10XzYTQkIfF;T`A9n1
-R6
-32
-Z51 !s110 1747123813
-!i10b 1
-Z52 !s108 1747123813.000000
-Z53 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
-Z54 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Controller_tb.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R2
-R3
-DEx4 work 20 serial_controller_tb 0 22 HoeaGU4<3f>Nl7`:HnnzV0
-!i122 22
-l43
-L7 115
-VE>c3`gCGW9S0BPG25SJc`2
-!s100 Y=Y[W`AfDdPGSX=fDhdVP1
-R6
-32
-R51
-!i10b 1
-R52
-R53
-R54
-!i113 1
-R11
-R12
-Eserial_receiver
-Z55 w1746540396
-R2
-R3
-!i122 12
-R0
-Z56 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-Z57 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd
-l0
-L4 1
-VC^ONna2Df7OZ;FU37^K[o0
-!s100 _Sf^mmVhzbWJ;8Q<D?e7D1
-R6
-32
-R35
-!i10b 1
-R36
-Z58 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
-Z59 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-DEx4 work 15 serial_receiver 0 22 C^ONna2Df7OZ;FU37^K[o0
-!i122 12
-l76
-L19 115
-VcIkXC>BbzTI3LYJ@Ylj^K2
-!s100 eP@1[BkToE7fL?obFQH>73
-R6
-32
-R35
-!i10b 1
-R36
-R58
-R59
-!i113 1
-R11
-R12
-Eserial_receiver_tb
-Z60 w1747123728
-R2
-R3
-!i122 23
-R0
-Z61 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd
-Z62 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd
-l0
-L4 1
-VXg_0_>FjMnoiP91>XVLEU2
-!s100 9?NYbTmJn[J0KOM0XmWO=0
-R6
-32
-R51
-!i10b 1
-R52
-Z63 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd|
-!s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R2
-R3
-DEx4 work 18 serial_receiver_tb 0 22 Xg_0_>FjMnoiP91>XVLEU2
-!i122 23
-l36
-L7 120
-VfERSo=7FHP1YYE`o9gdbB0
-!s100 g2>nK^=]J7IhX4k]Lb=<n0
-R6
-32
-R51
-!i10b 1
-R52
-R63
-Z64 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd|
-!i113 1
-R11
-R12
-Eserial_test
-Z65 w1746535635
-R2
-R3
-!i122 13
-R0
-Z66 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd
-Z67 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd
-l0
-L4 1
-VeY<9kSPl__RU[1a6;LAEO0
-!s100 YoF08CH3JnFLUV7JTZ3KH3
-R6
-32
-R35
-!i10b 1
-R36
-Z68 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd|
-Z69 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd|
-!i113 1
-R11
-R12
-Alogic
-R2
-R3
-DEx4 work 11 serial_test 0 22 eY<9kSPl__RU[1a6;LAEO0
-!i122 13
-l41
-L15 53
-VoRdjNjLP:2K8oY1oZCaVm1
-!s100 UF9R@74@Yf6Don@B7Q1WO3
-R6
-32
-R35
-!i10b 1
-R36
-R68
-R69
-!i113 1
-R11
-R12
-Eshiftregisterserialreceiver
-Z70 w1746526079
-R2
-R3
-!i122 14
-R0
-Z71 8C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
-Z72 FC:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
-l0
-L3 1
-VUAzT5O15Y]=<DjYg7[i=]2
-!s100 ZiRzCH[io?P;eTieQYogF1
-R6
-32
-R35
-!i10b 1
-R36
-Z73 !s90 -reportprogress|300|-work|work|C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
-Z74 !s107 C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd|
-!i113 1
-R11
-R12
-Astructural
-R2
-R3
-DEx4 work 27 shiftregisterserialreceiver 0 22 UAzT5O15Y]=<DjYg7[i=]2
-!i122 14
-l31
-L13 79
-VnZ9DS=TfoEmmma@1YaK?d1
-!s100 7c1fa`nSz_O2WMg5ZDjFK3
-R6
-32
-R35
-!i10b 1
-R36
-R73
-R74
+R43
+R44
 !i113 1
 R11
 R12

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon May 19 13:30:21 2025
+Analysis & Synthesis Status : Successful - Tue May 20 09:22:07 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : mac
+Top-level Entity Name : OutputBuffer
 Family : MAX 10
-Total logic elements : 22
-    Total combinational functions : 22
-    Dedicated logic registers : 10
-Total registers : 10
-Total pins : 12
+Total logic elements : 10
+    Total combinational functions : 6
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 14
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
