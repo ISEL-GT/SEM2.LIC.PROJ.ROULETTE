@@ -1,0 +1,108 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity memory_address_control_tb is
+end memory_address_control_tb;
+
+architecture tb of memory_address_control_tb is
+
+    -- Component under test
+    component memory_address_control
+        port (
+            CLK     : in std_logic;
+            reset   : in std_logic;
+            putget  : in std_logic;
+            incput  : in std_logic;
+            incget  : in std_logic;
+            full    : out std_logic;
+            empty   : out std_logic;
+            output  : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+    -- Testbench signals
+    signal CLK     : std_logic := '0';
+    signal reset   : std_logic := '0';
+    signal putget  : std_logic := '0';
+    signal incput  : std_logic := '0';
+    signal incget  : std_logic := '0';
+    signal full    : std_logic;
+    signal empty   : std_logic;
+    signal output  : std_logic_vector(3 downto 0);
+
+    -- Clock period
+    constant clk_period : time := 10 ns;
+
+begin
+
+    -- Clock generation
+    clk_process : process
+    begin
+        while true loop
+            CLK <= '0';
+            wait for clk_period / 2;
+            CLK <= '1';
+            wait for clk_period / 2;
+        end loop;
+    end process;
+
+    -- Instantiate the unit under test (UUT)
+    uut: memory_address_control
+        port map (
+            CLK     => CLK,
+            reset   => reset,
+            putget  => putget,
+            incput  => incput,
+            incget  => incget,
+            full    => full,
+            empty   => empty,
+            output  => output
+        );
+
+    -- Stimulus process
+    stimulus : process
+    begin
+        -- Initialize
+        reset <= '1';
+        wait for clk_period;
+        reset <= '0';
+
+        -- Add to PUT address (simulate write)
+        incput <= '1';
+        wait for clk_period;
+        incput <= '0';
+
+        -- Add to GET address (simulate read)
+        wait for clk_period;
+        incget <= '1';
+        wait for clk_period;
+        incget <= '0';
+
+        -- Toggle PUTGET and observe output switching between PUT/GET
+        putget <= '1';
+        wait for clk_period;
+        putget <= '0';
+        wait for clk_period;
+
+        -- Loop incrementing PUT and GET to test full/empty
+        for i in 1 to 15 loop
+            incput <= '1';
+            wait for clk_period;
+            incput <= '0';
+            wait for clk_period;
+        end loop;
+
+        for i in 1 to 15 loop
+            incget <= '1';
+            wait for clk_period;
+            incget <= '0';
+            wait for clk_period;
+        end loop;
+
+        wait for 50 ns;
+        assert false report "Simulation complete." severity note;
+        wait;
+    end process;
+
+end tb;
