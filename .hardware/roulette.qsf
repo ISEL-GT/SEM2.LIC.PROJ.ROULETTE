@@ -68,6 +68,7 @@ set_location_assignment PIN_P11 -to MCLK
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE .testbench/counterSerialLCD_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/CounterTb.vhd
 set_global_assignment -name VHDL_FILE .testbench/decoder_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/KeyControl_tb.vhd
@@ -76,9 +77,12 @@ set_global_assignment -name VHDL_FILE .testbench/Key_decode_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/Key_reader_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/LCDDispatcherControl_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/mac_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/parity_checker_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/priority_encoder_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/Serial_Controller_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_lcd_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/ShiftRegisterLCD_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/SLCDC_tb.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd
@@ -87,7 +91,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -99,7 +102,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -111,7 +113,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -123,10 +124,10 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE KEYBOARD_READER/RingBufferProject/Ring_Buffer_Control.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/adder_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/counter_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/register_4bits.vhd
@@ -167,7 +168,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -179,7 +179,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -191,7 +190,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -203,10 +201,10 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE KEYBOARD_READER/RingBufferProject/Ring_Buffer_Control.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/adder_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/counter_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/register_4bits.vhd
@@ -303,6 +301,7 @@ set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/full_adder.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/half_adder.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/registry_4bits_counter.vhd
+set_global_assignment -name VHDL_FILE .testbench/counterSerialLCD_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/CounterTb.vhd
 set_global_assignment -name VHDL_FILE .testbench/decoder_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/KeyControl_tb.vhd
@@ -311,9 +310,12 @@ set_global_assignment -name VHDL_FILE .testbench/Key_decode_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/Key_reader_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/LCDDispatcherControl_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/mac_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/parity_checker_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/priority_encoder_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/Serial_Controller_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_lcd_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/ShiftRegisterLCD_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/SLCDC_tb.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd
@@ -322,7 +324,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -334,7 +335,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -346,7 +346,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -358,10 +357,10 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE KEYBOARD_READER/RingBufferProject/Ring_Buffer_Control.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/adder_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/counter_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/register_4bits.vhd
@@ -402,7 +401,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -414,7 +412,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -426,7 +423,6 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
@@ -438,10 +434,10 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COU
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/DEC/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE KEYBOARD_READER/RingBufferProject/Ring_Buffer_Control.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/adder_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/counter_4bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/register_4bits.vhd
