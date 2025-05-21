@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity counter_5bits is
+entity variable_counter_5bits is
     port (
         CE  : in std_logic;
         CLK : in std_logic;
@@ -10,9 +10,9 @@ entity counter_5bits is
         reset  : in std_logic;
         count : out std_logic_vector(4 downto 0)
     );
-end counter_5bits;
+end variable_counter_5bits;
 
-architecture behavioral of counter_5bits is
+architecture behavioral of variable_counter_5bits is
 
     component adder_5bits is
         port (
@@ -41,11 +41,10 @@ architecture behavioral of counter_5bits is
 
 begin
 
-    -- Adder: adds 1 to the current count
     instance_adder_5bits : adder_5bits
         port map (
             A         => result_register_5bits,
-            B         => value, -- Addition value (either -1 or +1)
+            B         => value, -- Addition value
             carry_in  => '0',
             carry_out => open,
             result    => result_adder_5bits

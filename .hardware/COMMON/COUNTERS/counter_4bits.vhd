@@ -43,7 +43,7 @@ begin
     instance_adder_4bits : adder_4bits
         port map (
             A         => result_register_4bits,
-            B         => "00001",  -- Increment by 1
+            B         => "0001",  -- Increment by 1
             carry_in  => '0',
             carry_out => open,
             result    => result_adder_4bits
