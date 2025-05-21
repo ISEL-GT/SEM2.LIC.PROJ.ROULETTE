@@ -89,9 +89,10 @@
         </dependency>
         <dependency>
             <groupId>isel.leic</groupId>
-            <artifactId>usbPort</artifactId>
+            <artifactId>rouletteGame</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
+
 
 </project>

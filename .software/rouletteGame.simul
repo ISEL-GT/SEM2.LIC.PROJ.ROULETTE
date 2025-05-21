@@ -79,5 +79,5 @@ srr.D[0-7]  -> rdispatch.I[0-7]
 # Roulette Dispatcher
 rdispatch.done     -> srr.accept
 rdispatch.WrD      -> rdisplay.set
-rdispatch.D[0-2]   -> rdisplay.cmd[0-2]
-rdispatch.D[3-7]   -> rdisplay.data[0-4]
+rdispatch.D[0-2]   -> rdisplay.cmd[0-2]   # 3 bits menos significativos = comando
+rdispatch.D[3-7]   -> rdisplay.data[0-4]  # 5 bits mais significativos = dados

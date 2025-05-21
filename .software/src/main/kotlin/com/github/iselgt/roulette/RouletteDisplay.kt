@@ -1,86 +1,109 @@
 package com.github.iselgt.roulette
 
 /**
- * Object responsible for controlling the Roulette Display hardware.
- * It sends commands and data to the display via a serial emitter.
+ * Controls the 7-segment LED display of the roulette system.
+ * This object provides functionality to display numeric values, control animations,
+ * and toggle the display on or off through a serial emitter.
  */
 object RouletteDisplay {
-    // Constants for SerialEmitter communication (dependent on SerialEmitter's implementation)
-    private const val RDSELECT = 0x40       // Register select signal
-    private const val SCLK = 0x80           // Serial clock signal
-    private const val SDX = 0x02            // Serial data signal
 
-    // Display commands (from the command table)
-    private const val UPDATEDISPLAY = 0x60  // Command to update the display with buffered data
-    private const val DISPLAYOFF = 0x71     // Command to turn the display off
-    private const val DISPLAYON = 0x70      // Command to turn the display on
+    /** Command to trigger the display update */
+    private const val CMD_UPDATE = 0x06
+
+    /** Command to turn the display off */
+    private const val CMD_OFF = 0x0F
+
+    /** Command to turn the display on */
+    private const val CMD_ON = 0x07
+
+    // --- Segment animation sequence ---
 
     /**
-     * Initializes the SerialEmitter subsystem.
-     * Must be called before using any other functions in this object.
+     * Predefined segment codes used for LED animation.
+     * These codes correspond to specific LED segments in a circular pattern
+     * across the 7-segment display.
+     *
+     * The values are packed based on the display controller specification.
+     */
+    private val SEGMENTCIRCLE = intArrayOf(0x19, 0x12, 0x1A, 0x13, 0x1B, 0x14, 0x1C, 0x15, 0x1D, 0x16, 0x1E, 0x11)
+
+    /**
+     * Initializes the display system.
+     * This function must be called before using other display functions.
+     * It initializes the serial emitter and ensures the display is turned on.
      */
     fun init() {
         SerialEmitter.init()
-    }
-
-    // Delay between animation frames (in milliseconds)
-    private const val ANIMATION_DELAY = 100L
-
-    /**
-     * Plays a random animation on the display by showing 20 random patterns.
-     * Each pattern is displayed for [ANIMATION_DELAY] milliseconds.
-     */
-    fun animation() {
-        var value = 0
-        repeat(20) {
-            value = (Math.random() * 256).toInt() // Generate a random 8-bit pattern
-            setValue(value)                       // Display the pattern
-            Thread.sleep(ANIMATION_DELAY)         // Wait before next frame
-        }
+        off(false) // Turn on the display
     }
 
     /**
-     * Sets the displayed value on the Roulette Display.
-     * The value is split into individual digits, and each digit is sent along with a command
-     * indicating its position (most significant digit first).
+     * Displays an integer value (0–999) on the 7-segment display.
      *
-     * @param value The integer value to be displayed (0-999 -> 3 digits max).
+     * Each digit is encoded and sent to the display in order from left to right.
+     * Values longer than 3 digits are not supported by the physical display layout.
+     *
+     * @param value Integer value to be shown (expected range: 0 to 999).
      */
     fun setValue(value: Int) {
-        val string = value.toString() // Convert the number to a string to process each digit
-        val size = string.length      // Number of digits in the value
-        var cmd = size - 1            // Command represents the digit position (0 = least significant)
+        val digits = value.toString()
+        val numDigits = digits.length
 
-        var digits = 0
+        for (i in 0 until numDigits) {
+            val digit = digits[i].toString().toInt() // Get numeric digit from char
+            val position = numDigits - 1 - i         // Position: 0 (rightmost), 1, 2
 
-        // Process each digit from left to right (most significant first)
-        while (digits < size) {
-            val code = string[digits].digitToInt()  // Extract the numeric value of the digit (0-9)
+            // Data encoding: digit in bits [3-7], position in bits [0-2]
+            val packedData = (digit shl 3) or position
 
-            // Pack cmd (3 bits, shifted left) and code (5 bits) into an 8-bit value:
-            // - cmd occupies bits 7-5 (position encoding)
-            // - code occupies bits 4-0 (digit value, masked to ensure 5-bit)
-            val sentValue = (cmd.shl(5)) + (code and 0x1F)
-
-            SerialEmitter.send(SerialEmitter.Destination.ROULETTE, sentValue, 8)
-            digits++
-            cmd--  // Move to the next digit (rightward, decreasing position)
+            // Send the encoded data to the display controller
+            SerialEmitter.send(SerialEmitter.Destination.ROULETTE, packedData, 8)
         }
 
-        // Send the command to update the display with the buffered data
-        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, UPDATEDISPLAY, 8)
+        // Trigger display update
+        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
     }
 
     /**
-     * Turns the display on or off based on the input parameter.
+     * Plays a fast LED spinning animation using the 7-segment display.
      *
-     * @param value If `true`, turns the display off; if `false`, turns it on.
+     * Lights segments in a circular order over three digit positions,
+     * creating a spinning illusion. After the animation, the display is cleared.
      */
-    fun off(value: Boolean) {
-        if (value) {
-            SerialEmitter.send(SerialEmitter.Destination.ROULETTE, DISPLAYOFF, 8)
-        } else {
-            SerialEmitter.send(SerialEmitter.Destination.ROULETTE, DISPLAYON, 8)
+    fun animation() {
+        // Digit positions to animate: 0 = rightmost, 1 = center, 2 = leftmost
+        val positions = arrayOf(0x00, 0x01, 0x02)
+
+        // Repeat animation cycle three times
+        repeat(3) {
+            for (segment in SEGMENTCIRCLE) {
+                for (digit in positions) {
+                    val value = (segment shl 3) or digit
+                    SerialEmitter.send(SerialEmitter.Destination.ROULETTE, value, 8)
+                }
+
+                // Refresh the display
+                SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
+            }
         }
+
+        // Reset the display to show 0 after animation
+        setValue(0)
+    }
+
+    /**
+     * Toggles the power state of the display.
+     *
+     * @param enable If `true`, the display is turned OFF.
+     *               If `false`, the display is turned ON.
+     */
+    fun off(enable: Boolean) {
+        val cmd = if (enable) CMD_OFF else CMD_ON
+
+        // Send power control command
+        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, cmd, 8)
+
+        // Apply the command (update)
+        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
     }
 }
