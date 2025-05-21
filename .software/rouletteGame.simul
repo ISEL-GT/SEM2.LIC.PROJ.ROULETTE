@@ -70,7 +70,7 @@ dl.done -> srl.accept
 # SRD
 # --------------------------------------
 # Serial Receiver
-UsbPort.O5  -> srr./SS
+UsbPort.O6  -> srr./SS
 UsbPort.O1  -> srr.SDX
 UsbPort.O7  -> srr.SCLK
 srr.Dxval   -> rdispatch.Dval
