@@ -28,3 +28,7 @@ devkits/
 
 *.qws
 .idea/
+output_files/
+simulation/
+incremental_db/
+db/
