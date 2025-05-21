@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY RingBuffer
+set_global_assignment -name TOP_LEVEL_ENTITY mac
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:47:01  FEBRUARY 25, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -64,10 +64,7 @@ set_location_assignment PIN_C13 -to DXvalport
 set_location_assignment PIN_C10 -to acceptport
 set_location_assignment PIN_C11 -to RESETport
 set_location_assignment PIN_P11 -to MCLK
-
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity mac -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity mac -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity mac -section_id Top
+set_global_assignment -name VHDL_FILE roulette.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
 set_global_assignment -name VHDL_FILE .testbench/counterSerialLCD_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/CounterTb.vhd
@@ -92,39 +89,38 @@ set_global_assignment -name VHDL_FILE .testbench/Serial_Controller_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_lcd_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/ShiftRegisterLCD_tb.vhd
 set_global_assignment -name VHDL_FILE .testbench/SLCDC_tb.vhd
+set_global_assignment -name VHDL_FILE COMMON/parity_checker.vhd
+set_global_assignment -name VHDL_FILE COMMON/ADDERS/adder_2bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/ADDERS/adder_4bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/ADDERS/adder_5bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/ADDERS/full_adder.vhd
+set_global_assignment -name VHDL_FILE COMMON/ADDERS/half_adder.vhd
+set_global_assignment -name VHDL_FILE COMMON/CODEC/decoder_2x4.vhd
+set_global_assignment -name VHDL_FILE COMMON/CODEC/PENC/partial_priority_encoder.vhd
+set_global_assignment -name VHDL_FILE COMMON/CODEC/PENC/priority_encoder.vhd
+set_global_assignment -name VHDL_FILE COMMON/COUNTERS/counter_2bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/COUNTERS/counter_3bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/COUNTERS/counter_4bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/COUNTERS/variable_counter_5bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/MUXs/MUX2x1_1bit.vhd
+set_global_assignment -name VHDL_FILE COMMON/MUXs/MUX2x1_4bit.vhd
+set_global_assignment -name VHDL_FILE COMMON/REGISTERS/FFD.vhd
+set_global_assignment -name VHDL_FILE COMMON/REGISTERS/register_3bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/REGISTERS/register_4bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/REGISTERS/register_5bits.vhd
+set_global_assignment -name VHDL_FILE COMMON/REGISTERS/registry_2bits.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KeyControl.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/Key_decode.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/decoder_2x4.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/adder_2bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/FFD.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/full_adder.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/half_adder.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/MUX2x1.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/COUNTER/registry_2bits_counter.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/mux_2x1_penc.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/partial_priority_encoder.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/PENC/priority_encoder.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd
+set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/mac.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/RAM.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/mac.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/adder_4bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/counter_4bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_4BITS/register_4bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_5BITS/adder_5bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_5BITS/incrementable_counter_5bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/COUNTER_5BITS/register_5bits.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/MUXs/MUX2x1_1bit.vhd
-set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/MAC/MUXs/MUX2x1_4bit.vhd
 set_global_assignment -name VHDL_FILE SLCDC/SLCDC.vhd
-set_global_assignment -name VHDL_FILE SLCDC/LCD_dispatcher/counter_4bits_dispatcher.vhd
 set_global_assignment -name VHDL_FILE SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd
 set_global_assignment -name VHDL_FILE SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd
 set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/parity_checker.vhd
@@ -132,29 +128,13 @@ set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/receiver_controler.v
 set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/serial_receiver.vhd
 set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/serial_test.vhd
 set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/adder_3bits.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/counter_3bits.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/FFD.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/full_adder.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/half_adder.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/MUX2x1.vhd
-set_global_assignment -name VHDL_FILE SLCDC/serial_receiver/counter/registry_3bits_counter.vhd
 set_global_assignment -name VHDL_FILE SRC/SRC.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_dispatcher/rouletteDispatcherControl.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_dispatcher/roulette_dispatcher.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/parity_checker.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/receiver_controler_roulette.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_serial_test.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_shiftRegister.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/serial_receiver_roulette.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/adder_4bits.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/counter_4bits.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/FFD.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/full_adder.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/half_adder.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/MUX2x1.vhd
-set_global_assignment -name VHDL_FILE SRC/roulette_serial/counter/registry_4bits_counter.vhd
-
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

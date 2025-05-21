@@ -20,13 +20,11 @@ end key_scanner;
 
 architecture structural of key_scanner is
 
-	component counter is
+	component counter_2bits is
 		port (
 			CE 					  : in std_logic;
 			CLK 					  : in std_logic;
 			reset 				  : in std_logic;
-			parallel_load_flag  : in std_logic;
-			parallel_load_value : in std_logic_vector(1 downto 0);
 		  
 			count : out std_logic_vector(1 downto 0)
 		);
@@ -71,12 +69,10 @@ architecture structural of key_scanner is
 	begin
 	
 	
-	Contador: counter port map (
+	Contador: counter_2bits port map (
 		CE => KScan(0),
 		CLK => CLK,
 		reset => Reset,
-		parallel_load_flag => '0',
-		parallel_load_value => "01",
 		count => counter_to_decoder
 	);
 	

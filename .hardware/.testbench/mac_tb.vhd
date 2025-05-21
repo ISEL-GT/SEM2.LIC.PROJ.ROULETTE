@@ -1,13 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 entity mac_tb is
 end mac_tb;
 
-architecture behavior of mac_tb is
+architecture test of mac_tb is
 
-    -- Component declaration for Unit Under Test (UUT)
+    -- Component Under Test
     component mac
         port (
             CLK     : in std_logic;
@@ -17,25 +17,26 @@ architecture behavior of mac_tb is
             incget  : in std_logic;
             full    : out std_logic;
             empty   : out std_logic;
-            output  : out std_logic_vector(4 downto 0)
+            output  : out std_logic_vector(3 downto 0)
         );
     end component;
 
-    -- Testbench signals
+    -- Signals for test
     signal CLK     : std_logic := '0';
-    signal reset   : std_logic := '0';
+    signal reset   : std_logic := '1';
     signal putget  : std_logic := '0';
     signal incput  : std_logic := '0';
     signal incget  : std_logic := '0';
     signal full    : std_logic;
     signal empty   : std_logic;
-    signal output  : std_logic_vector(4 downto 0);
+    signal output  : std_logic_vector(3 downto 0);
 
+    -- Clock period
     constant CLK_PERIOD : time := 10 ns;
 
 begin
 
-    -- Instantiate the Unit Under Test (UUT)
+    -- Instantiate DUT
     uut: mac
         port map (
             CLK     => CLK,
@@ -48,7 +49,7 @@ begin
             output  => output
         );
 
-    -- Clock generation
+    -- Clock process
     clk_process : process
     begin
         while true loop
@@ -60,37 +61,37 @@ begin
     end process;
 
     -- Stimulus process
-    stim_proc: process
+    stim_proc : process
     begin
-        -- Reset
-        reset <= '1';
-        wait for CLK_PERIOD * 2;
+        -- Initial reset
+        wait for 20 ns;
         reset <= '0';
-        wait for CLK_PERIOD * 2;
+        wait for 20 ns;
+		 
+        -- Simulate putting data
+		  putget <= '1';
+        for i in 0 to 15 loop
+            incput <= '1';
+            wait for CLK_PERIOD;
+            incput <= '0';
+            wait for CLK_PERIOD;
+        end loop;
 
-        -- Increment PUT register 16 times (00000 to 10000)
-        incput <= '1';
-        wait for CLK_PERIOD * 16;
-        incput <= '0';
+        -- Check full condition
+        wait for 20 ns;
 
-        -- Increment GET register 16 times
-        incget <= '1';
-        wait for CLK_PERIOD * 16;
-        incget <= '0';
+        -- Switch to getting data
+        putget <= '0'; -- select get counter for output
+        for i in 0 to 15 loop
+            incget <= '1';
+            wait for CLK_PERIOD;
+            incget <= '0';
+            wait for CLK_PERIOD;
+        end loop;
 
-        -- Check output with putget = 1 (PUT output)
-        putget <= '1';
-        wait for CLK_PERIOD * 2;
-
-        -- Check output with putget = 0 (GET output)
-        putget <= '0';
-        wait for CLK_PERIOD * 2;
-
-        -- Final check for full and empty flags
-        wait for CLK_PERIOD;
-
-        -- Finish simulation
+        -- Final wait
+        wait for 50 ns;
         wait;
     end process;
 
-end behavior;
+end test;
