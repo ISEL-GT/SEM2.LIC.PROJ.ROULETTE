@@ -25,6 +25,7 @@ component FFD is
     );
 end component;			
 
+end component;
 signal sig_xor_bit   : std_logic;
 signal sig_error 		: std_logic;
 signal sig_check		: std_logic;
