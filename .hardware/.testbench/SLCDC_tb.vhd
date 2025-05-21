@@ -30,8 +30,6 @@ architecture behavioral of SLCDC_tb is
     signal MClk_tb    : std_logic;
     signal Reset_tb   : std_logic;
     signal accept_tb  : std_logic;
-    signal SS_tb      : std_logic; -- usado no stimulus
-    signal dFlag_tb   : std_logic; -- não usado na DUT, mas referenciado
 
     signal Wrl_tb     : std_logic;
     signal Dout_tb    : std_logic_vector(4 downto 0);
@@ -70,9 +68,8 @@ begin
         LCDSel_tb   <= '1';
         SCLK_tb     <= '0';
         SDX_tb      <= '0';
-        dFlag_tb    <= '0';
         accept_tb   <= '0';
-        SS_tb       <= '0';
+
 
         wait for clk_period * 2;
         Reset_tb    <= '0';
@@ -116,10 +113,6 @@ begin
         accept_tb   <= '0'; wait for clk_period;
         SCLK_tb     <= '0'; wait for clk_period;
 
-        -- Desativar SS (fim de transmissão)
-        SS_tb       <= '1';
-        SCLK_tb     <= '1'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
 
         wait for clk_period;
 

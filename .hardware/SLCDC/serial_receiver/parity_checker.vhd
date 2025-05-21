@@ -25,16 +25,8 @@ component FFD is
     );
 end component;			
 
-component counter_3bits is
-	 port (
-		 CE 		 : in std_logic;
-		 CLK		 : in std_logic;
-		 reset 	 : in std_logic;
-  
-		 count    : out std_logic_vector(2 downto 0)
-    );
 end component;
-signal sig_xor_bit   : std_logic;
+signal sig_xor_bit   : std_logic;
 signal sig_error 		: std_logic;
 signal sig_check		: std_logic;
 
@@ -50,7 +42,7 @@ begin
 			);
 			
 	sig_check <= sig_xor_bit xor data;
-		
+		
 	sig_error 	<= not sig_xor_bit;
 	
 	error 		<= sig_error;
