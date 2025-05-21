@@ -6,12 +6,12 @@ use ieee.std_logic_1164.all;
 entity mux2x1_4bit is
 
     port (
-        A : in std_logic;
-        B : in std_logic;
+        A : in std_logic_vector(3 downto 0);
+        B : in std_logic_vector(3 downto 0);
 
         selector : in std_logic;
 
-        result : out std_logic
+        result : out std_logic_vector(3 downto 0)
     );
 
 end mux2x1_4bit;
@@ -21,6 +21,9 @@ end mux2x1_4bit;
 architecture structural of mux2x1_4bit is
 begin
 
-    result <= (A and not selector) or (B and selector);
+    result(0) <= (A(0) and not selector) or (B(0) and selector);
+    result(1) <= (A(1) and not selector) or (B(1) and selector);
+    result(2) <= (A(2) and not selector) or (B(2) and selector);
+    result(3) <= (A(3) and not selector) or (B(3) and selector);
 
 end structural;

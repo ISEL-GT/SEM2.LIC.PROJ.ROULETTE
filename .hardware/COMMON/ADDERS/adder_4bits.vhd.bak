@@ -28,7 +28,7 @@ architecture behavioral of adder_4bits is
 	-- Result signals from each full adder
 	signal result_bits : std_logic_vector(3 downto 0);
 	
-	-- Carry signals between full adder
+	-- Carry signals between full adders
 	signal carry_chain : std_logic_vector(3 downto 0); -- carry_chain(0) is initial carry_in
 
 begin
@@ -69,7 +69,7 @@ begin
 			A => A(3),
 			B => B(3),
 			carry_in  => carry_chain(3),
-			carry_out => carry_out,
+			carry_out => carry_chain(4),
 			result    => result_bits(3)
 		);
 
