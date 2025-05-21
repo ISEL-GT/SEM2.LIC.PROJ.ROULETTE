@@ -1,80 +1,101 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 
 entity Ring_Buffer_Control is
     port (
-        DAV    : in  std_logic;
-        CTS    : in  std_logic;
-        full   : in  std_logic;
-        empty  : in  std_logic;
-        MCLK   : in  std_logic;
-        RESET  : in  std_logic;
+        RESET, CLK : in std_logic;
 
-        Wr     : out std_logic;
-        selPG  : out std_logic;
-        incPut : out std_logic;
-        incGet : out std_logic;
-        Wreg   : out std_logic;
-        DAC    : out std_logic
+        -- Entradas da Máquina
+        DAV, CTS, full, empty : in std_logic;
+
+        -- Saídas da Máquina	
+        Wr, selPG, incPut, incGet, Wreg, DAC : out std_logic
     );
 end Ring_Buffer_Control;
 
-architecture behavorial of Ring_Buffer_Control is
+architecture Behavioral of Ring_Buffer_Control is
 
-    type STATE_TYPE is (Iswaiting, CanBeStored, Writing, WriteCompleted, Reading);
+    -- Estados da máquina
+    type STATE_TYPE is (
+        START,
+        SelectAddress,
+        Writing,
+        Data_Accepted,
+        Data_Written,
+        Delivering,
+        Data_Delivered
+    );
 
     signal CurrentState, NextState : STATE_TYPE;
 
 begin
 
     -- Flip-Flop's
-    CurrentState <= Iswaiting when RESET = '1' else NextState when rising_edge(MCLK);
+    process (CLK, RESET)
+    begin
+        if RESET = '1' then
+            CurrentState <= START;
+        elsif rising_edge(CLK) then
+            CurrentState <= NextState;
+        end if;
+    end process;
 
     -- Gerar próximo estado
-    Generatenextstate: process (CurrentState, DAV, full, CTS, empty)
+    process (CurrentState, DAV, CTS, full, empty)
     begin
         case CurrentState is
 
-            when Iswaiting =>
+            when START =>
                 if (DAV = '1' and full = '0') then
-                    NextState <= CanBeStored;
-
-                elsif (CTS = '1' and empty = '0') then
-                    NextState <= Reading;
-
+                    NextState <= SelectAddress;
+                elsif (((DAV = '1' and full = '1') or DAV = '0') and CTS = '1' and empty = '0') then
+                    NextState <= Delivering;
                 else
-                    NextState <= Iswaiting;
+                    NextState <= START;
                 end if;
 
-            when CanBeStored =>
+            when SelectAddress =>
                 NextState <= Writing;
 
             when Writing =>
-                NextState <= WriteCompleted;
+                NextState <= Data_Accepted;
 
-            when WriteCompleted =>
-                if (DAV = '1') then
-                    NextState <= WriteCompleted;
+            when Data_Accepted =>
+                if DAV = '0' then
+                    NextState <= Data_Written;
                 else
-                    NextState <= Iswaiting;
+                    NextState <= Data_Accepted;
                 end if;
 
-            when Reading =>
-                if (CTS = '0') then
-                    NextState <= Iswaiting;
+            when Data_Written =>
+                NextState <= START;
+
+            when Delivering =>
+                if CTS = '0' then
+                    NextState <= Data_Delivered;
                 else
-                    NextState <= Reading;
+                    NextState <= Delivering;
                 end if;
+
+            when Data_Delivered =>
+                NextState <= START;
 
         end case;
     end process;
 
-    -- Saídas
-    Wr     <= '1' when (CurrentState = Writing) else '0';
-    selPG  <= '1' when (CurrentState = CanBeStored or CurrentState = Writing) else '0';
-    incPut <= '1' when (CurrentState = Writing) else '0';
-    incGet <= '1' when (CurrentState = Reading and CTS = '0') else '0';
-    Wreg   <= '1' when (CurrentState = Reading) else '0';
-    DAC    <= '1' when (CurrentState = WriteCompleted) else '0';
+    -- Geração das saídas
+    Wr      <= '1' when (CurrentState = Writing) else '0';
 
-end behavorial;
+    selPG   <= '1' when (
+                    CurrentState = SelectAddress or
+                    CurrentState = Writing or
+                    CurrentState = Data_Accepted or
+                    CurrentState = Data_Written
+                ) else '0';
+
+    DAC     <= '1' when (CurrentState = Data_Accepted) else '0';
+    incPut  <= '1' when (CurrentState = Data_Written) else '0';
+    Wreg    <= '1' when (CurrentState = Delivering) else '0';
+    incGet  <= '1' when (CurrentState = Data_Delivered) else '0';
+
+end Behavioral;

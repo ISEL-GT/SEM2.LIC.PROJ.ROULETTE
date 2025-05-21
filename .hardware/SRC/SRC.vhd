@@ -11,7 +11,7 @@ entity SRC is
         accept : in std_logic;
         
         Wrl    : out std_logic;
-        Dout   : out std_logic_vector(4 downto 0)
+        Dout   : out std_logic_vector(7 downto 0)
     );
 end SRC;
 
