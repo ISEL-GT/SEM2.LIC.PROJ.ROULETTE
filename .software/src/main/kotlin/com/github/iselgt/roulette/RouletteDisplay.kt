@@ -1,16 +1,15 @@
 package com.github.iselgt.roulette
 
-<<<<<<< HEAD
 object RouletteDisplay {
     // Dependem dos valores do SerialEmitter
-    private const val RDSelect = 0x40
+    private const val RDSELECT = 0x40
     private const val SCLK = 0x80
-    private const val SDX = 0x01
+    private const val SDX = 0x02
 
 
-    private const val updateDisplay = 0x06
-    private const val displayOff = 0x17
-    private const val displayOn = 0x07
+    private const val UPDATEDISPLAY = 0x06
+    private const val DISPLAYOFF = 0x17
+    private const val DISPLAYON = 0x07
 
     fun init() {
         SerialEmitter.init()
@@ -27,10 +26,10 @@ object RouletteDisplay {
         }
     }
 
-    fun setValue(value:Int){
+    fun setValue(value: Int) {
         val string = value.toString()
         val size = string.length
-        var cmd = size-1 
+        var cmd = size - 1
 
         var digits = 0
 
@@ -43,16 +42,12 @@ object RouletteDisplay {
             cmd--
         }
 
-        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, updateDisplay, 8)
+        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, UPDATEDISPLAY, 8)
     }
 
     //se for true desliga, baseado na tabela dos comandos do roulette
-    fun off(value:Boolean){
-        if (value) SerialEmitter.send(SerialEmitter.Destination.ROULETTE, displayOff, 8)
-        else SerialEmitter.send(SerialEmitter.Destination.ROULETTE, displayOn, 8)
+    fun off(value: Boolean) {
+        if (value) SerialEmitter.send(SerialEmitter.Destination.ROULETTE, DISPLAYOFF, 8)
+        else SerialEmitter.send(SerialEmitter.Destination.ROULETTE, DISPLAYON, 8)
     }
-=======
-object RouletteDisplay{
-
->>>>>>> e83e1c93fb2b2be1da6c12f1009f33c2386df160
 }
