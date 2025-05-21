@@ -31,7 +31,7 @@ architecture structural of serial_receiver_roulette is
 			data   : in std_logic;
 			init   : in std_logic;
 			CLK    : in std_logic;
-			Reset  : in std_logic;
+		
 			error  : out std_logic
 		);
 	end component;
@@ -89,7 +89,7 @@ begin
 			data   => SDX,
 			init   => init_sig,
 			CLK    => SCLK,
-			Reset  => Reset,
+		
 			error  => RXerror_sig
 		);
 

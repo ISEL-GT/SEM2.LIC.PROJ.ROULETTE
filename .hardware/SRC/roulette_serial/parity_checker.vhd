@@ -7,13 +7,23 @@ entity parity_checker_roulette is
 		data		: 	in std_logic;
 		init		: 	in std_logic;
 		CLK		: 	in std_logic;
-		Reset 	:	in std_logic;		
-		
+				
 		error	 	: 	out std_logic
 	);
 end parity_checker_roulette;
 
 architecture structural of parity_checker_roulette is
+
+component FFD is
+	 PORT (
+        CLK   : IN  std_logic;   -- Clock input
+        RESET : IN  std_logic;   -- Asynchronous reset input (active high)
+        SET   : IN  std_logic;   -- Asynchronous set input (active high)
+        D     : IN  std_logic;   -- Data input
+        EN    : IN  std_logic;   -- Enable input (active high)
+        Q     : OUT std_logic    -- Data output
+    );
+end component;			
 
 component counter_4bits is
 	 port (
@@ -24,20 +34,25 @@ component counter_4bits is
 		 count    : out std_logic_vector(3 downto 0)
     );
 end component;
-signal sig_count_out : std_logic_vector(3 downto 0);
+signal sig_xor_bit   : std_logic;
 signal sig_error 		: std_logic;
+signal sig_check		: std_logic;
 
 begin
+	FlipFlop  : FFD
+	port map (
+			CLK	=> CLK,
+			RESET	=> init,
+			SET	=>	'0',
+			D		=> sig_check,
+			EN		=> data,
+			Q 		=> sig_xor_bit
+			);
+			
+	sig_check <= sig_xor_bit xor data;
+		
+	sig_error 	<= not sig_xor_bit;
 	
-	CounterUp : counter_4bits port map (
-				 CE  		=> data,
-				 CLK 		=>	CLK,	
-				 reset 	=>	init,
-		  
-				 count 	=> sig_count_out
-	);
-	
-	sig_error 	<= not sig_count_out(0);
 	error 		<= sig_error;
 
 end structural;

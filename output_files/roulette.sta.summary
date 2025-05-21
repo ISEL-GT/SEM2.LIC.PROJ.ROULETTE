@@ -2,40 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -0.150
-TNS   : -0.600
+Type  : Slow 1200mV 85C Model Setup 'MCLK'
+Slack : -1.748
+TNS   : -13.684
 
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.324
+Type  : Slow 1200mV 85C Model Hold 'MCLK'
+Slack : 0.359
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -12.776
+TNS   : -21.330
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -0.065
-TNS   : -0.260
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.414
+TNS   : -40.514
 
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.293
+Type  : Slow 1200mV 0C Model Setup 'MCLK'
+Slack : -1.521
+TNS   : -11.053
+
+Type  : Slow 1200mV 0C Model Hold 'MCLK'
+Slack : 0.325
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -12.776
+TNS   : -21.330
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 0.461
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.215
+TNS   : -16.098
+
+Type  : Fast 1200mV 0C Model Setup 'MCLK'
+Slack : -0.585
+TNS   : -2.925
+
+Type  : Fast 1200mV 0C Model Hold 'MCLK'
+Slack : 0.160
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.148
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -11.184
+TNS   : -19.690
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.110
+TNS   : -4.374
 
 ------------------------------------------------------------

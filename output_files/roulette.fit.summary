@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue May 20 10:27:27 2025
+Fitter Status : Successful - Wed May 21 10:38:30 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : OutputBuffer
+Top-level Entity Name : RingBuffer
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 11 / 49,760 ( < 1 % )
-    Total combinational functions : 7 / 49,760 ( < 1 % )
-    Dedicated logic registers : 8 / 49,760 ( < 1 % )
-Total registers : 8
+Total logic elements : 163 / 49,760 ( < 1 % )
+    Total combinational functions : 162 / 49,760 ( < 1 % )
+    Dedicated logic registers : 15 / 49,760 ( < 1 % )
+Total registers : 15
 Total pins : 14 / 360 ( 4 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

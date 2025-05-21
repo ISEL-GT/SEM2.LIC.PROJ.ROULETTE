@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 20 11:33:27 2025
+Wed May 21 10:38:20 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |RingBuffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: RAM:ramm
+ 12. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_GET"
+ 13. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD4"
+ 14. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD3"
+ 15. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD2"
+ 16. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD1"
+ 17. Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT"
+ 18. Port Connectivity Checks: "mac:inst_mac|adder_4bits:instance_adder_4bits_1"
+ 19. Port Connectivity Checks: "mac:inst_mac|adder_4bits:instance_adder_4bits"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +54,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 20 11:33:27 2025           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 21 10:38:20 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; RingBuffer                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 162                                         ;
+;     Total combinational functions  ; 161                                         ;
+;     Dedicated logic registers      ; 15                                          ;
+; Total registers                    ; 15                                          ;
+; Total pins                         ; 14                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -151,11 +168,312 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++------------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                 ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                  ; Library ;
++------------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
+; .hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd ;         ;
+; .hardware/SRC/roulette_serial/counter/half_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd             ;         ;
+; .hardware/SRC/roulette_serial/counter/full_adder.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd             ;         ;
+; .hardware/SRC/roulette_serial/counter/FFD.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd                    ;         ;
+; .hardware/SRC/roulette_serial/counter/adder_4bits.vhd            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd            ;         ;
+; .hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd                    ;         ;
+; .hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ;         ;
+; .hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ;         ;
+; .hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ;         ;
++------------------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 162                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 161                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 66                       ;
+;     -- 3 input functions                    ; 73                       ;
+;     -- <=2 input functions                  ; 22                       ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 161                      ;
+;     -- arithmetic mode                      ; 0                        ;
+;                                             ;                          ;
+; Total registers                             ; 15                       ;
+;     -- Dedicated logic registers            ; 15                       ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 14                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; mac:inst_mac|output[1]~0 ;
+; Maximum fan-out                             ; 31                       ;
+; Total fan-out                               ; 592                      ;
+; Average fan-out                             ; 2.90                     ;
++---------------------------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                         ; Entity Name            ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |RingBuffer                                     ; 161 (16)            ; 15 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |RingBuffer                                                                                                 ; RingBuffer             ; work         ;
+;    |RAM:ramm|                                   ; 120 (120)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|RAM:ramm                                                                                        ; RAM                    ; work         ;
+;    |Ring_Buffer_Control:inst_ringBufferControl| ; 11 (11)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|Ring_Buffer_Control:inst_ringBufferControl                                                      ; Ring_Buffer_Control    ; work         ;
+;    |mac:inst_mac|                               ; 14 (4)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac                                                                                    ; mac                    ; work         ;
+;       |adder_4bits:instance_adder_4bits_1|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits_1                                                 ; adder_4bits            ; work         ;
+;          |full_adder:FA2|                       ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits_1|full_adder:FA2                                  ; full_adder             ; work         ;
+;             |half_adder:instance_half_adder_2|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits_1|full_adder:FA2|half_adder:instance_half_adder_2 ; half_adder             ; work         ;
+;       |adder_4bits:instance_adder_4bits|        ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits                                                   ; adder_4bits            ; work         ;
+;          |full_adder:FA2|                       ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits|full_adder:FA2                                    ; full_adder             ; work         ;
+;             |half_adder:instance_half_adder_2|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|adder_4bits:instance_adder_4bits|full_adder:FA2|half_adder:instance_half_adder_2   ; half_adder             ; work         ;
+;       |register_4bits_counter:registry_GET|     ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_GET                                                ; register_4bits_counter ; work         ;
+;          |FFD:FFD1|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_GET|FFD:FFD1                                       ; FFD                    ; work         ;
+;          |FFD:FFD2|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_GET|FFD:FFD2                                       ; FFD                    ; work         ;
+;          |FFD:FFD3|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_GET|FFD:FFD3                                       ; FFD                    ; work         ;
+;          |FFD:FFD4|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_GET|FFD:FFD4                                       ; FFD                    ; work         ;
+;       |register_4bits_counter:registry_PUT|     ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_PUT                                                ; register_4bits_counter ; work         ;
+;          |FFD:FFD1|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD1                                       ; FFD                    ; work         ;
+;          |FFD:FFD2|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD2                                       ; FFD                    ; work         ;
+;          |FFD:FFD3|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD3                                       ; FFD                    ; work         ;
+;          |FFD:FFD4|                             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |RingBuffer|mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD4                                       ; FFD                    ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |RingBuffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState                                                                                                                                   ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+; Name                        ; CurrentState.Data_Delivered ; CurrentState.Delivering ; CurrentState.Data_Written ; CurrentState.Data_Accepted ; CurrentState.Writing ; CurrentState.SelectAddress ; CurrentState.START ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+; CurrentState.START          ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 0                  ;
+; CurrentState.SelectAddress  ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 1                          ; 1                  ;
+; CurrentState.Writing        ; 0                           ; 0                       ; 0                         ; 0                          ; 1                    ; 0                          ; 1                  ;
+; CurrentState.Data_Accepted  ; 0                           ; 0                       ; 0                         ; 1                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Data_Written   ; 0                           ; 0                       ; 1                         ; 0                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Delivering     ; 0                           ; 1                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Data_Delivered ; 1                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; RAM:ramm|ram~40                                     ; rtl~0               ; yes                    ;
+; RAM:ramm|ram~36                                     ; rtl~1               ; yes                    ;
+; RAM:ramm|ram~32                                     ; rtl~2               ; yes                    ;
+; RAM:ramm|ram~44                                     ; rtl~3               ; yes                    ;
+; RAM:ramm|ram~20                                     ; rtl~4               ; yes                    ;
+; RAM:ramm|ram~24                                     ; rtl~5               ; yes                    ;
+; RAM:ramm|ram~16                                     ; rtl~6               ; yes                    ;
+; RAM:ramm|ram~28                                     ; rtl~7               ; yes                    ;
+; RAM:ramm|ram~8                                      ; rtl~8               ; yes                    ;
+; RAM:ramm|ram~4                                      ; rtl~9               ; yes                    ;
+; RAM:ramm|ram~0                                      ; rtl~10              ; yes                    ;
+; RAM:ramm|ram~12                                     ; rtl~11              ; yes                    ;
+; RAM:ramm|ram~52                                     ; rtl~12              ; yes                    ;
+; RAM:ramm|ram~56                                     ; rtl~13              ; yes                    ;
+; RAM:ramm|ram~48                                     ; rtl~14              ; yes                    ;
+; RAM:ramm|ram~60                                     ; rtl~15              ; yes                    ;
+; RAM:ramm|ram~25                                     ; rtl~5               ; yes                    ;
+; RAM:ramm|ram~41                                     ; rtl~0               ; yes                    ;
+; RAM:ramm|ram~9                                      ; rtl~8               ; yes                    ;
+; RAM:ramm|ram~57                                     ; rtl~13              ; yes                    ;
+; RAM:ramm|ram~37                                     ; rtl~1               ; yes                    ;
+; RAM:ramm|ram~21                                     ; rtl~4               ; yes                    ;
+; RAM:ramm|ram~5                                      ; rtl~9               ; yes                    ;
+; RAM:ramm|ram~53                                     ; rtl~12              ; yes                    ;
+; RAM:ramm|ram~17                                     ; rtl~6               ; yes                    ;
+; RAM:ramm|ram~33                                     ; rtl~2               ; yes                    ;
+; RAM:ramm|ram~1                                      ; rtl~10              ; yes                    ;
+; RAM:ramm|ram~49                                     ; rtl~14              ; yes                    ;
+; RAM:ramm|ram~45                                     ; rtl~3               ; yes                    ;
+; RAM:ramm|ram~29                                     ; rtl~7               ; yes                    ;
+; RAM:ramm|ram~13                                     ; rtl~11              ; yes                    ;
+; RAM:ramm|ram~61                                     ; rtl~15              ; yes                    ;
+; RAM:ramm|ram~26                                     ; rtl~5               ; yes                    ;
+; RAM:ramm|ram~22                                     ; rtl~4               ; yes                    ;
+; RAM:ramm|ram~18                                     ; rtl~6               ; yes                    ;
+; RAM:ramm|ram~30                                     ; rtl~7               ; yes                    ;
+; RAM:ramm|ram~38                                     ; rtl~1               ; yes                    ;
+; RAM:ramm|ram~42                                     ; rtl~0               ; yes                    ;
+; RAM:ramm|ram~34                                     ; rtl~2               ; yes                    ;
+; RAM:ramm|ram~46                                     ; rtl~3               ; yes                    ;
+; RAM:ramm|ram~6                                      ; rtl~9               ; yes                    ;
+; RAM:ramm|ram~10                                     ; rtl~8               ; yes                    ;
+; RAM:ramm|ram~2                                      ; rtl~10              ; yes                    ;
+; RAM:ramm|ram~14                                     ; rtl~11              ; yes                    ;
+; RAM:ramm|ram~58                                     ; rtl~13              ; yes                    ;
+; RAM:ramm|ram~54                                     ; rtl~12              ; yes                    ;
+; RAM:ramm|ram~50                                     ; rtl~14              ; yes                    ;
+; RAM:ramm|ram~62                                     ; rtl~15              ; yes                    ;
+; RAM:ramm|ram~23                                     ; rtl~4               ; yes                    ;
+; RAM:ramm|ram~39                                     ; rtl~1               ; yes                    ;
+; RAM:ramm|ram~7                                      ; rtl~9               ; yes                    ;
+; RAM:ramm|ram~55                                     ; rtl~12              ; yes                    ;
+; RAM:ramm|ram~43                                     ; rtl~0               ; yes                    ;
+; RAM:ramm|ram~27                                     ; rtl~5               ; yes                    ;
+; RAM:ramm|ram~11                                     ; rtl~8               ; yes                    ;
+; RAM:ramm|ram~59                                     ; rtl~13              ; yes                    ;
+; RAM:ramm|ram~35                                     ; rtl~2               ; yes                    ;
+; RAM:ramm|ram~19                                     ; rtl~6               ; yes                    ;
+; RAM:ramm|ram~3                                      ; rtl~10              ; yes                    ;
+; RAM:ramm|ram~51                                     ; rtl~14              ; yes                    ;
+; RAM:ramm|ram~31                                     ; rtl~7               ; yes                    ;
+; RAM:ramm|ram~47                                     ; rtl~3               ; yes                    ;
+; RAM:ramm|ram~15                                     ; rtl~11              ; yes                    ;
+; RAM:ramm|ram~63                                     ; rtl~15              ; yes                    ;
+; Number of user-specified and inferred latches = 64  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 15    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 15    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:ramm ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; address_width  ; 4     ; Signed Integer               ;
+; data_width     ; 4     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_GET" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                       ;
+; en   ; Input ; Info     ; Stuck at VCC                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD4" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                ;
++------+-------+----------+-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD3" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                ;
++------+-------+----------+-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD2" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                ;
++------+-------+----------+-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD1" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                ;
++------+-------+----------+-------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|register_4bits_counter:registry_PUT" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                       ;
+; en   ; Input ; Info     ; Stuck at VCC                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|adder_4bits:instance_adder_4bits_1"                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[3..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mac:inst_mac|adder_4bits:instance_adder_4bits"                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[3..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 14                          ;
+; cycloneiii_ff         ; 15                          ;
+;     CLR               ; 15                          ;
+; cycloneiii_lcell_comb ; 161                         ;
+;     normal            ; 161                         ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 73                          ;
+;         4 data inputs ; 66                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.17                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,10 +482,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 20 11:33:23 2025
+    Info: Processing started: Wed May 21 10:38:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/ring_buffer_tb.vhd
+    Info (12022): Found design unit 1: Ring_Buffer_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Ring_Buffer_tb.vhd Line: 7
+    Info (12023): Found entity 1: Ring_Buffer_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Ring_Buffer_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/serial_receiver_tb.vhd
     Info (12022): Found design unit 1: Serial_Receiver_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 7
     Info (12023): Found entity 1: Serial_Receiver_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/Serial_Receiver_tb.vhd Line: 4
@@ -220,7 +541,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12022): Found design unit 1: receiver_controler_roulette-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 22
     Info (12023): Found entity 1: receiver_controler_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/receiver_controler_roulette.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 16
+    Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 15
     Info (12023): Found entity 1: parity_checker_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/src/roulette_serial/counter/registry_4bits_counter.vhd
     Info (12022): Found design unit 1: register_4bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 18
@@ -257,12 +578,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12023): Found entity 1: serial_test File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/serial_receiver.vhd
     Info (12022): Found design unit 1: serial_receiver-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 19
-    Info (12023): Found entity 1: serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 4
+    Info (12023): Found entity 1: serial_receiver File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/receiver_controler.vhd
     Info (12022): Found design unit 1: receiver_controler-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 22
     Info (12023): Found entity 1: receiver_controler File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/parity_checker.vhd
-    Info (12022): Found design unit 1: parity_checker-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 16
+    Info (12022): Found design unit 1: parity_checker-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 15
     Info (12023): Found entity 1: parity_checker File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/slcdc/serial_receiver/counter/registry_3bits_counter.vhd
     Info (12022): Found design unit 1: register_3bits_counter-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/counter/registry_3bits_counter.vhd Line: 18
@@ -345,13 +666,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12022): Found design unit 1: adder_5bits-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd Line: 16
     Info (12023): Found entity 1: adder_5bits File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/mac.vhd
-    Info (12022): Found design unit 1: mac-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 20
-    Info (12023): Found entity 1: mac File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 5
+    Info (12022): Found design unit 1: mac-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 22
+    Info (12023): Found entity 1: mac File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/ram.vhd
     Info (12022): Found design unit 1: RAM-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 18
     Info (12023): Found entity 1: RAM File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/ring_buffer_control.vhd
-    Info (12022): Found design unit 1: Ring_Buffer_Control-behavorial File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd Line: 23
+    Info (12022): Found design unit 1: Ring_Buffer_Control-Behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd Line: 16
     Info (12023): Found entity 1: Ring_Buffer_Control File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file .hardware/keyboard_reader/ring_buffer/ringbuffer.vhd
     Info (12022): Found design unit 1: RingBuffer-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 18
@@ -384,14 +705,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file .hardwa
     Info (12022): Found design unit 1: OutputBufferControl_tb-behavioral File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd Line: 7
     Info (12023): Found entity 1: OutputBufferControl_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd Line: 4
 Info (12021): Found 0 design units, including 0 entities, in source file .hardware/keyboard_reader/ring_buffer/ringbuffertest.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file .hardware/.testbench/ringbuffermodule_tb.vhd
+    Info (12022): Found design unit 1: RingBufferModule_tb-tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/RingBufferModule_tb.vhd Line: 7
+    Info (12023): Found entity 1: RingBufferModule_tb File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/RingBufferModule_tb.vhd Line: 4
 Info (12127): Elaborating entity "RingBuffer" for the top level hierarchy
-Error (10344): VHDL expression error at RingBuffer.vhd(116): expression has 5 elements, but must have 4 elements File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 116
-Error (10346): VHDL error at RingBuffer.vhd(114): formal port or parameter "address" must have actual or default value File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 114
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
-    Error: Peak virtual memory: 4787 megabytes
-    Error: Processing ended: Tue May 20 11:33:27 2025
-    Error: Elapsed time: 00:00:04
-    Error: Total CPU time (on all processors): 00:00:10
+Info (12128): Elaborating entity "Ring_Buffer_Control" for hierarchy "Ring_Buffer_Control:inst_ringBufferControl" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 81
+Info (12128): Elaborating entity "mac" for hierarchy "mac:inst_mac" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 99
+Info (12128): Elaborating entity "adder_4bits" for hierarchy "mac:inst_mac|adder_4bits:instance_adder_4bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 70
+Info (12128): Elaborating entity "full_adder" for hierarchy "mac:inst_mac|adder_4bits:instance_adder_4bits|full_adder:FA0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd Line: 36
+Info (12128): Elaborating entity "half_adder" for hierarchy "mac:inst_mac|adder_4bits:instance_adder_4bits|full_adder:FA0|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_4bits_counter" for hierarchy "mac:inst_mac|register_4bits_counter:registry_PUT" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 93
+Info (12128): Elaborating entity "FFD" for hierarchy "mac:inst_mac|register_4bits_counter:registry_PUT|FFD:FFD1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd Line: 37
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ramm" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at RAM.vhd(27): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at RAM.vhd(30): signal "din" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 30
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 162 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Wed May 21 10:38:20 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

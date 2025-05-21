@@ -10,132 +10,299 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd}
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:39 on May 20,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd 
+# Start time: 10:49:35 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/registry_4bits_counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputBufferControl
-# -- Compiling architecture behavioral of OutputBufferControl
-# End time: 10:28:39 on May 20,2025, Elapsed time: 0:00:00
+# -- Compiling entity register_4bits_counter
+# -- Compiling architecture behavioral of register_4bits_counter
+# End time: 10:49:35 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd}
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:39 on May 20,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd 
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/half_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputRegister
-# -- Compiling architecture behavioral of OutputRegister
-# End time: 10:28:39 on May 20,2025, Elapsed time: 0:00:00
+# -- Compiling entity half_adder
+# -- Compiling architecture structural of half_adder
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd}
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:39 on May 20,2025
-# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd 
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputBuffer
-# -- Compiling architecture structural of OutputBuffer
-# End time: 10:28:39 on May 20,2025, Elapsed time: 0:00:00
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture logicFunction of FFD
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/counter/adder_4bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_4bits
+# -- Compiling architecture behavioral of adder_4bits
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mac
+# -- Compiling architecture behavioral of mac
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RAM
+# -- Compiling architecture behavioral of RAM
+# End time: 10:49:37 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:37 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Ring_Buffer_Control
+# -- Compiling architecture Behavioral of Ring_Buffer_Control
+# End time: 10:49:38 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:49:38 on May 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RingBuffer
+# -- Compiling architecture structural of RingBuffer
+# End time: 10:49:38 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBuffer_tb.vhd
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:54 on May 20,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBuffer_tb.vhd 
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputBuffer_tb
-# -- Compiling architecture behavioral of OutputBuffer_tb
-# End time: 10:28:54 on May 20,2025, Elapsed time: 0:00:00
+# -- Compiling entity mac
+# -- Compiling architecture behavioral of mac
+# End time: 10:55:50 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:54 on May 20,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputBufferControl_tb.vhd 
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputBufferControl_tb
-# -- Compiling architecture behavioral of OutputBufferControl_tb
-# End time: 10:28:54 on May 20,2025, Elapsed time: 0:00:00
+# -- Compiling entity mac
+# -- Compiling architecture behavioral of mac
+# End time: 10:55:50 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputRegister_tb.vhd
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:28:54 on May 20,2025
-# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/OutputRegister_tb.vhd 
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity OutputRegister_tb
-# -- Compiling architecture behavioral of OutputRegister_tb
-# End time: 10:28:54 on May 20,2025, Elapsed time: 0:00:00
+# -- Loading package std_logic_arith
+# -- Compiling entity RAM
+# -- Compiling architecture behavioral of RAM
+# End time: 10:55:50 on May 21,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.outputbuffer_tb
-# vsim work.outputbuffer_tb 
-# Start time: 10:28:59 on May 20,2025
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Ring_Buffer_Control
+# -- Compiling architecture Behavioral of Ring_Buffer_Control
+# End time: 10:55:50 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RingBuffer
+# -- Compiling architecture structural of RingBuffer
+# End time: 10:55:50 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:50 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd(1): (vcom-1491) Empty source files.
+# End time: 10:55:51 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:51 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RAM
+# -- Compiling architecture behavioral of RAM
+# End time: 10:55:51 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:51 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Ring_Buffer_Control
+# -- Compiling architecture Behavioral of Ring_Buffer_Control
+# End time: 10:55:51 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:51 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RingBuffer
+# -- Compiling architecture structural of RingBuffer
+# End time: 10:55:51 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:51 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd(1): (vcom-1491) Empty source files.
+# End time: 10:55:51 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:53 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/adder_5bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_5bits
+# -- Compiling architecture behavioral of adder_5bits
+# End time: 10:55:53 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/counter_5bits.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:53 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/counter_5bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter_5bits
+# -- Compiling architecture behavioral of counter_5bits
+# End time: 10:55:53 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/mux_2x1_5bits.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:54 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/mux_2x1_5bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2x1_5bits
+# -- Compiling architecture structural of mux_2x1_5bits
+# End time: 10:55:54 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:54 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/COUNTER_5bits/register_5bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_5bits
+# -- Compiling architecture behavioral of register_5bits
+# End time: 10:55:54 on May 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/RingBufferModule_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:08 on May 21,2025
+# vcom -reportprogress 300 -work work C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/RingBufferModule_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RingBufferModule_tb
+# -- Compiling architecture tb of RingBufferModule_tb
+# End time: 10:56:09 on May 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.ringbuffermodule_tb
+# vsim work.ringbuffermodule_tb 
+# Start time: 10:56:10 on May 21,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.outputbuffer_tb(behavioral)
-# Loading work.outputbuffer(structural)
-# Loading work.outputbuffercontrol(behavioral)
-# Loading work.outputregister(behavioral)
-add wave -position insertpoint sim:/outputbuffer_tb/*
+# Loading work.ringbuffermodule_tb(tb)
+# Loading work.ringbuffer(structural)
+# Loading work.ring_buffer_control(behavioral)
+# Loading work.mac(behavioral)
+# Loading work.adder_4bits(behavioral)
+# Loading work.full_adder(behavioral)
+# Loading work.half_adder(structural)
+# Loading work.register_4bits_counter(behavioral)
+# Loading work.ffd(logicfunction)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ram(behavioral)
+add wave -position insertpoint sim:/ringbuffermodule_tb/*
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ringbuffermodule_tb/UUT/ramm
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /ringbuffermodule_tb/UUT/ramm
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /ringbuffermodule_tb/UUT/ramm
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /ringbuffermodule_tb/UUT/ramm
 run
 run
 run
 run
 run
-run
-run
-vsim work.outputregister_tb
-# End time: 10:29:20 on May 20,2025, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 0
-# vsim work.outputregister_tb 
-# Start time: 10:29:20 on May 20,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.outputregister_tb(behavioral)
-# Loading work.outputregister(behavioral)
-vsim work.outputregister_tb
-# End time: 10:29:35 on May 20,2025, Elapsed time: 0:00:15
-# Errors: 0, Warnings: 0
-# vsim work.outputregister_tb 
-# Start time: 10:29:35 on May 20,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.outputregister_tb(behavioral)
-# Loading work.outputregister(behavioral)
-add wave -position insertpoint sim:/outputregister_tb/*
-run
-run
-run
-run
-vsim work.outputbuffer_tb
-# End time: 10:29:58 on May 20,2025, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 0
-# vsim work.outputbuffer_tb 
-# Start time: 10:29:58 on May 20,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.outputbuffer_tb(behavioral)
-# Loading work.outputbuffer(structural)
-# Loading work.outputbuffercontrol(behavioral)
-# Loading work.outputregister(behavioral)
-add wave -position insertpoint sim:/outputbuffer_tb/*
-run
-run
-run
-run
-# End time: 10:31:03 on May 20,2025, Elapsed time: 0:01:05
-# Errors: 0, Warnings: 0
+# End time: 11:02:51 on May 21,2025, Elapsed time: 0:06:41
+# Errors: 0, Warnings: 4

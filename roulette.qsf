@@ -65,6 +65,7 @@ set_location_assignment PIN_C10 -to acceptport -comment SW0
 set_location_assignment PIN_C11 -to RESETport -comment SW1
 set_location_assignment PIN_P11 -to MCLK
 
+set_global_assignment -name VHDL_FILE .hardware/.testbench/Ring_Buffer_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/.testbench/Serial_Receiver_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/.testbench/Serial_Controller_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/.testbench/priority_encoder_tb.vhd
@@ -141,6 +142,7 @@ set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputRegister_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputBuffer_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/.testbench/OutputBufferControl_tb.vhd
 set_global_assignment -name VHDL_FILE .hardware/KEYBOARD_READER/RING_BUFFER/RingBufferTest.vhd
+set_global_assignment -name VHDL_FILE .hardware/.testbench/RingBufferModule_tb.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

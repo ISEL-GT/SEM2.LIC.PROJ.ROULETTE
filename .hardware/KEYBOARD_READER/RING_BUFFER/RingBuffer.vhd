@@ -24,7 +24,7 @@ architecture structural of RingBuffer is
             CTS    : in  std_logic;
             full   : in  std_logic;
             empty  : in  std_logic;
-            MCLK   : in  std_logic;
+            CLK    : in  std_logic;
             RESET  : in  std_logic;
 
             Wr     : out std_logic;
@@ -48,7 +48,7 @@ architecture structural of RingBuffer is
 
             full    : out std_logic;
             empty   : out std_logic;
-            output  : out std_logic_vector(4 downto 0)
+            output  : out std_logic_vector(3 downto 0)
         );
     end component;
 
@@ -78,13 +78,13 @@ architecture structural of RingBuffer is
 begin
 
     -- Instância do controlo do ring buffer
-    ringBufferControl: Ring_Buffer_Control
+    inst_ringBufferControl: Ring_Buffer_Control
         port map (
             DAV     => DAV,
             CTS     => CTS,
             full    => full_sig,
             empty   => empty_sig,
-            MCLK    => MCLK,
+            CLK     => MCLK,
             RESET   => RESET,
 
             Wr      => wr_sig,
@@ -111,7 +111,7 @@ begin
         );
 
     -- Instância da RAM
-    ramm: RAM
+    ramm: RAM	
         port map (
             address => A_sig,
             wr      => wr_sig,
