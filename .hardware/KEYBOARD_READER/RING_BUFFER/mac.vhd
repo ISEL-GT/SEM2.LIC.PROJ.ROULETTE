@@ -58,6 +58,7 @@ architecture behavioral of mac is
     signal output_get_counter : std_logic_vector(3 downto 0);
     signal output_put_counter : std_logic_vector(3 downto 0);
     signal output_elements_counter : std_logic_vector(4 downto 0);
+	 signal virtual_elements_counter : std_logic_vector(4 downto 0);
 
 begin
 
@@ -83,6 +84,8 @@ begin
 
     -- Decide whether to enable the 5-bit counter based on whether we're putting or getting something
     enable_element_counter <= incput or incget;
+	 
+	 
 
     -- Instantiates a 5-bit counter to keep track of the number of elements in the buffer
     elements_counter : variable_counter_5bits
@@ -93,6 +96,7 @@ begin
             reset => reset,
             count => output_elements_counter
         );
+	
 
     -- Instantiates a 2x1 4-bit mux to select between the put and get counters
     output_mux : mux2x1_4bit
@@ -104,13 +108,7 @@ begin
             result   => output
         );
 		  
-	full <= output_elements_counter(4) and not (
-            output_elements_counter(3) or
-            output_elements_counter(2) or
-            output_elements_counter(1) or
-            output_elements_counter(0)
-        );
-
+	full <= output_elements_counter(4);
 
 	empty <= not (
              output_elements_counter(4) or

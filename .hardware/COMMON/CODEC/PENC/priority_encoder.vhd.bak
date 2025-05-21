@@ -24,7 +24,7 @@ architecture structural of priority_encoder is
 	);
 	end component;
 	
-	component mux2x1_1bit is
+	component mux_2x1_penc is
 
 	port (
 		A : in std_logic;
@@ -78,7 +78,7 @@ begin
 		 GS 	=> GS_PPenc3
 	);
 	
-	Mux2x1: mux2x1_1bit
+	Mux2x1: mux_2x1_penc
 	port map(
 		A		=> Y_PPenc1,
 		B		=>	Y_PPenc2,
