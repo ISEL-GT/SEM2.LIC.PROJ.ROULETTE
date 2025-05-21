@@ -31,7 +31,7 @@ architecture structural of LCD_Dispatcher is
     end component;
 
     -- Componente do contador
-    component counter_4bits_dispatcher is
+    component counter_4bits is
         port (
             CE     : in std_logic;
             CLK    : in std_logic;
@@ -60,7 +60,7 @@ begin
         );
 
     -- Instanciação do contador
-    counter_unit: counter_4bits_dispatcher
+    counter_unit: counter_4bits
         port map (
             CLK     => clk,
             CE      => sig_en_count,
