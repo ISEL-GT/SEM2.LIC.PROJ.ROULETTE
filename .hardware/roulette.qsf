@@ -55,17 +55,15 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_location_assignment PIN_C13 -to DPort[5]
 set_location_assignment PIN_E14 -to DPort[6]
 set_location_assignment PIN_D14 -to DPort[7]
-set_location_assignment PIN_A8 -to DPort[0] -comment LED0
-set_location_assignment PIN_A9 -to DPort[1] -comment LED1
-set_location_assignment PIN_A10 -to DPort[2] -comment LED2
-set_location_assignment PIN_B10 -to DPort[3] -comment LED3
-set_location_assignment PIN_D13 -to DPort[4] -comment LED4
-set_location_assignment PIN_C13 -to DXvalport -comment LED5
-set_location_assignment PIN_C10 -to acceptport -comment SW0
-set_location_assignment PIN_C11 -to RESETport -comment SW1
+set_location_assignment PIN_A8 -to DPort[0]
+set_location_assignment PIN_A9 -to DPort[1]
+set_location_assignment PIN_A10 -to DPort[2]
+set_location_assignment PIN_B10 -to DPort[3]
+set_location_assignment PIN_D13 -to DPort[4]
+set_location_assignment PIN_C13 -to DXvalport
+set_location_assignment PIN_C10 -to acceptport
+set_location_assignment PIN_C11 -to RESETport
 set_location_assignment PIN_P11 -to MCLK
-
-
 set_global_assignment -name VHDL_FILE roulette.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
 set_global_assignment -name VHDL_FILE .testbench/counterSerialLCD_tb.vhd
