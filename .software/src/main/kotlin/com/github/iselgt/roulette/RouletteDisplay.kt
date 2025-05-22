@@ -1,11 +1,20 @@
 package com.github.iselgt.roulette
 
+import isel.leic.utils.Time
+import kotlin.random.Random
+
 /**
  * Controls the 7-segment LED display of the roulette system.
  * This object provides functionality to display numeric values, control animations,
  * and toggle the display on or off through a serial emitter.
  */
 object RouletteDisplay {
+
+    /**
+     * This flag indicates whether we can still place bets on the roulette or not,
+     * used to check when we need to stop the betting phase (5 seconds before the spin stops).
+     */
+    public var bettingEnabled = true;
 
     /** Command to trigger the display update */
     private const val CMD_UPDATE = 0x06
@@ -45,12 +54,11 @@ object RouletteDisplay {
      *
      * @param value Integer value to be shown (expected range: 0 to 999).
      */
-    fun setValue(value: Int) {
-        val digits = value.toString()
-        val numDigits = digits.length
+    fun setValue(value: String) {
+        val numDigits = value.length
 
         for (i in 0 until numDigits) {
-            val digit = digits[i].toString().toInt() // Get numeric digit from char
+            val digit = value[i].toString().toInt() // Get numeric digit from char
             val position = numDigits - 1 - i         // Position: 0 (rightmost), 1, 2
 
             // Data encoding: digit in bits [3-7], position in bits [0-2]
@@ -65,6 +73,15 @@ object RouletteDisplay {
     }
 
     /**
+     * Displays an integer value (0–999) on the 7-segment display.
+     * Overloaded method to accept an integer directly.
+     */
+    fun setValue(value: Int) {
+        // Convert the integer value to a string and call the overloaded setValue method
+        setValue(value.toString())
+    }
+
+    /**
      * Plays a fast LED spinning animation using the 7-segment display.
      *
      * Lights segments in a circular order over three digit positions,
@@ -74,22 +91,41 @@ object RouletteDisplay {
         // Digit positions to animate: 0 = rightmost, 1 = center, 2 = leftmost
         val positions = arrayOf(0x00, 0x01, 0x02)
 
-        // Repeat animation cycle three times
-        repeat(3) {
+        // Randomly select a duration for the animation between 5 and 10 seconds
+        val randomDuration = Random.nextLong(10000L, 15000L)
+        val startTime = Time.getTimeInMillis()
+
+        // Repeat animation for the specified duration
+        do {
+            val elapsed = Time.getTimeInMillis() - startTime;
+
+            // Stop accepting bets 5 seconds before the end
+            if (randomDuration - elapsed < 5000L) bettingEnabled = false
+
             for (segment in SEGMENTCIRCLE) {
                 for (digit in positions) {
                     val value = (segment shl 3) or digit
                     SerialEmitter.send(SerialEmitter.Destination.ROULETTE, value, 8)
                 }
 
-                // Refresh the display
                 SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
             }
-        }
+        } while (elapsed < randomDuration)
 
         // Reset the display to show 0 after animation
+        bettingEnabled = true
         setValue(0)
     }
+
+    /**
+     * Turns the display on
+     */
+    fun on() = off(false)
+
+    /**
+     * Turns the display off
+     */
+    fun off() = off(true)
 
     /**
      * Toggles the power state of the display.

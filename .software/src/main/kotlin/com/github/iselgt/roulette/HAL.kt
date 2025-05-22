@@ -1,61 +1,41 @@
 package com.github.iselgt.roulette
 import isel.leic.UsbPort
 
-
 object HAL {
 
-    /**
-     * A representation of the usb port output values, updated whenever there is a writing action
-     * into the output. Used to track the output values since we can't read them.
-     */
-    private var trackedOutput = 0x00;
+    private var resetOutput = 0
 
-    fun init() = UsbPort.write(0x00)  // Initialises the HAL, setting the output values to 0
-
-    /**
-     * Checks if the input value has a '1' on the bit specified by the mask
-     * @param mask The mask specifying the bit to be checked.
-     *
-     * @return Whether the bit matches or not. Returns false on ambiguous masks
-     */
-    fun isBit(mask: Int): Boolean {
-        return UsbPort.read().and(mask) != 0 && mask.countOneBits() ==1
+    fun init(){
+        resetOutput = 0
+        UsbPort.write(resetOutput)
     }
 
-    /**
-     * Reads the bits from the input taking the mask into account
-     * @param mask An optional mask to be applied to the return value
-     *
-     * @return The bits present in the input
-     */
-    fun readBits(mask: Int = 0x00): Int {
+    //Checks if the bit chosen by the mask is on
+    fun isBit(mask: Int):Boolean {
+        require(mask.countOneBits()==1){ "mask must be one bit only" }
+        return UsbPort.read().and(mask) != 0
+    }
+
+    //Read the bits chosen by the mask and puts 0 on the bits that you aren't checking
+    fun readBits(mask:Int):Int{
         return UsbPort.read().and(mask)
     }
 
-    /**
-     * A shortcut for clear and set bits, writing the value into 
-     */
-    fun writeBits(value: Int, mask: Int = value){
+    //Force 0 on the bits chosen by the mask
+    fun clrBits(mask:Int) {
+        resetOutput = resetOutput.and(mask.inv())
+        UsbPort.write(resetOutput)
+    }
+
+    //Force 1 on the bits chosen by the mask
+    fun setBits(mask:Int){
+        resetOutput = mask.or(resetOutput)
+        UsbPort.write(resetOutput)
+    }
+
+    //Chose the bits that u want to rewrite and force them with the input value
+    fun writeBits(mask:Int, value:Int){
         clrBits(mask)
         setBits(value.and(mask))
-    }
-
-    /**
-     * Clears the output bits specified by the mask (sets them to 0)
-     * @param mask An optional mask to be applied. Defaults to clear everything
-     */
-    fun clrBits(mask: Int = 0xFF) {
-        trackedOutput = trackedOutput.and(mask.inv())
-        UsbPort.write(trackedOutput)
-    }
-
-
-    /**
-     * Sets the bits specified by the mask to 1.
-     * @param mask The mask specifying the bits to be set
-     */
-    fun setBits(mask: Int) {
-        trackedOutput = mask.or(trackedOutput)
-        UsbPort.write(trackedOutput)
     }
 }

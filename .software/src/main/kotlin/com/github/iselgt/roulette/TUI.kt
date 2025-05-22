@@ -12,9 +12,16 @@ object TUI {
         LCD.init()
     }
 
+    /**
+     * This method is responsible for writing a message on the LCD display.
+     * It will clear the display and write the message, waiting for a certain amount of time
+     * before returning.
+     */
     fun writeMessage(msg: String){
         LCD.clear()
+        LCD.cursor(0,0)
         LCD.write(msg)
+        Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))
     }
 }
 
@@ -22,12 +29,11 @@ fun main() {
 
     TUI.init()                                          // Initialize the TUI (Text User Interface) system
     TUI.writeMessage("Hello World :)")
-    Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))    // Pause the program for WAIT_TIME seconds
-    LCD.clear()
     TUI.writeMessage("Grupo 11 Display")
-    Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))
-    LCD.clear()
     TUI.writeMessage("Use '*' to Clear")
+    TUI.writeMessage("EIGHT")
+    TUI.writeMessage("NINE")
+    TUI.writeMessage("TEN")
 
     var isCleared = false                               // Create a var that give us the information if the display was already cleared
 

@@ -14,8 +14,9 @@ class HALTest {
         while (true) {
 
             val value = UsbPort.read()
-            HAL.setBits(7)
-            println("${counter++}: ${Integer.toBinaryString(value)} | ${Integer.toBinaryString(HAL.readBits(0xFF))}")
+            HAL.setBits(counter)
+            println("${counter}: ${Integer.toBinaryString(value)} | ${HAL.resetOutput}")
+            counter++
             Thread.sleep(500)
         }
     }
