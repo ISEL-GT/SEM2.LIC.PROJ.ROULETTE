@@ -7,6 +7,7 @@ const val WAIT_TIME = 2L
 const val WAIT_KEY = 200L
 
 object TUI {
+
     fun init() {
         KBD.init()
         LCD.init()
@@ -18,10 +19,10 @@ object TUI {
      * before returning.
      */
     fun writeMessage(msg: String){
-        LCD.clear()
+        Time.sleep(WAIT_TIME)
         LCD.cursor(0,0)
+        LCD.clear()
         LCD.write(msg)
-        Time.sleep(TimeUnit.SECONDS.toMillis(WAIT_TIME))
     }
 }
 
