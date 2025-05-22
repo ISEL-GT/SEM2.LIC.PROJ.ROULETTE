@@ -40,14 +40,14 @@ kbd.val -> rb.DAV
 kbd.K[0-3] -> rb.D[0-3]
 
 # Ring Buffer
-rb.DAC -> kbd.ack
+UsbPort.O0 -> kbd.ack
 rb.Q[0-3] -> ob.D[0-3]
 rb.Wreg -> ob.Load
 
 # Output Buffer
 ob.OBfree -> rb.CTS
-ob.Q[0-3] -> UsbPort.I[1-4]
-ob.Dval -> UsbPort.I0
+kbd.K[0-3] -> UsbPort.I[1-4]
+kbd.val -> UsbPort.I0
 UsbPort.O7 -> ob.ACK
 
 # --------------------------------------
@@ -61,9 +61,9 @@ srl.DXval -> dl.Dval
 srl.D[0-4] -> dl.I[0-4]
 
 # LCD Dispatcher
-dl.D[1-4] -> lcd.D[4-7]
-dl.D0 -> lcd.rs
-dl.WrL -> lcd.e
+UsbPort.O[1-4] -> lcd.D[4-7]
+UsbPort.O6 -> lcd.rs
+UsbPort.O7 -> lcd.e
 dl.done -> srl.accept
 
 # --------------------------------------

@@ -1,5 +1,7 @@
 package com.github.iselgt.roulette
 
+import kotlin.concurrent.timer
+import kotlin.system.measureTimeMillis
 import kotlin.test.*
 
 /**
@@ -27,9 +29,14 @@ class RouletteDisplayTest {
 
     @Test
     fun testDisplayAnimation() {
-        println("Testing animation...")
-        RouletteDisplay.animation()
-        assertTrue(true, "Animation ran without exceptions.")
+
+        val elapsed = measureTimeMillis {
+            println("Testing animation...")
+            RouletteDisplay.animation()
+            assertTrue(true, "Animation ran without exceptions.")
+        }
+
+        println("Animation completed in $elapsed ms")
     }
 
     @Test

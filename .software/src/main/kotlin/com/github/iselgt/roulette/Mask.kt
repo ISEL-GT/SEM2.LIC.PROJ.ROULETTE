@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette.components
+package com.github.iselgt.roulette
 
 /**
  * This enum is responsible for storing all the mask values used within the program

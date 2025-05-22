@@ -1,7 +1,6 @@
 package com.github.iselgt.roulette
 
 import isel.leic.utils.Time
-import jdk.internal.org.jline.utils.Colors.s
 
 object LCD {
     private const val LINES = 2
@@ -36,8 +35,6 @@ object LCD {
     private const val SET4BITS = 0x2                    // Entry Mode Set 4 bits long
     private const val SET8BITS = 0x3                    // Entry Mode Set 8 bits long
 
-    private var currCol = 0
-    private var currLine = 0
 
     private fun writeDATA(data: Int) {
         writeByte(true, data)
@@ -90,10 +87,7 @@ object LCD {
 
     // Writes a nibble (4 bits) of command/data to the LCD in Serial Mode
     private fun writeNibbleSerial(rs: Boolean, data: Int) {
-        val rsBit = if (rs) 1 else 0
-        val result = (data shl 1) or (rsBit)
-
-        SerialEmitter.send(SerialEmitter.Destination.LCD, result, 5)
+        TODO()
     }
 
     fun init() {
@@ -119,24 +113,14 @@ object LCD {
     }
 
 
-
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar()){
-            if (currCol>=COLS){
-                currLine++
-                currCol = 0
-                cursor(currLine, currCol)
-            }
-            writeDATA(c.code)
-            currCol = (currCol+1)%COLS
-        }   //.code => .toInt()
-
-        }   //.code = .toInt()
-
+        if (c != NONE_VALUE.toChar()) writeDATA(c.code)   //.code => .toInt()
+    }
 
     fun write(text: String) {
         for (c in text) {
-            write(c)
+            if (c == '|') cursor(1, 0)  // We're using '|' as a marker to newline
+            else write(c)
         }
     }
 
@@ -156,13 +140,9 @@ object LCD {
 }
 
 fun main() {
-
-    /*
     HAL.init()
     LCD.init()
     while (true) {
         LCD.write(KBD.waitKey(500))
     }
-    */
-
 }
