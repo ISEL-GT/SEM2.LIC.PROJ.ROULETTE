@@ -96,7 +96,7 @@ begin
     -- Counter
     Counter3bit: counter_3bits
         port map (
-            CE     => '1',
+            CE     => wr_sig,
             CLK    => SCLK,
             reset  => Reset,
             count  => counter_val
