@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 27 16:40:03 2025
+Tue May 27 17:50:31 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,14 +15,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Key_decode|KeyControl:keycontrols|CurrentState
   9. General Register Statistics
- 10. Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg"
- 11. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
- 12. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
- 13. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
- 14. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for User Entity Instance: clock_divisor:clkdivider
+ 12. Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg"
+ 13. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
+ 14. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
+ 15. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
+ 16. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +51,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 16:40:02 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 17:50:31 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; Key_decode                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 13                                          ;
-;     Total combinational functions  ; 13                                          ;
-;     Dedicated logic registers      ; 8                                           ;
-; Total registers                    ; 8                                           ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 64                                          ;
+;     Dedicated logic registers      ; 41                                          ;
+; Total registers                    ; 41                                          ;
 ; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -176,6 +178,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                        ; Library ;
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
+; COMMON/clock_divisor.vhd                               ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/clock_divisor.vhd                               ;         ;
 ; COMMON/ADDERS/adder_2bits.vhd                          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd                          ;         ;
 ; COMMON/ADDERS/full_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd                           ;         ;
 ; COMMON/ADDERS/half_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/half_adder.vhd                           ;         ;
@@ -192,36 +195,36 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 13          ;
-;                                             ;             ;
-; Total combinational functions               ; 13          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 6           ;
-;     -- 3 input functions                    ; 2           ;
-;     -- <=2 input functions                  ; 5           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 13          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 8           ;
-;     -- Dedicated logic registers            ; 8           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 16          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; Reset~input ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 89          ;
-; Average fan-out                             ; 1.68        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 64        ;
+;                                             ;           ;
+; Total combinational functions               ; 64        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 16        ;
+;     -- 3 input functions                    ; 10        ;
+;     -- <=2 input functions                  ; 38        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 33        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 41        ;
+;     -- Dedicated logic registers            ; 41        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 16        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 33        ;
+; Total fan-out                               ; 283       ;
+; Average fan-out                             ; 2.07      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -229,8 +232,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name              ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |Key_decode                                       ; 13 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                            ; Key_decode               ; work         ;
+; |Key_decode                                       ; 64 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                            ; Key_decode               ; work         ;
 ;    |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|KeyControl:keycontrols                                                                     ; KeyControl               ; work         ;
+;    |clock_divisor:clkdivider|                     ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|clock_divisor:clkdivider                                                                   ; clock_divisor            ; work         ;
 ;    |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan                                                                        ; key_scanner              ; work         ;
 ;       |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador                                                 ; counter_2bits            ; work         ;
 ;          |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits          ; register_2bits           ; work         ;
@@ -265,7 +269,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
@@ -273,6 +277,26 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; clock_divisor:clkdivider|count[0]      ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divisor:clkdivider ;
++----------------+--------+---------------------------------------------+
+; Parameter Name ; Value  ; Type                                        ;
++----------------+--------+---------------------------------------------+
+; div            ; 500000 ; Signed Integer                              ;
++----------------+--------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------+
@@ -330,17 +354,20 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 8                           ;
+; cycloneiii_ff         ; 41                          ;
 ;     CLR               ; 8                           ;
-; cycloneiii_lcell_comb ; 16                          ;
-;     normal            ; 16                          ;
-;         1 data inputs ; 3                           ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 67                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 36                          ;
+;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 5                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 6                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.52                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -359,7 +386,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 27 16:39:47 2025
+    Info: Processing started: Tue May 27 17:50:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -453,6 +480,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file .testbe
 Info (12021): Found 2 design units, including 1 entities, in source file .testbench/simulated/src_tb.vhd
     Info (12022): Found design unit 1: SRC_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/SRC_tb.vhd Line: 7
     Info (12023): Found entity 1: SRC_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/SRC_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file common/clock_divisor.vhd
+    Info (12022): Found design unit 1: clock_divisor-bhv File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/clock_divisor.vhd Line: 17
+    Info (12023): Found entity 1: clock_divisor File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/clock_divisor.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file common/parity_checker.vhd
     Info (12022): Found design unit 1: parity_checker_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/parity_checker.vhd Line: 15
     Info (12023): Found entity 1: parity_checker_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/parity_checker.vhd Line: 4
@@ -520,7 +550,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyboar
     Info (12022): Found design unit 1: keyboard_reader-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 18
     Info (12023): Found entity 1: keyboard_reader File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keyboard_reader/key_decode/keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 19
+    Info (12022): Found design unit 1: KeyControl-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 16
     Info (12023): Found entity 1: KeyControl File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keyboard_reader/key_decode/key_decode.vhd
     Info (12022): Found design unit 1: Key_decode-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 17
@@ -595,7 +625,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/rou
     Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
     Info (12023): Found entity 1: serial_receiver_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
 Info (12127): Elaborating entity "Key_decode" for the top level hierarchy
-Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:keyscan" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 55
+Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:clkdivider" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 61
+Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:keyscan" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 70
 Info (12128): Elaborating entity "counter_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
 Info (12128): Elaborating entity "adder_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
 Info (12128): Elaborating entity "full_adder" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
@@ -606,18 +637,18 @@ Info (12128): Elaborating entity "decoder_2x4" for hierarchy "key_scanner:keysca
 Info (12128): Elaborating entity "priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
 Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
 Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
-Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:keycontrols" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 65
+Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:keycontrols" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 80
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 14 logic cells
+    Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue May 27 16:40:03 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Tue May 27 17:50:31 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:24
 
 

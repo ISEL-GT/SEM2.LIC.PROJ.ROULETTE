@@ -8,7 +8,7 @@ architecture behavioral of roulette_tb is
 
     component roulette is 
         port (
-            	Liness: 	in std_logic_vector(3 downto 0);
+            	lines: 	in std_logic_vector(3 downto 0);
 					CLK   :	in std_logic;
 					Reset :	in std_logic;		
 					
@@ -16,7 +16,7 @@ architecture behavioral of roulette_tb is
 					LCD_EN	: 	out std_logic;			
 					LCD_DATA	: 	out std_logic_vector(7 downto 4);
 					
-					Colss 	: 	out std_logic_vector(3 downto 0);
+					columns 	: 	out std_logic_vector(3 downto 0);
 					Kout  	: 	out std_logic_vector(3 downto 0);
 					Kval		: 	out std_logic 
         );
@@ -44,7 +44,7 @@ begin
     
     UUT : roulette 
         port map (            
-            Liness	=> lines_tb, 
+            lines	=> lines_tb,
             CLK   	=> clk_tb, 
             Reset		=> reset_tb, 
 				
@@ -53,7 +53,7 @@ begin
 				LCD_DATA => LCD_DATA_tb,
 				
 				
-            Colss  	=> columns_tb, 
+            columns  	=> columns_tb,
             Kval   	=> Kval_tb, 
             Kout   	=> K_tb
         );
@@ -71,7 +71,8 @@ begin
         reset_tb <= '1';
 		  lines_tb <= "1111";		  
         wait for clk_period;
-		  		  
+		  
+		  
         lines_tb <= "1111";  -- not Kpress
         reset_tb <= '0';
         wait for clk_period * 10;

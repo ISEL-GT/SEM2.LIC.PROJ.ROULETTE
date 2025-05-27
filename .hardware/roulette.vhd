@@ -6,7 +6,7 @@ USE ieee.std_logic_1164.all;
 entity roulette is
 
 	port (
-		Liness: 	in std_logic_vector(3 downto 0);
+		lines: 	in std_logic_vector(3 downto 0);
 		CLK   :	in std_logic;
 		Reset :	in std_logic;		
 		Kack  :	in std_logic;
@@ -15,7 +15,7 @@ entity roulette is
 		LCD_EN	: 	out std_logic;			
 		LCD_DATA	: 	out std_logic_vector(7 downto 4);
 		
-		Colss 	: 	out std_logic_vector(3 downto 0);
+		columns 	: 	out std_logic_vector(3 downto 0);
 		Kout  	: 	out std_logic_vector(3 downto 0);
 		Kval    : out std_logic
 	);
@@ -34,12 +34,12 @@ architecture structural of roulette is
 
 	component keyboard_reader is
 		port (
-			Liness         : in std_logic_vector(3 downto 0);
+			lines         : in std_logic_vector(3 downto 0);
 			CLK            : in std_logic;
 			Reset          : in std_logic;
 			ack_control    : in std_logic;
 
-			Colss : out std_logic_vector(3 downto 0);
+			columns : out std_logic_vector(3 downto 0);
 			output : out std_logic_vector(3 downto 0);
 			Dval   : out std_logic
 		);
@@ -64,7 +64,7 @@ architecture structural of roulette is
 			CLK         : in std_logic;
 			Reset       : in std_logic;
 
-			Liness      : in std_logic_vector(3 downto 0);
+			lines      : in std_logic_vector(3 downto 0);
 			Kout        : out std_logic_vector(3 downto 0);
 			Kval        : out std_logic
 		);
@@ -114,12 +114,12 @@ begin
 
 	instance_key_reader: keyboard_reader
 		port map (
-			Liness         => Liness,
+			lines         => lines,
 			CLK            => CLK,
 			Reset          => Reset,
 			ack_control    => Kack,
 
-			Colss          => sig_cols,
+			columns          => sig_cols,
 			output         => sig_k3_0,
 			Dval           => sig_kval
 		);
@@ -130,6 +130,6 @@ begin
 	
 	Kval	<= sig_kval;
 	Kout 	<= sig_k3_0;
-	Colss <= sig_cols;
+	columns <= sig_cols;
 
 end structural;

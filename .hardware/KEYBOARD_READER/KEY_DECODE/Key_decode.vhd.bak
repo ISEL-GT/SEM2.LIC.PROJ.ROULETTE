@@ -54,7 +54,6 @@ architecture structural of Key_decode is
 	signal sig_kscan 	: std_logic_vector(1 downto 0);
 	signal sig_cols 	: std_logic_vector(3 downto 0);
 	signal sig_kval 	: std_logic;
-	signal clk_div    : std_logic;
 
 begin
 

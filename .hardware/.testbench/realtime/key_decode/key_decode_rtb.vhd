@@ -7,11 +7,11 @@ entity key_decode_rtb is
 
 	port (
 		Kack 	: 	in std_logic;
-		Liness: 	in std_logic_vector(3 downto 0);
+		lines: 	in std_logic_vector(3 downto 0);
 		CLK	:	in std_logic;
 		Reset :	in std_logic;
 
-		Colss : 	out std_logic_vector(3 downto 0);
+		columns : 	out std_logic_vector(3 downto 0);
 		Kout 	: 	out std_logic_vector(3 downto 0);
 		Kval 	: 	out std_logic
 	);
@@ -23,11 +23,11 @@ architecture structural of key_decode_rtb is
 	component key_decode is
 		port (
 			Kack 	: 	in std_logic;
-			Liness: 	in std_logic_vector(3 downto 0);
+			lines: 	in std_logic_vector(3 downto 0);
 			CLK	:	in std_logic;
 			Reset:	in std_logic;
 
-			Colss : 	out std_logic_vector(3 downto 0);
+			columns : 	out std_logic_vector(3 downto 0);
 			Kout 	: 	out std_logic_vector(3 downto 0);
 			Kval 	: 	out std_logic
 		);
@@ -38,11 +38,11 @@ begin
 	instance_key_decode: key_decode
 		port map (
 			Kack 	=> Kack,
-			Liness => Liness,
+			lines => lines,
 			CLK 	=> CLK,
 			Reset 	=> Reset,
 
-			Colss 	=> Colss,
+			columns 	=> columns,
 			Kout 	=> Kout,
 			Kval 	=> Kval
 		);
