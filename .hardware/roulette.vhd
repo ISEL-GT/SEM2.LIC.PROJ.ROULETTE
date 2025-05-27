@@ -135,7 +135,7 @@ begin
 			lines         => lines,
 			CLK            => clk_div,
 			Reset          => Reset,
-			ack_control    => '1',
+			ack_control    => sig_kack_outusbport,
 
 			columns          => sig_cols,
 			output         => sig_k3_0,
@@ -144,24 +144,24 @@ begin
 
 	instance_slcd: SLCDC
 		port map (
-			LCDSel => '1',
+			LCDSel => inputSignal,
 			SCLK   => clk_div,
-			SDX    => '1',
+			SDX    => sig_d7_4(1),
 			MClk   => CLK,
 			Reset  => Reset,
 
-			Wrl    => open,
-			Dout   => open
+			Wrl    => sig_enable,
+			Dout   => sig_rs
 		);
 
 	instance_src: SRC
 		port map (
-			ack_control => '1',
+			ack_control => sig_kack_outusbport,
 			CLK         => clk_div,
 			Reset       => Reset,
 
 			lines      => lines,
-			Kout        => open,
+			Kout        => sig_k3_0,
 			Kval        => sig_kval
 		);
 

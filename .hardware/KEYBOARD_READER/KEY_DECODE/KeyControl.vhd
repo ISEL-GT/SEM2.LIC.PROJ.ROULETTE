@@ -71,6 +71,6 @@ begin
     -- Geração de sinais de saída
     KScan(0) <= '1' when (CurrentState = State_Scan_Columns and Kpress = '0') else '0';
     KScan(1) <= '1' when (CurrentState = State_Scan_Lines) else '0';
-    Kval     <= '0' when (CurrentState = State_Val) else '1';
+    Kval     <= '1' when (CurrentState = State_Val) else '0';
 
 end behavioral;
