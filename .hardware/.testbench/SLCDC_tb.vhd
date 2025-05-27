@@ -13,7 +13,7 @@ architecture behavioral of SLCDC_tb is
             SDX    : in std_logic;
             MClk   : in std_logic;
             Reset  : in std_logic;
-            accept : in std_logic;
+          
             Wrl    : out std_logic;
             Dout   : out std_logic_vector(4 downto 0)
         );
@@ -29,7 +29,7 @@ architecture behavioral of SLCDC_tb is
     signal SDX_tb     : std_logic;
     signal MClk_tb    : std_logic;
     signal Reset_tb   : std_logic;
-    signal accept_tb  : std_logic;
+   
 
     signal Wrl_tb     : std_logic;
     signal Dout_tb    : std_logic_vector(4 downto 0);
@@ -44,7 +44,7 @@ begin
             SDX    => SDX_tb,
             MClk   => MClk_tb,
             Reset  => Reset_tb,
-            accept => accept_tb,
+           
             Wrl    => Wrl_tb,
             Dout   => Dout_tb
         );
@@ -60,63 +60,107 @@ begin
         end loop;
     end process;
 
-    -- Stimulus process
+   -- Stimulus process
     stimulus: process
     begin
-        -- Initialization
-        Reset_tb    <= '1';
-        LCDSel_tb   <= '1';
-        SCLK_tb     <= '0';
-        SDX_tb      <= '0';
-        accept_tb   <= '0';
-
-
-        wait for clk_period * 2;
-        Reset_tb    <= '0';
-        LCDSel_tb   <= '0';
-        wait for clk_period * 2;
-
-        -- Enviar bits de dados (5 bits, ex: 10101)
-
-        -- Bit 4 (MSB)
-        SDX_tb      <= '1'; wait for clk_period;
-        accept_tb   <= '1'; wait for clk_period;
-        SCLK_tb     <= '1'; wait for clk_period;
-        accept_tb   <= '0'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
-
-        -- Bit 3
-        SDX_tb      <= '0'; wait for clk_period;
-        accept_tb   <= '1'; wait for clk_period;
-        SCLK_tb     <= '1'; wait for clk_period;
-        accept_tb   <= '0'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
-
-        -- Bit 2
-        SDX_tb      <= '1'; wait for clk_period;
-        accept_tb   <= '1'; wait for clk_period;
-        SCLK_tb     <= '1'; wait for clk_period;
-        accept_tb   <= '0'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
-
-        -- Bit 1
-        SDX_tb      <= '0'; wait for clk_period;
-        accept_tb   <= '1'; wait for clk_period;
-        SCLK_tb     <= '1'; wait for clk_period;
-        accept_tb   <= '0'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
-
-        -- Bit 0 (LSB)
-        SDX_tb      <= '1'; wait for clk_period;
-        accept_tb   <= '1'; wait for clk_period;
-        SCLK_tb     <= '1'; wait for clk_period;
-        accept_tb   <= '0'; wait for clk_period;
-        SCLK_tb     <= '0'; wait for clk_period;
-
-
+        -- Inicialização
+        Reset_tb 	<= '1';
+        LCDSel_tb <= '1';
+        SDX_tb   	<= '0';
+   	  SCLK_tb	<= '0';
         wait for clk_period;
 
-        -- End of simulation
+        -- Tirar do reset
+        Reset_tb <= '0';
+        wait for clk_period;
+
+        -- Ativar SS (início da receção)
+        LCDSel_tb <= '0';
+
+        -- Enviar bits de dados (5 bits, por ex: 10101)
+        -- Bit 0 (LSB)
+        SDX_tb 	<= '1';  wait for clk_period;
+		  SCLK_tb	<= '1';	wait for clk_period;
+		  SCLK_tb	<= '0';	wait for clk_period;
+		  
+        -- Bit 1
+        SDX_tb 	<= '0'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 2
+        SDX_tb 	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 3
+        SDX_tb 	<= '0'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 4 (MSB)
+        SDX_tb 	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+		  -- Bit P 
+        SDX_tb 	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+
+		  LCDSel_tb <= '1';	  
+		  wait for clk_period*10;
+		  
+		  
+		  reset_tb <= '1';
+		  wait for clk_period;
+		  
+		  reset_tb <= '0';
+		  wait for clk_period;
+		  
+		   -- Ativar SS (início da receção)
+        LCDSel_tb <= '0';
+
+        -- Enviar bits de dados (5 bits, por ex: 10101)
+        -- Bit 0 (LSB)
+        SDX_tb 	<= '1';  wait for clk_period;
+		  SCLK_tb	<= '1';	wait for clk_period;
+		  SCLK_tb	<= '0';	wait for clk_period;
+		  
+        -- Bit 1
+        SDX_tb 	<= '0'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 2
+        SDX_tb 	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 3
+        SDX_tb 	<= '0'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+        -- Bit 4 (MSB)
+        SDX_tb 	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+		  
+		  -- Bit P 
+        SDX_tb 	<= '0'; wait for clk_period;
+		  SCLK_tb	<= '1'; wait for clk_period;
+		  SCLK_tb	<= '0'; wait for clk_period;
+
+		    
+		  wait for clk_period*10;
+		  
+		  
+		  LCDSel_tb <= '1';
+		 
+		  wait for clk_period;
+		  
+        -- Parar simulação
         wait;
     end process;
 

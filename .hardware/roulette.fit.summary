@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue May 27 11:37:59 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : roulette
+Top-level Entity Name : SRC
+Family : MAX 10
+Device : 10M08DAF484C8G
+Timing Models : Final
+Total logic elements : 38 / 8,064 ( < 1 % )
+    Total combinational functions : 30 / 8,064 ( < 1 % )
+    Dedicated logic registers : 25 / 8,064 ( < 1 % )
+Total registers : 25
+Total pins : 14 / 250 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 0 / 387,072 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )
