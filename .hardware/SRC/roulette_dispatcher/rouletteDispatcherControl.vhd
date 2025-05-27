@@ -1,14 +1,17 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-USE ieee.numeric_std.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity rouletteDispatcherControl is
     port(
-        clk   : in std_logic;
-        reset : in std_logic;
-        Dval  : in std_logic;
-        Wrl   : out std_logic;
-        done  : out std_logic
+        clk        : in std_logic;
+        reset      : in std_logic;
+        Dval       : in std_logic;
+        Count      : in std_logic_vector(3 downto 0);
+
+        Wrl        : out std_logic;
+        en_count   : out std_logic;
+        done       : out std_logic
     );
 end rouletteDispatcherControl;
 
@@ -17,9 +20,6 @@ architecture behavior of rouletteDispatcherControl is
     type STATE_TYPE is (WaitingDval, ReceivingDval, DoneReceived);
     signal currentState, nextState : STATE_TYPE;
 
-    signal counter : unsigned(3 downto 0) := (others => '0'); -- 4 bits para contar até 13
-    signal counter_enable : std_logic := '0';
-
 begin
 
     -- Registo de estado (sincrono com reset)
@@ -27,21 +27,13 @@ begin
     begin
         if reset = '1' then
             currentState <= WaitingDval;
-            counter <= (others => '0');
         elsif rising_edge(clk) then
             currentState <= nextState;
-            if counter_enable = '1' then
-                if counter < 13 then
-                    counter <= counter + 1;
-                end if;
-            else
-                counter <= (others => '0');
-            end if;
         end if;
     end process;
 
     -- Lógica de transição de estados
-    process(currentState, Dval, counter)
+    process(currentState, Dval, Count)
     begin
         case currentState is
             when WaitingDval =>
@@ -52,7 +44,8 @@ begin
                 end if;
 
             when ReceivingDval =>
-                if counter = 13 then
+                -- Condição de fim quando Count = "1101" (13)
+                if Count = "1101" then
                     nextState <= DoneReceived;
                 else
                     nextState <= ReceivingDval;
@@ -68,10 +61,8 @@ begin
     end process;
 
     -- Sinais de controlo
-    Wrl <= '1' when currentState = ReceivingDval else '0';
-    done <= '1' when currentState = DoneReceived else '0';
-
-    -- Enable para o contador apenas no estado de escrita
-    counter_enable <= '1' when currentState = ReceivingDval else '0';
+    Wrl      <= '1' when currentState = ReceivingDval else '0';
+    done     <= '1' when currentState = DoneReceived  else '0';
+    en_count <= '1' when currentState = ReceivingDval else '0';
 
 end behavior;
