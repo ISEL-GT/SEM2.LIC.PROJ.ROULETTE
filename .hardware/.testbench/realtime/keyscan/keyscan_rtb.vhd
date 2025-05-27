@@ -14,7 +14,6 @@ entity keyscan_rtb is
 		KPress  : out std_logic;
 		K 		: out std_logic_vector(3 downto 0)
 	);
-	
 end keyscan_rtb;
 
 architecture structural of keyscan_rtb is

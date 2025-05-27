@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 27 16:02:33 2025
+Tue May 27 16:40:03 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,15 +13,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "key_scanner:instantiate_key_scanner|register_2bits:Reg"
- 10. Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
- 11. Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
- 12. Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits"
- 13. Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. State Machine - |Key_decode|KeyControl:keycontrols|CurrentState
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg"
+ 11. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
+ 12. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
+ 13. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
+ 14. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +49,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 16:02:33 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 16:40:02 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; keyscan_rtb                                 ;
+; Top-level Entity Name              ; Key_decode                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 9                                           ;
-;     Total combinational functions  ; 9                                           ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 17                                          ;
+; Total logic elements               ; 13                                          ;
+;     Total combinational functions  ; 13                                          ;
+;     Dedicated logic registers      ; 8                                           ;
+; Total registers                    ; 8                                           ;
+; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -73,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; keyscan_rtb        ; roulette           ;
+; Top-level entity name                                            ; Key_decode         ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -175,7 +176,6 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                        ; Library ;
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
-; .testbench/realtime/keyscan/keyscan_rtb.vhd            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd            ;         ;
 ; COMMON/ADDERS/adder_2bits.vhd                          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd                          ;         ;
 ; COMMON/ADDERS/full_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd                           ;         ;
 ; COMMON/ADDERS/half_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/half_adder.vhd                           ;         ;
@@ -186,63 +186,78 @@ https://fpgasoftware.intel.com/eula.
 ; COMMON/MUXs/MUX2x1_1bit.vhd                            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/MUXs/MUX2x1_1bit.vhd                            ;         ;
 ; COMMON/REGISTERS/FFD.vhd                               ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/FFD.vhd                               ;         ;
 ; COMMON/REGISTERS/registry_2bits.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd                    ;         ;
+; KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ;         ;
+; KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ;         ;
 ; KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ;         ;
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                        ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 9                                                                                                            ;
-;                                             ;                                                                                                              ;
-; Total combinational functions               ; 9                                                                                                            ;
-; Logic element usage by number of LUT inputs ;                                                                                                              ;
-;     -- 4 input functions                    ; 1                                                                                                            ;
-;     -- 3 input functions                    ; 2                                                                                                            ;
-;     -- <=2 input functions                  ; 6                                                                                                            ;
-;                                             ;                                                                                                              ;
-; Logic elements by mode                      ;                                                                                                              ;
-;     -- normal mode                          ; 9                                                                                                            ;
-;     -- arithmetic mode                      ; 0                                                                                                            ;
-;                                             ;                                                                                                              ;
-; Total registers                             ; 4                                                                                                            ;
-;     -- Dedicated logic registers            ; 4                                                                                                            ;
-;     -- I/O registers                        ; 0                                                                                                            ;
-;                                             ;                                                                                                              ;
-; I/O pins                                    ; 17                                                                                                           ;
-;                                             ;                                                                                                              ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                            ;
-;                                             ;                                                                                                              ;
-; Maximum fan-out node                        ; key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1|Q ;
-; Maximum fan-out                             ; 7                                                                                                            ;
-; Total fan-out                               ; 60                                                                                                           ;
-; Average fan-out                             ; 1.28                                                                                                         ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 13          ;
+;                                             ;             ;
+; Total combinational functions               ; 13          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 6           ;
+;     -- 3 input functions                    ; 2           ;
+;     -- <=2 input functions                  ; 5           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 13          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 8           ;
+;     -- Dedicated logic registers            ; 8           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 16          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Reset~input ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 89          ;
+; Average fan-out                             ; 1.68        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                        ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                     ; Entity Name              ; Library Name ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |keyscan_rtb                                      ; 9 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |keyscan_rtb                                                                                                            ; keyscan_rtb              ; work         ;
-;    |key_scanner:instantiate_key_scanner|          ; 9 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner                                                                        ; key_scanner              ; work         ;
-;       |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|counter_2bits:Contador                                                 ; counter_2bits            ; work         ;
-;          |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits          ; register_2bits           ; work         ;
-;             |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1 ; FFD                      ; work         ;
-;             |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2 ; FFD                      ; work         ;
-;       |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|decoder_2x4:Decoder                                                    ; decoder_2x4              ; work         ;
-;       |priority_encoder:Penc|                     ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|priority_encoder:Penc                                                  ; priority_encoder         ; work         ;
-;          |mux2x1_1bit:Mux2x1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|priority_encoder:Penc|mux2x1_1bit:Mux2x1                               ; mux2x1_1bit              ; work         ;
-;          |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|priority_encoder:Penc|partial_priority_encoder:PencPartial1            ; partial_priority_encoder ; work         ;
-;          |partial_priority_encoder:PencPartial3|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|priority_encoder:Penc|partial_priority_encoder:PencPartial3            ; partial_priority_encoder ; work         ;
-;       |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|register_2bits:Reg                                                     ; register_2bits           ; work         ;
-;          |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|register_2bits:Reg|FFD:FFD1                                            ; FFD                      ; work         ;
-;          |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyscan_rtb|key_scanner:instantiate_key_scanner|register_2bits:Reg|FFD:FFD2                                            ; FFD                      ; work         ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name              ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |Key_decode                                       ; 13 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                            ; Key_decode               ; work         ;
+;    |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|KeyControl:keycontrols                                                                     ; KeyControl               ; work         ;
+;    |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan                                                                        ; key_scanner              ; work         ;
+;       |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador                                                 ; counter_2bits            ; work         ;
+;          |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits          ; register_2bits           ; work         ;
+;             |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1 ; FFD                      ; work         ;
+;             |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2 ; FFD                      ; work         ;
+;       |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|decoder_2x4:Decoder                                                    ; decoder_2x4              ; work         ;
+;       |priority_encoder:Penc|                     ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc                                                  ; priority_encoder         ; work         ;
+;          |mux2x1_1bit:Mux2x1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1                               ; mux2x1_1bit              ; work         ;
+;          |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1            ; partial_priority_encoder ; work         ;
+;       |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg                                                     ; register_2bits           ; work         ;
+;          |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                            ; FFD                      ; work         ;
+;          |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                            ; FFD                      ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Key_decode|KeyControl:keycontrols|CurrentState                                                                                             ;
++---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
+; Name                            ; CurrentState.State_Ack_Waiting ; CurrentState.State_Val ; CurrentState.State_Scan_Lines ; CurrentState.State_Scan_Columns ;
++---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
+; CurrentState.State_Scan_Columns ; 0                              ; 0                      ; 0                             ; 0                               ;
+; CurrentState.State_Scan_Lines   ; 0                              ; 0                      ; 1                             ; 1                               ;
+; CurrentState.State_Val          ; 0                              ; 1                      ; 0                             ; 1                               ;
+; CurrentState.State_Ack_Waiting  ; 1                              ; 0                      ; 0                             ; 1                               ;
++---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
 
 
 +------------------------------------------------------+
@@ -250,63 +265,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:instantiate_key_scanner|register_2bits:Reg" ;
-+------+-------+----------+----------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                  ;
-+------+-------+----------+----------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                             ;
-; en   ; Input ; Info     ; Stuck at VCC                                             ;
-+------+-------+----------+----------------------------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                             ;
+; en   ; Input ; Info     ; Stuck at VCC                             ;
++------+-------+----------+------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                      ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2" ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                 ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                      ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                 ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                 ;
++------+-------+----------+----------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits" ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                             ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at VCC                                                                                        ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:instantiate_key_scanner|counter_2bits:Contador|adder_2bits:instance_adder_2bits" ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                 ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------+
-; b[1]      ; Input  ; Info     ; Stuck at GND                                                                            ;
-; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                            ;
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                            ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.     ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -314,18 +329,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 4                           ;
-;     CLR               ; 4                           ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
+; boundary_port         ; 16                          ;
+; cycloneiii_ff         ; 8                           ;
+;     CLR               ; 8                           ;
+; cycloneiii_lcell_comb ; 16                          ;
+;     normal            ; 16                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 6                           ;
+;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 2                           ;
-;         4 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.13                        ;
+; Average LUT depth     ; 1.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -344,7 +359,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 27 16:02:16 2025
+    Info: Processing started: Tue May 27 16:39:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -355,8 +370,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file usbport
     Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
     Info (12023): Found entity 1: UsbPort File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file .testbench/realtime/keyscan/keyscan_rtb.vhd
-    Info (12022): Found design unit 1: keyscan_rtb-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd Line: 21
-    Info (12023): Found entity 1: keyscan_rtb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd Line: 6
+    Info (12022): Found design unit 1: keyscan_rtb-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd Line: 19
+    Info (12023): Found entity 1: keyscan_rtb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file .testbench/realtime/key_decode/key_decode_rtb.vhd
+    Info (12022): Found design unit 1: key_decode_rtb-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_decode/key_decode_rtb.vhd Line: 21
+    Info (12023): Found entity 1: key_decode_rtb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_decode/key_decode_rtb.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file .testbench/simulated/counterseriallcd_tb.vhd
     Info (12022): Found design unit 1: counterSerialLCD_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/counterSerialLCD_tb.vhd Line: 7
     Info (12023): Found entity 1: counterSerialLCD_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/counterSerialLCD_tb.vhd Line: 4
@@ -576,29 +594,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/rou
 Info (12021): Found 2 design units, including 1 entities, in source file src/roulette_serial/serial_receiver_roulette.vhd
     Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
     Info (12023): Found entity 1: serial_receiver_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
-Info (12127): Elaborating entity "keyscan_rtb" for the top level hierarchy
-Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:instantiate_key_scanner" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/keyscan/keyscan_rtb.vhd Line: 38
-Info (12128): Elaborating entity "counter_2bits" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
-Info (12128): Elaborating entity "adder_2bits" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
-Info (12128): Elaborating entity "full_adder" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
-Info (12128): Elaborating entity "half_adder" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "register_2bits" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 68
-Info (12128): Elaborating entity "FFD" for hierarchy "key_scanner:instantiate_key_scanner|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd Line: 37
-Info (12128): Elaborating entity "decoder_2x4" for hierarchy "key_scanner:instantiate_key_scanner|decoder_2x4:Decoder" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 79
-Info (12128): Elaborating entity "priority_encoder" for hierarchy "key_scanner:instantiate_key_scanner|priority_encoder:Penc" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
-Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "key_scanner:instantiate_key_scanner|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
-Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "key_scanner:instantiate_key_scanner|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
+Info (12127): Elaborating entity "Key_decode" for the top level hierarchy
+Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:keyscan" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 55
+Info (12128): Elaborating entity "counter_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
+Info (12128): Elaborating entity "adder_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
+Info (12128): Elaborating entity "full_adder" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
+Info (12128): Elaborating entity "half_adder" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 68
+Info (12128): Elaborating entity "FFD" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd Line: 37
+Info (12128): Elaborating entity "decoder_2x4" for hierarchy "key_scanner:keyscan|decoder_2x4:Decoder" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 79
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
+Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
+Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
+Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:keycontrols" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 65
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 9 logic cells
+    Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Tue May 27 16:02:33 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Tue May 27 16:40:03 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:23
 
 

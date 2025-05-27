@@ -16,8 +16,8 @@ set_location_assignment PIN_P11 -to CLK
 #============================================================
 # SW
 #============================================================
-#set_location_assignment PIN_C10 -to KScan[0]
-#set_location_assignment PIN_C11 -to KScan[1]
+set_location_assignment PIN_C10 -to KScan[0]
+set_location_assignment PIN_C11 -to KScan[1]
 #set_location_assignment PIN_D12 -to SW[2]
 #set_location_assignment PIN_C12 -to SW[3]
 set_location_assignment PIN_F15 -to Reset
@@ -28,7 +28,7 @@ set_location_assignment PIN_F15 -to Reset
 set_location_assignment PIN_A8 -to K[0]        # LEDR[0]
 set_location_assignment PIN_A9 -to K[1]        # LEDR[1]
 set_location_assignment PIN_A10 -to K[2]       # LEDR[2]
-# set_location_assignment PIN_B10 -to K[3]       # LEDR[3]
+set_location_assignment PIN_B10 -to K[3]       # LEDR[3]
 # set_location_assignment PIN_D13 -to open       # LEDR[4]
 set_location_assignment PIN_C13 -to columns[0]       # LEDR[5]
 set_location_assignment PIN_E14 -to columns[1]       # LEDR[6]
@@ -43,3 +43,7 @@ set_location_assignment PIN_W5 -to lines[0]
 set_location_assignment PIN_AA14 -to lines[1]
 set_location_assignment PIN_W12 -to lines[2]
 set_location_assignment PIN_AB12 -to lines[3]
+set_location_assignment PIN_AB11 -to Colss[0]
+set_location_assignment PIN_AB10 -to Colss[1]
+set_location_assignment PIN_AA9 -to Colss[2]
+set_location_assignment PIN_AA8 -to Colss[3]

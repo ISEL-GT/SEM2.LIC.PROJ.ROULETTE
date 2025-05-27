@@ -9,7 +9,7 @@ entity key_decode_rtb is
 		Kack 	: 	in std_logic;
 		Liness: 	in std_logic_vector(3 downto 0);
 		CLK	:	in std_logic;
-		Reset :	in std_logic;
+		Reset:	in std_logic;
 
 		Colss : 	out std_logic_vector(3 downto 0);
 		Kout 	: 	out std_logic_vector(3 downto 0);

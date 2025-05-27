@@ -1,5 +1,5 @@
 Flow report for roulette
-Tue May 27 16:03:03 2025
+Tue May 27 16:40:28 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 27 16:02:57 2025       ;
+; Flow Status                        ; Successful - Tue May 27 16:40:24 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; keyscan_rtb                                 ;
+; Top-level Entity Name              ; Key_decode                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 10 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 10 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 4 / 49,760 ( < 1 % )                        ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 17 / 360 ( 5 % )                            ;
+; Total logic elements               ; 15 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 14 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 8 / 49,760 ( < 1 % )                        ;
+; Total registers                    ; 8                                           ;
+; Total pins                         ; 16 / 360 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2025 16:02:17 ;
+; Start date & time ; 05/27/2025 16:39:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; roulette            ;
 +-------------------+---------------------+
@@ -78,11 +78,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2544930702742.174835813708888          ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; keyscan_rtb ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; keyscan_rtb ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; keyscan_rtb ; Top        ;
-; TOP_LEVEL_ENTITY                    ; keyscan_rtb                            ; roulette      ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 2544930702742.174836038701328          ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Key_decode  ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Key_decode  ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Key_decode  ; Top        ;
+; TOP_LEVEL_ENTITY                    ; Key_decode                             ; roulette      ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -91,11 +91,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4794 MB             ; 00:00:26                           ;
-; Fitter               ; 00:00:16     ; 1.0                     ; 5378 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4799 MB             ; 00:00:03                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:00:44                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4793 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:13     ; 1.0                     ; 5381 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4697 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4796 MB             ; 00:00:02                           ;
+; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
