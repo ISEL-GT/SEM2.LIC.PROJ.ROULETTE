@@ -39,38 +39,39 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY roulette
+set_global_assignment -name TOP_LEVEL_ENTITY keyscan_rtb
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:46:56  MAY 27, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VHDL_FILE roulette.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
-set_global_assignment -name VHDL_FILE .testbench/counterSerialLCD_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/CounterTb.vhd
-set_global_assignment -name VHDL_FILE .testbench/decoder_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/KeyControl_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/KeyScannerTb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Key_decode_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Key_reader_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/LCDDispatcherControl_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/LCDDispatcher_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/mac_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/OutputBufferControl_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/OutputBuffer_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/OutputRegister_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/parity_checker_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/priority_encoder_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/RingBufferModule_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/RING_BUFFER_bloco_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Ring_Buffer_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/rouletteDispatcherControl_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/roulette_dispatcher_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Serial_Controller_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_lcd_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/Serial_Receiver_roulette_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/ShiftRegisterLCD_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/SLCDC_tb.vhd
-set_global_assignment -name VHDL_FILE .testbench/SRC_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/realtime/keyscan/keyscan_rtb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/counterSerialLCD_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/CounterTb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/decoder_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/KeyControl_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/KeyScannerTb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Key_decode_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Key_reader_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/LCDDispatcherControl_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/LCDDispatcher_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/mac_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/OutputBufferControl_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/OutputBuffer_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/OutputRegister_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/parity_checker_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/priority_encoder_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/RingBufferModule_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/RING_BUFFER_bloco_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Ring_Buffer_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/rouletteDispatcherControl_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/roulette_dispatcher_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Serial_Controller_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Serial_Receiver_lcd_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/Serial_Receiver_roulette_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/ShiftRegisterLCD_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/SLCDC_tb.vhd
+set_global_assignment -name VHDL_FILE .testbench/simulated/SRC_tb.vhd
 set_global_assignment -name VHDL_FILE COMMON/parity_checker.vhd
 set_global_assignment -name VHDL_FILE COMMON/ADDERS/adder_2bits.vhd
 set_global_assignment -name VHDL_FILE COMMON/ADDERS/adder_3bits.vhd
@@ -119,35 +120,23 @@ set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_serial_test.v
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_shiftRegister.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/serial_receiver_roulette.vhd
 
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_location_assignment PIN_P11 -to CLK
+set_location_assignment PIN_F15 -to Reset
+set_location_assignment PIN_A8 -to K[0]
+set_location_assignment PIN_A9 -to K[1]
+set_location_assignment PIN_A10 -to K[2]
+set_location_assignment PIN_B10 -to K[3]
+set_location_assignment PIN_A11 -to open
+set_location_assignment PIN_B11 -to KPress
+set_location_assignment PIN_W5 -to lines[0]
+set_location_assignment PIN_AA14 -to lines[1]
+set_location_assignment PIN_W12 -to lines[2]
+set_location_assignment PIN_AB12 -to lines[3]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_P11 -to CLK
-set_location_assignment PIN_B14 -to Kack
-set_location_assignment PIN_F15 -to Reset
-set_location_assignment PIN_A8 -to Kval
-set_location_assignment PIN_A9 -to Kout[0]
-set_location_assignment PIN_A10 -to Kout[1]
-set_location_assignment PIN_B10 -to Kout[2]
-set_location_assignment PIN_D13 -to Kout[3]
-set_location_assignment PIN_W5 -to Liness[0]
-set_location_assignment PIN_AA14 -to Liness[1]
-set_location_assignment PIN_W12 -to Liness[2]
-set_location_assignment PIN_AB12 -to Liness[3]
-set_location_assignment PIN_AB11 -to Colss[0]
-set_location_assignment PIN_AB10 -to Colss[1]
-set_location_assignment PIN_AA9 -to Colss[2]
-set_location_assignment PIN_AA8 -to Colss[3]
-set_location_assignment PIN_W8 -to LCD_RS
-set_location_assignment PIN_V5 -to LCD_EN
-set_location_assignment PIN_AA15 -to LCD_DATA[0]
-set_location_assignment PIN_W13 -to LCD_DATA[1]
-set_location_assignment PIN_AB13 -to LCD_DATA[2]
-set_location_assignment PIN_Y11 -to LCD_DATA[3]
-set_location_assignment PIN_W11 -to LCD_DATA[4]
-set_location_assignment PIN_AA10 -to LCD_DATA[5]
-set_location_assignment PIN_Y8 -to LCD_DATA[6]
-set_location_assignment PIN_Y7 -to LCD_DATA[7]
+set_location_assignment PIN_C13 -to columns[0]
+set_location_assignment PIN_E14 -to columns[1]
+set_location_assignment PIN_D14 -to columns[2]
+set_location_assignment PIN_A11 -to columns[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

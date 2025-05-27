@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue May 27 15:19:10 2025
+Analysis & Synthesis Status : Successful - Tue May 27 16:02:33 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : roulette
+Top-level Entity Name : keyscan_rtb
 Family : MAX 10
-Total logic elements : 338
-    Total combinational functions : 313
-    Dedicated logic registers : 122
-Total registers : 122
-Total pins : 22
+Total logic elements : 9
+    Total combinational functions : 9
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 17
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
