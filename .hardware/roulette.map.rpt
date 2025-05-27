@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 27 17:50:31 2025
+Tue May 27 18:19:41 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,18 +13,38 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |Key_decode|KeyControl:keycontrols|CurrentState
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Parameter Settings for User Entity Instance: clock_divisor:clkdivider
- 12. Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg"
- 13. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
- 14. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
- 15. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
- 16. Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  8. State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState
+  9. State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState
+ 10. State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState
+ 11. User-Specified and Inferred Latches
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider
+ 16. Parameter Settings for User Entity Instance: keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm
+ 17. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5"
+ 18. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4"
+ 19. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3"
+ 20. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2"
+ 21. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1"
+ 22. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits"
+ 23. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits"
+ 24. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter"
+ 25. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4"
+ 26. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3"
+ 27. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2"
+ 28. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1"
+ 29. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits"
+ 30. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits"
+ 31. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer"
+ 32. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg"
+ 33. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
+ 34. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
+ 35. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
+ 36. Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -51,15 +71,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 17:50:31 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 18:19:41 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; Key_decode                                  ;
+; Top-level Entity Name              ; keyreader_rtb                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 64                                          ;
-;     Dedicated logic registers      ; 41                                          ;
-; Total registers                    ; 41                                          ;
+; Total logic elements               ; 240                                         ;
+;     Total combinational functions  ; 239                                         ;
+;     Dedicated logic registers      ; 69                                          ;
+; Total registers                    ; 69                                          ;
 ; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -76,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; Key_decode         ; roulette           ;
+; Top-level entity name                                            ; keyreader_rtb      ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -178,20 +198,36 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                        ; Library ;
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
+; .testbench/realtime/key_reader/keyreader_rtb.vhd       ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_reader/keyreader_rtb.vhd       ;         ;
 ; COMMON/clock_divisor.vhd                               ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/clock_divisor.vhd                               ;         ;
 ; COMMON/ADDERS/adder_2bits.vhd                          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd                          ;         ;
+; COMMON/ADDERS/adder_4bits.vhd                          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_4bits.vhd                          ;         ;
+; COMMON/ADDERS/adder_5bits.vhd                          ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_5bits.vhd                          ;         ;
 ; COMMON/ADDERS/full_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd                           ;         ;
 ; COMMON/ADDERS/half_adder.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/half_adder.vhd                           ;         ;
 ; COMMON/CODEC/decoder_2x4.vhd                           ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/decoder_2x4.vhd                           ;         ;
 ; COMMON/CODEC/PENC/partial_priority_encoder.vhd         ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/partial_priority_encoder.vhd         ;         ;
 ; COMMON/CODEC/PENC/priority_encoder.vhd                 ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd                 ;         ;
 ; COMMON/COUNTERS/counter_2bits.vhd                      ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd                      ;         ;
+; COMMON/COUNTERS/counter_4bits.vhd                      ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd                      ;         ;
+; COMMON/COUNTERS/variable_counter_5bits.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd             ;         ;
 ; COMMON/MUXs/MUX2x1_1bit.vhd                            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/MUXs/MUX2x1_1bit.vhd                            ;         ;
+; COMMON/MUXs/MUX2x1_4bit.vhd                            ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/MUXs/MUX2x1_4bit.vhd                            ;         ;
 ; COMMON/REGISTERS/FFD.vhd                               ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/FFD.vhd                               ;         ;
+; COMMON/REGISTERS/register_4bits.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_4bits.vhd                    ;         ;
+; COMMON/REGISTERS/register_5bits.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_5bits.vhd                    ;         ;
 ; COMMON/REGISTERS/registry_2bits.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd                    ;         ;
+; KEYBOARD_READER/keyboard_reader.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd                    ;         ;
 ; KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ;         ;
 ; KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ;         ;
 ; KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ;         ;
+; KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd         ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd         ;         ;
+; KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd  ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd  ;         ;
+; KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd       ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd       ;         ;
+; KEYBOARD_READER/RING_BUFFER/mac.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd                    ;         ;
+; KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ;         ;
+; KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ;         ;
+; KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ; yes             ; User VHDL File  ; C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ;         ;
 +--------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
@@ -200,20 +236,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 64        ;
+; Estimated Total logic elements              ; 240       ;
 ;                                             ;           ;
-; Total combinational functions               ; 64        ;
+; Total combinational functions               ; 239       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 16        ;
-;     -- 3 input functions                    ; 10        ;
-;     -- <=2 input functions                  ; 38        ;
+;     -- 4 input functions                    ; 82        ;
+;     -- 3 input functions                    ; 82        ;
+;     -- <=2 input functions                  ; 75        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 33        ;
+;     -- normal mode                          ; 208       ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
-; Total registers                             ; 41        ;
-;     -- Dedicated logic registers            ; 41        ;
+; Total registers                             ; 69        ;
+;     -- Dedicated logic registers            ; 69        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 16        ;
@@ -221,39 +257,106 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 283       ;
-; Average fan-out                             ; 2.07      ;
+; Maximum fan-out                             ; 61        ;
+; Total fan-out                               ; 929       ;
+; Average fan-out                             ; 2.73      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                    ; Entity Name              ; Library Name ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |Key_decode                                       ; 64 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |Key_decode                                                                                            ; Key_decode               ; work         ;
-;    |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|KeyControl:keycontrols                                                                     ; KeyControl               ; work         ;
-;    |clock_divisor:clkdivider|                     ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|clock_divisor:clkdivider                                                                   ; clock_divisor            ; work         ;
-;    |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan                                                                        ; key_scanner              ; work         ;
-;       |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador                                                 ; counter_2bits            ; work         ;
-;          |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits          ; register_2bits           ; work         ;
-;             |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1 ; FFD                      ; work         ;
-;             |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2 ; FFD                      ; work         ;
-;       |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|decoder_2x4:Decoder                                                    ; decoder_2x4              ; work         ;
-;       |priority_encoder:Penc|                     ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc                                                  ; priority_encoder         ; work         ;
-;          |mux2x1_1bit:Mux2x1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1                               ; mux2x1_1bit              ; work         ;
-;          |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1            ; partial_priority_encoder ; work         ;
-;       |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg                                                     ; register_2bits           ; work         ;
-;          |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                            ; FFD                      ; work         ;
-;          |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                            ; FFD                      ; work         ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++---------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                    ; Entity Name              ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |keyreader_rtb                                          ; 239 (16)            ; 69 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |keyreader_rtb                                                                                                                                                                                                                         ; keyreader_rtb            ; work         ;
+;    |keyboard_reader:instance_keyboard_reader|           ; 223 (0)             ; 69 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader                                                                                                                                                                                ; keyboard_reader          ; work         ;
+;       |Key_decode:instance_key_decode|                  ; 65 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode                                                                                                                                                 ; Key_decode               ; work         ;
+;          |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols                                                                                                                          ; KeyControl               ; work         ;
+;          |clock_divisor:clkdivider|                     ; 52 (52)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider                                                                                                                        ; clock_divisor            ; work         ;
+;          |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan                                                                                                                             ; key_scanner              ; work         ;
+;             |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador                                                                                                      ; counter_2bits            ; work         ;
+;                |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits                                                               ; register_2bits           ; work         ;
+;                   |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1                                                      ; FFD                      ; work         ;
+;                   |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2                                                      ; FFD                      ; work         ;
+;             |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|decoder_2x4:Decoder                                                                                                         ; decoder_2x4              ; work         ;
+;             |priority_encoder:Penc|                     ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc                                                                                                       ; priority_encoder         ; work         ;
+;                |mux2x1_1bit:Mux2x1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1                                                                                    ; mux2x1_1bit              ; work         ;
+;                |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1                                                                 ; partial_priority_encoder ; work         ;
+;             |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg                                                                                                          ; register_2bits           ; work         ;
+;                |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                                                                                 ; FFD                      ; work         ;
+;                |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                                                                                 ; FFD                      ; work         ;
+;       |OutputBuffer:instance_output_buffer|             ; 6 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer                                                                                                                                            ; OutputBuffer             ; work         ;
+;          |OutputBufferControl:CTRL|                     ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                   ; OutputBufferControl      ; work         ;
+;          |OutputRegister:REG|                           ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG                                                                                                                         ; OutputRegister           ; work         ;
+;       |RingBuffer:instance_ring_buffer|                 ; 152 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer                                                                                                                                                ; RingBuffer               ; work         ;
+;          |RAM:ramm|                                     ; 120 (120)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm                                                                                                                                       ; RAM                      ; work         ;
+;          |Ring_Buffer_Control:inst_ringBufferControl|   ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl                                                                                                     ; Ring_Buffer_Control      ; work         ;
+;          |mac:inst_mac|                                 ; 22 (2)              ; 13 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac                                                                                                                                   ; mac                      ; work         ;
+;             |counter_4bits:get_counter|                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter                                                                                                         ; counter_4bits            ; work         ;
+;                |register_4bits:instance_register_4bits| ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits                                                                  ; register_4bits           ; work         ;
+;                   |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD1                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD2                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD3|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD3                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD4|                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD4                                                         ; FFD                      ; work         ;
+;             |counter_4bits:put_counter|                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter                                                                                                         ; counter_4bits            ; work         ;
+;                |register_4bits:instance_register_4bits| ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits                                                                  ; register_4bits           ; work         ;
+;                   |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD3|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3                                                         ; FFD                      ; work         ;
+;                   |FFD:FFD4|                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4                                                         ; FFD                      ; work         ;
+;             |mux2x1_4bit:output_mux|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|mux2x1_4bit:output_mux                                                                                                            ; mux2x1_4bit              ; work         ;
+;             |variable_counter_5bits:elements_counter|   ; 6 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter                                                                                           ; variable_counter_5bits   ; work         ;
+;                |adder_5bits:instance_adder_5bits|       ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits                                                          ; adder_5bits              ; work         ;
+;                   |full_adder:full_adder_1|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_1                                  ; full_adder               ; work         ;
+;                      |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_1|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
+;                   |full_adder:full_adder_2|             ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_2                                  ; full_adder               ; work         ;
+;                      |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_2|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
+;                   |full_adder:full_adder_3|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_3                                  ; full_adder               ; work         ;
+;                      |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_3|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
+;                   |full_adder:full_adder_4|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_4                                  ; full_adder               ; work         ;
+;                      |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_4|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
+;                |register_5bits:instance_register_5bits| ; 1 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits                                                    ; register_5bits           ; work         ;
+;                   |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1                                           ; FFD                      ; work         ;
+;                   |FFD:FFD2|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2                                           ; FFD                      ; work         ;
+;                   |FFD:FFD3|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3                                           ; FFD                      ; work         ;
+;                   |FFD:FFD4|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4                                           ; FFD                      ; work         ;
+;                   |FFD:FFD5|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5                                           ; FFD                      ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState ;
++----------------------------+--------------------------+----------------------------+-------------------------+------------------------------------+
+; Name                       ; CurrentState.State_Clear ; CurrentState.State_WaitAck ; CurrentState.State_Load ; CurrentState.State_Idle            ;
++----------------------------+--------------------------+----------------------------+-------------------------+------------------------------------+
+; CurrentState.State_Idle    ; 0                        ; 0                          ; 0                       ; 0                                  ;
+; CurrentState.State_Load    ; 0                        ; 0                          ; 1                       ; 1                                  ;
+; CurrentState.State_WaitAck ; 0                        ; 1                          ; 0                       ; 1                                  ;
+; CurrentState.State_Clear   ; 1                        ; 0                          ; 0                       ; 1                                  ;
++----------------------------+--------------------------+----------------------------+-------------------------+------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState                                                       ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+; Name                        ; CurrentState.Data_Delivered ; CurrentState.Delivering ; CurrentState.Data_Written ; CurrentState.Data_Accepted ; CurrentState.Writing ; CurrentState.SelectAddress ; CurrentState.START ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+; CurrentState.START          ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 0                  ;
+; CurrentState.SelectAddress  ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 1                          ; 1                  ;
+; CurrentState.Writing        ; 0                           ; 0                       ; 0                         ; 0                          ; 1                    ; 0                          ; 1                  ;
+; CurrentState.Data_Accepted  ; 0                           ; 0                       ; 0                         ; 1                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Data_Written   ; 0                           ; 0                       ; 1                         ; 0                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Delivering     ; 0                           ; 1                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
+; CurrentState.Data_Delivered ; 1                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
++-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+
+
+Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Key_decode|KeyControl:keycontrols|CurrentState                                                                                             ;
+; State Machine - |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState                  ;
 +---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
 ; Name                            ; CurrentState.State_Ack_Waiting ; CurrentState.State_Val ; CurrentState.State_Scan_Lines ; CurrentState.State_Scan_Columns ;
 +---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
@@ -264,88 +367,321 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                     ;
++------------------------------------------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                                                               ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------------------------------------------+---------------------+------------------------+
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~40 ; rtl~0               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~36 ; rtl~1               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~32 ; rtl~2               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~44 ; rtl~3               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~20 ; rtl~4               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~24 ; rtl~5               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~16 ; rtl~6               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~28 ; rtl~7               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~8  ; rtl~8               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~4  ; rtl~9               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~0  ; rtl~10              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~12 ; rtl~11              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~52 ; rtl~12              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~56 ; rtl~13              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~48 ; rtl~14              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~60 ; rtl~15              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~25 ; rtl~5               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~41 ; rtl~0               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~9  ; rtl~8               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~57 ; rtl~13              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~37 ; rtl~1               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~21 ; rtl~4               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~5  ; rtl~9               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~53 ; rtl~12              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~17 ; rtl~6               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~33 ; rtl~2               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~1  ; rtl~10              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~49 ; rtl~14              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~45 ; rtl~3               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~29 ; rtl~7               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~13 ; rtl~11              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~61 ; rtl~15              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~26 ; rtl~5               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~22 ; rtl~4               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~18 ; rtl~6               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~30 ; rtl~7               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~38 ; rtl~1               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~42 ; rtl~0               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~34 ; rtl~2               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~46 ; rtl~3               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~6  ; rtl~9               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~10 ; rtl~8               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~2  ; rtl~10              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~14 ; rtl~11              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~58 ; rtl~13              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~54 ; rtl~12              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~50 ; rtl~14              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~62 ; rtl~15              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~23 ; rtl~4               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~39 ; rtl~1               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~7  ; rtl~9               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~55 ; rtl~12              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~43 ; rtl~0               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~27 ; rtl~5               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~11 ; rtl~8               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~59 ; rtl~13              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~35 ; rtl~2               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~19 ; rtl~6               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~3  ; rtl~10              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~51 ; rtl~14              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~31 ; rtl~7               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~47 ; rtl~3               ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~15 ; rtl~11              ; yes                    ;
+; keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm|ram~63 ; rtl~15              ; yes                    ;
+; Number of user-specified and inferred latches = 64                                       ;                     ;                        ;
++------------------------------------------------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 41    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 69    ;
+; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; clock_divisor:clkdivider|count[0]      ; 2       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                        ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                         ; Fan out ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|count[0] ; 2       ;
+; Total number of inverted registers = 1                                                                    ;         ;
++-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: clock_divisor:clkdivider ;
-+----------------+--------+---------------------------------------------+
-; Parameter Name ; Value  ; Type                                        ;
-+----------------+--------+---------------------------------------------+
-; div            ; 500000 ; Signed Integer                              ;
-+----------------+--------+---------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG|Reg[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider ;
++----------------+--------+---------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                                                ;
++----------------+--------+---------------------------------------------------------------------------------------------------------------------+
+; div            ; 500000 ; Signed Integer                                                                                                      ;
++----------------+--------+---------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:keyscan|register_2bits:Reg" ;
-+------+-------+----------+------------------------------------------+
-; Port ; Type  ; Severity ; Details                                  ;
-+------+-------+----------+------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                             ;
-; en   ; Input ; Info     ; Stuck at VCC                             ;
-+------+-------+----------+------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; address_width  ; 4     ; Signed Integer                                                                                        ;
+; data_width     ; 4     ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                 ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                 ;
-+------+-------+----------+----------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                             ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at VCC                                                                        ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                                                                                                           ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits" ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                    ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                                                                               ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter" ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                      ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------+
+; load[0] ; Input ; Info     ; Stuck at VCC                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits" ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                  ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                                                                                             ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits" ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; b[3..1]   ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer"           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dac  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                     ;
+; en   ; Input ; Info     ; Stuck at VCC                                                                                                     ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2" ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                              ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                         ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                              ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                                                                         ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                     ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                                                                                                ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; b[1]      ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                                                                    ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -354,20 +690,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 41                          ;
-;     CLR               ; 8                           ;
+; cycloneiii_ff         ; 69                          ;
+;     CLR               ; 27                          ;
+;     ENA CLR           ; 5                           ;
+;     ENA SCLR          ; 4                           ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 67                          ;
+; cycloneiii_lcell_comb ; 242                         ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 36                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 16                          ;
+;     normal            ; 211                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 82                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.92                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -386,7 +724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 27 17:50:14 2025
+    Info: Processing started: Tue May 27 18:19:24 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -402,6 +740,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file .testbe
 Info (12021): Found 2 design units, including 1 entities, in source file .testbench/realtime/key_decode/key_decode_rtb.vhd
     Info (12022): Found design unit 1: key_decode_rtb-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_decode/key_decode_rtb.vhd Line: 21
     Info (12023): Found entity 1: key_decode_rtb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_decode/key_decode_rtb.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file .testbench/realtime/key_reader/keyreader_rtb.vhd
+    Info (12022): Found design unit 1: keyreader_rtb-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_reader/keyreader_rtb.vhd Line: 19
+    Info (12023): Found entity 1: keyreader_rtb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_reader/keyreader_rtb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file .testbench/simulated/counterseriallcd_tb.vhd
     Info (12022): Found design unit 1: counterSerialLCD_tb-behavioral File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/counterSerialLCD_tb.vhd Line: 7
     Info (12023): Found entity 1: counterSerialLCD_tb File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/simulated/counterSerialLCD_tb.vhd Line: 4
@@ -624,31 +965,50 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/rou
 Info (12021): Found 2 design units, including 1 entities, in source file src/roulette_serial/serial_receiver_roulette.vhd
     Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
     Info (12023): Found entity 1: serial_receiver_roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
-Info (12127): Elaborating entity "Key_decode" for the top level hierarchy
-Info (12128): Elaborating entity "clock_divisor" for hierarchy "clock_divisor:clkdivider" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 61
-Info (12128): Elaborating entity "key_scanner" for hierarchy "key_scanner:keyscan" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 70
-Info (12128): Elaborating entity "counter_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
-Info (12128): Elaborating entity "adder_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
-Info (12128): Elaborating entity "full_adder" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
-Info (12128): Elaborating entity "half_adder" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "register_2bits" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 68
-Info (12128): Elaborating entity "FFD" for hierarchy "key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd Line: 37
-Info (12128): Elaborating entity "decoder_2x4" for hierarchy "key_scanner:keyscan|decoder_2x4:Decoder" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 79
-Info (12128): Elaborating entity "priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
-Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
-Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
-Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyControl:keycontrols" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 80
+Info (12127): Elaborating entity "keyreader_rtb" for the top level hierarchy
+Info (12128): Elaborating entity "keyboard_reader" for hierarchy "keyboard_reader:instance_keyboard_reader" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/.testbench/realtime/key_reader/keyreader_rtb.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at keyboard_reader.vhd(66): object "dac_ring_buffer" assigned a value but never read File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 66
+Info (12128): Elaborating entity "Key_decode" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 72
+Info (12128): Elaborating entity "clock_divisor" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 61
+Info (12128): Elaborating entity "key_scanner" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 70
+Info (12128): Elaborating entity "counter_2bits" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
+Info (12128): Elaborating entity "adder_2bits" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
+Info (12128): Elaborating entity "full_adder" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
+Info (12128): Elaborating entity "half_adder" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_2bits" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 68
+Info (12128): Elaborating entity "FFD" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd Line: 37
+Info (12128): Elaborating entity "decoder_2x4" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|decoder_2x4:Decoder" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 79
+Info (12128): Elaborating entity "priority_encoder" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
+Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
+Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
+Info (12128): Elaborating entity "KeyControl" for hierarchy "keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 80
+Info (12128): Elaborating entity "RingBuffer" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 84
+Info (12128): Elaborating entity "Ring_Buffer_Control" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 81
+Info (12128): Elaborating entity "mac" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 99
+Info (12128): Elaborating entity "counter_4bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 66
+Info (12128): Elaborating entity "adder_4bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 43
+Info (12128): Elaborating entity "register_4bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 53
+Info (12128): Elaborating entity "variable_counter_5bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 91
+Info (12128): Elaborating entity "adder_5bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd Line: 44
+Info (12128): Elaborating entity "register_5bits" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd Line: 54
+Info (12128): Elaborating entity "mux2x1_4bit" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|mux2x1_4bit:output_mux" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 102
+Info (12128): Elaborating entity "RAM" for hierarchy "keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at RAM.vhd(27): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at RAM.vhd(30): signal "din" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 30
+Info (12128): Elaborating entity "OutputBuffer" for hierarchy "keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 96
+Info (12128): Elaborating entity "OutputBufferControl" for hierarchy "keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 47
+Info (12128): Elaborating entity "OutputRegister" for hierarchy "keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG" File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 59
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 257 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 65 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Tue May 27 17:50:31 2025
+    Info (21061): Implemented 241 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Tue May 27 18:19:41 2025
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:21
 
 

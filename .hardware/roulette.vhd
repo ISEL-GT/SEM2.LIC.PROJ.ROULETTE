@@ -9,7 +9,6 @@ entity roulette is
 		lines: 	in std_logic_vector(3 downto 0);
 		CLK   :	in std_logic;
 		Reset :	in std_logic;		
-		Kack  :	in std_logic;
 
 		LCD_RS	: 	out std_logic;
 		LCD_EN	: 	out std_logic;			
@@ -70,6 +69,16 @@ architecture structural of roulette is
 		);
 	end component;
 
+	component clock_divisor is
+		generic (div: natural := 50000);
+		port (
+			clk_in  : in  std_logic;
+			clk_out : out std_logic
+		);
+	end component;
+
+	signal clk_divisor_out : std_logic;
+
 	-- Sinais de entrada do USB Port
 	signal sig_k3_0	: std_logic_vector(3 downto 0);
 	signal sig_kscan 	: std_logic_vector(1 downto 0);
@@ -85,6 +94,15 @@ architecture structural of roulette is
 	signal inputSignal : std_logic := '0';
 
 begin
+
+	divider: clock_divisor
+		generic map (
+			div => 50000  -- Divisor para gerar o clock de 1 MHz
+		)
+		port map (
+			clk_in  => CLK,
+			clk_out => clk_div
+		);
 
 	usbPortVHD: UsbPort
 		port map (
@@ -115,7 +133,7 @@ begin
 	instance_key_reader: keyboard_reader
 		port map (
 			lines         => lines,
-			CLK            => CLK,
+			CLK            => clk_div,
 			Reset          => Reset,
 			ack_control    => Kack,
 
@@ -124,10 +142,34 @@ begin
 			Dval           => sig_kval
 		);
 
-	LCD_RS			 	<= sig_rs;
-	LCD_EN				<= sig_enable;
-	LCD_DATA				<= sig_d7_4;
-	
+	instance_slcd: SLCDC
+		port map (
+			LCDSel => CONTROL,
+			SCLK   => clk_div,
+			SDX    => CONTROL,
+			MClk   => CLK,
+			Reset  => Reset,
+
+			Wrl    => SMETHING,
+			Dout   => SOMETHING,
+		);
+
+	instance_src: SRC
+		port map (
+			ack_control => CONTROL,
+			CLK         => clk_div,
+			Reset       => Reset,
+
+			lines      => lines,
+			Kout        => SOMETHING,
+			Kval        => sig_kval
+		);
+
+
+	LCD_RS	 <= sig_rs;
+	LCD_EN	 <= sig_enable;
+	LCD_DATA <= sig_d7_4;
+
 	Kval	<= sig_kval;
 	Kout 	<= sig_k3_0;
 	columns <= sig_cols;

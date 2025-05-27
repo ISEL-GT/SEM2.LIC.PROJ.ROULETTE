@@ -52,14 +52,14 @@ begin
                 NextState <= State_Val;
 
             when State_Val =>
-                if (Kack = '1' and Kpress = '0') then
+                if (Kack = '1') then
                     NextState <= State_Ack_Waiting;
                 else
                     NextState <= State_Val;
                 end if;
 
             when State_Ack_Waiting =>
-                if Kack = '0' then
+                if (Kack = '0' and Kpress = '0') then
                     NextState <= State_Scan_Columns;
                 else
                     NextState <= State_Ack_Waiting;
