@@ -4,7 +4,7 @@ import isel.leic.utils.Time
 
 object KBD {
 
-    const val EMPTY_CHAR = 0x00.toChar()            // and empty char
+    const val EMPTY_CHAR = 0x00.toChar()    // and empty char
     private const val KVAL = 0x01                   // the value 0000 0001 of the UsbPort Input  -> correspond to the bit that shows if the key is valid or not
     private const val K = 0x1E                      // the value 0001 1110 of the UsbPort Input  -> correspond to the bits that shows the k value
     private const val KACK = 0x01                   // the value 0000 0001 of the UsbPort Output -> correspond to the bits that acknowledge the valid key

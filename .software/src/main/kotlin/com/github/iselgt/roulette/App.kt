@@ -2,10 +2,7 @@ package com.github.iselgt.roulette
 
 import com.github.iselgt.roulette.enums.Mode
 import com.github.iselgt.roulette.enums.Phase
-import com.github.iselgt.roulette.enums.readFromFile
-import com.github.iselgt.roulette.enums.writeToFile
 import isel.leic.utils.Time
-import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.index
 import kotlin.random.Random
 
 /**
@@ -15,6 +12,7 @@ var operatingMode = Mode.DEFAULT
 var gamesPlayed = 0
 var coinsInserted = 0
 var roll_history = ArrayList<Int>()
+const val ROULETTE_MAX = 36
 
 /**
  * The base path for the storage of the game data.
@@ -110,7 +108,7 @@ fun spinRoulette() {
     // TODO("ALLOW BETTING")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
-    val spinResult = Random.nextInt(0, 36)
+    val spinResult = Random.nextInt(0, ROULETTE_MAX)
 
     if (operatingMode != Mode.MAINTENANCE) {
         gamesPlayed++ // Increment the number of games played
