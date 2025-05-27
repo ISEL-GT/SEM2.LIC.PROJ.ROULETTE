@@ -3,32 +3,32 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -7.339
-TNS   : -126.344
+Slack : -7.480
+TNS   : -130.888
 
 Type  : Slow 1200mV 85C Model Setup 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -2.245
-TNS   : -85.744
+Slack : -2.806
+TNS   : -116.742
 
 Type  : Slow 1200mV 85C Model Setup 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.311
-TNS   : -1.697
+Slack : -1.595
+TNS   : -1.716
 
 Type  : Slow 1200mV 85C Model Hold 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.535
-TNS   : -3.101
+Slack : -0.617
+TNS   : -1.287
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.325
-TNS   : 0.000
+Slack : -0.133
+TNS   : -0.133
 
 Type  : Slow 1200mV 85C Model Hold 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : 0.326
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -77.560
+TNS   : -77.542
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
 Slack : -1.222
@@ -39,31 +39,31 @@ Slack : -1.222
 TNS   : -2.444
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.314
-TNS   : -19.154
+Slack : -0.473
+TNS   : -40.149
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -6.521
-TNS   : -108.531
+Slack : -6.653
+TNS   : -112.721
 
 Type  : Slow 1200mV 0C Model Setup 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -2.014
-TNS   : -77.273
+Slack : -2.556
+TNS   : -104.852
 
 Type  : Slow 1200mV 0C Model Setup 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.078
-TNS   : -1.169
+Slack : -1.344
+TNS   : -1.344
 
 Type  : Slow 1200mV 0C Model Hold 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.317
-TNS   : -1.715
+Slack : -0.408
+TNS   : -0.770
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.294
-TNS   : 0.000
+Slack : -0.105
+TNS   : -0.105
 
 Type  : Slow 1200mV 0C Model Hold 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : 0.295
+Slack : 0.294
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
@@ -79,28 +79,28 @@ Slack : -1.222
 TNS   : -2.444
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.145
-TNS   : -5.686
+Slack : -0.278
+TNS   : -17.690
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -3.485
-TNS   : -37.075
+Slack : -3.596
+TNS   : -40.543
 
 Type  : Fast 1200mV 0C Model Setup 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.987
-TNS   : -28.883
+Slack : -1.390
+TNS   : -48.991
 
 Type  : Fast 1200mV 0C Model Setup 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -0.435
-TNS   : -0.435
-
-Type  : Fast 1200mV 0C Model Hold 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.234
-TNS   : -2.274
+Slack : -0.579
+TNS   : -0.579
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.093
-TNS   : 0.000
+Slack : -0.287
+TNS   : -0.287
+
+Type  : Fast 1200mV 0C Model Hold 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.199
+TNS   : -0.533
 
 Type  : Fast 1200mV 0C Model Hold 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
 Slack : 0.149
@@ -108,7 +108,7 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -66.142
+TNS   : -65.856
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
 Slack : -1.000
@@ -119,7 +119,7 @@ Slack : -1.000
 TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.054
-TNS   : -0.988
+Slack : -0.198
+TNS   : -7.123
 
 ------------------------------------------------------------

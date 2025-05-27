@@ -77,7 +77,7 @@ architecture structural of roulette is
 		);
 	end component;
 
-	signal clk_div : std_logic;
+	signal clk_divisor_out : std_logic;
 
 	-- Sinais de entrada do USB Port
 	signal sig_k3_0	: std_logic_vector(3 downto 0);
@@ -135,7 +135,7 @@ begin
 			lines         => lines,
 			CLK            => clk_div,
 			Reset          => Reset,
-			ack_control    => '1',
+			ack_control    => Kack,
 
 			columns          => sig_cols,
 			output         => sig_k3_0,
@@ -144,24 +144,24 @@ begin
 
 	instance_slcd: SLCDC
 		port map (
-			LCDSel => '1',
+			LCDSel => CONTROL,
 			SCLK   => clk_div,
-			SDX    => '1',
+			SDX    => CONTROL,
 			MClk   => CLK,
 			Reset  => Reset,
 
-			Wrl    => open,
-			Dout   => open
+			Wrl    => SMETHING,
+			Dout   => SOMETHING,
 		);
 
 	instance_src: SRC
 		port map (
-			ack_control => '1',
+			ack_control => CONTROL,
 			CLK         => clk_div,
 			Reset       => Reset,
 
 			lines      => lines,
-			Kout        => open,
+			Kout        => SOMETHING,
 			Kval        => sig_kval
 		);
 

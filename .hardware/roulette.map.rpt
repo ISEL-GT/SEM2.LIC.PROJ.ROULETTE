@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 27 18:19:41 2025
+Tue May 27 18:51:49 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 18:19:41 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 18:51:49 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; keyreader_rtb                               ;
@@ -285,13 +285,13 @@ https://fpgasoftware.intel.com/eula.
 ;             |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg                                                                                                          ; register_2bits           ; work         ;
 ;                |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                                                                                 ; FFD                      ; work         ;
 ;                |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                                                                                 ; FFD                      ; work         ;
-;       |OutputBuffer:instance_output_buffer|             ; 6 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer                                                                                                                                            ; OutputBuffer             ; work         ;
-;          |OutputBufferControl:CTRL|                     ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                   ; OutputBufferControl      ; work         ;
+;       |OutputBuffer:instance_output_buffer|             ; 7 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer                                                                                                                                            ; OutputBuffer             ; work         ;
+;          |OutputBufferControl:CTRL|                     ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                   ; OutputBufferControl      ; work         ;
 ;          |OutputRegister:REG|                           ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG                                                                                                                         ; OutputRegister           ; work         ;
-;       |RingBuffer:instance_ring_buffer|                 ; 152 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer                                                                                                                                                ; RingBuffer               ; work         ;
+;       |RingBuffer:instance_ring_buffer|                 ; 151 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer                                                                                                                                                ; RingBuffer               ; work         ;
 ;          |RAM:ramm|                                     ; 120 (120)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm                                                                                                                                       ; RAM                      ; work         ;
 ;          |Ring_Buffer_Control:inst_ringBufferControl|   ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl                                                                                                     ; Ring_Buffer_Control      ; work         ;
-;          |mac:inst_mac|                                 ; 22 (2)              ; 13 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac                                                                                                                                   ; mac                      ; work         ;
+;          |mac:inst_mac|                                 ; 21 (1)              ; 13 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac                                                                                                                                   ; mac                      ; work         ;
 ;             |counter_4bits:get_counter|                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter                                                                                                         ; counter_4bits            ; work         ;
 ;                |register_4bits:instance_register_4bits| ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits                                                                  ; register_4bits           ; work         ;
 ;                   |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyreader_rtb|keyboard_reader:instance_keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD1                                                         ; FFD                      ; work         ;
@@ -724,12 +724,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 27 18:19:24 2025
+    Info: Processing started: Tue May 27 18:51:33 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file roulette.vhd
-    Info (12022): Found design unit 1: roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/roulette.vhd Line: 25
+    Info (12022): Found design unit 1: roulette-structural File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/roulette.vhd Line: 24
     Info (12023): Found entity 1: roulette File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/roulette.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
     Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 33
@@ -1006,9 +1006,9 @@ Info (21057): Implemented 257 device resources after synthesis - the final resou
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 241 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Tue May 27 18:19:41 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Tue May 27 18:51:49 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:22
 
 

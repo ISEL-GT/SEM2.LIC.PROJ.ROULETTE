@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue May 27 18:19:59 2025
+Fitter Status : Successful - Tue May 27 18:52:08 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
 Top-level Entity Name : keyreader_rtb
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 247 / 49,760 ( < 1 % )
+Total logic elements : 246 / 49,760 ( < 1 % )
     Total combinational functions : 240 / 49,760 ( < 1 % )
     Dedicated logic registers : 69 / 49,760 ( < 1 % )
 Total registers : 69
