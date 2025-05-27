@@ -32,6 +32,7 @@ architecture structural of OutputBuffer is
 		port (
 			clk   : in  std_logic;
 			Wreg  : in  std_logic;
+			reset : in  std_logic;
 			Din   : in  std_logic_vector(3 downto 0);
 			Dout  : out std_logic_vector(3 downto 0)
 		);
@@ -58,6 +59,7 @@ begin
 	REG: OutputRegister
 		port map (
 			clk   => clk,
+			reset => reset,
 			Wreg  => Wreg_internal,
 			Din   => Din,
 			Dout  => Dout
