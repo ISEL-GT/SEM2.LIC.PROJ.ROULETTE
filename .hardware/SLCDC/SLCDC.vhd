@@ -9,7 +9,6 @@ entity SLCDC is
         MClk   : in std_logic;
         Reset  : in std_logic;
         
-        
         Wrl    : out std_logic;
         Dout   : out std_logic_vector(4 downto 0)
     );
