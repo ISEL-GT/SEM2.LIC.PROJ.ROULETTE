@@ -41,14 +41,6 @@ architecture structural of Key_decode is
 		);
 	end component;
 	
-	component clkDiv is
-	generic(div: natural := 50000000);
-		port (
-			clk_in	: in std_logic;
-			clk_out	: out std_logic
-	   );
-	end component;
-	
 	
 	signal sig_kpress : std_logic;
 	signal sig_k3		: std_logic_vector(3 downto 0);
@@ -69,11 +61,6 @@ architecture structural of Key_decode is
 		KPress 	=> sig_kpress,
 		K 			=> sig_k3
 	);
-	
-	--156250
---	div: clkDiv generic map () port map(
-	
-	
 	
 	keycontrols: KeyControl port map (
 		reset 	=> Reset,

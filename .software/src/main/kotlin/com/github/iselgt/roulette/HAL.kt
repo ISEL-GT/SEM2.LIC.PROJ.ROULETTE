@@ -3,7 +3,7 @@ import isel.leic.UsbPort
 
 object HAL {
 
-    private var resetOutput = 0
+    var resetOutput = 0
 
     fun init() {
         resetOutput = 0
