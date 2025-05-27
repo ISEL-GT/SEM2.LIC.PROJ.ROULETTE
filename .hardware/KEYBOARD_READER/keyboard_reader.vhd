@@ -3,12 +3,12 @@ use ieee.std_logic_1164.all;
 
 entity keyboard_reader is
     port (
-        Liness         : in std_logic_vector(3 downto 0);
+        lines         : in std_logic_vector(3 downto 0);
         CLK            : in std_logic;
         Reset          : in std_logic;
         ack_control    : in std_logic;
 
-        Colss : out std_logic_vector(3 downto 0);
+        columns : out std_logic_vector(3 downto 0);
         output : out std_logic_vector(3 downto 0);
         Dval   : out std_logic
     );
@@ -20,11 +20,11 @@ architecture behavioral of keyboard_reader is
     component Key_decode is
         port (
             Kack    : in std_logic;
-            Liness  : in std_logic_vector(3 downto 0);
+            lines  : in std_logic_vector(3 downto 0);
             CLK     : in std_logic;
             Reset   : in std_logic;
 
-            Colss   : out std_logic_vector(3 downto 0);
+            columns   : out std_logic_vector(3 downto 0);
             Kout    : out std_logic_vector(3 downto 0);
             Kval    : out std_logic
         );
@@ -72,11 +72,11 @@ begin
     instance_key_decode: Key_decode
         port map (
             Kack   => ack_control,
-            Liness => Liness,
+            lines => lines,
             CLK    => CLK,
             Reset  => Reset,
 
-            Colss  => Colss,
+            columns  => columns,
             Kout   => output_key_decode,
             Kval   => Kval_key_decode
         );

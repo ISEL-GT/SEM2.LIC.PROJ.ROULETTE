@@ -1,105 +1,105 @@
-LIBRARY ieee; 
+LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-entity Key_decode is 
-	port (
+entity Key_decode is
+	port(
 		Kack 	: 	in std_logic;
-		Liness: 	in std_logic_vector(3 downto 0);
+		lines: 	in std_logic_vector(3 downto 0);
 		CLK	:	in std_logic;
 		Reset:	in std_logic;
-		
-		Colss : 	out std_logic_vector(3 downto 0);
+
+		columns : 	out std_logic_vector(3 downto 0);
 		Kout 	: 	out std_logic_vector(3 downto 0);
-		Kval 	: 	out std_logic 
+		Kval 	: 	out std_logic
 	);
 end Key_decode;
 
 architecture structural of Key_decode is
 
-	component key_scanner is 
+	component key_scanner is
 	    port (
 			KScan : in std_logic_vector(1 downto 0);
 			lines : in std_logic_vector(3 downto 0);
 			CLK 	: in std_logic;
 			Reset : in std_logic;
-		
+
 			columns : out std_logic_vector(3 downto 0);
-			KPress  : out std_logic; 
+			KPress  : out std_logic;
 			K 		  : out std_logic_vector(3 downto 0)
 		);
 	end component;
-	
+
 	component KeyControl is
 		port (
 		   reset		: in std_logic;
 			clk		: in std_logic;
 			Kpress	: in std_logic;
 			Kack		: in std_logic;
-			
+
 			KScan		: out std_logic_vector(1 downto 0);
 			Kval		: out std_logic
 		);
 	end component;
-	
-	component clkDiv is
-	generic(div: natural := 50000000);
+
+	component clock_divisor is
+		generic (div: natural := 50000);
 		port (
-			clk_in	: in std_logic;
-			clk_out	: out std_logic
-	   );
+			clk_in  : in  std_logic;
+			clk_out : out std_logic
+		);
 	end component;
-	
-	
+
 	signal sig_kpress : std_logic;
 	signal sig_k3		: std_logic_vector(3 downto 0);
 	signal sig_kscan 	: std_logic_vector(1 downto 0);
 	signal sig_cols 	: std_logic_vector(3 downto 0);
 	signal sig_kval 	: std_logic;
-	
-	
-	
-	begin
-	
+	signal clk_div    : std_logic;
+
+begin
+
+	clkdivider: clock_divisor
+		generic map (
+			div => 500000  -- ajusta conforme a frequência desejada
+		)
+		port map (
+			clk_in  => CLK,
+			clk_out => clk_div
+		);
+
 	keyscan: key_scanner port map (
 		KScan 	=> sig_kscan,
-		lines 	=> Liness,
-		CLK 		=>	CLK,
+		lines 	=> lines,
+		CLK     => clk_div,
 		Reset 	=>	Reset,
-		columns 	=> sig_cols,
+		columns => sig_cols,
 		KPress 	=> sig_kpress,
-		K 			=> sig_k3
+		K 		=> sig_k3
 	);
-	
-	--156250
---	div: clkDiv generic map () port map(
-	
-	
-	
+
 	keycontrols: KeyControl port map (
 		reset 	=> Reset,
-		clk 		=> CLK,
+		clk 	=> clk_div,
 		Kpress 	=> sig_kpress,
-		Kack 		=> Kack,
+		Kack 	=> Kack,
 		KScan 	=> sig_kscan,
-		Kval 		=> sig_kval
+		Kval 	=> sig_kval
 	);
-	
-	
+
 	Kval 	<= sig_kval;
 	Kout 	<= sig_k3;
-	Colss <= sig_cols;
-	
+	columns <= sig_cols;
+
 end structural;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+

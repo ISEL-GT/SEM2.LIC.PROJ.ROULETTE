@@ -9,10 +9,10 @@ architecture behavioral of Key_reader_tb is
     component Key_reader is
         port (
             Kack   : in std_logic;
-            Liness : in std_logic_vector(3 downto 0);
+            lines : in std_logic_vector(3 downto 0);
             CLK    : in std_logic;
             Reset  : in std_logic;
-            Colss  : out std_logic_vector(3 downto 0);
+            columns  : out std_logic_vector(3 downto 0);
             Kout   : out std_logic_vector(3 downto 0);
             Kval   : out std_logic
         );
@@ -34,10 +34,10 @@ begin
     UUT : Key_reader 
         port map (
             Kack   => Kack_tb, 
-            Liness => lines_tb, 
+            lines => lines_tb,
             CLK    => clk_tb, 
             Reset  => reset_tb, 
-            Colss  => columns_tb, 
+            columns  => columns_tb,
             Kout   => K_tb, 
             Kval   => Kval_tb
         );

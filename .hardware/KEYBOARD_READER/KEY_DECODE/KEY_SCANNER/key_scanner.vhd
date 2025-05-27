@@ -7,12 +7,12 @@ entity key_scanner is
     port (
 		KScan   : in std_logic_vector(1 downto 0);
 		lines   : in std_logic_vector(3 downto 0);
-		CLK 	  : in std_logic;
+		CLK 	: in std_logic;
 		Reset   : in std_logic;
 		
 		columns : out std_logic_vector(3 downto 0);
 		KPress  : out std_logic; 
-		K 		  : out std_logic_vector(3 downto 0)
+		K 		: out std_logic_vector(3 downto 0)
     );
 
 end key_scanner;
@@ -23,7 +23,7 @@ architecture structural of key_scanner is
 	component counter_2bits is
 		port (
 			CE 					  : in std_logic;
-			CLK 					  : in std_logic;
+			CLK 				  : in std_logic;
 			reset 				  : in std_logic;
 		  
 			count : out std_logic_vector(1 downto 0)
