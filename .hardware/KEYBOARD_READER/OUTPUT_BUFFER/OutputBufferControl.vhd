@@ -38,8 +38,12 @@ begin
 				end if;
 
 			when State_Load =>
+				if Load = '1' then 
+					NextState <= State_Load;
+				else
 				NextState <= State_WaitAck;
-
+				end if;
+				
 			when State_WaitAck =>
 				if ACK = '1' then
 					NextState <= State_Clear;
@@ -47,8 +51,12 @@ begin
 					NextState <= State_WaitAck;
 				end if;
 
-			when State_Clear =>
+			when State_Clear => 
+				if ACK = '0' THEN 
 				NextState <= State_Idle;
+								else
+				NextState <= State_clear;
+				end if;
 
 		end case;
 	end process;

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue May 27 18:51:49 2025
+Analysis & Synthesis Status : Successful - Tue May 27 20:01:01 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : keyreader_rtb
+Top-level Entity Name : keyboard_reader
 Family : MAX 10
-Total logic elements : 240
-    Total combinational functions : 239
+Total logic elements : 239
+    Total combinational functions : 238
     Dedicated logic registers : 69
 Total registers : 69
 Total pins : 16

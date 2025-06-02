@@ -3,7 +3,7 @@ package com.github.iselgt.roulette
 import isel.leic.utils.Time
 import java.util.concurrent.TimeUnit
 
-const val WAIT_TIME = 2L
+const val WAIT_TIME = 200L
 const val WAIT_KEY = 200L
 
 object TUI {
