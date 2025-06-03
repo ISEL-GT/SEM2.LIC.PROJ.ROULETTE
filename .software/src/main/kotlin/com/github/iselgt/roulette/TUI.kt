@@ -1,7 +1,6 @@
 package com.github.iselgt.roulette
 
 import isel.leic.utils.Time
-import java.util.concurrent.TimeUnit
 
 const val WAIT_TIME = 200L
 const val WAIT_KEY = 200L
@@ -14,7 +13,7 @@ object TUI {
     }
 
     /**
-     * This method is responsible for writing a message on the LCD display.
+     * This method is responsible for writing a message on the LCD.
      * It will clear the display and write the message, waiting for a certain amount of time
      * before returning.
      */

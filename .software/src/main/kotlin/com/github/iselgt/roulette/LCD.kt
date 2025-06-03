@@ -6,7 +6,7 @@ object LCD {
     private const val LINES = 2
     private const val COLS = 16
 
-    private const val SERIAL_INTERFACE = false
+    private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
     private const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
@@ -59,7 +59,7 @@ object LCD {
 
     // Writes a nibble command/data on LCD
     private fun writeNibble(rs: Boolean, data: Int) {
-        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data.shl(1))
+        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data)
         else writeNibbleParallel(rs, data.shl(1))
     }
 
@@ -87,7 +87,9 @@ object LCD {
 
     // Writes a nibble (4 bits) of command/data to the LCD in Serial Mode
     private fun writeNibbleSerial(rs: Boolean, data: Int) {
-        TODO()
+        val rsBit = if (rs){0x01} else 0x00
+        val dataResult = data.shl(1) or rsBit
+        SerialEmitter.send(SerialEmitter.Destination.LCD, dataResult, 5)
     }
 
     fun init() {
@@ -141,8 +143,13 @@ object LCD {
 
 fun main() {
     HAL.init()
+    SerialEmitter.init()
     LCD.init()
-    while (true) {
-        LCD.write(KBD.waitKey(500))
+    LCD.write("Hello World")
+    while (true){
+        LCD.write("0123456789ABCDEF")
+        LCD.cursor(1,0)
+        LCD.write("0123456789ABCDEF")
+        LCD.cursor(0,0)
     }
 }

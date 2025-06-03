@@ -7,7 +7,7 @@ entity SLCDC_test is
         RESET    : in std_logic;
         LCD_EN   : out std_logic;
         LCD_RS   : out std_logic;
-        LCD_DATA : out std_logic_vector(7 downto 4);
+        LCD_DATA : out std_logic_vector(7 downto 0);
         data     : out std_logic_vector(4 downto 0)
     );
 end SLCDC_test;
@@ -56,8 +56,8 @@ begin
             Dout   => signal_D
         );
 
-    LCD_DATA(7 downto 4) 	<= signal_D(4 downto 1);
-    LCD_RS              	<= signal_D(0);
-    data                	<= signal_D;
+    LCD_DATA(7 downto 4) <= signal_D(4 downto 1);
+    LCD_RS              <= signal_D(0);
+    data                <= signal_D;
 
 end structural;

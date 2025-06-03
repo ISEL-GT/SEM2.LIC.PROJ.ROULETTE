@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue May 27 20:01:01 2025
+Tue Jun 03 12:26:20 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,38 +13,36 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState
-  9. State Machine - |keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState
- 10. State Machine - |keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState
- 11. User-Specified and Inferred Latches
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState
+ 10. State Machine - |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState
+ 11. Registers Protected by Synthesis
  12. General Register Statistics
  13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: Key_decode:instance_key_decode|clock_divisor:clkdivider
- 16. Parameter Settings for User Entity Instance: RingBuffer:instance_ring_buffer|RAM:ramm
- 17. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5"
- 18. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4"
- 19. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3"
- 20. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2"
- 21. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1"
- 22. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits"
- 23. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits"
- 24. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter"
- 25. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4"
- 26. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3"
- 27. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2"
- 28. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1"
- 29. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits"
- 30. Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits"
- 31. Port Connectivity Checks: "RingBuffer:instance_ring_buffer"
- 32. Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg"
- 33. Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2"
- 34. Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1"
- 35. Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits"
- 36. Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: UsbPort:U1|sld_virtual_jtag:b2v_inst
+ 15. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD4"
+ 16. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD3"
+ 17. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD2"
+ 18. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD1"
+ 19. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits"
+ 20. Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|adder_4bits:instance_adder_4bits"
+ 21. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD3"
+ 22. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD2"
+ 23. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD1"
+ 24. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits"
+ 25. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits"
+ 26. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit"
+ 27. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop"
+ 28. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
+ 29. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
+ 30. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
+ 31. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
+ 32. Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
+ 33. Port Connectivity Checks: "UsbPort:U1"
+ 34. Virtual JTAG Settings
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -71,16 +69,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 20:01:01 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 03 12:26:20 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; keyboard_reader                             ;
+; Top-level Entity Name              ; SLCDC_test                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 239                                         ;
-;     Total combinational functions  ; 238                                         ;
-;     Dedicated logic registers      ; 69                                          ;
-; Total registers                    ; 69                                          ;
-; Total pins                         ; 16                                          ;
+; Total logic elements               ; 180                                         ;
+;     Total combinational functions  ; 151                                         ;
+;     Dedicated logic registers      ; 104                                         ;
+; Total registers                    ; 104                                         ;
+; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -96,8 +94,10 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; keyboard_reader    ; roulette           ;
+; Top-level entity name                                            ; SLCDC_test         ; roulette           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; State Machine Processing                                         ; Gray               ; Auto               ;
+; Safe State Machine                                               ; On                 ; Off                ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -107,8 +107,6 @@ https://fpgasoftware.intel.com/eula.
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
 ; Extract VHDL State Machines                                      ; On                 ; On                 ;
 ; Ignore Verilog initial constructs                                ; Off                ; Off                ;
@@ -189,255 +187,174 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
-+--------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                  ; Library ;
-+--------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
-; COMMON/clock_divisor.vhd                               ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/clock_divisor.vhd                               ;         ;
-; COMMON/ADDERS/adder_2bits.vhd                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd                          ;         ;
-; COMMON/ADDERS/adder_4bits.vhd                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_4bits.vhd                          ;         ;
-; COMMON/ADDERS/adder_5bits.vhd                          ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_5bits.vhd                          ;         ;
-; COMMON/ADDERS/full_adder.vhd                           ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd                           ;         ;
-; COMMON/ADDERS/half_adder.vhd                           ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/half_adder.vhd                           ;         ;
-; COMMON/CODEC/decoder_2x4.vhd                           ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/decoder_2x4.vhd                           ;         ;
-; COMMON/CODEC/PENC/partial_priority_encoder.vhd         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/partial_priority_encoder.vhd         ;         ;
-; COMMON/CODEC/PENC/priority_encoder.vhd                 ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd                 ;         ;
-; COMMON/COUNTERS/counter_2bits.vhd                      ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd                      ;         ;
-; COMMON/COUNTERS/counter_4bits.vhd                      ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd                      ;         ;
-; COMMON/COUNTERS/variable_counter_5bits.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd             ;         ;
-; COMMON/MUXs/MUX2x1_1bit.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/MUXs/MUX2x1_1bit.vhd                            ;         ;
-; COMMON/MUXs/MUX2x1_4bit.vhd                            ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/MUXs/MUX2x1_4bit.vhd                            ;         ;
-; COMMON/REGISTERS/FFD.vhd                               ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/FFD.vhd                               ;         ;
-; COMMON/REGISTERS/register_4bits.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_4bits.vhd                    ;         ;
-; COMMON/REGISTERS/register_5bits.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_5bits.vhd                    ;         ;
-; COMMON/REGISTERS/registry_2bits.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd                    ;         ;
-; KEYBOARD_READER/keyboard_reader.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd                    ;         ;
-; KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KeyControl.vhd              ;         ;
-; KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd              ;         ;
-; KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd ;         ;
-; KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd         ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd         ;         ;
-; KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd  ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd  ;         ;
-; KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd       ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd       ;         ;
-; KEYBOARD_READER/RING_BUFFER/mac.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd                    ;         ;
-; KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd                    ;         ;
-; KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd             ;         ;
-; KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ; yes             ; User VHDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd    ;         ;
-+--------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                              ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
+; SLCDC_test.vhd                                                     ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC_test.vhd                                                     ;             ;
+; UsbPort.vhd                                                        ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd                                                        ;             ;
+; COMMON/ADDERS/adder_3bits.vhd                                      ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_3bits.vhd                                      ;             ;
+; COMMON/ADDERS/adder_4bits.vhd                                      ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_4bits.vhd                                      ;             ;
+; COMMON/ADDERS/full_adder.vhd                                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd                                       ;             ;
+; COMMON/ADDERS/half_adder.vhd                                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/half_adder.vhd                                       ;             ;
+; COMMON/COUNTERS/counter_3bits.vhd                                  ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_3bits.vhd                                  ;             ;
+; COMMON/COUNTERS/counter_4bits.vhd                                  ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd                                  ;             ;
+; COMMON/REGISTERS/FFD.vhd                                           ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/FFD.vhd                                           ;             ;
+; COMMON/REGISTERS/register_3bits.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_3bits.vhd                                ;             ;
+; COMMON/REGISTERS/register_4bits.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/register_4bits.vhd                                ;             ;
+; SLCDC/SLCDC.vhd                                                    ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd                                                    ;             ;
+; SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd                      ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd                      ;             ;
+; SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd                            ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd                            ;             ;
+; SLCDC/serial_receiver/parity_checker.vhd                           ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/parity_checker.vhd                           ;             ;
+; SLCDC/serial_receiver/receiver_controler.vhd                       ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd                       ;             ;
+; SLCDC/serial_receiver/serial_receiver.vhd                          ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd                          ;             ;
+; SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd              ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd              ;             ;
+; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                                 ;             ;
+; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                           ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                      ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                  ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                        ; altera_sld  ;
+; db/ip/sld86bd74f0/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                   ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                     ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 239       ;
-;                                             ;           ;
-; Total combinational functions               ; 238       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 84        ;
-;     -- 3 input functions                    ; 90        ;
-;     -- <=2 input functions                  ; 64        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 207       ;
-;     -- arithmetic mode                      ; 31        ;
-;                                             ;           ;
-; Total registers                             ; 69        ;
-;     -- Dedicated logic registers            ; 69        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 16        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 61        ;
-; Total fan-out                               ; 939       ;
-; Average fan-out                             ; 2.77      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 180                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 151                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 62                       ;
+;     -- 3 input functions                    ; 42                       ;
+;     -- <=2 input functions                  ; 47                       ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 143                      ;
+;     -- arithmetic mode                      ; 8                        ;
+;                                             ;                          ;
+; Total registers                             ; 104                      ;
+;     -- Dedicated logic registers            ; 104                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 13                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 107                      ;
+; Total fan-out                               ; 826                      ;
+; Average fan-out                             ; 2.85                     ;
++---------------------------------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                   ;
-+------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                             ; Entity Name              ; Library Name ;
-+------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |keyboard_reader                                     ; 238 (16)            ; 69 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |keyboard_reader                                                                                                                                                                                ; keyboard_reader          ; work         ;
-;    |Key_decode:instance_key_decode|                  ; 64 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode                                                                                                                                                 ; Key_decode               ; work         ;
-;       |KeyControl:keycontrols|                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols                                                                                                                          ; KeyControl               ; work         ;
-;       |clock_divisor:clkdivider|                     ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|clock_divisor:clkdivider                                                                                                                        ; clock_divisor            ; work         ;
-;       |key_scanner:keyscan|                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan                                                                                                                             ; key_scanner              ; work         ;
-;          |counter_2bits:Contador|                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador                                                                                                      ; counter_2bits            ; work         ;
-;             |register_2bits:instance_registry_2bits| ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits                                                               ; register_2bits           ; work         ;
-;                |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1                                                      ; FFD                      ; work         ;
-;                |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2                                                      ; FFD                      ; work         ;
-;          |decoder_2x4:Decoder|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|decoder_2x4:Decoder                                                                                                         ; decoder_2x4              ; work         ;
-;          |priority_encoder:Penc|                     ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc                                                                                                       ; priority_encoder         ; work         ;
-;             |mux2x1_1bit:Mux2x1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1                                                                                    ; mux2x1_1bit              ; work         ;
-;             |partial_priority_encoder:PencPartial1|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1                                                                 ; partial_priority_encoder ; work         ;
-;          |register_2bits:Reg|                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg                                                                                                          ; register_2bits           ; work         ;
-;             |FFD:FFD1|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                                                                                 ; FFD                      ; work         ;
-;             |FFD:FFD2|                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                                                                                 ; FFD                      ; work         ;
-;    |OutputBuffer:instance_output_buffer|             ; 7 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|OutputBuffer:instance_output_buffer                                                                                                                                            ; OutputBuffer             ; work         ;
-;       |OutputBufferControl:CTRL|                     ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                   ; OutputBufferControl      ; work         ;
-;       |OutputRegister:REG|                           ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG                                                                                                                         ; OutputRegister           ; work         ;
-;    |RingBuffer:instance_ring_buffer|                 ; 151 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer                                                                                                                                                ; RingBuffer               ; work         ;
-;       |RAM:ramm|                                     ; 120 (120)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|RAM:ramm                                                                                                                                       ; RAM                      ; work         ;
-;       |Ring_Buffer_Control:inst_ringBufferControl|   ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl                                                                                                     ; Ring_Buffer_Control      ; work         ;
-;       |mac:inst_mac|                                 ; 21 (1)              ; 13 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac                                                                                                                                   ; mac                      ; work         ;
-;          |counter_4bits:get_counter|                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter                                                                                                         ; counter_4bits            ; work         ;
-;             |register_4bits:instance_register_4bits| ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits                                                                  ; register_4bits           ; work         ;
-;                |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD1                                                         ; FFD                      ; work         ;
-;                |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD2                                                         ; FFD                      ; work         ;
-;                |FFD:FFD3|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD3                                                         ; FFD                      ; work         ;
-;                |FFD:FFD4|                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits|FFD:FFD4                                                         ; FFD                      ; work         ;
-;          |counter_4bits:put_counter|                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter                                                                                                         ; counter_4bits            ; work         ;
-;             |register_4bits:instance_register_4bits| ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits                                                                  ; register_4bits           ; work         ;
-;                |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1                                                         ; FFD                      ; work         ;
-;                |FFD:FFD2|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2                                                         ; FFD                      ; work         ;
-;                |FFD:FFD3|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3                                                         ; FFD                      ; work         ;
-;                |FFD:FFD4|                            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4                                                         ; FFD                      ; work         ;
-;          |mux2x1_4bit:output_mux|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|mux2x1_4bit:output_mux                                                                                                            ; mux2x1_4bit              ; work         ;
-;          |variable_counter_5bits:elements_counter|   ; 6 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter                                                                                           ; variable_counter_5bits   ; work         ;
-;             |adder_5bits:instance_adder_5bits|       ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits                                                          ; adder_5bits              ; work         ;
-;                |full_adder:full_adder_1|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_1                                  ; full_adder               ; work         ;
-;                   |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_1|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
-;                |full_adder:full_adder_2|             ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_2                                  ; full_adder               ; work         ;
-;                   |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_2|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
-;                |full_adder:full_adder_3|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_3                                  ; full_adder               ; work         ;
-;                   |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_3|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
-;                |full_adder:full_adder_4|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_4                                  ; full_adder               ; work         ;
-;                   |half_adder:instance_half_adder_2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits|full_adder:full_adder_4|half_adder:instance_half_adder_2 ; half_adder               ; work         ;
-;             |register_5bits:instance_register_5bits| ; 1 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits                                                    ; register_5bits           ; work         ;
-;                |FFD:FFD1|                            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1                                           ; FFD                      ; work         ;
-;                |FFD:FFD2|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2                                           ; FFD                      ; work         ;
-;                |FFD:FFD3|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3                                           ; FFD                      ; work         ;
-;                |FFD:FFD4|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4                                           ; FFD                      ; work         ;
-;                |FFD:FFD5|                            ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |keyboard_reader|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5                                           ; FFD                      ; work         ;
-+------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                    ; Entity Name                       ; Library Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |SLCDC_test                                                                                                                             ; 151 (2)             ; 104 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 13   ; 0            ; 0          ; |SLCDC_test                                                                                                                                                                                                                                                                                                                                            ; SLCDC_test                        ; work         ;
+;    |SLCDC:U2|                                                                                                                           ; 25 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2                                                                                                                                                                                                                                                                                                                                   ; SLCDC                             ; work         ;
+;       |LCD_Dispatcher:DispatcherInst|                                                                                                   ; 10 (0)              ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst                                                                                                                                                                                                                                                                                                     ; LCD_Dispatcher                    ; work         ;
+;          |LCDDispatcherControl:control_unit|                                                                                            ; 5 (5)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit                                                                                                                                                                                                                                                                   ; LCDDispatcherControl              ; work         ;
+;          |counter_4bits:counter_unit|                                                                                                   ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit                                                                                                                                                                                                                                                                          ; counter_4bits                     ; work         ;
+;             |register_4bits:instance_register_4bits|                                                                                    ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits                                                                                                                                                                                                                                   ; register_4bits                    ; work         ;
+;                |FFD:FFD1|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD1                                                                                                                                                                                                                          ; FFD                               ; work         ;
+;                |FFD:FFD2|                                                                                                               ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD2                                                                                                                                                                                                                          ; FFD                               ; work         ;
+;                |FFD:FFD3|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD3                                                                                                                                                                                                                          ; FFD                               ; work         ;
+;                |FFD:FFD4|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD4                                                                                                                                                                                                                          ; FFD                               ; work         ;
+;       |serial_receiver:ReceiverInst|                                                                                                    ; 15 (0)              ; 12 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst                                                                                                                                                                                                                                                                                                      ; serial_receiver                   ; work         ;
+;          |ShiftRegisterSerialReceiver:ShiftReg|                                                                                         ; 0 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg                                                                                                                                                                                                                                                                 ; ShiftRegisterSerialReceiver       ; work         ;
+;             |FFD:FFD0|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FFD1|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FFD2|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FFD3|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;             |FFD:FFD4|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4                                                                                                                                                                                                                                                        ; FFD                               ; work         ;
+;          |counter_3bits:Counter3bit|                                                                                                    ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit                                                                                                                                                                                                                                                                            ; counter_3bits                     ; work         ;
+;             |register_3bits:instance_registry_3bits|                                                                                    ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits                                                                                                                                                                                                                                     ; register_3bits                    ; work         ;
+;                |FFD:FFD1|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD1                                                                                                                                                                                                                            ; FFD                               ; work         ;
+;                |FFD:FFD2|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD2                                                                                                                                                                                                                            ; FFD                               ; work         ;
+;                |FFD:FFD3|                                                                                                               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD3                                                                                                                                                                                                                            ; FFD                               ; work         ;
+;          |parity_checker:ParityCheck|                                                                                                   ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|parity_checker:ParityCheck                                                                                                                                                                                                                                                                           ; parity_checker                    ; work         ;
+;             |FFD:FlipFlop|                                                                                                              ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop                                                                                                                                                                                                                                                              ; FFD                               ; work         ;
+;          |receiver_controler:Controller|                                                                                                ; 11 (11)             ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller                                                                                                                                                                                                                                                                        ; receiver_controler                ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 124 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 123 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 123 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 123 (1)             ; 86 (5)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 122 (0)             ; 81 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 122 (84)            ; 81 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |keyboard_reader|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState                             ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; Name                       ; CurrentState.State_Clear ; CurrentState.State_WaitAck ; CurrentState.State_Load ; CurrentState.State_Idle ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; CurrentState.State_Idle    ; 0                        ; 0                          ; 0                       ; 0                       ;
-; CurrentState.State_Load    ; 0                        ; 0                          ; 1                       ; 1                       ;
-; CurrentState.State_WaitAck ; 0                        ; 1                          ; 0                       ; 1                       ;
-; CurrentState.State_Clear   ; 1                        ; 0                          ; 0                       ; 1                       ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                             ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                 ; IP Include File ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |SLCDC_test|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |keyboard_reader|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState                                                                                              ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
-; Name                        ; CurrentState.Data_Delivered ; CurrentState.Delivering ; CurrentState.Data_Written ; CurrentState.Data_Accepted ; CurrentState.Writing ; CurrentState.SelectAddress ; CurrentState.START ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
-; CurrentState.START          ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 0                  ;
-; CurrentState.SelectAddress  ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 1                          ; 1                  ;
-; CurrentState.Writing        ; 0                           ; 0                       ; 0                         ; 0                          ; 1                    ; 0                          ; 1                  ;
-; CurrentState.Data_Accepted  ; 0                           ; 0                       ; 0                         ; 1                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Data_Written   ; 0                           ; 0                       ; 1                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Delivering     ; 0                           ; 1                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Data_Delivered ; 1                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
+Encoding Type: Safe Gray Encoding
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState ;
++----------------------------+--------------------------+-----------------------------------------------------------+
+; Name                       ; currentState.state_bit_1 ; currentState.state_bit_0                                  ;
++----------------------------+--------------------------+-----------------------------------------------------------+
+; currentState.WaitingDval   ; 0                        ; 0                                                         ;
+; currentState.ReceivingDval ; 0                        ; 1                                                         ;
+; currentState.DoneReceived  ; 1                        ; 1                                                         ;
++----------------------------+--------------------------+-----------------------------------------------------------+
 
 
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |keyboard_reader|Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState                                                         ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
-; Name                            ; CurrentState.State_Ack_Waiting ; CurrentState.State_Val ; CurrentState.State_Scan_Lines ; CurrentState.State_Scan_Columns ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
-; CurrentState.State_Scan_Columns ; 0                              ; 0                      ; 0                             ; 0                               ;
-; CurrentState.State_Scan_Lines   ; 0                              ; 0                      ; 1                             ; 1                               ;
-; CurrentState.State_Val          ; 0                              ; 1                      ; 0                             ; 1                               ;
-; CurrentState.State_Ack_Waiting  ; 1                              ; 0                      ; 0                             ; 1                               ;
-+---------------------------------+--------------------------------+------------------------+-------------------------------+---------------------------------+
+Encoding Type: Safe Gray Encoding
++--------------------------------------------------------------------------------------------------------------+
+; State Machine - |SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState ;
++---------------------+--------------------------+--------------------------+----------------------------------+
+; Name                ; CurrentState.state_bit_2 ; CurrentState.state_bit_1 ; CurrentState.state_bit_0         ;
++---------------------+--------------------------+--------------------------+----------------------------------+
+; CurrentState.State1 ; 0                        ; 0                        ; 0                                ;
+; CurrentState.State2 ; 0                        ; 0                        ; 1                                ;
+; CurrentState.State3 ; 0                        ; 1                        ; 1                                ;
+; CurrentState.State4 ; 0                        ; 1                        ; 0                                ;
+; CurrentState.State5 ; 1                        ; 1                        ; 0                                ;
++---------------------+--------------------------+--------------------------+----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~40     ; rtl~0               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~36     ; rtl~1               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~32     ; rtl~2               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~44     ; rtl~3               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~20     ; rtl~4               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~24     ; rtl~5               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~16     ; rtl~6               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~28     ; rtl~7               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~8      ; rtl~8               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~4      ; rtl~9               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~0      ; rtl~10              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~12     ; rtl~11              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~52     ; rtl~12              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~56     ; rtl~13              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~48     ; rtl~14              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~60     ; rtl~15              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~25     ; rtl~5               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~41     ; rtl~0               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~9      ; rtl~8               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~57     ; rtl~13              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~37     ; rtl~1               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~21     ; rtl~4               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~5      ; rtl~9               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~53     ; rtl~12              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~17     ; rtl~6               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~33     ; rtl~2               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~1      ; rtl~10              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~49     ; rtl~14              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~45     ; rtl~3               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~29     ; rtl~7               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~13     ; rtl~11              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~61     ; rtl~15              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~26     ; rtl~5               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~22     ; rtl~4               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~18     ; rtl~6               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~30     ; rtl~7               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~38     ; rtl~1               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~42     ; rtl~0               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~34     ; rtl~2               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~46     ; rtl~3               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~6      ; rtl~9               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~10     ; rtl~8               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~2      ; rtl~10              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~14     ; rtl~11              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~58     ; rtl~13              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~54     ; rtl~12              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~50     ; rtl~14              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~62     ; rtl~15              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~23     ; rtl~4               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~39     ; rtl~1               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~7      ; rtl~9               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~55     ; rtl~12              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~43     ; rtl~0               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~27     ; rtl~5               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~11     ; rtl~8               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~59     ; rtl~13              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~35     ; rtl~2               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~19     ; rtl~6               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~3      ; rtl~10              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~51     ; rtl~14              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~31     ; rtl~7               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~47     ; rtl~3               ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~15     ; rtl~11              ; yes                    ;
-; RingBuffer:instance_ring_buffer|RAM:ramm|ram~63     ; rtl~15              ; yes                    ;
-; Number of user-specified and inferred latches = 64  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                     ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState.state_bit_0 ; no                                                               ; yes                                        ;
+; SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState.state_bit_1 ; no                                                               ; yes                                        ;
+; SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState.state_bit_0      ; no                                                               ; yes                                        ;
+; SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState.state_bit_1      ; no                                                               ; yes                                        ;
+; SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState.state_bit_2      ; no                                                               ; yes                                        ;
+; Total number of protected registers is 5                                                          ;                                                                  ;                                            ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -445,242 +362,230 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 69    ;
-; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 51    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 63    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------+
-; Inverted Register Statistics                                               ;
-+------------------------------------------------------------------+---------+
-; Inverted Register                                                ; Fan out ;
-+------------------------------------------------------------------+---------+
-; Key_decode:instance_key_decode|clock_divisor:clkdivider|count[0] ; 2       ;
-; Total number of inverted registers = 1                           ;         ;
-+------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |keyboard_reader|OutputBuffer:instance_output_buffer|OutputRegister:REG|Reg[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Key_decode:instance_key_decode|clock_divisor:clkdivider ;
-+----------------+--------+----------------------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                                       ;
-+----------------+--------+----------------------------------------------------------------------------+
-; div            ; 500000 ; Signed Integer                                                             ;
-+----------------+--------+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UsbPort:U1|sld_virtual_jtag:b2v_inst ;
++-------------------------+------------------+--------------------------------------+
+; Parameter Name          ; Value            ; Type                                 ;
++-------------------------+------------------+--------------------------------------+
+; sld_auto_instance_index ; YES              ; String                               ;
+; sld_instance_index      ; 0                ; Signed Integer                       ;
+; sld_ir_width            ; 8                ; Signed Integer                       ;
+; sld_sim_n_scan          ; 0                ; Signed Integer                       ;
+; sld_sim_action          ; UNUSED           ; String                               ;
+; sld_sim_total_length    ; 0                ; Signed Integer                       ;
+; lpm_type                ; sld_virtual_jtag ; String                               ;
+; lpm_hint                ; UNUSED           ; String                               ;
++-------------------------+------------------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: RingBuffer:instance_ring_buffer|RAM:ramm ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; address_width  ; 4     ; Signed Integer                                               ;
-; data_width     ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD4" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                             ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                        ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD3" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                             ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                        ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD2" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                             ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                        ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits|FFD:FFD1" ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                             ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                        ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD2" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD1" ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                           ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|adder_4bits:instance_adder_4bits" ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------+
+; b[3..1]   ; Input  ; Info     ; Stuck at GND                                                                                   ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                   ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                   ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits" ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                       ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at VCC                                                                                                                  ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD3" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits" ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                           ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                                      ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                               ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD2" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter" ;
-+---------+-------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                             ;
-+---------+-------+----------+-------------------------------------------------------------------------------------+
-; load[0] ; Input ; Info     ; Stuck at VCC                                                                        ;
-+---------+-------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD1" ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                           ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD4" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                             ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits" ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                  ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at VCC                                                                                             ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD3" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                             ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits" ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------+
+; b[2..1]   ; Input  ; Info     ; Stuck at GND                                                                                 ;
+; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                 ;
+; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                 ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD2" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                             ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit" ;
++------+-------+----------+-------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                           ;
++------+-------+----------+-------------------------------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                                                      ;
++------+-------+----------+-------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits|FFD:FFD1" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                             ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits" ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                         ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at VCC                                                                                                    ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4" ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                               ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                          ;
++------+-------+----------+---------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits" ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                             ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------------------+
-; b[3..1]   ; Input  ; Info     ; Stuck at GND                                                                                        ;
-; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                        ;
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                        ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                 ;
-+-----------+--------+----------+-----------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3" ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                               ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                          ;
++------+-------+----------+---------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RingBuffer:instance_ring_buffer"                                                    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; dac  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2" ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                               ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                          ;
++------+-------+----------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg" ;
-+------+-------+----------+-------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                 ;
-+------+-------+----------+-------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                            ;
-; en   ; Input ; Info     ; Stuck at VCC                                                            ;
-+------+-------+----------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1" ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                               ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                          ;
++------+-------+----------+---------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD2" ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                     ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                               ;
++------+-------+----------+---------------------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                          ;
++------+-------+----------+---------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                     ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at GND                                                                                                                ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UsbPort:U1"                                                                                     ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; outputport[4..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputport[6]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputport[0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                            ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
-; set  ; Input ; Info     ; Stuck at VCC                                                                                                       ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------+
-; b[1]      ; Input  ; Info     ; Stuck at GND                                                                                           ;
-; b[0]      ; Input  ; Info     ; Stuck at VCC                                                                                           ;
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                                           ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                    ;
-+-----------+--------+----------+--------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Virtual JTAG Settings                                                                                                                                  ;
++----------------+------------+------------------+----------+---------+-----------------+-------------------------+--------------------------------------+
+; Instance Index ; Auto Index ; Index Reassigned ; IR Width ; Address ; USER1 DR length ; VIR capture instruction ; Hierarchy Location                   ;
++----------------+------------+------------------+----------+---------+-----------------+-------------------------+--------------------------------------+
+; 0              ; YES        ; N/A              ; 8        ; 0x100   ; 9               ; 0x00B                   ; UsbPort:U1|sld_virtual_jtag:b2v_inst ;
++----------------+------------+------------------+----------+---------+-----------------+-------------------------+--------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -688,23 +593,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 69                          ;
-;     CLR               ; 27                          ;
+; boundary_port         ; 52                          ;
+; cycloneiii_ff         ; 18                          ;
+;     CLR               ; 13                          ;
 ;     ENA CLR           ; 5                           ;
-;     ENA SCLR          ; 4                           ;
-;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 241                         ;
-;     arith             ; 31                          ;
-;         2 data inputs ; 31                          ;
-;     normal            ; 210                         ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 90                          ;
-;         4 data inputs ; 84                          ;
+; cycloneiii_lcell_comb ; 26                          ;
+;     normal            ; 26                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.62                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -723,7 +625,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 27 20:00:55 2025
+    Info: Processing started: Tue Jun 03 12:26:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -970,39 +872,69 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/rou
 Info (12021): Found 2 design units, including 1 entities, in source file src/roulette_serial/serial_receiver_roulette.vhd
     Info (12022): Found design unit 1: serial_receiver_roulette-structural File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 18
     Info (12023): Found entity 1: serial_receiver_roulette File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SRC/roulette_serial/serial_receiver_roulette.vhd Line: 4
-Info (12127): Elaborating entity "keyboard_reader" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at keyboard_reader.vhd(66): object "dac_ring_buffer" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 66
-Info (12128): Elaborating entity "Key_decode" for hierarchy "Key_decode:instance_key_decode" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 72
-Info (12128): Elaborating entity "clock_divisor" for hierarchy "Key_decode:instance_key_decode|clock_divisor:clkdivider" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 61
-Info (12128): Elaborating entity "key_scanner" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 70
-Info (12128): Elaborating entity "counter_2bits" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 72
-Info (12128): Elaborating entity "adder_2bits" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 56
-Info (12128): Elaborating entity "full_adder" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_2bits.vhd Line: 47
-Info (12128): Elaborating entity "half_adder" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|adder_2bits:instance_adder_2bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
-Info (12128): Elaborating entity "register_2bits" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_2bits.vhd Line: 68
-Info (12128): Elaborating entity "FFD" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits|FFD:FFD1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/REGISTERS/registry_2bits.vhd Line: 37
-Info (12128): Elaborating entity "decoder_2x4" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|decoder_2x4:Decoder" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 79
-Info (12128): Elaborating entity "priority_encoder" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd Line: 89
-Info (12128): Elaborating entity "partial_priority_encoder" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|partial_priority_encoder:PencPartial1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 54
-Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "Key_decode:instance_key_decode|key_scanner:keyscan|priority_encoder:Penc|mux2x1_1bit:Mux2x1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/CODEC/PENC/priority_encoder.vhd Line: 81
-Info (12128): Elaborating entity "KeyControl" for hierarchy "Key_decode:instance_key_decode|KeyControl:keycontrols" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/Key_decode.vhd Line: 80
-Info (12128): Elaborating entity "RingBuffer" for hierarchy "RingBuffer:instance_ring_buffer" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 84
-Info (12128): Elaborating entity "Ring_Buffer_Control" for hierarchy "RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 81
-Info (12128): Elaborating entity "mac" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 99
-Info (12128): Elaborating entity "counter_4bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 66
-Info (12128): Elaborating entity "adder_4bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|adder_4bits:instance_adder_4bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 43
-Info (12128): Elaborating entity "register_4bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:put_counter|register_4bits:instance_register_4bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 53
-Info (12128): Elaborating entity "variable_counter_5bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 91
-Info (12128): Elaborating entity "adder_5bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|adder_5bits:instance_adder_5bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd Line: 44
-Info (12128): Elaborating entity "register_5bits" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/variable_counter_5bits.vhd Line: 54
-Info (12128): Elaborating entity "mux2x1_4bit" for hierarchy "RingBuffer:instance_ring_buffer|mac:inst_mac|mux2x1_4bit:output_mux" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd Line: 102
-Info (12128): Elaborating entity "RAM" for hierarchy "RingBuffer:instance_ring_buffer|RAM:ramm" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at RAM.vhd(27): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at RAM.vhd(30): signal "din" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 30
-Info (12128): Elaborating entity "OutputBuffer" for hierarchy "OutputBuffer:instance_output_buffer" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 96
-Info (12128): Elaborating entity "OutputBufferControl" for hierarchy "OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 47
-Info (12128): Elaborating entity "OutputRegister" for hierarchy "OutputBuffer:instance_output_buffer|OutputRegister:REG" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 59
-Info (286030): Timing-Driven Synthesis is running
+Info (12127): Elaborating entity "SLCDC_test" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at SLCDC_test.vhd(37): used implicit default value for signal "signalInput" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC_test.vhd Line: 37
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:U1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC_test.vhd Line: 42
+Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+Info (12133): Instantiated megafunction "UsbPort:U1|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
+    Info (12134): Parameter "lpm_type" = "sld_virtual_jtag"
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "sld_ir_width" = "8"
+    Info (12134): Parameter "sld_sim_action" = "UNUSED"
+    Info (12134): Parameter "sld_sim_n_scan" = "0"
+    Info (12134): Parameter "sld_sim_total_length" = "0"
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12131): Elaborated megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12131): Elaborated megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "SLCDC" for hierarchy "SLCDC:U2" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC_test.vhd Line: 48
+Info (12128): Elaborating entity "serial_receiver" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 54
+Info (12128): Elaborating entity "ShiftRegisterSerialReceiver" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 78
+Info (12128): Elaborating entity "FFD" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/ShiftRegisterSerialReceiver.vhd Line: 33
+Info (12128): Elaborating entity "parity_checker" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|parity_checker:ParityCheck" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 88
+Info (12128): Elaborating entity "counter_3bits" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 97
+Info (12128): Elaborating entity "adder_3bits" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_3bits.vhd Line: 56
+Info (12128): Elaborating entity "full_adder" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:full_adder_0" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/adder_3bits.vhd Line: 40
+Info (12128): Elaborating entity "half_adder" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits|full_adder:full_adder_0|half_adder:instance_half_adder_1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/ADDERS/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "register_3bits" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_3bits.vhd Line: 68
+Info (12128): Elaborating entity "receiver_controler" for hierarchy "SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/serial_receiver.vhd Line: 115
+Warning (10036): Verilog HDL or VHDL warning at receiver_controler.vhd(26): object "state_number" assigned a value but never read File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 26
+Info (12128): Elaborating entity "LCD_Dispatcher" for hierarchy "SLCDC:U2|LCD_Dispatcher:DispatcherInst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/SLCDC.vhd Line: 67
+Info (12128): Elaborating entity "LCDDispatcherControl" for hierarchy "SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 51
+Info (12128): Elaborating entity "counter_4bits" for hierarchy "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd Line: 63
+Info (12128): Elaborating entity "adder_4bits" for hierarchy "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|adder_4bits:instance_adder_4bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 43
+Info (12128): Elaborating entity "register_4bits" for hierarchy "SLCDC:U2|LCD_Dispatcher:DispatcherInst|counter_4bits:counter_unit|register_4bits:instance_register_4bits" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/COMMON/COUNTERS/counter_4bits.vhd Line: 53
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2025.06.03.12:26:10 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/db/ip/sld86bd74f0/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (284007): State machine "|SLCDC_test|SLCDC:U2|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit|currentState" will be implemented as a safe state machine. File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd Line: 21
+Info (284007): State machine "|SLCDC_test|SLCDC:U2|serial_receiver:ReceiverInst|receiver_controler:Controller|CurrentState" will be implemented as a safe state machine. File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/SLCDC/serial_receiver/receiver_controler.vhd Line: 25
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Warning (20013): Ignored 24 assignments for entity "testeSerial" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity testeSerial -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity testeSerial -section_id Top was ignored
@@ -1030,14 +962,14 @@ Warning (20013): Ignored 24 assignments for entity "testeSerial" -- entity does 
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity testeSerial -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 240 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4928 megabytes
-    Info: Processing ended: Tue May 27 20:01:01 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:13
+Info (21057): Implemented 202 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 184 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Tue Jun 03 12:26:20 2025
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:39
 
 

@@ -2,124 +2,64 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -7.036
-TNS   : -122.368
-
-Type  : Slow 1200mV 85C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -2.314
-TNS   : -95.395
-
-Type  : Slow 1200mV 85C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.905
-TNS   : -1.951
-
-Type  : Slow 1200mV 85C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.332
-TNS   : -0.836
-
-Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.324
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 46.175
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : 0.324
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.330
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -77.542
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.222
-TNS   : -7.332
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
-Slack : -1.222
-TNS   : -2.444
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.114
-TNS   : -3.765
-
-Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -6.306
-TNS   : -104.935
-
-Type  : Slow 1200mV 0C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -2.093
-TNS   : -86.164
-
-Type  : Slow 1200mV 0C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.609
-TNS   : -1.609
-
-Type  : Slow 1200mV 0C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.231
-TNS   : -0.267
-
-Type  : Slow 1200mV 0C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : 0.293
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 96.297
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.294
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.879
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -77.542
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.222
-TNS   : -7.332
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
-Slack : -1.222
-TNS   : -2.444
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : 0.047
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.569
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -3.287
-TNS   : -34.107
-
-Type  : Fast 1200mV 0C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.980
-TNS   : -34.864
-
-Type  : Fast 1200mV 0C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -0.812
-TNS   : -0.812
-
-Type  : Fast 1200mV 0C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : -0.209
-TNS   : -0.488
-
-Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.053
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 46.527
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : 0.148
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.299
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -65.477
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 96.635
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
-Slack : -1.000
-TNS   : -6.000
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.806
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
-Slack : -1.000
-TNS   : -2.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.598
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
-Slack : 0.031
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 48.380
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 98.039
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.418
 TNS   : 0.000
 
 ------------------------------------------------------------

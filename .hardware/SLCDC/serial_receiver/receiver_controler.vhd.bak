@@ -85,7 +85,7 @@ begin
     end process;
 
     -- Output Logic
-    wr    <= '1' when CurrentState = State2 else '0';
+    wr    <= '1' when (CurrentState = State2 and (not_enRx = '0' and dFlag = '0')) else '0';
     init  <= '1' when  CurrentState = State1 else '0';
     DXval <= '1' when  CurrentState = State4 else '0';
 	 

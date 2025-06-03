@@ -10,7 +10,7 @@ object SerialEmitter {
     private const val LCD_MASK = 0x20           // Enables LCD communication -> O5
     private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
     private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07
-    private const val DELAYTIME = 5L
+    private const val DELAYTIME = 0L
 
     /**
      * Initializes the serial interface:
@@ -18,7 +18,6 @@ object SerialEmitter {
      * - Clears the clock line
      */
     fun init() {
-        HAL.init()
         HAL.setBits(LCD_MASK)
         HAL.setBits(ROULETTE_MASK)
         HAL.clrBits(SCLK_MASK)
@@ -78,5 +77,5 @@ object SerialEmitter {
 }
 
 fun main() {
-    SerialEmitter.send(SerialEmitter.Destination.ROULETTE, 0x55, 8)
+    SerialEmitter.send(SerialEmitter.Destination.LCD, 0x03, 8)
 }
