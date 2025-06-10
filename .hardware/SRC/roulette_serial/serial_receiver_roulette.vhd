@@ -98,7 +98,7 @@ begin
 		port map (
 			CE     => '1',
 			CLK    => SCLK,
-			reset  => Reset,
+			reset  => init_sig,
 			count  => counter_val
 		);
 

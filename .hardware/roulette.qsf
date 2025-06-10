@@ -39,12 +39,13 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY SLCDC_test
+set_global_assignment -name TOP_LEVEL_ENTITY roulette
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:46:56  MAY 27, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VHDL_FILE roulette.vhd
 set_global_assignment -name VHDL_FILE SLCDC_test.vhd
+set_global_assignment -name VHDL_FILE SRC_test.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
 set_global_assignment -name VHDL_FILE .testbench/realtime/keyscan/keyscan_rtb.vhd
 set_global_assignment -name VHDL_FILE .testbench/realtime/key_decode/key_decode_rtb.vhd
@@ -109,6 +110,10 @@ set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/mac.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/RAM.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd
 set_global_assignment -name VHDL_FILE KEYBOARD_READER/RING_BUFFER/Ring_Buffer_Control.vhd
+set_global_assignment -name VHDL_FILE RouletteDisplay/dec2hex.vhd
+set_global_assignment -name VHDL_FILE RouletteDisplay/dec_3_8.vhd
+set_global_assignment -name VHDL_FILE RouletteDisplay/reg_5bit.vhd
+set_global_assignment -name VHDL_FILE RouletteDisplay/rouletteDisplay.vhd
 set_global_assignment -name VHDL_FILE SLCDC/SLCDC.vhd
 set_global_assignment -name VHDL_FILE SLCDC/LCD_dispatcher/LCDDispatcherControl.vhd
 set_global_assignment -name VHDL_FILE SLCDC/LCD_dispatcher/LCD_Dispatcher.vhd
@@ -125,35 +130,6 @@ set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_serial_test.v
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/roulette_shiftRegister.vhd
 set_global_assignment -name VHDL_FILE SRC/roulette_serial/serial_receiver_roulette.vhd
 
-set_location_assignment PIN_P11 -to MCLK
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity testeSerial -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity testeSerial -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity testeSerial -section_id Top
-set_location_assignment PIN_A8 -to data[0]
-set_location_assignment PIN_A9 -to data[1]
-set_location_assignment PIN_A10 -to data[2]
-set_location_assignment PIN_B10 -to data[3]
-set_location_assignment PIN_D13 -to data[4]
-set_location_assignment PIN_C11 -to RESET
-set_location_assignment PIN_W8 -to LCD_RS
-set_location_assignment PIN_V5 -to LCD_EN
-set_location_assignment PIN_AA15 -to LCD_DATA[0]
-set_location_assignment PIN_W13 -to LCD_DATA[1]
-set_location_assignment PIN_AB13 -to LCD_DATA[2]
-set_location_assignment PIN_Y11 -to LCD_DATA[3]
-set_location_assignment PIN_W11 -to LCD_DATA[4]
-set_location_assignment PIN_AA10 -to LCD_DATA[5]
-set_location_assignment PIN_Y8 -to LCD_DATA[6]
-set_location_assignment PIN_Y7 -to LCD_DATA[7]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity testeSerial -section_id Top
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name STATE_MACHINE_PROCESSING GRAY
-set_global_assignment -name SAFE_STATE_MACHINE ON
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

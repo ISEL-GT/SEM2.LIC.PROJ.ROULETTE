@@ -1,177 +1,197 @@
-LIBRARY ieee; 
-USE ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
-
--- This is the top-level entity responsible for running the actual program
 entity roulette is
-
-	port (
-		lines: 	in std_logic_vector(3 downto 0);
-		CLK   :	in std_logic;
-		Reset :	in std_logic;		
-
-		LCD_RS	: 	out std_logic;
-		LCD_EN	: 	out std_logic;			
-		LCD_DATA	: 	out std_logic_vector(7 downto 4);
-		
-		columns 	: 	out std_logic_vector(3 downto 0);
-		Kout  	: 	out std_logic_vector(3 downto 0);
-		Kval    : out std_logic
-	);
+    Port (
+        clk       : in  std_logic;
+        reset     : in  std_logic;
+        Coin      : in  std_logic;
+        Coinid    : in  std_logic;
+        Lines     : in  std_logic_vector(3 downto 0);
+        
+        KEY_COL   : out std_logic_vector(3 downto 0);
+        LCD_DATA  : out std_logic_vector(7 downto 4);
+        LCD_RS    : out std_logic;
+        LCD_EN    : out std_logic;
+        HEX0, HEX1,
+        HEX2, HEX3,
+        HEX4, HEX5 : out std_logic_vector(7 downto 0)
+    );
 end roulette;
 
--- This architecture connects the UsbPORT, key reader, coin acceptor, SLCDC and SRC components
-architecture structural of roulette is
+architecture Structural of roulette is
 
-	
-	component UsbPort is 
-	    port (
-			inputPort	:  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
-			outputPort 	:  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
-		);
-	end component;
+    -- Declaração dos componentes
 
-	component keyboard_reader is
-		port (
-			lines         : in std_logic_vector(3 downto 0);
-			CLK            : in std_logic;
-			Reset          : in std_logic;
-			ack_control    : in std_logic;
+    component keyboard_reader
+        Port (
+            lines       : in  std_logic_vector(3 downto 0);
+            CLK         : in  std_logic;
+            Reset       : in  std_logic;
+            ack_control : in  std_logic;
+				
+            columns     : out std_logic_vector(3 downto 0);
+            output      : out std_logic_vector(3 downto 0);
+            Dval        : out std_logic
+        );
+    end component;
 
-			columns : out std_logic_vector(3 downto 0);
-			output : out std_logic_vector(3 downto 0);
-			Dval   : out std_logic
-		);
-	end component;
+    component UsbPort
+        Port (
+            inputPort  : in  std_logic_vector(7 downto 0);
+            outputPort : out std_logic_vector(7 downto 0)
+        );
+    end component;
 
-	component SLCDC is
-		port (
-			LCDSel : in std_logic;
-			SCLK   : in std_logic;
-			SDX    : in std_logic;
-			MClk   : in std_logic;
-			Reset  : in std_logic;
+    component SRC
+        Port (
+            RouSel : in  std_logic;
+            SCLK   : in  std_logic;
+            SDX    : in  std_logic;
+            MClk   : in  std_logic;
+            Reset  : in  std_logic;
+								
+            Wrl    : out std_logic;
+            Dout   : out std_logic_vector(7 downto 0)
+        );
+    end component;
 
-			Wrl    : out std_logic;
-			Dout   : out std_logic_vector(4 downto 0)
-		);
-	end component;
+    component SLCDC
+        Port (
+            LCDSel : in  std_logic;
+            SCLK   : in  std_logic;
+            SDX    : in  std_logic;
+            MClk   : in  std_logic;
+            Reset  : in  std_logic;
+				
+            Wrl    : out std_logic;
+            Dout   : out std_logic_vector(4 downto 0)
+        );
+    end component;
 
-	component SRC is
-		port (
-			ack_control : in std_logic;
-			CLK         : in std_logic;
-			Reset       : in std_logic;
+    component rouletteDisplay
+        Port (
+            set	: in std_logic;
+				cmd	: in std_logic_vector(2 downto 0);
+				data	: in std_logic_vector(4 downto 0);
+				
+				HEX0	: out std_logic_vector(7 downto 0);
+				HEX1	: out std_logic_vector(7 downto 0);
+				HEX2	: out std_logic_vector(7 downto 0);
+				HEX3	: out std_logic_vector(7 downto 0);
+				HEX4	: out std_logic_vector(7 downto 0);
+				HEX5	: out std_logic_vector(7 downto 0)
+        );
+    end component;
+     
+    -- Sinais internos
+    signal sig_Q         : std_logic_vector(3 downto 0);
+    signal sig_Dval      : std_logic;
+    signal ACK       	 : std_logic;
 
-			lines      : in std_logic_vector(3 downto 0);
-			Kout        : out std_logic_vector(3 downto 0);
-			Kval        : out std_logic
-		);
-	end component;
+    signal sig_inputPort  : std_logic_vector(7 downto 0);
+    signal sig_outputPort : std_logic_vector(7 downto 0);
 
-	component clock_divisor is
-		generic (div: natural := 50000);
-		port (
-			clk_in  : in  std_logic;
-			clk_out : out std_logic
-		);
-	end component;
+    signal Dout_SRC  	 : std_logic_vector(7 downto 0);
+    signal sig_WRD       : std_logic;
 
-	signal clk_div : std_logic;
+    signal Dout_LCD  	 : std_logic_vector(4 downto 0);
+    signal sig_WRL       : std_logic;
 
-	-- Sinais de entrada do USB Port
-	signal sig_k3_0	: std_logic_vector(3 downto 0);
-	signal sig_kscan 	: std_logic_vector(1 downto 0);
-	signal sig_cols 	: std_logic_vector(3 downto 0);
-	signal sig_kval 	: std_logic;
-	signal sig_d7_4	: std_logic_vector(3 downto 0);
-	signal sig_enable	: std_logic;
-	signal sig_rs		: std_logic;
-	signal sig_kack_outusbport : std_logic;
+    signal sig_cmd       : std_logic_vector(2 downto 0);
+    signal sig_data      : std_logic_vector(4 downto 0);
+    signal sig_set       : std_logic;
 
-	-- Valores não atribuidos correspondentes aos bits 5-7 do input do UsbPort
-	-- Este sinal foi criado para não haver erros associados ao Usbport ao abrir o modelsim
-	signal inputSignal : std_logic := '0';
-
+	 signal internal_SDX    : std_logic;
+    signal internal_LCDSel : std_logic;
+    signal internal_RouSel : std_logic;
+    signal internal_SCLK   : std_logic;
 begin
 
-	divider: clock_divisor
-		generic map (
-			div => 50000  -- Divisor para gerar o clock de 1 MHz
-		)
-		port map (
-			clk_in  => CLK,
-			clk_out => clk_div
-		);
+    -- Instância do teclado
+    U5: keyboard_reader
+        port map (
+            lines       => Lines,
+            CLK         => clk,
+            Reset       => reset,
+            ack_control => ACK,
+            columns     => KEY_COL,
+            output      => sig_Q,
+            Dval        => sig_Dval
+        );
 
-	usbPortVHD: UsbPort
-		port map (
-			inputPort(0) 	=> sig_kval,
-			inputPort(1)	=> sig_k3_0(0),
-			inputPort(2)	=> sig_k3_0(1),
-			inputPort(3)	=> sig_k3_0(2),
-			inputPort(4)	=> sig_k3_0(3),
+    -- Instância da USBPort
+    U1: UsbPort
+        port map (
+            inputPort  => sig_inputPort,
+            outputPort => sig_outputPort
+        );
 
-			-- Valores não atribuidos
-			inputPort(5)	=> inputSignal,
-			inputPort(6)	=> inputSignal,
-			inputPort(7)	=> inputSignal,
+    -- Instância do receptor serial
+    U2: SRC
+        port map (
+            RouSel => internal_RouSel,
+            SCLK   => internal_SCLK,
+            SDX    => internal_SDX,
+            MClk   => clk,
+            Reset  => reset,
+            Wrl    => sig_WRD,
+            Dout   => Dout_SRC
+        );
 
-			outputPort(0) 	=> sig_kack_outusbport,
-			outputPort(1) 	=> sig_d7_4(0),
-			outputPort(2) 	=> sig_d7_4(1),
-			outputPort(3) 	=> sig_d7_4(2),
-			outputPort(4) 	=> sig_d7_4(3),
-
-			-- Valores não atribuidos
-			outputPort(5)  => inputSignal,
-
-			outputPort(6) 	=> sig_rs,
-			outputPort(7) 	=> sig_enable
-	);
-
-	instance_key_reader: keyboard_reader
-		port map (
-			lines         => lines,
-			CLK            => clk_div,
-			Reset          => Reset,
-			ack_control    => '1',
-
-			columns          => sig_cols,
-			output         => sig_k3_0,
-			Dval           => sig_kval
-		);
-
-	instance_slcd: SLCDC
-		port map (
-			LCDSel => '1',
-			SCLK   => clk_div,
-			SDX    => '1',
-			MClk   => CLK,
-			Reset  => Reset,
-
-			Wrl    => open,
-			Dout   => open
-		);
-
-	instance_src: SRC
-		port map (
-			ack_control => '1',
-			CLK         => clk_div,
-			Reset       => Reset,
-
-			lines      => lines,
-			Kout        => open,
-			Kval        => sig_kval
-		);
+    -- Instância do SLCDC
+    U4: SLCDC
+        port map (
+            LCDSel => internal_LCDSel,
+            SCLK   => internal_SCLK,
+            SDX    => internal_SDX,
+            MClk   => clk,
+            Reset  => reset,
+            Wrl    => sig_WRL,
+            Dout   => Dout_LCD
+        );
+		  
+	 sig_cmd(0) <= Dout_SRC(0);
+	 sig_cmd(1) <= Dout_SRC(1);
+	 sig_cmd(2) <= Dout_SRC(2);
+	 
+	 sig_data(0)  <= Dout_SRC(3);
+	 sig_data(1)  <= Dout_SRC(4);
+	 sig_data(2)  <= Dout_SRC(5);
+	 sig_data(3)  <= Dout_SRC(6);
+	 sig_data(4)  <= Dout_SRC(7);
+	 sig_set   	  <= sig_WRD;
 
 
-	LCD_RS	 <= sig_rs;
-	LCD_EN	 <= sig_enable;
-	LCD_DATA <= sig_d7_4;
+    -- Instância do display da roleta
+    U3: rouletteDisplay
+        port map (
+            cmd   => sig_cmd,
+            data  => sig_data,
+            set   => sig_set,
+				
+            HEX0  => HEX0,
+            HEX1  => HEX1,
+            HEX2  => HEX2,
+            HEX3  => HEX3,
+            HEX4  => HEX4,
+            HEX5  => HEX5
+        );
 
-	Kval	<= sig_kval;
-	Kout 	<= sig_k3_0;
-	columns <= sig_cols;
+    -- Atribuições internas
+    sig_inputPort(0)           <= sig_Dval;
+    sig_inputPort(4 downto 1)  <= sig_Q;
+	 sig_inputPort(5)				 <= Coinid;
+	 sig_inputPort(6)				 <= Coin;
+	 
+	 internal_SDX    <= sig_outputPort(1);
+    ACK             <= sig_outputPort(4);
+    internal_LCDSel <= sig_outputPort(5);
+    internal_RouSel <= sig_outputPort(6);
+    internal_SCLK   <= sig_outputPort(7);
+	 
+    LCD_DATA <= Dout_LCD(4 downto 1);
+	 LCD_RS   <= Dout_LCD(0); 
+    LCD_EN   <= sig_WRL;
 
-end structural;
+end Structural;

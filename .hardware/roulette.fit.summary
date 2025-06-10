@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Jun 03 12:26:28 2025
+Fitter Status : Successful - Tue Jun 10 17:12:16 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : SLCDC_test
+Top-level Entity Name : roulette
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 176 / 49,760 ( < 1 % )
-    Total combinational functions : 152 / 49,760 ( < 1 % )
-    Dedicated logic registers : 104 / 49,760 ( < 1 % )
-Total registers : 104
-Total pins : 13 / 360 ( 4 % )
+Total logic elements : 618 / 49,760 ( 1 % )
+    Total combinational functions : 583 / 49,760 ( 1 % )
+    Dedicated logic registers : 262 / 49,760 ( < 1 % )
+Total registers : 262
+Total pins : 66 / 360 ( 18 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

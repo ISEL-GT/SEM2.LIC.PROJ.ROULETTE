@@ -58,7 +58,7 @@ object RouletteDisplay {
         val numDigits = value.length
 
         for (i in 0 until numDigits) {
-            val digit = value[i].toString().toInt() // Get numeric digit from char
+            val digit = value[i].toString().toInt()  // Get numeric digit from char
             val position = numDigits - 1 - i         // Position: 0 (rightmost), 1, 2
 
             // Data encoding: digit in bits [3-7], position in bits [0-2]
