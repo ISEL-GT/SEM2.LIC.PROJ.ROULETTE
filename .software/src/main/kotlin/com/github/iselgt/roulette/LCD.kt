@@ -1,10 +1,9 @@
 package com.github.iselgt.roulette
 
 import isel.leic.utils.Time
+import javax.management.Query.or
 
 object LCD {
-    private const val LINES = 2
-    private const val COLS = 16
 
     private const val SERIAL_INTERFACE = false
 
@@ -19,11 +18,8 @@ object LCD {
 
     // LCD Command Constants
     private const val LCD_CLEAR = 0x01                  // Clear display & reset cursor to (0,0)
-    const val LCD_HOME = 0x02                           // Return cursor to (0,0) without clearing
     private const val LCD_ENTRY_MODE = 0x06             // Cursor moves right, no display shift
     private const val LCD_DISPLAY_OFF = 0x08            // Turn off display
-    const val LCD_DISPLAY_ON = 0x0C                     // Display ON, Cursor OFF, Blink OFF
-    const val LCD_DISPLAY_ON_CURSOR = 0x0E              // Display ON, Cursor ON, No Blink
     private const val LCD_DISPLAY_ON_BLINK = 0x0F       // Display ON, Cursor ON, Blink ON
     private const val LCD_FUNCTION_SET = 0x28           // 4-bit mode, 2 lines, 5x8 font
 
@@ -49,17 +45,17 @@ object LCD {
 
         // The 4 most significant bits
         val topdata = data shr 4
+
         // The 4 less significant bits
         val botdata = data and 0x0F
 
         writeNibble(rs, topdata)  // High
         writeNibble(rs, botdata)  // Low
-
     }
 
     // Writes a nibble command/data on LCD
     private fun writeNibble(rs: Boolean, data: Int) {
-        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data.shl(1))
+        if (SERIAL_INTERFACE) writeNibbleSerial(rs, data)
         else writeNibbleParallel(rs, data.shl(1))
     }
 
@@ -87,12 +83,16 @@ object LCD {
 
     // Writes a nibble (4 bits) of command/data to the LCD in Serial Mode
     private fun writeNibbleSerial(rs: Boolean, data: Int) {
-        TODO()
+        val rsBit = if (rs) 0x01 else 0x00
+        val dataResult = (data shl 1) or rsBit // Shift data to align with the serial protocol
+        SerialEmitter.send(SerialEmitter.Destination.LCD, dataResult, 5)
     }
 
     fun init() {
         // Initiate LCD with 8-bit mode before switching to 4-bit mode
         Time.sleep(WAIT_FIRST_TIME)                 // Longer wait time for power-on
+
+        println("Initializing LCD")
         writeNibble(false, SET8BITS)
         Time.sleep(WAIT_TIME)
         writeNibble(false, SET8BITS)
@@ -109,12 +109,14 @@ object LCD {
         Time.sleep(WAIT_TIME)                       // Extra delay needed for clearing
         writeCMD(LCD_ENTRY_MODE)                    // Cursor moves right
         writeCMD(LCD_DISPLAY_ON_BLINK)              // Display ON, Cursor ON, Blink ON
-        Time.sleep(WAIT_TIME)                       // Short delay for stability
+        Time.sleep(WAIT_TIME)
+        println("Finished initialisation")// Short delay for stability
     }
 
 
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar()) writeDATA(c.code)   //.code => .toInt()
+        if (c != NONE_VALUE.toChar())
+            writeDATA(c.code)   //.code => .toInt()
     }
 
     fun write(text: String) {
@@ -142,6 +144,8 @@ object LCD {
 fun main() {
     HAL.init()
     LCD.init()
+    LCD.clear()
+
     while (true) {
         LCD.write(KBD.waitKey(500))
     }

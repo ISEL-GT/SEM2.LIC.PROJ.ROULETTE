@@ -2,10 +2,7 @@ package com.github.iselgt.roulette
 
 import com.github.iselgt.roulette.enums.Mode
 import com.github.iselgt.roulette.enums.Phase
-import com.github.iselgt.roulette.enums.readFromFile
-import com.github.iselgt.roulette.enums.writeToFile
 import isel.leic.utils.Time
-import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.index
 import kotlin.random.Random
 
 /**
@@ -15,6 +12,7 @@ var operatingMode = Mode.DEFAULT
 var gamesPlayed = 0
 var coinsInserted = 0
 var roll_history = ArrayList<Int>()
+const val ROULETTE_MAX = 36
 
 /**
  * The base path for the storage of the game data.
@@ -62,23 +60,23 @@ fun waitForStartOrMaintenance() {
 
     // Reset the display
     RouletteDisplay.setValue("000")
+    operatingMode = Mode.DEFAULT
 
     do {
 
         // Wait for the user to press a key and check if it's a valid mode
         val key = KBD.waitKey(1000)
-        val mode = Mode.fromChar(key)
-
-        // If the key is not a valid mode, continue waiting
-        if (mode == null) continue
-        operatingMode = mode
 
         // If we're in maintenance mode, start the maintenance phase and set the M bit
-        if (mode == Mode.MAINTENANCE) {
-            HAL.setBits(0x128)
+        if (HAL.readBits(Mode.MAINTENANCE.character.code) == 0) {
+            operatingMode = Mode.MAINTENANCE
+            break
         }
 
-    } while (!Mode.MODES.contains(mode?.character))
+        if (key != Mode.DEFAULT.character) continue // If the key is not the default mode, continue waiting
+        break
+
+    } while (true)
 
     // Turn on the display and show the message
     RouletteDisplay.on()
@@ -110,7 +108,7 @@ fun spinRoulette() {
     // TODO("ALLOW BETTING")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
-    val spinResult = Random.nextInt(0, 36)
+    val spinResult = Random.nextInt(0, ROULETTE_MAX)
 
     if (operatingMode != Mode.MAINTENANCE) {
         gamesPlayed++ // Increment the number of games played

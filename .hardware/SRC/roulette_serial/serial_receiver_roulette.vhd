@@ -96,7 +96,7 @@ begin
 	-- Counter
 	Counter4bit: counter_4bits
 		port map (
-			CE     => wr_sig,
+			CE     => '1',
 			CLK    => SCLK,
 			reset  => Reset,
 			count  => counter_val

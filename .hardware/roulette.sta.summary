@@ -1,0 +1,125 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -7.149
+TNS   : -124.603
+
+Type  : Slow 1200mV 85C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -2.241
+TNS   : -79.633
+
+Type  : Slow 1200mV 85C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -1.460
+TNS   : -1.524
+
+Type  : Slow 1200mV 85C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.798
+TNS   : -4.767
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -77.542
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -1.222
+TNS   : -7.332
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.375
+TNS   : -21.135
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -6.329
+TNS   : -106.850
+
+Type  : Slow 1200mV 0C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -2.021
+TNS   : -72.004
+
+Type  : Slow 1200mV 0C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -1.207
+TNS   : -1.207
+
+Type  : Slow 1200mV 0C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.580
+TNS   : -3.083
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -77.542
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -1.222
+TNS   : -7.332
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.255
+TNS   : -9.147
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -3.367
+TNS   : -36.730
+
+Type  : Fast 1200mV 0C Model Setup 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.947
+TNS   : -25.430
+
+Type  : Fast 1200mV 0C Model Setup 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -0.527
+TNS   : -0.527
+
+Type  : Fast 1200mV 0C Model Hold 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.291
+TNS   : -3.018
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -65.964
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|clock_divisor:clkdivider|tmp'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Key_decode:instance_key_decode|KeyControl:keycontrols|CurrentState.State_Scan_Lines'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState.Data_Delivered'
+Slack : -0.115
+TNS   : -1.780
+
+------------------------------------------------------------

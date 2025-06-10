@@ -8,7 +8,6 @@ entity SRC is
         SDX    : in std_logic;
         MClk   : in std_logic;
         Reset  : in std_logic;
-        accept : in std_logic;
         
         Wrl    : out std_logic;
         Dout   : out std_logic_vector(7 downto 0)
@@ -59,7 +58,7 @@ begin
             SDX     => SDX,
             MClk    => MClk,
             Reset   => Reset,
-            accept  => accept,
+            accept  => done_sig,
             DXval   => DXval_sig,
             Data    => Data_sig
         );

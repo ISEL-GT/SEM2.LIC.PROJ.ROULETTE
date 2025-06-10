@@ -62,69 +62,71 @@ begin
         -- Reset
         reset_tb <= '1';
         Kscan_tb <= "11";
-        lines_tb <= "0000";
+        lines_tb <= "1111";
         wait for clk_period * 2;
 
         -- Release reset and apply test vectors
         reset_tb <= '0';
         Kscan_tb <= "11";
-        lines_tb <= "0001";
+        lines_tb <= "0111";
         wait for clk_period * 2;
 
         Kscan_tb <= "10";
-        lines_tb <= "0001";
         wait for clk_period * 2;
 
         Kscan_tb <= "00";
-        lines_tb <= "0001";
         wait for clk_period * 2;
 
-        Kscan_tb <= "11";
-        lines_tb <= "0010";
+        lines_tb <= "1111";
         wait for clk_period * 2;
+		  
+		  Kscan_tb <= "11";
+		  lines_tb <= "1011";
+		  wait for clk_period * 2;
 
         Kscan_tb <= "10";
-        lines_tb <= "0010";
         wait for clk_period * 2;
 
-        Kscan_tb <= "00";
-        lines_tb <= "0010";
+         Kscan_tb <= "00";
         wait for clk_period * 2;
 
-        Kscan_tb <= "11";
-        lines_tb <= "0100";
+        lines_tb <= "1111";
         wait for clk_period * 2;
-
-        Kscan_tb <= "10";
-        lines_tb <= "0100";
-        wait for clk_period * 2;
-
-        Kscan_tb <= "00";
-        lines_tb <= "0100";
-        wait for clk_period * 2;
-
-        Kscan_tb <= "11";
-        lines_tb <= "1000";
-        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "11";
+		  lines_tb <= "1101";
+		  wait for clk_period * 2;
 
         Kscan_tb <= "10";
-        lines_tb <= "1000";
+        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "00";
         wait for clk_period * 2;
 
-        Kscan_tb <= "00";
-        lines_tb <= "1000";
+        lines_tb <= "1111";
         wait for clk_period * 2;
-
-        Kscan_tb <= "11";
-        lines_tb <= "0000";
-        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "11";
+		  lines_tb <= "1110";
+		  wait for clk_period * 2;
 
         Kscan_tb <= "10";
-        lines_tb <= "0000";
+        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "00";
         wait for clk_period * 2;
 
-        Kscan_tb <= "00";
-        lines_tb <= "0000";
+        lines_tb <= "1111";
+        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "11";
+		  lines_tb <= "0111";
+		  wait for clk_period * 2;
+
+        Kscan_tb <= "10";
+        wait for clk_period * 2;
+		  
+		  Kscan_tb <= "00";
         wait for clk_period * 2;
 
         -- End of simulation
