@@ -5,7 +5,7 @@ use IEEE.numeric_std.ALL;  -- Biblioteca usada para operações com tipos numér
 -- Entidade do divisor de clock
 entity clock_divisor is
     generic (
-        div : natural := 50000  -- Valor de divisão do clock (por padrão, divide por 50 milhões)
+        div : natural := 50000000  -- Valor de divisão do clock (por padrão, divide por 50 milhões)
     );
     port (
         clk_in  : in  std_logic;   -- Clock de entrada (rápido)

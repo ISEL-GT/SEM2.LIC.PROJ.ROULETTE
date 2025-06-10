@@ -30,6 +30,8 @@ class RouletteDisplayTest {
     @Test
     fun testDisplayAnimation() {
 
+        RouletteDisplay.on()
+
         val elapsed = measureTimeMillis {
             println("Testing animation...")
             RouletteDisplay.animation()

@@ -61,59 +61,59 @@ begin
         lines_tb <= "1111";  -- not Kpress
         reset_tb <= '0';
 		  Kack_tb  <= '1';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 
         -- Test of first line
         lines_tb <= "0111";
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '1';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         lines_tb <= "1111";  -- not Kpress
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '0';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 
         -- Test of second line
         lines_tb <= "1011";
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '1';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         lines_tb <= "1111";  -- not Kpress
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '0';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 
         -- Test of third line
         lines_tb <= "1101";
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '1';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         lines_tb <= "1111";  -- not Kpress
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '0';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 
         -- Test of fourth line
         lines_tb <= "1110";
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '1';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         lines_tb <= "1111";  -- not Kpress
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 		  
         Kack_tb  <= '0';
-        wait for clk_period * 2;
+        wait for clk_period * 4;
 
         wait;
     end process;

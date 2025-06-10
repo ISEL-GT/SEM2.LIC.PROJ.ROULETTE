@@ -6,14 +6,9 @@ package com.github.iselgt.roulette.enums
 enum class Mode(val character: Char) {
     EXITING('.'),
     DEFAULT('*'),
-    MAINTENANCE('B');
+    MAINTENANCE(0x01.toChar());
 
     companion object {
-
-        /**
-         * This value is responsible for providing a list of all the available modes.
-         */
-        val MODES = Mode.entries.map { it.character }
 
         /**
          * This method is responsible for returning the mode associated with the given character.

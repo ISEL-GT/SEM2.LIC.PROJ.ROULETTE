@@ -13,8 +13,11 @@ object HAL {
     //Checks if the bit chosen by the mask is on
     fun isBit(mask: Int):Boolean = readBits(mask) != 0
 
-    //Read the bits chosen by the mask and puts 0 on the bits that you aren't checking
-    fun readBits(mask:Int):Int{
+    /**
+     * Reads the bits from the UsbPort Input (I0-I7) and returns the value masked by the mask.
+     * @return the value of the bits read from the UsbPort Input masked by the mask.
+     */
+    fun readBits(mask: Int): Int{
         return UsbPort.read().and(mask)
     }
 

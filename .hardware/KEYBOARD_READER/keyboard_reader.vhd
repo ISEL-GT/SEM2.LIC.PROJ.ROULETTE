@@ -71,10 +71,10 @@ begin
 
     instance_key_decode: Key_decode
         port map (
-            Kack   => ack_control,
+            Kack  => ack_control,
             lines => lines,
-            CLK    => CLK,
-            Reset  => Reset,
+            CLK   => CLK,
+            Reset => Reset,
 
             columns  => columns,
             Kout   => output_key_decode,

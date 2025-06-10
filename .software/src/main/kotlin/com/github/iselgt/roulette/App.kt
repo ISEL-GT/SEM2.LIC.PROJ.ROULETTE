@@ -60,23 +60,23 @@ fun waitForStartOrMaintenance() {
 
     // Reset the display
     RouletteDisplay.setValue("000")
+    operatingMode = Mode.DEFAULT
 
     do {
 
         // Wait for the user to press a key and check if it's a valid mode
         val key = KBD.waitKey(1000)
-        val mode = Mode.fromChar(key)
-
-        // If the key is not a valid mode, continue waiting
-        if (mode == null) continue
-        operatingMode = mode
 
         // If we're in maintenance mode, start the maintenance phase and set the M bit
-        if (mode == Mode.MAINTENANCE) {
-            HAL.setBits(0x128)
+        if (HAL.readBits(Mode.MAINTENANCE.character.code) == 0) {
+            operatingMode = Mode.MAINTENANCE
+            break
         }
 
-    } while (!Mode.MODES.contains(mode?.character))
+        if (key != Mode.DEFAULT.character) continue // If the key is not the default mode, continue waiting
+        break
+
+    } while (true)
 
     // Turn on the display and show the message
     RouletteDisplay.on()

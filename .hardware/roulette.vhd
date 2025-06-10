@@ -151,7 +151,7 @@ begin
 			Reset  => Reset,
 
 			Wrl    => sig_enable,
-			Dout   => sig_rs
+			Dout   => sig_d7_4
 		);
 
 	instance_src: SRC

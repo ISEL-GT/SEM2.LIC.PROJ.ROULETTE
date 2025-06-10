@@ -42,7 +42,7 @@ architecture structural of Key_decode is
 	end component;
 
 	component clock_divisor is
-		generic (div: natural := 50000);
+		generic (div: natural := 2);
 		port (
 			clk_in  : in  std_logic;
 			clk_out : out std_logic
@@ -60,7 +60,7 @@ begin
 
 	clkdivider: clock_divisor
 		generic map (
-			div => 500000  -- ajusta conforme a frequência desejada
+			div => 2  -- ajusta conforme a frequência desejada
 		)
 		port map (
 			clk_in  => CLK,
