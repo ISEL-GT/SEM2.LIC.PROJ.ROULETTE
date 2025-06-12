@@ -1,7 +1,7 @@
-package com.github.iselgt.roulette
+package com.github.iselgt.roulette.control
 
 import isel.leic.utils.Time
-import javax.management.Query.or
+import kotlin.text.iterator
 
 object LCD {
 

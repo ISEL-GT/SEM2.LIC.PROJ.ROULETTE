@@ -1,20 +1,21 @@
-package com.github.iselgt.roulette.enums
+package com.github.iselgt.roulette.control.state
 
-import com.github.iselgt.roulette.TUI
+import com.github.iselgt.roulette.control.TUI
+import com.github.iselgt.roulette.main
 import com.github.iselgt.roulette.operatingMode
 import com.github.iselgt.roulette.spinRoulette
-import com.github.iselgt.roulette.waitForBet
+import com.github.iselgt.roulette.waitForBetOrCoins
 import com.github.iselgt.roulette.waitForMaintenanceInput
 import com.github.iselgt.roulette.waitForStartOrMaintenance
 
 /**
  * This enum is responsible for keeping track of the different phases of the game.
  */
-enum class Phase(val msg: String, val method: () -> Unit) {
-    INIT("", ::waitForStartOrMaintenance),  // dummy phase to initialise the state machine and run stepPhase only
+enum class GamePhase(val msg: String, val method: () -> Unit) {
+    INIT("", ::main),  // dummy phase to initialise the state machine and run stepPhase only
 
     START("PRESS * TO START", ::waitForStartOrMaintenance),
-    BETTING("1 CREDIT PER BET|HIT '#' TO ROLL", ::waitForBet),
+    BETTING("1 CREDIT PER BET|HIT '#' TO ROLL", ::waitForBetOrCoins),
     SPINNING("SPINNING...", ::spinRoulette),
     MAINTENANCE("MAINTENANCE MODE", ::waitForMaintenanceInput);
 
@@ -22,7 +23,7 @@ enum class Phase(val msg: String, val method: () -> Unit) {
      * This method is responsible for returning the next phase of the game,
      * acting as a state machine.
      */
-    fun next(): Phase {
+    fun next(): GamePhase {
         return when (this) {
             INIT -> START
             START -> if (operatingMode == Mode.DEFAULT) BETTING else MAINTENANCE

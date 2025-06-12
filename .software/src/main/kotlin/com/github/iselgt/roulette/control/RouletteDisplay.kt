@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette
+package com.github.iselgt.roulette.control
 
 import isel.leic.utils.Time
 import kotlin.random.Random
@@ -14,7 +14,7 @@ object RouletteDisplay {
      * This flag indicates whether we can still place bets on the roulette or not,
      * used to check when we need to stop the betting phase (5 seconds before the spin stops).
      */
-    public var bettingEnabled = true;
+    var bettingEnabled = true;
 
     /** Command to trigger the display update */
     private const val CMD_UPDATE = 0x06

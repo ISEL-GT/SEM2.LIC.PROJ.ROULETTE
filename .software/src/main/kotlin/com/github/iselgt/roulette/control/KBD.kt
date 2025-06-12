@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette
+package com.github.iselgt.roulette.control
 import isel.leic.utils.Time
 
 

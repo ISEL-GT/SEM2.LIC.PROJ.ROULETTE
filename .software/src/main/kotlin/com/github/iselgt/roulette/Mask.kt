@@ -14,7 +14,7 @@ enum class Mask(val data: Int) {
     KACK(0x01),       // Acknowledgement that a key has been processed, provided by USB Port's output
 
     /**
-     * Masks aimed for the LCD (Screen)
+     * Masks aimed for the LCD.kt (Screen)
      */
     CLEAR_DISPLAY(0x1),
     RETURN(0x2),

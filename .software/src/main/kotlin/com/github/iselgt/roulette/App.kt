@@ -1,8 +1,18 @@
 package com.github.iselgt.roulette
 
-import com.github.iselgt.roulette.enums.Mode
-import com.github.iselgt.roulette.enums.Phase
+import com.github.iselgt.roulette.control.CoinAcceptor
+import com.github.iselgt.roulette.control.state.Mode
+import com.github.iselgt.roulette.control.state.GamePhase
+import com.github.iselgt.roulette.control.HAL
+import com.github.iselgt.roulette.control.KBD
+import com.github.iselgt.roulette.control.LCD
+import com.github.iselgt.roulette.control.RouletteDisplay
+import com.github.iselgt.roulette.control.TUI
 import isel.leic.utils.Time
+import jdk.internal.org.jline.keymap.KeyMap.key
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 /**
@@ -10,8 +20,11 @@ import kotlin.random.Random
  */
 var operatingMode = Mode.DEFAULT
 var gamesPlayed = 0
-var coinsInserted = 0
+var credits = 0
+var bets = ArrayList<Int>()
 var roll_history = ArrayList<Int>()
+
+const val WIN_MULTIPLIER = 2
 const val ROULETTE_MAX = 36
 
 /**
@@ -22,16 +35,16 @@ const val STORAGE_PATH = "./data"
 /**
  * This variable is responsible for keeping track of the current phase of the game.
  */
-private var phase: Phase = Phase.INIT
+private var gamePhase: GamePhase = GamePhase.INIT
 
 /**
  * This method is responsible for changing the phase of the game, and calling the
  * method associated with it.
  */
 fun stepPhase() {
-    phase = phase.next()
-    phase.printToLCD()
-    phase.method()
+    gamePhase = gamePhase.next()
+    gamePhase.printToLCD()
+    gamePhase.method()
 }
 
 /**
@@ -42,13 +55,40 @@ fun loadGameStatistics() {
     val stats = readFromFile("$STORAGE_PATH/stats.txt")
     if (stats.isNotEmpty()) {
         gamesPlayed = stats[0].toInt()
-        coinsInserted = stats[1].toInt()
+        credits = stats[1].toInt()
     }
 
     val rolls = readFromFile("$STORAGE_PATH/rolls.txt")
     if (rolls.isNotEmpty()) {
         roll_history = ArrayList(rolls[0].split(";").map { it.toInt() })
     }
+}
+
+/**
+ * This method is responsible for processing the coin insertion.
+ * It waits for the user to insert coins and adds them to the credits.
+ * @param timeout The maximum time to wait for coin insertion in milliseconds.
+ */
+fun processCoins(timeout: Int) {
+
+    // Wait for the user to insert coins and add them to the credits
+    val insertedCredits = CoinAcceptor.waitCoin(timeout)
+
+    if (insertedCredits > 0) {
+        credits += insertedCredits // Add the inserted credits to the total credits
+        TUI.writeMessage("ADDED $insertedCredits CREDITS|CREDITS: $credits") // Show the current credits on the display
+        Time.sleep(2000L) // Wait for 1 second to show the message
+        gamePhase.printToLCD()
+    }
+
+}
+
+/**
+ * Clears the bet at the specified index and resets the display to show no result.
+ */
+fun clearBet(betIndex: Int) {
+    bets[betIndex] = 0
+    RouletteDisplay.setValue("000") // Reset the display to show no result
 }
 
 /**
@@ -68,7 +108,7 @@ fun waitForStartOrMaintenance() {
         val key = KBD.waitKey(1000)
 
         // If we're in maintenance mode, start the maintenance phase and set the M bit
-        if (HAL.readBits(Mode.MAINTENANCE.character.code) == 0) {
+        if (HAL.isBit(Mode.MAINTENANCE.character.code)) {
             operatingMode = Mode.MAINTENANCE
             break
         }
@@ -86,16 +126,79 @@ fun waitForStartOrMaintenance() {
  * This method is responsible for registering the bet made by the user and passing it to the
  * coin acceptor. If the user presses "#", then the bets are over and the roulette will spin.
  */
-fun waitForBet() {
+fun waitForBetOrCoins() {
+
+    // Implement a circular buffer to store the bets
+    bets.clear() // Clear the bets list before starting a new betting phase
+    var betIndex = 0
 
     while (RouletteDisplay.bettingEnabled) {
 
         val key = KBD.waitKey(100)
-        if (key == 0x00.toChar()) continue
-        if (key == '#' && phase == Phase.BETTING) break
-    }
+        processCoins(100)
 
-    // TODO("COIN ACCEPTOR INPUTS")
+        if (key == 0x00.toChar()) continue
+
+        if (key == '#' && gamePhase == GamePhase.BETTING) {
+            if (bets.isEmpty()) {
+                TUI.writeMessage("PLEASE BET TO|SPIN ROULETTE")
+                Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+                gamePhase.printToLCD()
+                continue
+            }
+            break
+        }
+
+        if (credits <= 0) {
+            TUI.writeMessage("NO CREDITS|INSERT COINS")
+            Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+
+            gamePhase.printToLCD();
+            continue
+        }
+
+        if (bets.getOrElse(betIndex) { 0 } >= 1) {
+            when (key) {
+
+                // Clear the bet at the current index
+                'C' -> {
+                    clearBet(betIndex)
+                    continue
+                }
+
+                // "Accept" a bet at the current index
+                'A' -> {
+
+                    if (bets[betIndex] > ROULETTE_MAX) {
+                        LCD.clear()
+                        TUI.writeMessage("BET TOO HIGH|MAX: $ROULETTE_MAX")
+                        Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+
+                        clearBet(betIndex)
+                        gamePhase.printToLCD()
+                        continue
+                    }
+
+                    if (operatingMode != Mode.MAINTENANCE) credits--
+                    TUI.writeMessage("NEW BET: ${bets[betIndex]}|CREDITS: $credits")
+                    RouletteDisplay.setValue("000")
+                    betIndex++
+                    Time.sleep(2000L)
+                }
+            }
+        }
+
+        // If the bet is already at two digits, ignore the input
+        if (bets.getOrElse(betIndex) { 0 } >= 10 || !key.isDigit()) continue
+
+        if (bets.size <= betIndex) {
+            bets.add(0) // Ensure the list has enough space for the current bet
+        }
+
+        // Concatenate the pressed key to the current bet at the current index
+        bets[betIndex] = bets[betIndex] * 10 + key.digitToInt()
+        RouletteDisplay.setValue(bets[betIndex]) // Update the display with the current bet
+    }
 }
 
 /**
@@ -104,16 +207,20 @@ fun waitForBet() {
 fun spinRoulette() {
 
     // Animate the roulette display spinning and allow bets for up to 5s
+    CoroutineScope(Dispatchers.Default).launch {
+        waitForBetOrCoins()
+        println("finished")
+    }
+
     RouletteDisplay.animation()
-    // TODO("ALLOW BETTING")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
     val spinResult = Random.nextInt(0, ROULETTE_MAX)
 
     if (operatingMode != Mode.MAINTENANCE) {
         gamesPlayed++ // Increment the number of games played
+        credits += bets.count { it == spinResult } * WIN_MULTIPLIER // Adds the number of bets that match the spin result to the coins *2
 
-        //TODO("COIN SUM BY VALUE")
         roll_history.add(spinResult) // Add the result to the history
     }
 
@@ -123,7 +230,7 @@ fun spinRoulette() {
     TUI.writeMessage("DONE!|RESULTS IN 5S...")
 
     Time.sleep(5000L) // Wait for 5 seconds before showing the result
-    TUI.writeMessage("ROLL: $spinResult|CREDITS: ???")
+    TUI.writeMessage("ROLL: $spinResult|CREDITS: $credits")
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
 }
 
@@ -155,14 +262,14 @@ fun waitForMaintenanceInput() {
                 keyAPressed = true
                 keyCPressed = false
                 keyDPressed = false
-                TUI.writeMessage("GAMES: $gamesPlayed|COINS: $coinsInserted")
+                TUI.writeMessage("GAMES: $gamesPlayed|COINS: $credits")
             }
 
             // If we click "*" after "A", we reset the counters for games and coins
             '*' -> {
                 if (keyAPressed) {
                     gamesPlayed = 0
-                    coinsInserted = 0
+                    credits = 0
                     TUI.writeMessage("GAME STATS|CLEARED")
                 }
 
@@ -179,8 +286,8 @@ fun waitForMaintenanceInput() {
                 keyDPressed = false
             }
 
-            // If the key is "C", show the history of rolled numbers
-            'C' -> {
+            // If the key is "B", show the history of rolled numbers
+            'B' -> {
 
                 keyCPressed = true
                 keyDPressed = false
@@ -200,7 +307,7 @@ fun waitForMaintenanceInput() {
                     continue
                 }
 
-                writeToFile("$STORAGE_PATH/stats.txt", listOf(gamesPlayed.toString(), coinsInserted.toString()))
+                writeToFile("$STORAGE_PATH/stats.txt", listOf(gamesPlayed.toString(), credits.toString()))
                 writeToFile("$STORAGE_PATH/rolls.txt", listOf(roll_history.joinToString(";")))
                 TUI.writeMessage("GOODBYE!")
 

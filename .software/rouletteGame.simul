@@ -27,7 +27,7 @@ m.out -> UsbPort.I7
 # --------------------------------------
 # Coin Acceptor
 # --------------------------------------
-UsbPort.O6 -> ca.accept
+UsbPort.O2 -> ca.accept
 ca.Coin -> UsbPort.I6
 ca.Coin_id -> UsbPort.I5
 
