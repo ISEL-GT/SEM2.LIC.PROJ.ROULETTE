@@ -12,7 +12,7 @@ object CoinAcceptor {
         val startTime = System.currentTimeMillis()
 
         while (System.currentTimeMillis() - startTime < timeout) {
-            if (CoinSignal.COIN.isActive()) { // Check if coin is detected
+            if (CoinSignal.COIN.isActive() || !CoinSignal.ACCEPT.isActive()) { // Check if coin is detected
 
                 val credits = if (CoinSignal.COIN_ID.isActive()) 4 else 2 // Return credit value based on COIN_ID status
                 CoinSignal.ACCEPT.set()

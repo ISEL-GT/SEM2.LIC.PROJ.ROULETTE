@@ -8,8 +8,8 @@ import com.github.iselgt.roulette.control.KBD
 import com.github.iselgt.roulette.control.LCD
 import com.github.iselgt.roulette.control.RouletteDisplay
 import com.github.iselgt.roulette.control.TUI
+import com.github.iselgt.roulette.control.signals.CoinSignal
 import isel.leic.utils.Time
-import jdk.internal.org.jline.keymap.KeyMap.key
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -50,7 +50,7 @@ fun stepPhase() {
 /**
  * This method is responsible for loading the game statistics from the stats file.
  */
-fun loadGameStatistics() {
+fun loadStatistics() {
 
     val stats = readFromFile("$STORAGE_PATH/stats.txt")
     if (stats.isNotEmpty()) {
@@ -62,6 +62,14 @@ fun loadGameStatistics() {
     if (rolls.isNotEmpty()) {
         roll_history = ArrayList(rolls[0].split(";").map { it.toInt() })
     }
+}
+
+/**
+ * Saves the game statistics to the stats file and the roll history to the rolls file.
+ */
+fun saveStatistics() {
+    writeToFile("$STORAGE_PATH/stats.txt", listOf(gamesPlayed.toString(), credits.toString()))
+    writeToFile("$STORAGE_PATH/rolls.txt", listOf(roll_history.joinToString(";")))
 }
 
 /**
@@ -77,10 +85,12 @@ fun processCoins(timeout: Int) {
     if (insertedCredits > 0) {
         credits += insertedCredits // Add the inserted credits to the total credits
         TUI.writeMessage("ADDED $insertedCredits CREDITS|CREDITS: $credits") // Show the current credits on the display
-        Time.sleep(2000L) // Wait for 1 second to show the message
-        gamePhase.printToLCD()
-    }
+        Time.sleep(1000L) // Wait for 1 second to show the message
 
+        saveStatistics()
+        gamePhase.printToLCD()
+        CoinSignal.ACCEPT.unset()
+    }
 }
 
 /**
@@ -228,6 +238,7 @@ fun spinRoulette() {
 
     RouletteDisplay.setValue("0$spinResult") // Show the result of the spin
     TUI.writeMessage("DONE!|RESULTS IN 5S...")
+    saveStatistics()
 
     Time.sleep(5000L) // Wait for 5 seconds before showing the result
     TUI.writeMessage("ROLL: $spinResult|CREDITS: $credits")
@@ -307,8 +318,7 @@ fun waitForMaintenanceInput() {
                     continue
                 }
 
-                writeToFile("$STORAGE_PATH/stats.txt", listOf(gamesPlayed.toString(), credits.toString()))
-                writeToFile("$STORAGE_PATH/rolls.txt", listOf(roll_history.joinToString(";")))
+                saveStatistics()
                 TUI.writeMessage("GOODBYE!")
 
                 Time.sleep(2000L)  // Wait for 2 seconds before turning off the machine
@@ -330,7 +340,7 @@ fun main() {
     TUI.init()  // Initialize the TUI (Text User Interface) system
     RouletteDisplay.init()
     RouletteDisplay.off()  // The display should be off by default
-    loadGameStatistics()
+    loadStatistics()
 
     while (true) { stepPhase() }
 }
