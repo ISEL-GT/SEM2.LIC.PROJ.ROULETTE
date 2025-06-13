@@ -6,8 +6,9 @@ entity roulette is
         clk       : in  std_logic;
         reset     : in  std_logic;
         Coin      : in  std_logic;
-        Coinid    : in  std_logic;
+        Coin_id   : in  std_logic;
         Lines     : in  std_logic_vector(3 downto 0);
+		  M 		   : in  std_logic;
         
         KEY_COL   : out std_logic_vector(3 downto 0);
         LCD_DATA  : out std_logic_vector(7 downto 4);
@@ -181,8 +182,9 @@ begin
     -- Atribuições internas
     sig_inputPort(0)           <= sig_Dval;
     sig_inputPort(4 downto 1)  <= sig_Q;
-	 sig_inputPort(5)				 <= Coinid;
+	 sig_inputPort(5)				 <= Coin_id;
 	 sig_inputPort(6)				 <= Coin;
+	 sig_inputPort(7)		       <= M;
 	 
 	 internal_SDX    <= sig_outputPort(1);
     ACK             <= sig_outputPort(4);
