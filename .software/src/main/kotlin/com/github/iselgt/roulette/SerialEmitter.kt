@@ -6,7 +6,7 @@ object SerialEmitter {
 
     enum class Destination { LCD, ROULETTE }
 
-    private const val SDX = 0x01                // Serial data line -> 01
+    private const val SDX = 0x02                // Serial data line -> 01
     private const val LCD_MASK = 0x20           // Enables LCD communication -> O5
     private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
     private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07

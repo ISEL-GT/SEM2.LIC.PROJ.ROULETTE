@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roulette
-Tue Jun 10 17:12:09 2025
+Thu Jun 12 18:14:13 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -24,47 +24,47 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  16. User-Specified and Inferred Latches
  17. General Register Statistics
  18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Parameter Settings for User Entity Instance: keyboard_reader:U5|Key_decode:instance_key_decode|clock_divisor:clkdivider
- 21. Parameter Settings for User Entity Instance: keyboard_reader:U5|RingBuffer:instance_ring_buffer|RAM:ramm
- 22. Parameter Settings for User Entity Instance: UsbPort:U1|sld_virtual_jtag:b2v_inst
- 23. Port Connectivity Checks: "rouletteDisplay:U3|FFD:clear_reg"
- 24. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:5:out_reg"
- 25. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:5:in_reg"
- 26. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:4:out_reg"
- 27. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:4:in_reg"
- 28. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:3:out_reg"
- 29. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:3:in_reg"
- 30. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:2:out_reg"
- 31. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:2:in_reg"
- 32. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:1:out_reg"
- 33. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:1:in_reg"
- 34. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:0:out_reg"
- 35. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:0:in_reg"
- 36. Port Connectivity Checks: "rouletteDisplay:U3|dec_3_8:decoder"
- 37. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD3"
- 38. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD2"
- 39. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD1"
- 40. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits"
- 41. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits"
- 42. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit"
- 43. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop"
- 44. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
- 45. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
- 46. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
- 47. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
- 48. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
- 49. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|counter_4bits:Counter4bit"
- 50. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|parity_checker_roulette:ParityCheck|FFD:FlipFlop"
- 51. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD7"
- 52. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD6"
- 53. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD5"
- 54. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD4"
- 55. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD3"
- 56. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD2"
- 57. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD1"
- 58. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD0"
- 59. Port Connectivity Checks: "UsbPort:U1"
+ 19. Parameter Settings for User Entity Instance: keyboard_reader:U5|Key_decode:instance_key_decode|clock_divisor:clkdivider
+ 20. Parameter Settings for User Entity Instance: keyboard_reader:U5|RingBuffer:instance_ring_buffer|RAM:ramm
+ 21. Parameter Settings for User Entity Instance: UsbPort:U1|sld_virtual_jtag:b2v_inst
+ 22. Port Connectivity Checks: "rouletteDisplay:U3|FFD:clear_reg"
+ 23. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:5:out_reg"
+ 24. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:5:in_reg"
+ 25. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:4:out_reg"
+ 26. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:4:in_reg"
+ 27. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:3:out_reg"
+ 28. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:3:in_reg"
+ 29. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:2:out_reg"
+ 30. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:2:in_reg"
+ 31. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:1:out_reg"
+ 32. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:1:in_reg"
+ 33. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:0:out_reg"
+ 34. Port Connectivity Checks: "rouletteDisplay:U3|reg_5bit:\circuit_gen:0:in_reg"
+ 35. Port Connectivity Checks: "rouletteDisplay:U3|dec_3_8:decoder"
+ 36. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD3"
+ 37. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD2"
+ 38. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits|FFD:FFD1"
+ 39. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|register_3bits:instance_registry_3bits"
+ 40. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit|adder_3bits:instance_adder_3bits"
+ 41. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|counter_3bits:Counter3bit"
+ 42. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|parity_checker:ParityCheck|FFD:FlipFlop"
+ 43. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD4"
+ 44. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD3"
+ 45. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD2"
+ 46. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD1"
+ 47. Port Connectivity Checks: "SLCDC:U4|serial_receiver:ReceiverInst|ShiftRegisterSerialReceiver:ShiftReg|FFD:FFD0"
+ 48. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|counter_4bits:Counter4bit"
+ 49. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|parity_checker_roulette:ParityCheck|FFD:FlipFlop"
+ 50. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD7"
+ 51. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD6"
+ 52. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD5"
+ 53. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD4"
+ 54. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD3"
+ 55. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD2"
+ 56. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD1"
+ 57. Port Connectivity Checks: "SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD0"
+ 58. Port Connectivity Checks: "UsbPort:U1"
+ 59. Port Connectivity Checks: "keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG"
  60. Port Connectivity Checks: "keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5"
  61. Port Connectivity Checks: "keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD4"
  62. Port Connectivity Checks: "keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD3"
@@ -115,13 +115,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 10 17:12:09 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 12 18:14:13 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 650                                         ;
-;     Total combinational functions  ; 582                                         ;
+; Total logic elements               ; 647                                         ;
+;     Total combinational functions  ; 578                                         ;
 ;     Dedicated logic registers      ; 262                                         ;
 ; Total registers                    ; 262                                         ;
 ; Total pins                         ; 66                                          ;
@@ -273,7 +273,6 @@ https://fpgasoftware.intel.com/eula.
 ; KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd             ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/KEY_DECODE/KEY_SCANNER/key_scanner.vhd             ;             ;
 ; KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd                     ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd                     ;             ;
 ; KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd              ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBufferControl.vhd              ;             ;
-; KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd                   ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputRegister.vhd                   ;             ;
 ; KEYBOARD_READER/RING_BUFFER/mac.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/mac.vhd                                ;             ;
 ; KEYBOARD_READER/RING_BUFFER/RAM.vhd                                ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd                                ;             ;
 ; KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd                         ; yes             ; User VHDL File                               ; C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RingBuffer.vhd                         ;             ;
@@ -316,16 +315,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 650                      ;
+; Estimated Total logic elements              ; 647                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 582                      ;
+; Total combinational functions               ; 578                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
 ;     -- 4 input functions                    ; 287                      ;
-;     -- 3 input functions                    ; 135                      ;
-;     -- <=2 input functions                  ; 160                      ;
+;     -- 3 input functions                    ; 143                      ;
+;     -- <=2 input functions                  ; 148                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 543                      ;
+;     -- normal mode                          ; 539                      ;
 ;     -- arithmetic mode                      ; 39                       ;
 ;                                             ;                          ;
 ; Total registers                             ; 262                      ;
@@ -338,8 +337,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 107                      ;
-; Total fan-out                               ; 2748                     ;
-; Average fan-out                             ; 2.79                     ;
+; Total fan-out                               ; 2744                     ;
+; Average fan-out                             ; 2.80                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -348,7 +347,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |roulette                                                                                                                               ; 582 (18)            ; 262 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 66   ; 0            ; 0          ; |roulette                                                                                                                                                                                                                                                                                                                                            ; roulette                          ; work         ;
+; |roulette                                                                                                                               ; 578 (18)            ; 262 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 66   ; 0            ; 0          ; |roulette                                                                                                                                                                                                                                                                                                                                            ; roulette                          ; work         ;
 ;    |SLCDC:U4|                                                                                                                           ; 25 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SLCDC:U4                                                                                                                                                                                                                                                                                                                                   ; SLCDC                             ; work         ;
 ;       |LCD_Dispatcher:DispatcherInst|                                                                                                   ; 10 (0)              ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SLCDC:U4|LCD_Dispatcher:DispatcherInst                                                                                                                                                                                                                                                                                                     ; LCD_Dispatcher                    ; work         ;
 ;          |LCDDispatcherControl:control_unit|                                                                                            ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SLCDC:U4|LCD_Dispatcher:DispatcherInst|LCDDispatcherControl:control_unit                                                                                                                                                                                                                                                                   ; LCDDispatcherControl              ; work         ;
@@ -401,10 +400,10 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:FFD5|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD5                                                                                                                                                                                                                                                      ; FFD                               ; work         ;
 ;             |FFD:FFD6|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD6                                                                                                                                                                                                                                                      ; FFD                               ; work         ;
 ;             |FFD:FFD7|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|SRC:U2|serial_receiver_roulette:ReceiverInst|roulette_shiftRegister:ShiftReg|FFD:FFD7                                                                                                                                                                                                                                                      ; FFD                               ; work         ;
-;    |keyboard_reader:U5|                                                                                                                 ; 223 (0)             ; 69 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5                                                                                                                                                                                                                                                                                                                         ; keyboard_reader                   ; work         ;
-;       |Key_decode:instance_key_decode|                                                                                                  ; 65 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode                                                                                                                                                                                                                                                                                          ; Key_decode                        ; work         ;
+;    |keyboard_reader:U5|                                                                                                                 ; 219 (0)             ; 69 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5                                                                                                                                                                                                                                                                                                                         ; keyboard_reader                   ; work         ;
+;       |Key_decode:instance_key_decode|                                                                                                  ; 64 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode                                                                                                                                                                                                                                                                                          ; Key_decode                        ; work         ;
 ;          |KeyControl:keycontrols|                                                                                                       ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|KeyControl:keycontrols                                                                                                                                                                                                                                                                   ; KeyControl                        ; work         ;
-;          |clock_divisor:clkdivider|                                                                                                     ; 52 (52)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|clock_divisor:clkdivider                                                                                                                                                                                                                                                                 ; clock_divisor                     ; work         ;
+;          |clock_divisor:clkdivider|                                                                                                     ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|clock_divisor:clkdivider                                                                                                                                                                                                                                                                 ; clock_divisor                     ; work         ;
 ;          |key_scanner:keyscan|                                                                                                          ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan                                                                                                                                                                                                                                                                      ; key_scanner                       ; work         ;
 ;             |counter_2bits:Contador|                                                                                                    ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador                                                                                                                                                                                                                                               ; counter_2bits                     ; work         ;
 ;                |register_2bits:instance_registry_2bits|                                                                                 ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan|counter_2bits:Contador|register_2bits:instance_registry_2bits                                                                                                                                                                                                        ; register_2bits                    ; work         ;
@@ -417,12 +416,16 @@ https://fpgasoftware.intel.com/eula.
 ;             |register_2bits:Reg|                                                                                                        ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg                                                                                                                                                                                                                                                   ; register_2bits                    ; work         ;
 ;                |FFD:FFD1|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD1                                                                                                                                                                                                                                          ; FFD                               ; work         ;
 ;                |FFD:FFD2|                                                                                                               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|Key_decode:instance_key_decode|key_scanner:keyscan|register_2bits:Reg|FFD:FFD2                                                                                                                                                                                                                                          ; FFD                               ; work         ;
-;       |OutputBuffer:instance_output_buffer|                                                                                             ; 6 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer                                                                                                                                                                                                                                                                                     ; OutputBuffer                      ; work         ;
-;          |OutputBufferControl:CTRL|                                                                                                     ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                                                                                                                                                            ; OutputBufferControl               ; work         ;
-;          |OutputRegister:REG|                                                                                                           ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputRegister:REG                                                                                                                                                                                                                                                                  ; OutputRegister                    ; work         ;
-;       |RingBuffer:instance_ring_buffer|                                                                                                 ; 152 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer                                                                                                                                                                                                                                                                                         ; RingBuffer                        ; work         ;
+;       |OutputBuffer:instance_output_buffer|                                                                                             ; 4 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer                                                                                                                                                                                                                                                                                     ; OutputBuffer                      ; work         ;
+;          |OutputBufferControl:CTRL|                                                                                                     ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL                                                                                                                                                                                                                                                            ; OutputBufferControl               ; work         ;
+;          |register_4bits:REG|                                                                                                           ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG                                                                                                                                                                                                                                                                  ; register_4bits                    ; work         ;
+;             |FFD:FFD1|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG|FFD:FFD1                                                                                                                                                                                                                                                         ; FFD                               ; work         ;
+;             |FFD:FFD2|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG|FFD:FFD2                                                                                                                                                                                                                                                         ; FFD                               ; work         ;
+;             |FFD:FFD3|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG|FFD:FFD3                                                                                                                                                                                                                                                         ; FFD                               ; work         ;
+;             |FFD:FFD4|                                                                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG|FFD:FFD4                                                                                                                                                                                                                                                         ; FFD                               ; work         ;
+;       |RingBuffer:instance_ring_buffer|                                                                                                 ; 151 (0)             ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer                                                                                                                                                                                                                                                                                         ; RingBuffer                        ; work         ;
 ;          |RAM:ramm|                                                                                                                     ; 120 (120)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|RAM:ramm                                                                                                                                                                                                                                                                                ; RAM                               ; work         ;
-;          |Ring_Buffer_Control:inst_ringBufferControl|                                                                                   ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl                                                                                                                                                                                                                                              ; Ring_Buffer_Control               ; work         ;
+;          |Ring_Buffer_Control:inst_ringBufferControl|                                                                                   ; 9 (9)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl                                                                                                                                                                                                                                              ; Ring_Buffer_Control               ; work         ;
 ;          |mac:inst_mac|                                                                                                                 ; 22 (2)              ; 13 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac                                                                                                                                                                                                                                                                            ; mac                               ; work         ;
 ;             |counter_4bits:get_counter|                                                                                                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter                                                                                                                                                                                                                                                  ; counter_4bits                     ; work         ;
 ;                |register_4bits:instance_register_4bits|                                                                                 ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|counter_4bits:get_counter|register_4bits:instance_register_4bits                                                                                                                                                                                                           ; register_4bits                    ; work         ;
@@ -612,32 +615,32 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState                 ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; Name                       ; CurrentState.State_Clear ; CurrentState.State_WaitAck ; CurrentState.State_Load ; CurrentState.State_Idle ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
-; CurrentState.State_Idle    ; 0                        ; 0                          ; 0                       ; 0                       ;
-; CurrentState.State_Load    ; 0                        ; 0                          ; 1                       ; 1                       ;
-; CurrentState.State_WaitAck ; 0                        ; 1                          ; 0                       ; 1                       ;
-; CurrentState.State_Clear   ; 1                        ; 0                          ; 0                       ; 1                       ;
-+----------------------------+--------------------------+----------------------------+-------------------------+-------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL|CurrentState                     ;
++-----------------------------+-----------------------------+----------------------------+-------------------------+-------------------------+
+; Name                        ; CurrentState.State_Transmit ; CurrentState.State_WaitAck ; CurrentState.State_Load ; CurrentState.State_Idle ;
++-----------------------------+-----------------------------+----------------------------+-------------------------+-------------------------+
+; CurrentState.State_Idle     ; 0                           ; 0                          ; 0                       ; 0                       ;
+; CurrentState.State_Load     ; 0                           ; 0                          ; 1                       ; 1                       ;
+; CurrentState.State_WaitAck  ; 0                           ; 1                          ; 0                       ; 1                       ;
+; CurrentState.State_Transmit ; 1                           ; 0                          ; 0                       ; 1                       ;
++-----------------------------+-----------------------------+----------------------------+-------------------------+-------------------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState                                                                                  ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
-; Name                        ; CurrentState.Data_Delivered ; CurrentState.Delivering ; CurrentState.Data_Written ; CurrentState.Data_Accepted ; CurrentState.Writing ; CurrentState.SelectAddress ; CurrentState.START ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
-; CurrentState.START          ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 0                  ;
-; CurrentState.SelectAddress  ; 0                           ; 0                       ; 0                         ; 0                          ; 0                    ; 1                          ; 1                  ;
-; CurrentState.Writing        ; 0                           ; 0                       ; 0                         ; 0                          ; 1                    ; 0                          ; 1                  ;
-; CurrentState.Data_Accepted  ; 0                           ; 0                       ; 0                         ; 1                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Data_Written   ; 0                           ; 0                       ; 1                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Delivering     ; 0                           ; 1                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-; CurrentState.Data_Delivered ; 1                           ; 0                       ; 0                         ; 0                          ; 0                    ; 0                          ; 1                  ;
-+-----------------------------+-----------------------------+-------------------------+---------------------------+----------------------------+----------------------+----------------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |roulette|keyboard_reader:U5|RingBuffer:instance_ring_buffer|Ring_Buffer_Control:inst_ringBufferControl|CurrentState                                                         ;
++----------------------------+---------------------------+------------------+------------------+----------------------------+----------------------+----------------------+--------------------+
+; Name                       ; CurrentState.IncrementPut ; CurrentState.Get ; CurrentState.Put ; CurrentState.Data_Accepted ; CurrentState.Writing ; CurrentState.Reading ; CurrentState.START ;
++----------------------------+---------------------------+------------------+------------------+----------------------------+----------------------+----------------------+--------------------+
+; CurrentState.START         ; 0                         ; 0                ; 0                ; 0                          ; 0                    ; 0                    ; 0                  ;
+; CurrentState.Reading       ; 0                         ; 0                ; 0                ; 0                          ; 0                    ; 1                    ; 1                  ;
+; CurrentState.Writing       ; 0                         ; 0                ; 0                ; 0                          ; 1                    ; 0                    ; 1                  ;
+; CurrentState.Data_Accepted ; 0                         ; 0                ; 0                ; 1                          ; 0                    ; 0                    ; 1                  ;
+; CurrentState.Put           ; 0                         ; 0                ; 1                ; 0                          ; 0                    ; 0                    ; 1                  ;
+; CurrentState.Get           ; 0                         ; 1                ; 0                ; 0                          ; 0                    ; 0                    ; 1                  ;
+; CurrentState.IncrementPut  ; 1                         ; 0                ; 0                ; 0                          ; 0                    ; 0                    ; 1                  ;
++----------------------------+---------------------------+------------------+------------------+----------------------------+----------------------+----------------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -733,11 +736,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 262   ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 111   ;
+; Number of registers using Asynchronous Clear ; 115   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 142   ;
+; Number of registers using Clock Enable       ; 138   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -813,15 +816,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; Total number of inverted registers = 64                                                                                                                                                                                                                                                                                         ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |roulette|keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputRegister:REG|Reg[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1213,6 +1207,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_reader:U5|OutputBuffer:instance_output_buffer|register_4bits:REG" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; set  ; Input ; Info     ; Stuck at GND                                                                ;
+; en   ; Input ; Info     ; Stuck at VCC                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "keyboard_reader:U5|RingBuffer:instance_ring_buffer|mac:inst_mac|variable_counter_5bits:elements_counter|register_5bits:instance_register_5bits|FFD:FFD5" ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1417,23 +1421,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 105                         ;
 ; cycloneiii_ff         ; 176                         ;
-;     CLR               ; 58                          ;
+;     CLR               ; 62                          ;
 ;     ENA               ; 60                          ;
 ;     ENA CLR           ; 20                          ;
-;     ENA SCLR          ; 4                           ;
 ;     plain             ; 34                          ;
-; cycloneiii_lcell_comb ; 461                         ;
+; cycloneiii_lcell_comb ; 457                         ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 430                         ;
+;     normal            ; 426                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 40                          ;
-;         2 data inputs ; 52                          ;
-;         3 data inputs ; 102                         ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 110                         ;
 ;         4 data inputs ; 234                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.77                        ;
+; Average LUT depth     ; 2.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1452,7 +1455,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 10 17:11:55 2025
+    Info: Processing started: Thu Jun 12 18:13:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roulette -c roulette
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -1746,8 +1749,7 @@ Info (12128): Elaborating entity "RAM" for hierarchy "keyboard_reader:U5|RingBuf
 Warning (10492): VHDL Process Statement warning at RAM.vhd(27): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 27
 Warning (10492): VHDL Process Statement warning at RAM.vhd(30): signal "din" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/RING_BUFFER/RAM.vhd Line: 30
 Info (12128): Elaborating entity "OutputBuffer" for hierarchy "keyboard_reader:U5|OutputBuffer:instance_output_buffer" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/keyboard_reader.vhd Line: 96
-Info (12128): Elaborating entity "OutputBufferControl" for hierarchy "keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 47
-Info (12128): Elaborating entity "OutputRegister" for hierarchy "keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputRegister:REG" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 59
+Info (12128): Elaborating entity "OutputBufferControl" for hierarchy "keyboard_reader:U5|OutputBuffer:instance_output_buffer|OutputBufferControl:CTRL" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/KEYBOARD_READER/OUTPUT_BUFFER/OutputBuffer.vhd Line: 48
 Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:U1" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/roulette.vhd Line: 124
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "UsbPort:U1|sld_virtual_jtag:b2v_inst" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/UsbPort.vhd Line: 80
@@ -1789,7 +1791,7 @@ Info (12128): Elaborating entity "dec_3_8" for hierarchy "rouletteDisplay:U3|dec
 Info (12128): Elaborating entity "reg_5bit" for hierarchy "rouletteDisplay:U3|reg_5bit:\circuit_gen:0:in_reg" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/RouletteDisplay/rouletteDisplay.vhd Line: 64
 Info (12128): Elaborating entity "dec2hex" for hierarchy "rouletteDisplay:U3|dec2hex:\circuit_gen:0:hex_digit" File: C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/RouletteDisplay/rouletteDisplay.vhd Line: 66
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.10.17:12:01 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.12.18:14:04 Progress: Loading sld86bd74f0/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1822,14 +1824,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 726 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 723 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 59 output pins
-    Info (21061): Implemented 655 logic cells
+    Info (21061): Implemented 652 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4948 megabytes
-    Info: Processing ended: Tue Jun 10 17:12:09 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4950 megabytes
+    Info: Processing ended: Thu Jun 12 18:14:13 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:31
 
 

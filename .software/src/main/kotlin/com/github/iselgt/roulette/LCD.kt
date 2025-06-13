@@ -3,9 +3,6 @@ package com.github.iselgt.roulette
 import isel.leic.utils.Time
 
 object LCD {
-    private const val LINES = 2
-    private const val COLS = 16
-
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD

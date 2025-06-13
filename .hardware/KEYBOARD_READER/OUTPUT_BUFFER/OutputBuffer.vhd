@@ -28,13 +28,14 @@ architecture structural of OutputBuffer is
 		);
 	end component;
 
-	component OutputRegister
+	component register_4bits
 		port (
-			clk   : in  std_logic;
-			Wreg  : in  std_logic;
-			reset : in  std_logic;
-			Din   : in  std_logic_vector(3 downto 0);
-			Dout  : out std_logic_vector(3 downto 0)
+			CLK   : in std_logic;
+			RESET : in std_logic;
+			SET   : in std_logic;
+			D     : in std_logic_vector(3 downto 0);
+			EN    : in std_logic;
+			Q     : out std_logic_vector(3 downto 0)
 		);
 	end component;
 	
@@ -56,13 +57,14 @@ begin
 		);
 
 	-- Instância do registo de dados
-	REG: OutputRegister
+	REG: register_4bits
 		port map (
-			clk   => clk,
-			reset => reset,
-			Wreg  => Wreg_internal,
-			Din   => Din,
-			Dout  => Dout
+			CLK   => Wreg_internal,
+			RESET => reset,
+			SET   => '0',
+			EN    => '1',
+			D	   => Din,
+			Q  	=> Dout
 		);
 
 end structural;

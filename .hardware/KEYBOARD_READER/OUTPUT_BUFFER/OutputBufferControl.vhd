@@ -16,7 +16,7 @@ end OutputBufferControl;
 
 architecture behavioral of OutputBufferControl is
 
-	type STATE_TYPE is (State_Idle, State_Load, State_WaitAck, State_Clear);
+	type STATE_TYPE is (State_Idle, State_Load, State_WaitAck, State_Transmit);
 	signal CurrentState, NextState : STATE_TYPE;
 
 begin
@@ -38,24 +38,24 @@ begin
 				end if;
 
 			when State_Load =>
-				if Load = '1' then 
-					NextState <= State_Load;
+				if Load = '0' then 
+					NextState <= State_Transmit;
 				else
-				NextState <= State_WaitAck;
+				NextState <= State_Load;
 				end if;
 				
-			when State_WaitAck =>
+			when State_Transmit =>
 				if ACK = '1' then
-					NextState <= State_Clear;
-				else
 					NextState <= State_WaitAck;
+				else
+					NextState <= State_Transmit;
 				end if;
 
-			when State_Clear => 
+			when State_WaitAck => 
 				if ACK = '0' THEN 
 				NextState <= State_Idle;
 								else
-				NextState <= State_clear;
+				NextState <= State_WaitAck;
 				end if;
 
 		end case;
@@ -63,7 +63,7 @@ begin
 
 	-- Generate outputs
 	Wreg   <= '1' when (CurrentState = State_Load) else '0';
-	Dval   <= '1' when (CurrentState = State_Load or CurrentState = State_WaitAck) else '0';
-	OBfree <= '1' when (CurrentState = State_Idle or CurrentState = State_Clear) else '0';
+	Dval   <= '1' when (CurrentState = State_Transmit) else '0';
+	OBfree <= '1' when (CurrentState = State_Idle) else '0';
 
 end behavioral;
