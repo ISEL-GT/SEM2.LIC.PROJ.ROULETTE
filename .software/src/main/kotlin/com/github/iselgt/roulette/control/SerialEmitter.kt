@@ -37,19 +37,12 @@ object SerialEmitter {
         // Disable destination before transmission
         HAL.clrBits(address)
 
-        // Send data bits with Rs first and then the D0-D3
-        var bits = "";
-
         repeat(size) { i ->
             val bit = (data shr i) and 1
             if (bit == 1) parityCount++
-            bits += bit.toString()
             writeBit(bit)
             pulseClock()
         }
-
-        println(bits.reversed() + " (${data.shr(1)} and ${data.and(0x01)})")
-
         // Send odd parity bit
         val parityBit = if (parityCount % 2 == 0) 1 else 0
         writeBit(parityBit)

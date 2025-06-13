@@ -5,7 +5,7 @@ import kotlin.text.iterator
 
 object LCD {
 
-    private const val SERIAL_INTERFACE = false
+    private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
     private const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
@@ -92,7 +92,6 @@ object LCD {
         // Initiate LCD with 8-bit mode before switching to 4-bit mode
         Time.sleep(WAIT_FIRST_TIME)                 // Longer wait time for power-on
 
-        println("Initializing LCD")
         writeNibble(false, SET8BITS)
         Time.sleep(WAIT_TIME)
         writeNibble(false, SET8BITS)
@@ -110,7 +109,6 @@ object LCD {
         writeCMD(LCD_ENTRY_MODE)                    // Cursor moves right
         writeCMD(LCD_DISPLAY_ON_BLINK)              // Display ON, Cursor ON, Blink ON
         Time.sleep(WAIT_TIME)
-        println("Finished initialisation")// Short delay for stability
     }
 
 

@@ -89,7 +89,7 @@ object RouletteDisplay {
      */
     fun animation() {
         // Digit positions to animate: 0 = rightmost, 1 = center, 2 = leftmost
-        val positions = arrayOf(0x00, 0x01, 0x02)
+        val positions = arrayOf(0, 1, 2, 3, 4, 5)
 
         // Randomly select a duration for the animation between 5 and 10 seconds
         val randomDuration = Random.nextLong(10000L, 15000L)
@@ -114,7 +114,7 @@ object RouletteDisplay {
 
         // Reset the display to show 0 after animation
         bettingEnabled = true
-        setValue(0)
+        setValue("000000")
     }
 
     /**

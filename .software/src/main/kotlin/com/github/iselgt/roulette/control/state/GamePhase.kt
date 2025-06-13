@@ -16,7 +16,7 @@ enum class GamePhase(val msg: String, val method: () -> Unit) {
 
     START("PRESS * TO START", ::waitForStartOrMaintenance),
     BETTING("1 CREDIT PER BET|HIT '#' TO ROLL", ::waitForBetOrCoins),
-    SPINNING("SPINNING...", ::spinRoulette),
+    SPINNING("LAST BETS IN!", ::spinRoulette),
     MAINTENANCE("MAINTENANCE MODE", ::waitForMaintenanceInput);
 
     /**
