@@ -98,7 +98,7 @@ begin
         port map (
             CE     => '1',
             CLK    => SCLK,
-            reset  => Reset,
+            reset  => init_sig,
             count  => counter_val
         );
 
@@ -107,8 +107,9 @@ begin
     eq6 <= not counter_val(0) and counter_val(1) and counter_val(2); -- "110" = 6
 
     -- Flags
-    pFlag_sig <= eq6;
-    dFlag_sig <= eq5;
+    pFlag_sig <= eq6 and not SCLK;
+    dFlag_sig <= eq5 and not SCLK;
+	 
 
     -- Controlador
     Controller: receiver_controler
@@ -117,7 +118,7 @@ begin
             accept   => accept,
             pFlag    => pFlag_sig,
             dFlag    => dFlag_sig,
-            RXerror  => RXerror_sig,
+            RXerror  => RXerror_sig and not SCLK,
             CLK      => MClk,
             Reset    => Reset,
             wr       => wr_sig,

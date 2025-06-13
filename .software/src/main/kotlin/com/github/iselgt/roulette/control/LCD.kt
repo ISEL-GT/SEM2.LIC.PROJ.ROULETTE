@@ -4,7 +4,6 @@ import isel.leic.utils.Time
 import kotlin.text.iterator
 
 object LCD {
-
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
@@ -141,10 +140,13 @@ object LCD {
 
 fun main() {
     HAL.init()
+    SerialEmitter.init()
     LCD.init()
-    LCD.clear()
-
-    while (true) {
-        LCD.write(KBD.waitKey(500))
+    LCD.write("Hello World")
+    while (true){
+        LCD.write("0123456789ABCDEF")
+        LCD.cursor(1,0)
+        LCD.write("0123456789ABCDEF")
+        LCD.cursor(0,0)
     }
 }

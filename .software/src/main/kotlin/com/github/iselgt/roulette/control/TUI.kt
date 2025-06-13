@@ -3,7 +3,7 @@ package com.github.iselgt.roulette.control
 import com.github.iselgt.roulette.control.state.Mode
 import isel.leic.utils.Time
 
-const val WAIT_TIME = 2L
+const val WAIT_TIME = 200L
 const val WAIT_KEY = 200L
 
 object TUI {
