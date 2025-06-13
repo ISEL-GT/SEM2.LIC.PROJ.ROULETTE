@@ -1,6 +1,6 @@
 package com.github.iselgt.roulette
 
-import com.github.iselgt.roulette.control.RouletteDisplay
+import com.github.iselgt.roulette.control.display.RouletteDisplay
 import kotlin.system.measureTimeMillis
 import kotlin.test.*
 

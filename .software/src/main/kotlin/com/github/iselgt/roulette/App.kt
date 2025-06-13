@@ -3,8 +3,9 @@ package com.github.iselgt.roulette
 import com.github.iselgt.roulette.control.CoinAcceptor
 import com.github.iselgt.roulette.control.state.Mode
 import com.github.iselgt.roulette.control.state.GamePhase
-import com.github.iselgt.roulette.control.RouletteDisplay
+import com.github.iselgt.roulette.control.display.RouletteDisplay
 import com.github.iselgt.roulette.control.TUI
+import com.github.iselgt.roulette.control.display.RouletteDisplay.setValue
 import com.github.iselgt.roulette.control.signals.CoinSignal
 import isel.leic.utils.Time
 import kotlin.random.Random
@@ -18,9 +19,10 @@ var credits = 0
 var coins = 0
 var bets = ArrayList<Int>()
 var roll_history = ArrayList<Int>()
+var betBuffer = 0
 
 const val WIN_MULTIPLIER = 2
-const val ROULETTE_MAX = 36
+const val ROULETTE_MAX = 12
 
 /**
  * The base path for the storage of the game data.
@@ -99,6 +101,59 @@ fun resetBetSelection() {
 }
 
 /**
+ * Processes a bet made by the user.
+ */
+fun processBet(key: Char) {
+
+    if (betBuffer > 0) {
+        when (key) {
+
+            // Clear the bet at the current index
+            'C' -> {
+                betBuffer = 0
+                resetBetSelection()
+                return
+            }
+
+            // "Accept" a bet at the current index
+            'A' -> {
+
+                if (betBuffer > ROULETTE_MAX) {
+                    TUI.writeMessage("BET TOO HIGH|MAX: $ROULETTE_MAX")
+                    Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+
+                    betBuffer = 0
+                    resetBetSelection()
+                    gamePhase.printToLCD()
+                    return
+                }
+
+                if (operatingMode != Mode.MAINTENANCE) credits--
+                bets.add(betBuffer) // Add the bet to the bets list
+                TUI.writeMessage("NEW BET: ${betBuffer}|CREDITS: $credits")
+
+                betBuffer = 0
+                resetBetSelection()
+                Time.sleep(1000L)
+
+                gamePhase.printToLCD()
+            }
+        }
+    }
+
+    // If the bet is already at two digits, ignore the input
+    if (betBuffer >= 10 * ROULETTE_MAX.toString().length || !key.isDigit()) return
+
+    // Concatenate the pressed key to the current bet at the current index
+    betBuffer = betBuffer * 10 + key.digitToInt()
+
+    // The spinning phase shows values on the LCD
+    if (gamePhase == GamePhase.BETTING) RouletteDisplay.setValue(betBuffer)
+    else TUI.writeMessage("LAST BETS IN!|SELECTION: $betBuffer")
+
+}
+
+/**
  * This method is responsible for waiting for the start of the game or maintenance mode.
  * If the user presses "*", then the game will start, and if it presses "M", then the
  * maintenance mode will be activated.
@@ -137,9 +192,8 @@ fun waitForBetOrCoins() {
 
     // Implement a circular buffer to store the bets
     bets.clear() // Clear the bets list before starting a new betting phase
-    var betBuffer = 0
 
-    while (RouletteDisplay.bettingEnabled) {
+    while (true) {
 
         val key = TUI.getKey(100)
         processCoins(100)
@@ -160,58 +214,14 @@ fun waitForBetOrCoins() {
             TUI.writeMessage("NO CREDITS|INSERT COINS")
             Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
 
-            gamePhase.printToLCD();
+            gamePhase.printToLCD()
             continue
         }
 
-        if (betBuffer > 0) {
-            when (key) {
-
-                // Clear the bet at the current index
-                'C' -> {
-                    betBuffer = 0
-                    resetBetSelection()
-                    continue
-                }
-
-                // "Accept" a bet at the current index
-                'A' -> {
-
-                    if (betBuffer > ROULETTE_MAX) {
-                        TUI.writeMessage("BET TOO HIGH|MAX: $ROULETTE_MAX")
-                        Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
-
-                        betBuffer = 0
-                        resetBetSelection()
-                        gamePhase.printToLCD()
-                        continue
-                    }
-
-                    if (operatingMode != Mode.MAINTENANCE) credits--
-                    bets.add(betBuffer) // Add the bet to the bets list
-                    TUI.writeMessage("NEW BET: ${betBuffer}|CREDITS: $credits")
-
-                    betBuffer = 0
-                    resetBetSelection()
-                    Time.sleep(1000L)
-                    gamePhase.printToLCD()
-                }
-            }
-        }
-
-        // If the bet is already at two digits, ignore the input
-        if (betBuffer >= 10 || !key.isDigit()) continue
-
-        // Concatenate the pressed key to the current bet at the current index
-        betBuffer = betBuffer * 10 + key.digitToInt()
-
-        if (gamePhase == GamePhase.BETTING) {
-            RouletteDisplay.setValue(betBuffer)
-        }
-        else {
-            TUI.writeMessage("LAST BETS IN!|SELECTION: $betBuffer")
-        }
+        processBet(key) // Process the bet made by the user«
     }
+
+    Time.sleep(1000L)
 }
 
 /**
@@ -219,11 +229,35 @@ fun waitForBetOrCoins() {
  */
 fun spinRoulette() {
 
-    // Create a new thread running DisplayRoulette.animation()
-    RouletteDisplay.animation()
+    // Get the current time and a future time from 6-15 seconds from now
+    val startTime = Time.getTimeInMillis()
+    val endTime = startTime + Random.nextLong(10000L, 15000L)
+    var stopBetting = false
+
+    // Get the time 5 seconds before the end time to stop accepting bets
+    val stopBetsTime = endTime - 5000L
+
+    while (Time.getTimeInMillis() < endTime) {
+
+        // Animate the next segment of the display
+        RouletteDisplay.animation()
+        if (stopBetting) continue
+
+        // If 5 seconds have passed since the start of the spin, stop accepting bets and display a message
+        if (Time.getTimeInMillis() >= stopBetsTime) {
+            TUI.writeMessage("BETTING CLOSED!")
+            stopBetting = true
+            continue
+        }
+
+        processBet(TUI.getKey(10))
+    }
+
+    setValue("000000")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
     val spinResult = Random.nextInt(0, ROULETTE_MAX)
+    val creditDifference = (bets.count { it == spinResult } * WIN_MULTIPLIER) - bets.count()
 
     if (operatingMode != Mode.MAINTENANCE) {
         gamesPlayed++ // Increment the number of games played
@@ -239,7 +273,7 @@ fun spinRoulette() {
     saveStatistics()
 
     Time.sleep(5000L) // Wait for 5 seconds before showing the result
-    TUI.writeMessage("ROLL: $spinResult|CREDITS: $credits")
+    TUI.writeMessage("ROLL: $spinResult|EARNINGS: $creditDifference")
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
 }
 
@@ -303,9 +337,10 @@ fun waitForMaintenanceInput() {
                 keyAPressed = false
 
                 // Limit the roll history to 32 characters, breaking it into two lines. Don't separate numbers.
-                val history = roll_history.take(5).joinToString(">")
-                val history2 = roll_history.drop(5).take(5).joinToString(">")
-                TUI.writeMessage("$history|$history2")
+                val formattedHistory = roll_history.map { if (it.toString().length == 1) "0$it" else it.toString() }
+                val history = formattedHistory.reversed().take(5).joinToString(">")
+                val history2 = formattedHistory.reversed().drop(5).take(5).joinToString(">")
+                TUI.writeMessage(" $history| $history2")
             }
 
             // If the key is "D", turn off the machine and save the statistics

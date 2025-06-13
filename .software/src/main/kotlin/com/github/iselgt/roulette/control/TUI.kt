@@ -18,9 +18,9 @@ object TUI {
      * It will clear the display and write the message, waiting for a certain amount of time
      * before returning.
      */
-    fun writeMessage(msg: String){
+    fun writeMessage(msg: String) {
         Time.sleep(WAIT_TIME)
-        LCD.cursor(0,0)
+        LCD.cursor(0, 0)
         LCD.clear()
         LCD.write(msg)
     }

@@ -1,5 +1,6 @@
-package com.github.iselgt.roulette.control
+package com.github.iselgt.roulette.control.display
 
+import com.github.iselgt.roulette.control.SerialEmitter
 import isel.leic.utils.Time
 import kotlin.random.Random
 
@@ -10,12 +11,6 @@ import kotlin.random.Random
  */
 object RouletteDisplay {
 
-    /**
-     * This flag indicates whether we can still place bets on the roulette or not,
-     * used to check when we need to stop the betting phase (5 seconds before the spin stops).
-     */
-    var bettingEnabled = true;
-
     /** Command to trigger the display update */
     private const val CMD_UPDATE = 0x06
 
@@ -24,17 +19,6 @@ object RouletteDisplay {
 
     /** Command to turn the display on */
     private const val CMD_ON = 0x07
-
-    // --- Segment animation sequence ---
-
-    /**
-     * Predefined segment codes used for LED animation.
-     * These codes correspond to specific LED segments in a circular pattern
-     * across the 7-segment display.
-     *
-     * The values are packed based on the display controller specification.
-     */
-    private val SEGMENTCIRCLE = intArrayOf(0x19, 0x12, 0x1A, 0x13, 0x1B, 0x14, 0x1C, 0x15, 0x1D, 0x16, 0x1E, 0x11)
 
     /**
      * Initializes the display system.
@@ -88,33 +72,17 @@ object RouletteDisplay {
      * creating a spinning illusion. After the animation, the display is cleared.
      */
     fun animation() {
-        // Digit positions to animate: 0 = rightmost, 1 = center, 2 = leftmost
+
+        // Digit positions in the display to animate
         val positions = arrayOf(0, 1, 2, 3, 4, 5)
+        val segment = DisplaySequenceFactory.next()
 
-        // Randomly select a duration for the animation between 5 and 10 seconds
-        val randomDuration = Random.nextLong(10000L, 15000L)
-        val startTime = Time.getTimeInMillis()
+        for (digit in positions) {
+            val value = (segment shl 3) or digit
+            SerialEmitter.send(SerialEmitter.Destination.ROULETTE, value, 8)
+        }
 
-        // Repeat animation for the specified duration
-        do {
-            val elapsed = Time.getTimeInMillis() - startTime;
-
-            // Stop accepting bets 5 seconds before the end
-            if (randomDuration - elapsed < 5000L) bettingEnabled = false
-
-            for (segment in SEGMENTCIRCLE) {
-                for (digit in positions) {
-                    val value = (segment shl 3) or digit
-                    SerialEmitter.send(SerialEmitter.Destination.ROULETTE, value, 8)
-                }
-
-                SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
-            }
-        } while (elapsed < randomDuration)
-
-        // Reset the display to show 0 after animation
-        bettingEnabled = true
-        setValue("000000")
+        SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
     }
 
     /**

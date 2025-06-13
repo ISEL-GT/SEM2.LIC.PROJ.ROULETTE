@@ -30,6 +30,14 @@ object LCD {
     private const val SET4BITS = 0x2                    // Entry Mode Set 4 bits long
     private const val SET8BITS = 0x3                    // Entry Mode Set 8 bits long
 
+    /**
+     * A nested object to keep track of the cursor position on the LCD.
+     */
+    object Cursor  {
+        var column: Int = 0
+        var line: Int = 0
+    }
+
 
     private fun writeDATA(data: Int) {
         writeByte(true, data)
@@ -129,6 +137,10 @@ object LCD {
             1 -> LCD_LINE_2 + column                // Second line
             else -> LCD_LINE_1                      // Default to first line if invalid
         }
+
+        Cursor.column = column
+        Cursor.line = line
+
         writeCMD(address)
     }
 
