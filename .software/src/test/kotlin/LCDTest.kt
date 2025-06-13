@@ -1,5 +1,7 @@
 package com.github.iselgt.roulette
 
+import com.github.iselgt.roulette.control.KBD
+import com.github.iselgt.roulette.control.LCD
 import kotlin.test.Test
 
 class LCDTest {

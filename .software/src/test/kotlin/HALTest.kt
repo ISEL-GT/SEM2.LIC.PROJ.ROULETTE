@@ -1,5 +1,6 @@
 package com.github.iselgt.roulette
 
+import com.github.iselgt.roulette.control.HAL
 import isel.leic.UsbPort
 import kotlin.test.Test
 

@@ -1,6 +1,7 @@
 package com.github.iselgt.roulette
 
-import com.github.iselgt.roulette.KBD.waitKey
+import com.github.iselgt.roulette.control.KBD
+import com.github.iselgt.roulette.control.KBD.waitKey
 import kotlin.test.Test
 
 class KBDTest {

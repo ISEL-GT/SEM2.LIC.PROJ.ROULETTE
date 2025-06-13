@@ -27,7 +27,7 @@ m.out -> UsbPort.I7
 # --------------------------------------
 # Coin Acceptor
 # --------------------------------------
-UsbPort.O6 -> ca.accept
+UsbPort.O2 -> ca.accept
 ca.Coin -> UsbPort.I6
 ca.Coin_id -> UsbPort.I5
 
@@ -61,9 +61,9 @@ srl.DXval -> dl.Dval
 srl.D[0-4] -> dl.I[0-4]
 
 # LCD Dispatcher
-UsbPort.O[1-4] -> lcd.D[4-7]
-UsbPort.O6 -> lcd.rs
-UsbPort.O7 -> lcd.e
+dl.D[1-4] -> lcd.D[4-7]
+dl.D0 -> lcd.rs
+dl.WrL -> lcd.e
 dl.done -> srl.accept
 
 # --------------------------------------

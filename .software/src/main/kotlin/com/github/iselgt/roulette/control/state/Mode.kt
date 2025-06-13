@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette.enums
+package com.github.iselgt.roulette.control.state
 
 /**
  * This enum is responsible for keeping track of the different modes of the game.
@@ -6,7 +6,7 @@ package com.github.iselgt.roulette.enums
 enum class Mode(val character: Char) {
     EXITING('.'),
     DEFAULT('*'),
-    MAINTENANCE(0x01.toChar());
+    MAINTENANCE(0b10000000.toChar());
 
     companion object {
 

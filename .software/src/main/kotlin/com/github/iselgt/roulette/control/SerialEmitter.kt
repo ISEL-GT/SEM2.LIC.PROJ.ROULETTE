@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette
+package com.github.iselgt.roulette.control
 
 import isel.leic.utils.Time
 
@@ -7,10 +7,10 @@ object SerialEmitter {
     enum class Destination { LCD, ROULETTE }
 
     private const val SDX = 0x02                // Serial data line -> 01
-    private const val LCD_MASK = 0x20           // Enables LCD communication -> O5
+    private const val LCD_MASK = 0x20           // Enables LCD.kt communication -> O5
     private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
     private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07
-    private const val DELAYTIME = 5L
+    private const val DELAYTIME = 2L
 
     /**
      * Initializes the serial interface:
@@ -18,7 +18,6 @@ object SerialEmitter {
      * - Clears the clock line
      */
     fun init() {
-        HAL.init()
         HAL.setBits(LCD_MASK)
         HAL.setBits(ROULETTE_MASK)
         HAL.clrBits(SCLK_MASK)
@@ -37,19 +36,12 @@ object SerialEmitter {
         // Disable destination before transmission
         HAL.clrBits(address)
 
-        // Send data bits with Rs first and then the D0-D3
-        var bits = "";
-
         repeat(size) { i ->
             val bit = (data shr i) and 1
             if (bit == 1) parityCount++
-            bits += bit.toString()
             writeBit(bit)
             pulseClock()
         }
-
-        println(bits.reversed() + " (${data.shr(1)} and ${data.and(0x01)})")
-
         // Send odd parity bit
         val parityBit = if (parityCount % 2 == 0) 1 else 0
         writeBit(parityBit)
@@ -83,5 +75,5 @@ object SerialEmitter {
 }
 
 fun main() {
-    SerialEmitter.send(SerialEmitter.Destination.ROULETTE, 0x55, 8)
+    SerialEmitter.send(SerialEmitter.Destination.LCD, 0x03, 8)
 }

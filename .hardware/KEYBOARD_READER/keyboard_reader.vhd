@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity keyboard_reader is
     port (
-        lines         : in std_logic_vector(3 downto 0);
+        lines          : in std_logic_vector(3 downto 0);
         CLK            : in std_logic;
         Reset          : in std_logic;
         ack_control    : in std_logic;

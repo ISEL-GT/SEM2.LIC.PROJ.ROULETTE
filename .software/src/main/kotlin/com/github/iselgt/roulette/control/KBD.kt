@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette
+package com.github.iselgt.roulette.control
 import isel.leic.utils.Time
 
 
@@ -15,7 +15,7 @@ object KBD {
         HAL.init()
     }
 
-    private fun getKey(): Char {
+    fun getKey(): Char {
         if (HAL.isBit(KVAL)) {
             val key = HAL.readBits(K)
             HAL.setBits(KACK)
