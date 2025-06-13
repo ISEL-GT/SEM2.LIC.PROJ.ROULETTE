@@ -87,6 +87,9 @@ architecture Structural of roulette is
     end component;
      
     -- Sinais internos
+	 signal coin_sig		 : std_logic;
+	 signal coin_accept 	 : std_logic;
+	 
     signal sig_Q         : std_logic_vector(3 downto 0);
     signal sig_Dval      : std_logic;
     signal ACK       	 : std_logic;
@@ -181,13 +184,16 @@ begin
         );
 
     -- Atribuições internas
+	 coin_sig <= Coin and not coin_accept;
+	 
     sig_inputPort(0)           <= sig_Dval;
     sig_inputPort(4 downto 1)  <= sig_Q;
 	 sig_inputPort(5)				 <= Coin_id;
-	 sig_inputPort(6)				 <= Coin;
+	 sig_inputPort(6)				 <= coin_sig;
 	 sig_inputPort(7)		       <= M;
 	 
 	 internal_SDX    <= sig_outputPort(1);
+	 coin_accept 	  <= sig_outputPort(2);
     ACK             <= sig_outputPort(4);
     internal_LCDSel <= sig_outputPort(5);
     internal_RouSel <= sig_outputPort(6);
