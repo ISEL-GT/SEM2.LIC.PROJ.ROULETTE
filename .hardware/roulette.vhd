@@ -14,6 +14,7 @@ entity roulette is
         LCD_DATA  : out std_logic_vector(7 downto 4);
         LCD_RS    : out std_logic;
         LCD_EN    : out std_logic;
+		  accept    : out std_logic;
         HEX0, HEX1,
         HEX2, HEX3,
         HEX4, HEX5 : out std_logic_vector(7 downto 0)
@@ -187,6 +188,7 @@ begin
 	 sig_inputPort(7)		       <= M;
 	 
 	 internal_SDX    <= sig_outputPort(1);
+	 accept			  <= sig_outputPort(2);
     ACK             <= sig_outputPort(4);
     internal_LCDSel <= sig_outputPort(5);
     internal_RouSel <= sig_outputPort(6);

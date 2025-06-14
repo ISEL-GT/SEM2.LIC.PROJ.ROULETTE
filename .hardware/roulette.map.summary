@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Fri Jun 13 17:18:20 2025
+Analysis & Synthesis Status : Successful - Fri Jun 13 22:13:16 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
 Top-level Entity Name : roulette
@@ -7,7 +7,7 @@ Total logic elements : 647
     Total combinational functions : 578
     Dedicated logic registers : 262
 Total registers : 262
-Total pins : 67
+Total pins : 68
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
