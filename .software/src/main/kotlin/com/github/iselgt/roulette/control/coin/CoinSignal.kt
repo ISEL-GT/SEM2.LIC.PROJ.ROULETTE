@@ -1,4 +1,4 @@
-package com.github.iselgt.roulette.control.signals
+package com.github.iselgt.roulette.control.coin
 
 import com.github.iselgt.roulette.control.HAL
 

@@ -1,6 +1,4 @@
-package com.github.iselgt.roulette.control
-
-import com.github.iselgt.roulette.control.signals.CoinSignal
+package com.github.iselgt.roulette.control.coin
 
 object CoinAcceptor {
 

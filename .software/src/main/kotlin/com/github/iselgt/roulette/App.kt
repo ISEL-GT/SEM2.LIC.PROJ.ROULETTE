@@ -1,12 +1,13 @@
 package com.github.iselgt.roulette
 
-import com.github.iselgt.roulette.control.CoinAcceptor
+import com.github.iselgt.roulette.control.M
+import com.github.iselgt.roulette.control.coin.CoinAcceptor
 import com.github.iselgt.roulette.control.state.Mode
 import com.github.iselgt.roulette.control.state.GamePhase
 import com.github.iselgt.roulette.control.display.RouletteDisplay
 import com.github.iselgt.roulette.control.TUI
 import com.github.iselgt.roulette.control.display.RouletteDisplay.setValue
-import com.github.iselgt.roulette.control.signals.CoinSignal
+import com.github.iselgt.roulette.control.coin.CoinSignal
 import isel.leic.utils.Time
 import kotlin.random.Random
 
@@ -21,8 +22,8 @@ var bets = ArrayList<Int>()
 var roll_history = ArrayList<Int>()
 var betBuffer = 0
 
-const val WIN_MULTIPLIER = 2
-const val ROULETTE_MAX = 12
+const val WIN_MULTIPLIER = 4
+const val ROULETTE_MAX = 36
 
 /**
  * The base path for the storage of the game data.
@@ -170,7 +171,7 @@ fun waitForStartOrMaintenance() {
         val key = TUI.getKey()
 
         // If we're in maintenance mode, start the maintenance phase and set the M bit
-        if (TUI.isMaintenance()) {
+        if (M.isMaintenance()) {
             operatingMode = Mode.MAINTENANCE
             break
         }
@@ -277,93 +278,6 @@ fun spinRoulette() {
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
 }
 
-
-/**
- * This method is responsible for waiting for the user to press a key and checking if it's a valid mode.
- * If the key is not a valid mode, continue waiting.
- */
-fun waitForMaintenanceInput() {
-
-    // Tracks whether we are displaying the number of games played and coins inserted
-    var keyAPressed = false
-
-    // Tracks whether we are displaying the history of rolled numbers
-    var keyCPressed = false
-
-    // Tracks whether we are turning off the machine for real
-    var keyDPressed = false
-
-    do {
-
-        // Wait for the user to press a key and check if it's a valid mode
-        val key = TUI.getKey()
-
-        when (key) {
-
-            // If the key is "A", show the number of games played and coins inserted
-            'A' -> {
-                keyAPressed = true
-                keyCPressed = false
-                keyDPressed = false
-                TUI.writeMessage("GAMES: $gamesPlayed|COINS: $credits")
-            }
-
-            // If we click "*" after "A", we reset the counters for games and coins
-            '*' -> {
-                if (keyAPressed) {
-                    gamesPlayed = 0
-                    credits = 0
-                    TUI.writeMessage("GAME STATS|CLEARED")
-                }
-
-                else if (keyCPressed) {
-                    roll_history.clear()
-                    TUI.writeMessage("ROLL HISTORY|CLEARED")
-                }
-
-                // If we click "*" alone, then start a game
-                else { break }
-
-                keyAPressed = false
-                keyCPressed = false
-                keyDPressed = false
-            }
-
-            // If the key is "B", show the history of rolled numbers
-            'B' -> {
-
-                keyCPressed = true
-                keyDPressed = false
-                keyAPressed = false
-
-                // Limit the roll history to 32 characters, breaking it into two lines. Don't separate numbers.
-                val formattedHistory = roll_history.map { if (it.toString().length == 1) "0$it" else it.toString() }
-                val history = formattedHistory.reversed().take(5).joinToString(">")
-                val history2 = formattedHistory.reversed().drop(5).take(5).joinToString(">")
-                TUI.writeMessage(" $history| $history2")
-            }
-
-            // If the key is "D", turn off the machine and save the statistics
-            'D' -> {
-                if (!keyDPressed) {
-                    TUI.writeMessage("ARE YOU SURE?|HIT 'D' FOR YES")
-                    keyDPressed = true
-                    continue
-                }
-
-                saveStatistics()
-                TUI.writeMessage("GOODBYE!")
-
-                Time.sleep(2000L)  // Wait for 2 seconds before turning off the machine
-                RouletteDisplay.off()
-                operatingMode = Mode.EXITING
-                break
-            }
-            else -> continue
-        }
-
-    } while (true)
-}
 
 /**
  * Main function to start the roulette game.

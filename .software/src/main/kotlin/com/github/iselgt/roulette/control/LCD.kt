@@ -149,16 +149,3 @@ object LCD {
         Time.sleep(WAIT_TIME)
     }
 }
-
-fun main() {
-    HAL.init()
-    SerialEmitter.init()
-    LCD.init()
-    LCD.write("Hello World")
-    while (true){
-        LCD.write("0123456789ABCDEF")
-        LCD.cursor(1,0)
-        LCD.write("0123456789ABCDEF")
-        LCD.cursor(0,0)
-    }
-}

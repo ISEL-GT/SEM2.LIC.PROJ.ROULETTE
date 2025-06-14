@@ -1,11 +1,11 @@
 package com.github.iselgt.roulette.control.state
 
+import com.github.iselgt.roulette.control.M.waitForMaintenanceInput
 import com.github.iselgt.roulette.control.TUI
 import com.github.iselgt.roulette.main
 import com.github.iselgt.roulette.operatingMode
 import com.github.iselgt.roulette.spinRoulette
 import com.github.iselgt.roulette.waitForBetOrCoins
-import com.github.iselgt.roulette.waitForMaintenanceInput
 import com.github.iselgt.roulette.waitForStartOrMaintenance
 
 /**

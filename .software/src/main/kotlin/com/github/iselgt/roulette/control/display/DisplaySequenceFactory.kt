@@ -3,6 +3,10 @@ package com.github.iselgt.roulette.control.display
 import com.github.iselgt.roulette.control.display.DisplaySequenceFactory
 import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.index
 
+/**
+ * Factory object for generating display sequences for the 7-segment LED display.
+ * This object provides a method to generate the next segment code in a circular animation sequence.
+ */
 object DisplaySequenceFactory {
 
     /**
