@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Jun 14 01:57:20 2025
+Analysis & Synthesis Status : Successful - Wed Jun 18 14:25:31 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : roulette
-Top-level Entity Name : roulette
+Top-level Entity Name : keydecode_ringBuffer
 Family : MAX 10
-Total logic elements : 641
-    Total combinational functions : 572
-    Dedicated logic registers : 262
-Total registers : 262
-Total pins : 68
+Total logic elements : 232
+    Total combinational functions : 230
+    Dedicated logic registers : 61
+Total registers : 61
+Total pins : 17
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

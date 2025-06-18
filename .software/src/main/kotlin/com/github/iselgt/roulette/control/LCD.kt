@@ -149,3 +149,9 @@ object LCD {
         Time.sleep(WAIT_TIME)
     }
 }
+    fun main(){
+        LCD.init()
+        LCD.write("Hello World")
+        while (true)
+            LCD.write(KBD.waitKey(2000))
+    }

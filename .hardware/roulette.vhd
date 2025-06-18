@@ -184,8 +184,8 @@ begin
 	 
     sig_inputPort(0)           <= sig_Dval;
     sig_inputPort(4 downto 1)  <= sig_Q;
-	 sig_inputPort(5)				 <= Coin_id;
-	 sig_inputPort(6)				 <= Coin;
+	 sig_inputPort(5)				 <= Coin;
+	 sig_inputPort(6)				 <= Coin_id;
 	 sig_inputPort(7)		       <= M;
 	 
 	 internal_SDX    <= sig_outputPort(1);

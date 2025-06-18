@@ -1,0 +1,5 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Serial_Controller_tb is
+end Serial_Controller_tb;

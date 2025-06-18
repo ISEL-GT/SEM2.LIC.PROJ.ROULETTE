@@ -1,4 +1,5 @@
 package com.github.iselgt.roulette.control
+import com.github.iselgt.roulette.control.KBD.waitKey
 import isel.leic.utils.Time
 
 
@@ -7,7 +8,7 @@ object KBD {
     const val EMPTY_CHAR = 0x00.toChar()    // and empty char
     private const val KVAL = 0x01                   // the value 0000 0001 of the UsbPort Input  -> correspond to the bit that shows if the key is valid or not
     private const val K = 0x1E                      // the value 0001 1110 of the UsbPort Input  -> correspond to the bits that shows the k value
-    private const val KACK = 0x01                   // the value 0000 0001 of the UsbPort Output -> correspond to the bits that acknowledge the valid key
+    private const val KACK = 0x10                   // the value 0000 0001 of the UsbPort Output -> correspond to the bits that acknowledge the valid key
 
     private val keys = charArrayOf('1', '4', '7', '*', '2', '5', '8', '0', '3', '6', '9', '#', 'A', 'B', 'C', 'D')
 
@@ -38,5 +39,15 @@ object KBD {
             key = getKey()
         } while (Time.getTimeInMillis() < endTime && key == EMPTY_CHAR)
         return key
+    }
+}
+fun main() {
+    KBD.init()
+
+    while (true) {
+        val keyPressed = waitKey(1000)
+        if (keyPressed == KBD.EMPTY_CHAR) continue
+
+        print(keyPressed)
     }
 }

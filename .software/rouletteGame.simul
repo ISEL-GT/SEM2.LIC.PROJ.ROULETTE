@@ -40,7 +40,7 @@ kbd.val -> rb.DAV
 kbd.K[0-3] -> rb.D[0-3]
 
 # Ring Buffer
-UsbPort.O0 -> kbd.ack
+UsbPort.O4 -> kbd.ack
 rb.Q[0-3] -> ob.D[0-3]
 rb.Wreg -> ob.Load
 
@@ -48,7 +48,7 @@ rb.Wreg -> ob.Load
 ob.OBfree -> rb.CTS
 kbd.K[0-3] -> UsbPort.I[1-4]
 kbd.val -> UsbPort.I0
-UsbPort.O7 -> ob.ACK
+UsbPort.O4 -> ob.ACK
 
 # --------------------------------------
 # SLCDC

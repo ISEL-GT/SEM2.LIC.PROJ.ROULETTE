@@ -1,0 +1,80 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity OutputRegister_tb is
+end OutputRegister_tb;
+
+architecture behavioral of OutputRegister_tb is
+
+    component OutputRegister is
+        port (
+            clk   : in  std_logic;
+            Wreg  : in  std_logic;
+            Din   : in  std_logic_vector(3 downto 0);  
+            Dout  : out std_logic_vector(3 downto 0) 
+        );
+    end component;
+
+    constant clk_period      : time := 10 ns;
+    constant half_clk_period : time := clk_period / 2;
+
+    signal clk_tb   : std_logic;
+    signal Wreg_tb  : std_logic;
+    signal Din_tb   : std_logic_vector(3 downto 0);
+    signal Dout_tb  : std_logic_vector(3 downto 0);
+
+begin
+
+    -- Instanciação do DUT (Device Under Test)
+    UUT: OutputRegister
+        port map (
+            clk   => clk_tb,
+            Wreg  => Wreg_tb,
+            Din   => Din_tb,
+            Dout  => Dout_tb
+        );
+
+    -- Geração de clock
+    clk_gen: process
+    begin
+        while true loop
+            clk_tb <= '0';
+            wait for half_clk_period;
+            clk_tb <= '1';
+            wait for half_clk_period;
+        end loop;
+    end process;
+
+    -- Estímulos de teste
+    stimulus: process
+    begin
+        -- Reset inicial
+        Wreg_tb <= '0';
+        Din_tb  <= "0000";
+        wait for clk_period;
+
+        -- Teste 1: Escrever "1010" no registo
+        Din_tb  <= "1010";
+        Wreg_tb <= '1';
+        wait for clk_period;
+
+        -- Desativar escrita
+        Wreg_tb <= '0';
+        Din_tb  <= "1111";  -- não deve afetar a saída
+        wait for clk_period;
+
+        -- Teste 2: Escrever novo valor "0101"
+        Din_tb  <= "0101";
+        Wreg_tb <= '1';
+        wait for clk_period;
+
+        -- Desativar escrita novamente
+        Wreg_tb <= '0';
+        Din_tb  <= "0000"; -- valor não escrito
+        wait for clk_period;
+
+        -- Fim da simulação
+        wait for clk_period * 5;
+    end process;
+
+end behavioral;

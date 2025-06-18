@@ -60,7 +60,7 @@ begin
 
 	clkdivider: clock_divisor
 		generic map (
-			div => 2  -- ajusta conforme a frequência desejada
+			div =>  50000  -- ajusta conforme a frequência desejada
 		)
 		port map (
 			clk_in  => CLK,
@@ -70,20 +70,20 @@ begin
 	keyscan: key_scanner port map (
 		KScan 	=> sig_kscan,
 		lines 	=> lines,
-		CLK     => clk_div,
+		CLK     	=> clk_div,
 		Reset 	=>	Reset,
-		columns => sig_cols,
+		columns 	=> sig_cols,
 		KPress 	=> sig_kpress,
-		K 		=> sig_k3
+		K 			=> sig_k3
 	);
 
 	keycontrols: KeyControl port map (
 		reset 	=> Reset,
-		clk 	=> clk_div,
+		clk 		=> clk_div,
 		Kpress 	=> sig_kpress,
-		Kack 	=> Kack,
+		Kack 		=> Kack,
 		KScan 	=> sig_kscan,
-		Kval 	=> sig_kval
+		Kval 		=> sig_kval
 	);
 
 	Kval 	<= sig_kval;

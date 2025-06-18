@@ -1,5 +1,6 @@
 package com.github.iselgt.roulette.control.display
 
+import com.github.iselgt.roulette.control.LCD
 import com.github.iselgt.roulette.control.SerialEmitter
 import isel.leic.utils.Time
 import kotlin.random.Random
@@ -111,3 +112,12 @@ object RouletteDisplay {
         SerialEmitter.send(SerialEmitter.Destination.ROULETTE, CMD_UPDATE, 8)
     }
 }
+    fun main(){
+        RouletteDisplay.init()
+        Time.sleep(1000)
+        RouletteDisplay.animation()
+        Time.sleep(10000)
+        RouletteDisplay.setValue("0")
+        RouletteDisplay.setValue("11")
+
+    }
