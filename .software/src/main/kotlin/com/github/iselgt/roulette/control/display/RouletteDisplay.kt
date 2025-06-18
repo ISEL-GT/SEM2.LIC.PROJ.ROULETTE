@@ -1,7 +1,10 @@
 package com.github.iselgt.roulette.control.display
 
+import com.github.iselgt.roulette.ROULETTE_MAX
+import com.github.iselgt.roulette.control.HAL
 import com.github.iselgt.roulette.control.LCD
 import com.github.iselgt.roulette.control.SerialEmitter
+import com.github.iselgt.roulette.control.SerialEmitter.ROULETTE_MASK
 import isel.leic.utils.Time
 import kotlin.random.Random
 
@@ -27,7 +30,7 @@ object RouletteDisplay {
      * It initializes the serial emitter and ensures the display is turned on.
      */
     fun init() {
-        SerialEmitter.init()
+        HAL.init(ROULETTE_MASK)
         off(false) // Turn on the display
     }
 

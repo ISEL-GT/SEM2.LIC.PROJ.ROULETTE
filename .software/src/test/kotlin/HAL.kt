@@ -4,7 +4,7 @@ import com.github.iselgt.roulette.control.HAL
 import isel.leic.UsbPort
 import kotlin.test.Test
 
-class HALTest {
+class HAL {
 
     @Test
     fun halGlobalTest() {
@@ -16,7 +16,7 @@ class HALTest {
 
             val value = UsbPort.read()
             HAL.setBits(counter)
-            println("${counter}: ${Integer.toBinaryString(value)} | ${HAL.resetOutput}")
+            println("${counter}: ${Integer.toBinaryString(value)} | ${HAL.outputPort}")
             counter++
             Thread.sleep(500)
         }

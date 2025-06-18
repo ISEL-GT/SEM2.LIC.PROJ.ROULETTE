@@ -1,6 +1,10 @@
 package com.github.iselgt.roulette
 
+import com.github.iselgt.roulette.control.display.DisplaySequenceFactory
+import com.github.iselgt.roulette.control.display.DisplaySequenceFactory.SEGMENTCIRCLE
+import com.github.iselgt.roulette.control.display.DisplaySequenceFactory.currentSegmentIndex
 import com.github.iselgt.roulette.control.display.RouletteDisplay
+import isel.leic.UsbPort
 import kotlin.system.measureTimeMillis
 import kotlin.test.*
 
@@ -11,7 +15,7 @@ import kotlin.test.*
  * Animation
  * Display On/off
  */
-class RouletteDisplayTest {
+class RouletteDisplay {
 
     @Test
     fun testDisplayStaticValues() {
@@ -30,11 +34,16 @@ class RouletteDisplayTest {
     @Test
     fun testDisplayAnimation() {
 
+        RouletteDisplay.off() // Ensure display is off before starting animation
         RouletteDisplay.on()
 
         val elapsed = measureTimeMillis {
             println("Testing animation...")
-            RouletteDisplay.animation()
+
+            while (true) {
+                RouletteDisplay.animation()
+            }
+
             assertTrue(true, "Animation ran without exceptions.")
         }
 

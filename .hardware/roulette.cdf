@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/") File("roulette.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/dev/VHDL/SEM2.LIC.PROJ.ROULETTE/.hardware/") File("roulette.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -4,10 +4,9 @@ import com.github.iselgt.roulette.control.KBD
 import com.github.iselgt.roulette.control.LCD
 import kotlin.test.Test
 
-class LCDTest {
+class LCD {
 
     @Test
-
     fun lcdTest(){
         LCD.init()
         while (true){
@@ -17,5 +16,13 @@ class LCDTest {
                 break
             }
         }
+    }
+
+    @Test
+    fun lcdHelloWorld() {
+        initPeripherics()
+        LCD.write("Hello World")
+
+        while (true) LCD.write(KBD.waitKey(2000))
     }
 }

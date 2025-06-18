@@ -1,6 +1,9 @@
 package com.github.iselgt.roulette
 
+import com.github.iselgt.roulette.control.HAL
+import com.github.iselgt.roulette.control.LCD
 import com.github.iselgt.roulette.control.M
+import com.github.iselgt.roulette.control.SerialEmitter
 import com.github.iselgt.roulette.control.coin.CoinAcceptor
 import com.github.iselgt.roulette.control.state.Mode
 import com.github.iselgt.roulette.control.state.GamePhase
@@ -278,14 +281,21 @@ fun spinRoulette() {
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
 }
 
+fun initPeripherics() {
+    HAL.init()  // Initialize the hardware abstraction
+    SerialEmitter.init()
+    LCD.init()
+    RouletteDisplay.init()
+    TUI.init()  // Initialize the TUI (Text User Interface) system
+}
 
 /**
  * Main function to start the roulette game.
  */
 fun main() {
 
-    TUI.init()  // Initialize the TUI (Text User Interface) system
-    RouletteDisplay.init()
+    initPeripherics()
+
     RouletteDisplay.off()  // The display should be off by default
     loadStatistics()
     CoinAcceptor.init()

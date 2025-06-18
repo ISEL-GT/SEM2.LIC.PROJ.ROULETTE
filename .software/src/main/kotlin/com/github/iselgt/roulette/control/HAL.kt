@@ -3,11 +3,11 @@ import isel.leic.UsbPort
 
 object HAL {
 
-    var resetOutput = 0
+    var outputPort = 0
 
-    fun init() {
-        resetOutput = 0
-        UsbPort.write(resetOutput)
+    fun init(mask: Int = 0x00) {
+        outputPort = mask
+        UsbPort.write(mask)
     }
 
     //Checks if the bit chosen by the mask is on
@@ -23,14 +23,14 @@ object HAL {
 
     //Force 0 on the bits chosen by the mask
     fun clrBits(mask:Int) {
-        resetOutput = resetOutput.and(mask.inv())
-        UsbPort.write(resetOutput)
+        outputPort = outputPort.and(mask.inv())
+        UsbPort.write(outputPort)
     }
 
     //Force 1 on the bits chosen by the mask
     fun setBits(mask:Int){
-        resetOutput = mask.or(resetOutput)
-        UsbPort.write(resetOutput)
+        outputPort = mask.or(outputPort)
+        UsbPort.write(outputPort)
     }
 
     //Chose the bits that u want to rewrite and force them with the input value

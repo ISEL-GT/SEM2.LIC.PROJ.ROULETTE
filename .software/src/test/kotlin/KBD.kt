@@ -4,7 +4,7 @@ import com.github.iselgt.roulette.control.KBD
 import com.github.iselgt.roulette.control.KBD.waitKey
 import kotlin.test.Test
 
-class KBDTest {
+class KBD {
 
     @Test
     fun kbdTest() {

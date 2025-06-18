@@ -7,8 +7,8 @@ object SerialEmitter {
     enum class Destination { LCD, ROULETTE }
 
     private const val SDX = 0x02                // Serial data line -> 01
-    private const val LCD_MASK = 0x20           // Enables LCD.kt communication -> O5
-    private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
+    const val LCD_MASK = 0x20           // Enables LCD.kt communication -> O5
+    const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
     private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07
     private const val DELAYTIME = 2L
 
@@ -18,8 +18,6 @@ object SerialEmitter {
      * - Clears the clock line
      */
     fun init() {
-        HAL.setBits(LCD_MASK)
-        HAL.setBits(ROULETTE_MASK)
         HAL.clrBits(SCLK_MASK)
     }
 
