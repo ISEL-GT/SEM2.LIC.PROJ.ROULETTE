@@ -72,7 +72,7 @@ begin
 
     instance_key_decode: Key_decode
         port map (
-            Kack  => ack_control,
+            Kack  => dac_ring_buffer,
             lines => lines,
             CLK   => CLK,
             Reset => Reset,

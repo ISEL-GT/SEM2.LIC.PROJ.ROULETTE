@@ -113,11 +113,9 @@ object RouletteDisplay {
     }
 }
     fun main(){
-        RouletteDisplay.init()
-        Time.sleep(1000)
-        RouletteDisplay.animation()
-        Time.sleep(10000)
-        RouletteDisplay.setValue("0")
-        RouletteDisplay.setValue("11")
-
+            RouletteDisplay.init()
+            Time.sleep(1000)
+            while (true) {
+            RouletteDisplay.animation()
+        }
     }

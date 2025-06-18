@@ -7,7 +7,7 @@ object LCD {
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
-    private const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
+    public const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
     private const val DATA_MASK = 0x1E                  // A useful mask that correspond to the 4 bits key
     private const val ENABLE_MASK = 0x80                // A useful mask that correspond to enable
     private const val REGISTER_SELECTOR_MASK= 0x40      // A useful mask that correspond to the register selector
@@ -151,6 +151,7 @@ object LCD {
 }
     fun main(){
         LCD.init()
+        LCD.clear()
         LCD.write("Hello World")
         while (true)
             LCD.write(KBD.waitKey(2000))
