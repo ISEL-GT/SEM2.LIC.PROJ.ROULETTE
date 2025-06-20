@@ -10,7 +10,8 @@ entity roulette_dispatcher is
 
         Wrl   : out std_logic;
         Dout  : out std_logic_vector(7 downto 0);
-        done  : out std_logic
+        done  : out std_logic;
+		  counter: out std_logic_vector(4 downto 0)
     );
 end roulette_dispatcher;
 
@@ -44,9 +45,10 @@ architecture structural of roulette_dispatcher is
     -- Sinais internos
     signal sig_en_count : std_logic;
     signal sig_count    : std_logic_vector(3 downto 0);
+	 signal sig_notEn		: std_logic;
 
 begin
-
+	
     -- Instanciação do controlador
     control_unit: rouletteDispatcherControl
         port map (
@@ -58,17 +60,20 @@ begin
             Wrl       => Wrl,
             done      => done
         );
+		  
+		  sig_notEn <= not sig_en_count;
 
     -- Instanciação do contador
     counter_unit: counter_4bits
         port map (
             CLK     => clk,
             CE      => sig_en_count,
-            reset   => reset,
+            reset   => sig_notEn,
             count   => sig_count
         );
 
     -- Ligação direta de dados
     Dout <= Din;
+	 counter <= sig_en_count & sig_count;
 	 
 end structural;

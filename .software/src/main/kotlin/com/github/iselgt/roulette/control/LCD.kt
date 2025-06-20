@@ -1,5 +1,6 @@
 package com.github.iselgt.roulette.control
 
+import com.github.iselgt.roulette.control.KBD.EMPTY_CHAR
 import isel.leic.utils.Time
 import kotlin.text.iterator
 
@@ -7,7 +8,6 @@ object LCD {
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
-    private const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
     private const val DATA_MASK = 0x1E                  // A useful mask that correspond to the 4 bits key
     private const val ENABLE_MASK = 0x80                // A useful mask that correspond to enable
     private const val REGISTER_SELECTOR_MASK= 0x40      // A useful mask that correspond to the register selector
@@ -93,6 +93,7 @@ object LCD {
         val rsBit = if (rs) 0x01 else 0x00
         val dataResult = (data shl 1) or rsBit // Shift data to align with the serial protocol
         SerialEmitter.send(SerialEmitter.Destination.LCD, dataResult, 5)
+        Time.sleep(WAIT_TIME)
     }
 
     fun init() {
@@ -120,7 +121,7 @@ object LCD {
 
 
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar())
+        if (c != EMPTY_CHAR)
             writeDATA(c.code)   //.code => .toInt()
     }
 
@@ -149,3 +150,20 @@ object LCD {
         Time.sleep(WAIT_TIME)
     }
 }
+    fun main() {
+        LCD.init()
+        LCD.clear()
+        LCD.write("Hello World")
+        Time.sleep(1000L)
+        LCD.clear()
+        while (true) {
+            val key = KBD.waitKey(1000L)
+            if (key == '*') {
+                LCD.clear()
+            } else
+                if (key != EMPTY_CHAR) {
+                    LCD.write(key)
+                }
+        }
+    }
+

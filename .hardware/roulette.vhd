@@ -17,7 +17,8 @@ entity roulette is
 		  accept    : out std_logic;
         HEX0, HEX1,
         HEX2, HEX3,
-        HEX4, HEX5 : out std_logic_vector(7 downto 0)
+        HEX4, HEX5 : out std_logic_vector(7 downto 0);
+		  		  counter : out std_logic_vector(4 downto 0)
     );
 end roulette;
 
@@ -55,7 +56,8 @@ architecture Structural of roulette is
 				
 				
             Wrl    : out std_logic;
-            Dout   : out std_logic_vector(7 downto 0)
+            Dout   : out std_logic_vector(7 downto 0);
+				counter : out std_logic_vector(4 downto 0)
         );
     end component;
 
@@ -139,7 +141,8 @@ begin
             MClk   => clk,
             Reset  => reset,
             Wrl    => sig_WRD,
-            Dout   => Dout_SRC
+            Dout   => Dout_SRC,
+				counter => counter
         );
 
     -- Instância do SLCDC
@@ -184,8 +187,8 @@ begin
 	 
     sig_inputPort(0)           <= sig_Dval;
     sig_inputPort(4 downto 1)  <= sig_Q;
-	 sig_inputPort(5)				 <= Coin_id;
-	 sig_inputPort(6)				 <= Coin;
+	 sig_inputPort(5)				 <= Coin;
+	 sig_inputPort(6)				 <= Coin_id;
 	 sig_inputPort(7)		       <= M;
 	 
 	 internal_SDX    <= sig_outputPort(1);

@@ -1,0 +1,49 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all;
+
+
+-- This is the top-level entity responsible for running the actual program
+entity keyscan_rtb is
+
+	port (
+		KScan   : in std_logic_vector(1 downto 0);
+		lines   : in std_logic_vector(3 downto 0);
+		CLK 	: in std_logic;
+		Reset   : in std_logic;
+
+		columns : out std_logic_vector(3 downto 0);
+		KPress  : out std_logic;
+		K 		: out std_logic_vector(3 downto 0)
+	);
+end roulette;
+
+architecture structural of keyscan_rtb is
+
+	component key_scanner is
+		port (
+			KScan   : in std_logic_vector(1 downto 0);
+			lines   : in std_logic_vector(3 downto 0);
+			CLK 	: in std_logic;
+			Reset   : in std_logic;
+
+			columns : out std_logic_vector(3 downto 0);
+			KPress  : out std_logic;
+			K 		: out std_logic_vector(3 downto 0)
+		);
+	end component;
+
+begin
+
+	instantiate_key_scanner: key_scanner
+		port map (
+			KScan   => KScan,
+			lines   => lines,
+			CLK 	=> CLK,
+			Reset   => Reset,
+
+			columns => columns,
+			KPress  => KPress,
+			K 		=> K
+		);
+
+end structural;

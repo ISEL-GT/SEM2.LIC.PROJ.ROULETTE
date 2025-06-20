@@ -8,7 +8,8 @@ entity keyboard_reader is
         Reset          : in std_logic;
         ack_control    : in std_logic;
 
-        columns : out std_logic_vector(3 downto 0);
+		  
+        columns: out std_logic_vector(3 downto 0);
         output : out std_logic_vector(3 downto 0);
         Dval   : out std_logic
     );
@@ -71,7 +72,7 @@ begin
 
     instance_key_decode: Key_decode
         port map (
-            Kack  => ack_control,
+            Kack  => dac_ring_buffer,
             lines => lines,
             CLK   => CLK,
             Reset => Reset,

@@ -1,12 +1,15 @@
 package com.github.iselgt.roulette.control.coin
 
+import com.github.iselgt.roulette.control.COIN_ACCEPT_MASK
+import com.github.iselgt.roulette.control.COIN_ID_MASK
+import com.github.iselgt.roulette.control.COIN_MASK
 import com.github.iselgt.roulette.control.HAL
 
 enum class CoinSignal(val mask: Int, var value: Boolean) {
-    COIN(0x40, false),  // UsbPort.I6
-    COIN_ID(0x20, false),  // UsbPort.I5
+    COIN(COIN_MASK, false),  // UsbPort.I6
+    COIN_ID(COIN_ID_MASK, false),  // UsbPort.I5
 
-    ACCEPT(0x04, false);  // UsbPort.O2
+    ACCEPT(COIN_ACCEPT_MASK, false);  // UsbPort.O2
 
     /**
      * Checks if the signal is active by reading the corresponding bit in the HAL.

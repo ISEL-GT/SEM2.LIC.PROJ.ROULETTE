@@ -6,11 +6,7 @@ object SerialEmitter {
 
     enum class Destination { LCD, ROULETTE }
 
-    private const val SDX = 0x02                // Serial data line -> 01
-    private const val LCD_MASK = 0x20           // Enables LCD.kt communication -> O5
-    private const val ROULETTE_MASK = 0x40      // Enables ROULETTE communication -> O6
-    private const val SCLK_MASK = 0x80          // Serial clock pulse -> 07
-    private const val DELAYTIME = 2L
+    private const val DELAYTIME = 1L
 
     /**
      * Initializes the serial interface:
@@ -18,8 +14,6 @@ object SerialEmitter {
      * - Clears the clock line
      */
     fun init() {
-        HAL.setBits(LCD_MASK)
-        HAL.setBits(ROULETTE_MASK)
         HAL.clrBits(SCLK_MASK)
     }
 
@@ -33,7 +27,7 @@ object SerialEmitter {
         val address = if (addr == Destination.LCD) LCD_MASK else ROULETTE_MASK
         var parityCount = 0
 
-        // Disable destination before transmission
+        // Enables destination before transmission
         HAL.clrBits(address)
 
         repeat(size) { i ->
@@ -42,12 +36,15 @@ object SerialEmitter {
             writeBit(bit)
             pulseClock()
         }
+
         // Send odd parity bit
         val parityBit = if (parityCount % 2 == 0) 1 else 0
         writeBit(parityBit)
         pulseClock()
+        // Clear the last bit send
+        HAL.clrBits(SDX)
 
-        // Re-enable destination after transmission
+        // Disables destination after transmission
         HAL.setBits(address)
     }
 
@@ -61,7 +58,6 @@ object SerialEmitter {
             HAL.setBits(SDX)
         else
             HAL.clrBits(SDX)
-        Time.sleep(DELAYTIME)
     }
 
     /**
@@ -71,5 +67,6 @@ object SerialEmitter {
     private fun pulseClock() {
         HAL.setBits(SCLK_MASK)
         HAL.clrBits(SCLK_MASK)
+        Time.sleep(DELAYTIME)
     }
 }

@@ -10,7 +10,8 @@ entity SRC is
         Reset  : in std_logic;
         
         Wrl    : out std_logic;
-        Dout   : out std_logic_vector(7 downto 0)
+        Dout   : out std_logic_vector(7 downto 0);
+		  counter : out std_logic_vector(4 downto 0)
     );
 end SRC;
 
@@ -39,7 +40,8 @@ architecture structural of SRC is
             
             Wrl   : out std_logic;
             Dout  : out std_logic_vector(7 downto 0);
-            done  : out std_logic
+            done  : out std_logic;
+				counter : out std_logic_vector(4 downto 0)
         );
     end component;
 
@@ -72,7 +74,8 @@ begin
             Din     => Data_sig,
             Wrl     => Wrl,
             Dout    => Dout,
-            done    => done_sig
+            done    => done_sig,
+				counter => counter
         );
 
 end structural;

@@ -1,6 +1,5 @@
 package com.github.iselgt.roulette.control
 
-import com.github.iselgt.roulette.control.state.Mode
 import isel.leic.utils.Time
 
 object TUI {
@@ -22,6 +21,13 @@ object TUI {
         LCD.cursor(0, 0)
         LCD.clear()
         LCD.write(msg)
+
+        /**
+         * for (character in msg) {
+         *             if (character != KBD.EMPTY_CHAR)
+         *                 LCD.write(character)
+         *         }
+         */
     }
 
     /**
