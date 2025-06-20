@@ -1,5 +1,5 @@
 Fitter report for roulette
-Fri Jun 20 16:05:29 2025
+Fri Jun 20 16:42:36 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun 20 16:05:29 2025       ;
+; Fitter Status                      ; Successful - Fri Jun 20 16:42:36 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
 ; Top-level Entity Name              ; roulette                                    ;
@@ -155,7 +155,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.23        ;
+; Average used               ; 1.22        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -2020,7 +2020,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
@@ -2032,9 +2032,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Isel/2Semestre/LIC/SEM2.LIC.PROJ.ROULETTE/.hardware/roulette.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 6626 megabytes
-    Info: Processing ended: Fri Jun 20 16:05:29 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Processing ended: Fri Jun 20 16:42:36 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+

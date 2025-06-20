@@ -1,5 +1,5 @@
 Timing Analyzer report for roulette
-Fri Jun 20 16:05:34 2025
+Fri Jun 20 16:42:41 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -94,13 +94,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.44        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.0%      ;
-;     Processors 3-16        ;   2.9%      ;
+;     Processor 2            ;   3.1%      ;
+;     Processors 3-16        ;   3.0%      ;
 +----------------------------+-------------+
 
 
@@ -890,7 +890,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 20 16:05:33 2025
+    Info: Processing started: Fri Jun 20 16:42:40 2025
 Info: Command: quartus_sta roulette -c roulette
 Info: qsta_default_script.tcl version: #1
 Critical Warning (136021): Ignored assignment LOCATION which contains an invalid node name "counter[1]•"
@@ -1079,8 +1079,8 @@ Info (332114): Report Metastability: Found 1 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4981 megabytes
-    Info: Processing ended: Fri Jun 20 16:05:34 2025
+    Info: Peak virtual memory: 4979 megabytes
+    Info: Processing ended: Fri Jun 20 16:42:41 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
