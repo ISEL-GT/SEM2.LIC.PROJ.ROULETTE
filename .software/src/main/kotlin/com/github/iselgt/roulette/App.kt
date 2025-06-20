@@ -252,7 +252,7 @@ fun spinRoulette() {
             continue
         }
 
-        processBet(TUI.getKey(10))
+        processBet(TUI.getKey(100))
     }
 
     setValue("000000")

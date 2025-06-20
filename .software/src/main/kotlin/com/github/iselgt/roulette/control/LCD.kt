@@ -1,6 +1,6 @@
 package com.github.iselgt.roulette.control
 
-import com.github.iselgt.roulette.control.LCD.NONE_VALUE
+import com.github.iselgt.roulette.control.KBD.EMPTY_CHAR
 import isel.leic.utils.Time
 import kotlin.text.iterator
 
@@ -8,7 +8,6 @@ object LCD {
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
-    public const val NONE_VALUE = 0x00                 // Null-Terminator value for when no key has been pressed
     private const val DATA_MASK = 0x1E                  // A useful mask that correspond to the 4 bits key
     private const val ENABLE_MASK = 0x80                // A useful mask that correspond to enable
     private const val REGISTER_SELECTOR_MASK= 0x40      // A useful mask that correspond to the register selector
@@ -122,7 +121,7 @@ object LCD {
 
 
     fun write(c: Char) {
-        if (c != NONE_VALUE.toChar())
+        if (c != EMPTY_CHAR)
             writeDATA(c.code)   //.code => .toInt()
     }
 
@@ -162,7 +161,7 @@ object LCD {
             if (key == '*') {
                 LCD.clear()
             } else
-                if (key != NONE_VALUE.toChar()) {
+                if (key != EMPTY_CHAR) {
                     LCD.write(key)
                 }
         }

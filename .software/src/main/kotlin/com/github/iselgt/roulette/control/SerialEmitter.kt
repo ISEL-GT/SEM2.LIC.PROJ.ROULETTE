@@ -36,17 +36,16 @@ object SerialEmitter {
             writeBit(bit)
             pulseClock()
         }
+
         // Send odd parity bit
         val parityBit = if (parityCount % 2 == 0) 1 else 0
         writeBit(parityBit)
         pulseClock()
         // Clear the last bit send
         HAL.clrBits(SDX)
-        Time.sleep(DELAYTIME)
 
         // Disables destination after transmission
         HAL.setBits(address)
-        Time.sleep(DELAYTIME)
     }
 
     /**
@@ -59,7 +58,6 @@ object SerialEmitter {
             HAL.setBits(SDX)
         else
             HAL.clrBits(SDX)
-        Time.sleep(DELAYTIME)
     }
 
     /**
@@ -68,7 +66,6 @@ object SerialEmitter {
      */
     private fun pulseClock() {
         HAL.setBits(SCLK_MASK)
-        Time.sleep(DELAYTIME)
         HAL.clrBits(SCLK_MASK)
         Time.sleep(DELAYTIME)
     }

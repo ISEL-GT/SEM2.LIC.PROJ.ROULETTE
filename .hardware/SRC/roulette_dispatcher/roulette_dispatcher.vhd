@@ -10,7 +10,8 @@ entity roulette_dispatcher is
 
         Wrl   : out std_logic;
         Dout  : out std_logic_vector(7 downto 0);
-        done  : out std_logic
+        done  : out std_logic;
+		  counter: out std_logic_vector(4 downto 0)
     );
 end roulette_dispatcher;
 
@@ -73,5 +74,6 @@ begin
 
     -- Ligação direta de dados
     Dout <= Din;
+	 counter <= sig_en_count & sig_count;
 	 
 end structural;
