@@ -1,5 +1,5 @@
 Flow report for roulette
-Wed Jun 18 15:36:48 2025
+Fri Jun 20 14:51:57 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 18 15:36:46 2025       ;
+; Flow Status                        ; Successful - Fri Jun 20 14:51:55 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; roulette                                    ;
-; Top-level Entity Name              ; KBD_test                                    ;
+; Top-level Entity Name              ; roulette                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 378 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 361 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 155 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 155                                         ;
-; Total pins                         ; 16 / 360 ( 4 % )                            ;
+; Total logic elements               ; 611 / 49,760 ( 1 % )                        ;
+;     Total combinational functions  ; 575 / 49,760 ( 1 % )                        ;
+;     Dedicated logic registers      ; 262 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 262                                         ;
+; Total pins                         ; 68 / 360 ( 19 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/18/2025 15:36:25 ;
+; Start date & time ; 06/20/2025 14:51:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; roulette            ;
 +-------------------+---------------------+
@@ -78,17 +78,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2544493407065.175025738527952          ; --            ; --           ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; KBD_test     ; Top        ;
+; COMPILER_SIGNATURE_ID               ; 2544493407065.175042749005372          ; --            ; --           ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --           ; Top        ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; testkeyboard ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; KBD_test     ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --           ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; testkeyboard ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; KBD_test     ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --           ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; testkeyboard ; Top        ;
-; TOP_LEVEL_ENTITY                    ; KBD_test                               ; roulette      ; --           ; --         ;
 +-------------------------------------+----------------------------------------+---------------+--------------+------------+
 
 
@@ -97,11 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4950 MB             ; 00:00:24                           ;
-; Fitter               ; 00:00:04     ; 1.2                     ; 6617 MB             ; 00:00:11                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4706 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.4                     ; 4974 MB             ; 00:00:01                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4947 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:05     ; 1.2                     ; 6621 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4700 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.5                     ; 4983 MB             ; 00:00:02                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

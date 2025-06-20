@@ -1,6 +1,5 @@
 package com.github.iselgt.roulette.control
 
-import com.github.iselgt.roulette.control.state.Mode
 import isel.leic.utils.Time
 
 object TUI {

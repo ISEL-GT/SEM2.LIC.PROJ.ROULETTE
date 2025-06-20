@@ -1,5 +1,6 @@
 package com.github.iselgt.roulette.control
 
+import com.github.iselgt.roulette.control.LCD.NONE_VALUE
 import isel.leic.utils.Time
 import kotlin.text.iterator
 
@@ -93,6 +94,7 @@ object LCD {
         val rsBit = if (rs) 0x01 else 0x00
         val dataResult = (data shl 1) or rsBit // Shift data to align with the serial protocol
         SerialEmitter.send(SerialEmitter.Destination.LCD, dataResult, 5)
+        Time.sleep(WAIT_TIME)
     }
 
     fun init() {
@@ -149,10 +151,20 @@ object LCD {
         Time.sleep(WAIT_TIME)
     }
 }
-    fun main(){
+    fun main() {
         LCD.init()
         LCD.clear()
         LCD.write("Hello World")
-        while (true)
-            LCD.write(KBD.waitKey(2000))
+        Time.sleep(1000L)
+        LCD.clear()
+        while (true) {
+            val key = KBD.waitKey(1000L)
+            if (key == '*') {
+                LCD.clear()
+            } else
+                if (key != NONE_VALUE.toChar()) {
+                    LCD.write(key)
+                }
+        }
     }
+

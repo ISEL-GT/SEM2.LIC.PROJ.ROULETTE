@@ -6,9 +6,6 @@ import isel.leic.utils.Time
 object KBD {
 
     const val EMPTY_CHAR = 0x00.toChar()    // and empty char
-    private const val KVAL = 0x01                   // the value 0000 0001 of the UsbPort Input  -> correspond to the bit that shows if the key is valid or not
-    private const val K = 0x1E                      // the value 0001 1110 of the UsbPort Input  -> correspond to the bits that shows the k value
-    private const val KACK = 0x10                   // the value 0000 0001 of the UsbPort Output -> correspond to the bits that acknowledge the valid key
 
     private val keys = charArrayOf('1', '4', '7', '*', '2', '5', '8', '0', '3', '6', '9', '#', 'A', 'B', 'C', 'D')
 
@@ -16,16 +13,16 @@ object KBD {
         HAL.init()
     }
 
-    fun getKey(): Char {
-        if (HAL.isBit(KVAL)) {
-            val key = HAL.readBits(K)
-            HAL.setBits(KACK)
+    private fun getKey(): Char {
+        if (HAL.isBit(K_VAL_MASK)) {
+            val key = HAL.readBits(K_MASK)
+            HAL.setBits(ACK_MASK)
 
-            while(HAL.isBit(KVAL)) {
+            while(HAL.isBit(K_VAL_MASK)) {
                 // do nothing
             }
 
-            HAL.clrBits(KACK)
+            HAL.clrBits(ACK_MASK)
             return keys[key.shr(1)]   // We use a logical shift right as the values of the K3:0 are the UsbPortInput(4:1)
 
         }

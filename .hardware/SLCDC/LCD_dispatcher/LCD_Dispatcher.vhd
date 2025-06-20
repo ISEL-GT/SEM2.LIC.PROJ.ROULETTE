@@ -44,6 +44,7 @@ architecture structural of LCD_Dispatcher is
     -- Sinais internos
     signal sig_en_count : std_logic;
     signal sig_count    : std_logic_vector(3 downto 0);
+	 signal sig_notEn		: std_logic;
 
 begin
 
@@ -58,13 +59,15 @@ begin
             Wrl       => Wrl,
             done      => done
         );
+		  
+		 sig_notEn <= not sig_en_count;
 
     -- Instanciação do contador
     counter_unit: counter_4bits
         port map (
             CLK     => clk,
             CE      => sig_en_count,
-            reset   => reset,
+            reset   => sig_notEn,
             count   => sig_count
         );
 
