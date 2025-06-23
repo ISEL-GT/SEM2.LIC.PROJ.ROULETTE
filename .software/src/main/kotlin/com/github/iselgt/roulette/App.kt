@@ -34,7 +34,7 @@ const val STORAGE_PATH = "./data"
 /**
  * This variable is responsible for keeping track of the current phase of the game.
  */
-private var gamePhase: GamePhase = GamePhase.INIT
+public var gamePhase: GamePhase = GamePhase.INIT
 
 /**
  * This method is responsible for changing the phase of the game, and calling the
@@ -42,7 +42,7 @@ private var gamePhase: GamePhase = GamePhase.INIT
  */
 fun stepPhase() {
     gamePhase = gamePhase.next()
-    gamePhase.printToLCD()
+    gamePhase.menu()
     gamePhase.method()
 }
 
@@ -84,11 +84,10 @@ fun processCoins(timeout: Int) {
     if (insertedCredits > 0) {
         credits += insertedCredits // Add the inserted credits to the total credits
         coins++
-        TUI.writeMessage("ADDED $insertedCredits CREDITS|CREDITS: $credits") // Show the current credits on the display
+        TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString()) // Update the credits on the LCD
         Time.sleep(1000L) // Wait for 1 second to show the message
 
         saveStatistics()
-        gamePhase.printToLCD()
         CoinSignal.ACCEPT.unset()
     }
 }
@@ -99,7 +98,9 @@ fun processCoins(timeout: Int) {
  */
 fun resetBetSelection() {
     if (gamePhase == GamePhase.BETTING) RouletteDisplay.setValue("000000")
-    else TUI.writeMessage("LAST BETS IN!|SELECTION: ")
+    else {
+        TUI.updateMenuFromPlacementMap("GAME-LAST", "00") // Reset the last bet value on the LCD
+    }
 }
 
 /**
@@ -121,24 +122,32 @@ fun processBet(key: Char) {
             'A' -> {
 
                 if (betBuffer > ROULETTE_MAX) {
-                    TUI.writeMessage("BET TOO HIGH|MAX: $ROULETTE_MAX")
-                    Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+
+                    if (gamePhase == GamePhase.BETTING) {
+                        TUI.clear()
+                        TUI.writeLeft("BET TOO HIGH!")
+                        TUI.writeRight("MAX BET: $ROULETTE_MAX", line = 1)
+                        Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
+                    }
 
                     betBuffer = 0
                     resetBetSelection()
-                    gamePhase.printToLCD()
+                    gamePhase.menu()
                     return
                 }
 
                 if (operatingMode != Mode.MAINTENANCE) credits--
-                bets.add(betBuffer) // Add the bet to the bets list
-                TUI.writeMessage("NEW BET: ${betBuffer}|CREDITS: $credits")
+                bets.add(betBuffer) // Add the bet to the bets list<
+
+                if (gamePhase == GamePhase.BETTING) {
+                    TUI.updateMenuFromPlacementMap("BETTING-BETS", bets.size.toString()) // Update the number of bets on the LCD
+                    TUI.updateMenuFromPlacementMap("GAME-LAST", betBuffer.toString().padStart(2, '0')) // Update the last bet value on the LCD
+                }
+
+                TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString()) // Update the credits on the LCD
 
                 betBuffer = 0
                 resetBetSelection()
-                Time.sleep(1000L)
-
-                gamePhase.printToLCD()
             }
         }
     }
@@ -151,8 +160,10 @@ fun processBet(key: Char) {
 
     // The spinning phase shows values on the LCD
     if (gamePhase == GamePhase.BETTING) RouletteDisplay.setValue(betBuffer)
-    else TUI.writeMessage("LAST BETS IN!|SELECTION: $betBuffer")
-
+    else {
+        // If we're not in the betting phase, update the last bet value on the LCD
+        TUI.updateMenuFromPlacementMap("GAME-LAST", betBuffer.toString().padStart(2, '0'))
+    }
 }
 
 /**
@@ -204,26 +215,20 @@ fun waitForBetOrCoins() {
 
         if (key == '#' && gamePhase == GamePhase.BETTING) {
             if (bets.isEmpty()) {
-                TUI.writeMessage("PLEASE BET TO|SPIN ROULETTE")
+                TUI.clear()
+                TUI.writeCenter("PLEASE BET TO")
+                TUI.writeCenter("SPIN ROULETTE", line = 1)
                 Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
-                gamePhase.printToLCD()
+                gamePhase.menu()
                 continue
             }
             break
         }
 
-        if (credits <= 0) {
-            TUI.writeMessage("NO CREDITS|INSERT COINS")
-            Time.sleep(2000L) // Wait for 2 seconds before going back to the betting phase
-
-            gamePhase.printToLCD()
-            continue
-        }
+        if (credits <= 0) { continue }
 
         processBet(key) // Process the bet made by the user«
     }
-
-    Time.sleep(1000L)
 }
 
 /**
@@ -247,12 +252,12 @@ fun spinRoulette() {
 
         // If 5 seconds have passed since the start of the spin, stop accepting bets and display a message
         if (Time.getTimeInMillis() >= stopBetsTime) {
-            TUI.writeMessage("BETTING CLOSED!")
+            TUI.writeFrom("-", 1, 8)
             stopBetting = true
             continue
         }
 
-        processBet(TUI.getKey(100))
+        processBet(TUI.getKey(10))
     }
 
     setValue("000000")
@@ -271,12 +276,23 @@ fun spinRoulette() {
     if (roll_history.size > 10) roll_history.removeAt(0) // Keep only the last 10 results
 
     RouletteDisplay.setValue(spinResult) // Show the result of the spin
-    TUI.writeMessage("DONE!|RESULTS IN 5S...")
+    TUI.clear()
+    TUI.writeCenter("DONE!")
+    TUI.writeCenter("RESULTS IN 5S...", line = 1)
+
+    // Update the display with the countdown every second
+    for (i in 5 downTo 1) {
+        TUI.updateMenuFromPlacementMap("COUNTDOWN", i.toString())
+        Time.sleep(1000L) // Wait for 1 second before showing the next number
+    }
+
     saveStatistics()
 
-    Time.sleep(5000L) // Wait for 5 seconds before showing the result
-    TUI.writeMessage("ROLL: $spinResult|EARNINGS: $creditDifference")
+    TUI.clear()
+    TUI.writeLeft("ROLL: $spinResult")
+    TUI.writeLeft("EARNINGS: $creditDifference", line = 1)
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
+    TUI.clear()
 }
 
 
@@ -291,5 +307,5 @@ fun main() {
     loadStatistics()
     CoinAcceptor.init()
 
-    while (true) { stepPhase() }
+    while (operatingMode != Mode.EXITING) { stepPhase() }
 }

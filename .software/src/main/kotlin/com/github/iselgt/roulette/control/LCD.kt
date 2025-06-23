@@ -5,6 +5,9 @@ import isel.leic.utils.Time
 import kotlin.text.iterator
 
 object LCD {
+    public const val COLS = 16                     // Number of columns in the LCD
+    public const val LINES = 2                      // Number of lines in the LCD
+
     private const val SERIAL_INTERFACE = true
 
     // Useful Constants to use with LCD
@@ -127,8 +130,7 @@ object LCD {
 
     fun write(text: String) {
         for (c in text) {
-            if (c == '|') cursor(1, 0)  // We're using '|' as a marker to newline
-            else write(c)
+            write(c)
         }
     }
 

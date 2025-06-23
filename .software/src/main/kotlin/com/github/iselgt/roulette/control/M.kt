@@ -3,6 +3,7 @@ package com.github.iselgt.roulette.control
 import com.github.iselgt.roulette.control.display.RouletteDisplay
 import com.github.iselgt.roulette.control.state.Mode
 import com.github.iselgt.roulette.credits
+import com.github.iselgt.roulette.gamePhase
 import com.github.iselgt.roulette.gamesPlayed
 import com.github.iselgt.roulette.operatingMode
 import com.github.iselgt.roulette.roll_history
@@ -43,7 +44,9 @@ object M {
                     keyAPressed = true
                     keyCPressed = false
                     keyDPressed = false
-                    TUI.writeMessage("GAMES: $gamesPlayed|COINS: $credits")
+                    TUI.clear()
+                    TUI.writeCenter("GAMES: $gamesPlayed")
+                    TUI.writeCenter("COINS: $credits", line = 1)
                 }
 
                 // If we click "*" after "A", we reset the counters for games and coins
@@ -51,12 +54,16 @@ object M {
                     if (keyAPressed) {
                         gamesPlayed = 0
                         credits = 0
-                        TUI.writeMessage("GAME STATS|CLEARED")
+                        TUI.clear()
+                        TUI.writeCenter("GAME STATS")
+                        TUI.writeCenter("CLEARED", line = 1)
                     }
 
                     else if (keyCPressed) {
                         roll_history.clear()
-                        TUI.writeMessage("ROLL HISTORY|CLEARED")
+                        TUI.clear()
+                        TUI.writeCenter("ROLL HISTORY")
+                        TUI.writeCenter("CLEARED", line = 1)
                     }
 
                     // If we click "*" alone, then start a game
@@ -78,23 +85,28 @@ object M {
                     val formattedHistory = roll_history.map { if (it.toString().length == 1) "0$it" else it.toString() }
                     val history = formattedHistory.reversed().take(5).joinToString(">")
                     val history2 = formattedHistory.reversed().drop(5).take(5).joinToString(">")
-                    TUI.writeMessage(" $history| $history2")
+                    TUI.writeCenter(history)
+                    TUI.writeCenter(history2, line = 1)
                 }
 
                 // If the key is "D", turn off the machine and save the statistics
                 'D' -> {
-                    if (!keyDPressed) {
-                        TUI.writeMessage("ARE YOU SURE?|HIT 'D' FOR YES")
-                        keyDPressed = true
+                    TUI.clear()
+
+                    if (!TUI.binOption("SAVE AND EXIT?")) {
+                        gamePhase.menu()
                         continue
                     }
 
                     saveStatistics()
-                    TUI.writeMessage("GOODBYE!")
+                    TUI.clear()
+                    TUI.writeCenter("GOODBYE!")
 
-                    Time.sleep(2000L)  // Wait for 2 seconds before turning off the machine
                     RouletteDisplay.off()
+                    Time.sleep(2000L)  // Wait for 2 seconds before turning off the machine
                     operatingMode = Mode.EXITING
+                    TUI.clear()
+
                     break
                 }
                 else -> continue
