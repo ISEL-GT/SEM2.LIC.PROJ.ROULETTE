@@ -261,7 +261,7 @@ fun spinRoulette() {
     setValue("000000")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
-    val spinResult = 1
+    val spinResult = Random.nextInt(1, ROULETTE_MAX)
     val creditDifference = (bets.count { it == spinResult } * WIN_MULTIPLIER) - bets.count()
 
     if (operatingMode != Mode.MAINTENANCE) {
