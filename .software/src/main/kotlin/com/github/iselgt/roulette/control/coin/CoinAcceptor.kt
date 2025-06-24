@@ -1,5 +1,7 @@
 package com.github.iselgt.roulette.control.coin
 
+import isel.leic.utils.Time
+
 object CoinAcceptor {
 
     fun init() {
@@ -18,6 +20,7 @@ object CoinAcceptor {
             CoinSignal.ACCEPT.set()
 
             while (CoinSignal.COIN.isActive()) {
+                Time.sleep(10)
                 // Wait until the coin is no longer detected
             }
 

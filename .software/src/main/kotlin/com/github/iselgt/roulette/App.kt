@@ -23,7 +23,7 @@ var bets = ArrayList<Int>()
 var roll_history = ArrayList<Int>()
 var betBuffer = 0
 
-const val WIN_MULTIPLIER = 4
+const val WIN_MULTIPLIER = 8
 const val ROULETTE_MAX = 36
 
 /**
@@ -119,6 +119,8 @@ fun processBet(key: Char) {
             // "Accept" a bet at the current index
             'A' -> {
 
+                if (credits <= 0) return
+
                 if (betBuffer > ROULETTE_MAX) {
 
                     if (gamePhase == GamePhase.BETTING) {
@@ -136,7 +138,7 @@ fun processBet(key: Char) {
                 }
 
                 if (operatingMode != Mode.MAINTENANCE) credits--
-                bets.add(betBuffer) // Add the bet to the bets list<
+                bets.add(betBuffer) // Add the bet to the bets list
 
                 if (gamePhase == GamePhase.BETTING) {
                     TUI.updateMenuFromPlacementMap("BETTING-BETS", bets.size.toString()) // Update the number of bets on the LCD
@@ -175,6 +177,8 @@ fun waitForStartOrMaintenance() {
     // Reset the display
     RouletteDisplay.setValue("000000")
     operatingMode = Mode.DEFAULT
+    bets.clear() // Clear the bets list before starting a new betting phase
+    betBuffer = 0 // Reset the bet buffer to 0
 
     do {
 
@@ -221,8 +225,6 @@ fun waitForBetOrCoins() {
             break
         }
 
-        if (credits <= 0) { continue }
-
         processBet(key) // Process the bet made by the user«
     }
 }
@@ -259,7 +261,7 @@ fun spinRoulette() {
     setValue("000000")
 
     // Generate a random number between 0 and 36 to simulate the roulette spin and show the result
-    val spinResult = Random.nextInt(0, ROULETTE_MAX)
+    val spinResult = 1
     val creditDifference = (bets.count { it == spinResult } * WIN_MULTIPLIER) - bets.count()
 
     if (operatingMode != Mode.MAINTENANCE) {

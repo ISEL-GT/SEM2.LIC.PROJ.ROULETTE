@@ -31,8 +31,6 @@ enum class GamePhase(val method: () -> Unit) : GamePhaseMenu {
     BETTING(::waitForBetOrCoins) {
 
         override fun menu() {
-            bets.clear() // Clear the bets list before starting a new betting phase
-            betBuffer = 0 // Reset the bet buffer to 0
 
             TUI.clear()
             TUI.writeLeft("BETS:${bets.size}")  // BETTING-BETS
