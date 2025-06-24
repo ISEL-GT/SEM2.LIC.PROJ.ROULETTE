@@ -2,6 +2,7 @@ package com.github.iselgt.roulette.control.state
 
 import com.github.iselgt.roulette.ROULETTE_MAX
 import com.github.iselgt.roulette.bets
+import com.github.iselgt.roulette.control.LCD.Cursor.line
 import com.github.iselgt.roulette.control.M.waitForMaintenanceInput
 import com.github.iselgt.roulette.control.TUI
 import com.github.iselgt.roulette.credits
@@ -32,7 +33,7 @@ enum class GamePhase(val method: () -> Unit) : GamePhaseMenu {
             TUI.clear()
             TUI.writeLeft("BETS:${bets.size}")  // BETTING-BETS
             TUI.writeRight("MAX:$ROULETTE_MAX")
-            TUI.writeLeft("CREDS:$credits", line = 1)  // GAME-CREDITS
+            TUI.writeLeft("CREDS:${credits.toString().padStart(2, '0')}", line = 1)  // GAME-CREDITS
             TUI.writeRight("LAST:--", line = 1)  // GAME-LAST
         }
     },
@@ -41,7 +42,7 @@ enum class GamePhase(val method: () -> Unit) : GamePhaseMenu {
 
         override fun menu() {
             TUI.clear()
-            TUI.writeCenter("SPINNING...")
+            TUI.writeCenter("SPINNING..")
             TUI.writeLeft("CREDS:$credits", line = 1)  // GAME-CREDITS
             TUI.writeRight("BET:00", line = 1)  // GAME-LAST
         }
@@ -70,6 +71,7 @@ enum class GamePhase(val method: () -> Unit) : GamePhaseMenu {
             "GAME-LAST" to Pair(1, 14),
             "BETTING-BETS" to Pair(0, 5),
             "COUNTDOWN" to Pair(1, 11),
+            "LOCK" to Pair(0, 14),
         )
     }
 

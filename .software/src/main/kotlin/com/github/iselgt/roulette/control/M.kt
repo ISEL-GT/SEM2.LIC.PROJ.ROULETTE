@@ -1,5 +1,7 @@
 package com.github.iselgt.roulette.control
 
+import com.github.iselgt.roulette.coins
+import com.github.iselgt.roulette.control.LCD.Cursor.line
 import com.github.iselgt.roulette.control.display.RouletteDisplay
 import com.github.iselgt.roulette.control.state.Mode
 import com.github.iselgt.roulette.credits
@@ -45,15 +47,15 @@ object M {
                     keyCPressed = false
                     keyDPressed = false
                     TUI.clear()
-                    TUI.writeCenter("GAMES: $gamesPlayed")
-                    TUI.writeCenter("COINS: $credits", line = 1)
+                    TUI.writeCenter("GAMES: ${gamesPlayed.toString().padStart(2, '0')}")
+                    TUI.writeCenter("COINS: ${coins.toString().padStart(2, '0')}", line = 1)
                 }
 
                 // If we click "*" after "A", we reset the counters for games and coins
                 '*' -> {
                     if (keyAPressed) {
                         gamesPlayed = 0
-                        credits = 0
+                        coins = 0
                         TUI.clear()
                         TUI.writeCenter("GAME STATS")
                         TUI.writeCenter("CLEARED", line = 1)
@@ -72,6 +74,7 @@ object M {
                     keyAPressed = false
                     keyCPressed = false
                     keyDPressed = false
+                    saveStatistics()
                 }
 
                 // If the key is "B", show the history of rolled numbers
@@ -82,9 +85,11 @@ object M {
                     keyAPressed = false
 
                     // Limit the roll history to 32 characters, breaking it into two lines. Don't separate numbers.
-                    val formattedHistory = roll_history.map { if (it.toString().length == 1) "0$it" else it.toString() }
+                    val formattedHistory = roll_history.map { it.toString().padStart(2, '0') }
                     val history = formattedHistory.reversed().take(5).joinToString(">")
                     val history2 = formattedHistory.reversed().drop(5).take(5).joinToString(">")
+
+                    TUI.clear()
                     TUI.writeCenter(history)
                     TUI.writeCenter(history2, line = 1)
                 }

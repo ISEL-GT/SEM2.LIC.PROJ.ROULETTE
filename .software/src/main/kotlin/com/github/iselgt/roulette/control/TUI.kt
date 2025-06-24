@@ -41,6 +41,7 @@ object TUI {
         val trimmedMsg = msg.take(totalCols - column)
         LCD.cursor(line, column)
         LCD.write(trimmedMsg)
+        LCD.cursor(1, 16) // Move cursor outside the display area to hide it
     }
 
     /**
@@ -105,6 +106,7 @@ object TUI {
      */
     fun clear() {
         LCD.clear()
+        LCD.cursor(1, 16) // Move cursor outside the display area to hide it
     }
 
     /**

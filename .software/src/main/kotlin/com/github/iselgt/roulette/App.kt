@@ -74,20 +74,18 @@ fun saveStatistics() {
 /**
  * This method is responsible for processing the coin insertion.
  * It waits for the user to insert coins and adds them to the credits.
- * @param timeout The maximum time to wait for coin insertion in milliseconds.
  */
-fun processCoins(timeout: Int) {
+fun processCoins() {
 
     // Wait for the user to insert coins and add them to the credits
-    val insertedCredits = CoinAcceptor.waitCoin(timeout)
+    val insertedCredits = CoinAcceptor.waitCoin()
 
     if (insertedCredits > 0) {
         credits += insertedCredits // Add the inserted credits to the total credits
         coins++
-        TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString()) // Update the credits on the LCD
+        TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString().padStart(2, '0')) // Update the credits on the LCD
         Time.sleep(1000L) // Wait for 1 second to show the message
 
-        saveStatistics()
         CoinSignal.ACCEPT.unset()
     }
 }
@@ -132,7 +130,8 @@ fun processBet(key: Char) {
 
                     betBuffer = 0
                     resetBetSelection()
-                    gamePhase.menu()
+
+                    if (gamePhase == GamePhase.BETTING) gamePhase.menu()
                     return
                 }
 
@@ -144,7 +143,7 @@ fun processBet(key: Char) {
                     TUI.updateMenuFromPlacementMap("GAME-LAST", betBuffer.toString().padStart(2, '0')) // Update the last bet value on the LCD
                 }
 
-                TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString()) // Update the credits on the LCD
+                TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString().padStart(2, '0')) // Update the credits on the LCD
 
                 betBuffer = 0
                 resetBetSelection()
@@ -205,11 +204,13 @@ fun waitForBetOrCoins() {
 
     // Implement a circular buffer to store the bets
     bets.clear() // Clear the bets list before starting a new betting phase
+    betBuffer = 0 // Reset the bet buffer to 0
+    TUI.updateMenuFromPlacementMap("BETTING-BETS", "0") // Reset the number of bets on the LCD
 
     while (true) {
 
         val key = TUI.getKey(100)
-        processCoins(100)
+        processCoins()
 
         if (key == 0x00.toChar()) continue
 
@@ -252,7 +253,7 @@ fun spinRoulette() {
 
         // If 5 seconds have passed since the start of the spin, stop accepting bets and display a message
         if (Time.getTimeInMillis() >= stopBetsTime) {
-            TUI.writeFrom("-", 1, 8)
+            TUI.updateMenuFromPlacementMap("LOCK", "#")
             stopBetting = true
             continue
         }
@@ -285,8 +286,6 @@ fun spinRoulette() {
         TUI.updateMenuFromPlacementMap("COUNTDOWN", i.toString())
         Time.sleep(1000L) // Wait for 1 second before showing the next number
     }
-
-    saveStatistics()
 
     TUI.clear()
     TUI.writeLeft("ROLL: $spinResult")
