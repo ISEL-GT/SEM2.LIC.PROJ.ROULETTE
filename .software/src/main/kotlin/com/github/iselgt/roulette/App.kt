@@ -202,11 +202,6 @@ fun waitForStartOrMaintenance() {
  */
 fun waitForBetOrCoins() {
 
-    // Implement a circular buffer to store the bets
-    bets.clear() // Clear the bets list before starting a new betting phase
-    betBuffer = 0 // Reset the bet buffer to 0
-    TUI.updateMenuFromPlacementMap("BETTING-BETS", "0") // Reset the number of bets on the LCD
-
     while (true) {
 
         val key = TUI.getKey(100)

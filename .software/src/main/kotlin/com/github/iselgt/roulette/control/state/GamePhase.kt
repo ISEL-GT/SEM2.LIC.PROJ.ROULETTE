@@ -1,6 +1,7 @@
 package com.github.iselgt.roulette.control.state
 
 import com.github.iselgt.roulette.ROULETTE_MAX
+import com.github.iselgt.roulette.betBuffer
 import com.github.iselgt.roulette.bets
 import com.github.iselgt.roulette.control.LCD.Cursor.line
 import com.github.iselgt.roulette.control.M.waitForMaintenanceInput
@@ -30,11 +31,14 @@ enum class GamePhase(val method: () -> Unit) : GamePhaseMenu {
     BETTING(::waitForBetOrCoins) {
 
         override fun menu() {
+            bets.clear() // Clear the bets list before starting a new betting phase
+            betBuffer = 0 // Reset the bet buffer to 0
+
             TUI.clear()
             TUI.writeLeft("BETS:${bets.size}")  // BETTING-BETS
             TUI.writeRight("MAX:$ROULETTE_MAX")
             TUI.writeLeft("CREDS:${credits.toString().padStart(2, '0')}", line = 1)  // GAME-CREDITS
-            TUI.writeRight("LAST:--", line = 1)  // GAME-LAST
+            TUI.writeRight("LAST:${bets.lastOrNull()?.toString()?.padStart(2, '0') ?: "--"}", line = 1)  // GAME-LAST
         }
     },
 
