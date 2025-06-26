@@ -20,8 +20,8 @@ var gamesPlayed = 0
 
 var credits = 0
 var coins = 0
-var savedCoinCount = 0
-var savedCreditCount = 0
+var savedCoins = 0
+var savedCredits = 0
 
 var bets = ArrayList<Int>()
 var roll_history = ArrayList<Int>()
@@ -87,7 +87,6 @@ fun processCoins() {
     if (insertedCredits > 0) {
         credits += insertedCredits // Add the inserted credits to the total credits
         coins++
-        savedCoinCount++
         TUI.updateMenuFromPlacementMap("GAME-CREDITS", credits.toString().padStart(2, '0')) // Update the credits on the LCD
         Time.sleep(1000L) // Wait for 1 second to show the message
 
@@ -193,8 +192,8 @@ fun waitForStartOrMaintenance() {
         // If we're in maintenance mode, start the maintenance phase and set the M bit
         if (M.isMaintenance()) {
             operatingMode = Mode.MAINTENANCE
-            savedCoinCount = coins
-            savedCreditCount = credits
+            savedCoins = coins
+            savedCredits = credits
 
             coins = 0 // Reset coins for maintenance mode
             credits = 0 // Reset credits for maintenance mode
@@ -299,8 +298,8 @@ fun spinRoulette() {
     TUI.writeLeft("EARNINGS: $creditDifference", line = 1)
 
     if (operatingMode == Mode.MAINTENANCE) {
-        coins = savedCoinCount
-        credits = savedCreditCount
+        coins = savedCoins
+        credits = savedCredits
     }
 
     Time.sleep(5000L) // Wait for 5 seconds before going back to the next phase
